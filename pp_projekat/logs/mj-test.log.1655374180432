@@ -1,0 +1,16 @@
+INFO  12:08:39,641 - Compiling source file: C:\Users\Aleksandar\Desktop\PP\projekat\PP_Projekat\pp_projekat\test\program.mj
+INFO  12:08:39,646 - #1 program
+INFO  12:08:39,646 - #21 MJProgram
+INFO  12:08:39,646 - #21 int
+INFO  12:08:39,647 - #21 x
+INFO  12:08:39,647 - #43 ,
+INFO  12:08:39,647 - #21 y
+INFO  12:08:39,647 - #41 ;
+INFO  12:08:39,647 - #49 {
+INFO  12:08:39,647 - #14 void
+INFO  12:08:39,647 - #21 main
+INFO  12:08:39,647 - #45 (
+INFO  12:08:39,648 - #46 )
+INFO  12:08:39,648 - #49 {
+INFO  12:08:39,648 - #50 }
+INFO  12:08:39,648 - #50 }
