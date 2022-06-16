@@ -3,7 +3,7 @@ package rs.ac.bg.etf.pp1;
 public class sym {
 
 	// keywords
-	public static final int PROGRAM = 1;
+	public static final int PROG = 1;
 	public static final int BREAK = 2;
 	public static final int CLASS = 3;
 	public static final int ENUM = 4;

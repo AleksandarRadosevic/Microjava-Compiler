@@ -39,7 +39,7 @@ import java_cup.runtime.Symbol;
 "\r\n" { }
 "\f" { }
 
-"program" 		{ return new_symbol(sym.PROGRAM,yytext());}
+"program" 		{ return new_symbol(sym.PROG,yytext());}
 "break" 		{ return new_symbol(sym.BREAK,yytext());}
 "class" 		{ return new_symbol(sym.CLASS,yytext());}
 "enum" 			{ return new_symbol(sym.ENUM,yytext());}
