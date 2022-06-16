@@ -1,4 +1,71 @@
 
+terminal PROG, IDENT, LBRACECURLY, RBRACECURLY, CONST, ASSIGN, NUMBER, CHARCONST, BOOLCONST;
+terminal COMMA, CLASS, EXTENDS;
+nonterminal Program, DeclarationList, MethodDeclList ConstDecl, VarDecl, ClassDecl, RecordDecl, Type, ConstVal, ConstDeclList;
+nonterminal OptionalBraces, VarDeclList ClassDecl, ConstDeclRepeat, VarDeclRepeat, OptionalExtends, DeclListVar;
+nonterminal OptConstructorMethod, ConstructorDecl, OptionalConstructorDecl, DeclListMethod;
+
+Program ::= (Program) PROG IDENT DeclarationList LBRACECURLY DeclListMethod RBRACECURLY;
+
+DeclarationList ::= (Declarations) DeclarationList DeclList
+				|
+				(NoDeclarations) /* epsilon */;
+				
+DeclList ::= (DeclLists)  
+				ConstDecl  |
+				VarDecl    | 
+				ClassDecl  | 
+				RecordDecl;
+			
+/* const start */	
+ConstDecl ::= (ConstDecl) ConstDeclRepeat ConstDeclList SEMICOLON;
+
+ConstDeclRepeat ::= (ConstDeclRepeat) CONST Type:constType IDENT ASSIGN ConstVal;
+
+ConstVal ::= (ConstVal) NUMBER | CHARCONST | BOOLCONST;
+
+ConstDeclList ::= (ConstDeclList) ConstDeclList ConstDeclRepeat  
+				|
+				(NoConstDecl) /* epsilon */;
+	
+/* const finish */	
+
+/* var start */
+VarDecl ::= (VarDecl) VarDeclRepeat VarDeclList;
+
+VarDeclRepeat ::= (VarDeclRepeat) Type:varType IDENT OptionalBraces;
+
+OptionalBraces ::= (OptionalBraces) LBRACE RBRACE 
+				|
+				(NoOptionalBraces) /* epsilon */;
+
+VarDeclList ::= (VarDeclList) VarDeclList COMMA VarDeclRepeat  
+				|
+				(NoVarDeclList) /* epsilon */;
+	
+/* var end */
+
+/* class start */
+			
+ClassDecl ::= (ClassDecl) CLASS IDENT OptionalExtends LBRACECURLY DeclListVar OptConstructorMethod RBRACECURLY;			 
+
+OptionalExtends ::= (OptionalExtends) EXTENDS Type;
+ 
+DeclListVar ::=	(DeclListVar) DeclListVar VarDecl 
+				|
+				(NoDeclListVar) /* epsilon */;	
 
 
-Program ::= (PROGRAM) PROG
+OptConstructorMethod ::= (OptConstructorMethod) LBRACECURLY OptionalConstructorDecl DeclListMethod RBRACECURLY
+				|
+				(NoOptConstructorMethod) /* epsilon */;	
+				
+OptionalConstructorDecl ::= (OptionalConstructorDecl) ConstructorDecl
+				|
+				(NoOptionalConstructorDecl) /* epsilon */;	
+				
+DeclListMethod ::= (DeclListMethod) DeclListMethod MethodDecl 
+				|
+				(NoDeclListMethod) /* epsilon */;	
+
+/* class end */

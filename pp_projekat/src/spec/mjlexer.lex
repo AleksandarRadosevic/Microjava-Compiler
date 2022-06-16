@@ -92,7 +92,7 @@ import java_cup.runtime.Symbol;
 
 [0-9]+  						{ return new_symbol (sym.NUMBER, new Integer (yytext())); }
 ([a-z]|[A-Z])[a-z|A-Z|0-9|_]* 	{ return new_symbol (sym.IDENT, yytext()); }
-(["])[.]*(["])					{ return new_symbol (sym.CHARCONST, yytext()); }
+(["])[.](["])					{ return new_symbol (sym.CHARCONST, yytext()); }
 (["])[true|false](["])			{ return new_symbol (sym.BOOLCONST, yytext()); }
 
 
