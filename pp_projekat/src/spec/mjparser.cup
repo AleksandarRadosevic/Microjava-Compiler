@@ -1,14 +1,15 @@
 
 terminal PROG, IDENT, LBRACECURLY, RBRACECURLY, CONST, ASSIGN, NUMBER, CHARCONST, BOOLCONST;
-terminal COMMA, CLASS, EXTENDS, RECORD, LPAREN, RPAREN, VOID, PRINT, GOTO;
-terminal IF, SEMICOLON, LPAREN, RPAREN, DO, WHILE, BREAK, CONTINUE, RETURN, READ, LPAREN, INCREMENT, DECREMENT;
+terminal COMMA, CLASS, EXTENDS, RECORD, LPAREN, RPAREN, VOID, PRINT, GOTO, AND, NEW;
+terminal IF, SEMICOLON, LPAREN, RPAREN, DO, WHILE, BREAK, CONTINUE, RETURN, READ, LBRACE, RBRACE, INCREMENT, DECREMENT;
 nonterminal Program, DeclarationList, MethodDeclList ConstDecl, VarDecl, ClassDecl, RecordDecl, Type, ConstVal, ConstDeclList;
 nonterminal OptionalBraces, VarDeclList ClassDecl, ConstDeclRepeat, VarDeclRepeat, OptionalExtends, DeclListVar;
 nonterminal OptConstructorMethod, ConstructorDecl, OptionalConstructorDecl, DeclListMethod, StatementList, TypeOrVoid;
 nonterminal FormParsOptional, Statement, FormPars, Pars, ParsList, SingleStatement, OptionalLabelColon, Label, LabelColon;
-nonterminal Condition, OptionalElse, Designator, DesignatorStatement, DesignatorStatementElements;
-nonterminal Expr, OptionalNumConst, Statements, OptionalExpression, Assignop, ActParsOptional;
-
+nonterminal Condition, OptionalElse, Designator, DesignatorStatement, DesignatorStatementElements, ExprCommaList;
+nonterminal Expr, OptionalNumConst, Statements, OptionalExpression, Assignop, ActParsOptional, ActPars, CondTerm;
+nonterminal CondTermListOr, CondFactListAnd, CondFact, RelopOprOptional, Relop, OptionalMinus, Term, AddopTermList;
+nonterminal Addop, Factor, MulopFactorList, Mulop, ActParsBracesOptional, ExprBracesOptional;
 
 
 
@@ -145,5 +146,56 @@ DesignatorStatementElements ::= (DesignatorStatementElements) Assignop Expr
 					| LPAREN ActParsOptional RPAREN 
 					| INCREMENT
 					| DECREMENT;				
-	
-ActPars ::= (ActPars)
+
+
+ActParsOptional ::=  (ActParsOptional) ActPars 
+				| (NoActPars) /* epsilon */;
+
+
+ActPars ::= (ActPars) Expr ExprCommaList;
+
+ExprCommaList ::= (ExprCommaList) ExprCommaList COMMA Expr 
+				| (NoExprCommaList) /* epsilon */;
+
+
+Condition ::= (Condition) CondTerm CondTermListOr;
+CondTermListOr ::= (CondTermListOr) CondTermListOr OR CondTerm
+				| (NoCondTermListOr) /* epsilon */;
+
+CondTerm ::= (CondTerm) CondFact CondFactListAnd;
+CondFactListAnd ::= (CondFactListAnd) CondFactListAnd AND CondFact
+				| (NoCondFactListAnd) /* epsilon */;
+				
+CondFact ::= (CondFact) Expr RelopOprOptional;				 
+				
+RelopOprOptional ::= (RelopOprOptional) Relop Expr
+				| (NoRelopOprOptional) /* epsilon */;				
+				
+				
+Expr ::= (Expr) OptionalMinus Term AddopTermList;
+
+
+AddopTermList ::= (AddopTermList) AddopTermList Addop Term
+				| (NoAddopTermList) /* epsilon */;
+
+Term ::= (Term) Factor MulopFactorList;
+
+MulopFactorList ::= (MulopFactorList) MulopFactorList Mulop Factor;
+
+Factor ::= (Factor) Designator ActParsBracesOptional
+		| NUMBER
+		| CHARCONST
+		| BOOLCONST
+		| NEW Type ExprBracesOptional
+		| LPAREN Expr RPAREN;
+		
+ActParsBracesOptional ::= (ActParsBracesOptional) LPAREN ActParsOptional RPAREN 		
+						| (NoActParsBracesOptional) /* epsilon */;
+		
+ExprBracesOptional ::= (ExprBracesOptional)	LBRACE Expr RBRACE	
+					| (NoExprBracesOptional) /* epsilon */;
+					
+					
+Designator ::= (Designator) IDENT IdentList;
+
+IdentList ::= () 
