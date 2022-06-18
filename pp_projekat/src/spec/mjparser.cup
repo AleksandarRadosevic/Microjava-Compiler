@@ -1,10 +1,16 @@
 
 terminal PROG, IDENT, LBRACECURLY, RBRACECURLY, CONST, ASSIGN, NUMBER, CHARCONST, BOOLCONST;
-terminal COMMA, CLASS, EXTENDS, RECORD, LPAREN, RPAREN, VOID;
+terminal COMMA, CLASS, EXTENDS, RECORD, LPAREN, RPAREN, VOID, PRINT, GOTO;
+terminal IF, SEMICOLON, LPAREN, RPAREN, DO, WHILE, BREAK, CONTINUE, RETURN, READ, LPAREN, INCREMENT, DECREMENT;
 nonterminal Program, DeclarationList, MethodDeclList ConstDecl, VarDecl, ClassDecl, RecordDecl, Type, ConstVal, ConstDeclList;
 nonterminal OptionalBraces, VarDeclList ClassDecl, ConstDeclRepeat, VarDeclRepeat, OptionalExtends, DeclListVar;
 nonterminal OptConstructorMethod, ConstructorDecl, OptionalConstructorDecl, DeclListMethod, StatementList, TypeOrVoid;
 nonterminal FormParsOptional, Statement, FormPars, Pars, ParsList, SingleStatement, OptionalLabelColon, Label, LabelColon;
+nonterminal Condition, OptionalElse, Designator, DesignatorStatement, DesignatorStatementElements;
+nonterminal Expr, OptionalNumConst, Statements, OptionalExpression, Assignop, ActParsOptional;
+
+
+
 
 Program ::= (Program) PROG IDENT DeclarationList LBRACECURLY DeclListMethod RBRACECURLY;
 
@@ -84,12 +90,7 @@ TypeOrVoid ::= (TypeOrVoid) Type | VOID;
 
 FormParsOptional ::= (FormParsOptional) FormParams
 				| (NoFormParsOptional) /* epsilon */;
-				
-	
-StatementList ::= (StatementList) Statement 
-				| 
-				(NoStatementList) /* epsilon */;
-				
+						
 /* method end */
 	
 /* pars type start */
@@ -115,8 +116,34 @@ OptionalLabelColon ::= (OptionalLabelColon) LabelColon |
 LabelColon ::= Label COLON;
 
 SingleStatement ::= DesignatorStatement SEMICOLON
-				| IF
+				| IF LPAREN Condition RPAREN Statement OptionalElse
+			 	| DO Statement WHILE LPAREN RPAREN Condition SEMICOLON
+				| BREAK SEMICOLON
+				| CONTINUE SEMICOLON
+				| RETURN OptionalExpression SEMICOLON
+				| READ LPAREN Designator RPAREN SEMICOLON
+				| PRINT LPAREN Expr OptionalNumConst RPAREN SEMICOLON
+				| GOTO Label SEMICOLON;
+				
+OptionalElse ::= (OptionalElse) ELSE Statement
+				| (NoOptionalElse) /* epsilon */;
+
+OptionalExpression ::= (OptionalExpression) Expr 
+					| (NoOptionalExpression) /* epsilon */;
+
+OptionalNumConst ::= (OptionalNumConst) COMMA NUMBER
+				| (NoOptionalNumConst) /* epsilon */;
 				
 				
+Statements ::= (Statements) LBRACECURLY StatementList RBRACECURLY;
+StatementList ::= (StatementList) StatementList Statement
+				| (NoStatementList) /* epsilon */;				
 				
-				;
+DesignatorStatement ::= (DesignatorStatement) Designator DesignatorStatementElements 				
+				
+DesignatorStatementElements ::= (DesignatorStatementElements) Assignop Expr
+					| LPAREN ActParsOptional RPAREN 
+					| INCREMENT
+					| DECREMENT;				
+	
+ActPars ::= (ActPars)
