@@ -1,9 +1,10 @@
 
 terminal PROG, IDENT, LBRACECURLY, RBRACECURLY, CONST, ASSIGN, NUMBER, CHARCONST, BOOLCONST;
-terminal COMMA, CLASS, EXTENDS;
+terminal COMMA, CLASS, EXTENDS, RECORD, LPAREN, RPAREN, VOID;
 nonterminal Program, DeclarationList, MethodDeclList ConstDecl, VarDecl, ClassDecl, RecordDecl, Type, ConstVal, ConstDeclList;
 nonterminal OptionalBraces, VarDeclList ClassDecl, ConstDeclRepeat, VarDeclRepeat, OptionalExtends, DeclListVar;
-nonterminal OptConstructorMethod, ConstructorDecl, OptionalConstructorDecl, DeclListMethod;
+nonterminal OptConstructorMethod, ConstructorDecl, OptionalConstructorDecl, DeclListMethod, StatementList, TypeOrVoid;
+nonterminal FormParsOptional, Statement, FormPars, Pars, ParsList, SingleStatement, OptionalLabelColon, Label, LabelColon;
 
 Program ::= (Program) PROG IDENT DeclarationList LBRACECURLY DeclListMethod RBRACECURLY;
 
@@ -69,3 +70,53 @@ DeclListMethod ::= (DeclListMethod) DeclListMethod MethodDecl
 				(NoDeclListMethod) /* epsilon */;	
 
 /* class end */
+
+
+RecordDecl ::= (RecordDecl) RECORD IDENT LBRACECURLY DeclListVar RBRACECURLY;
+
+ConstructorDecl ::= (ConstructorDecl) IDENT LPAREN RPAREN DeclListVar LBRACECURLY StatementList RBRACECURLY
+
+/* method start */
+
+MethodDecl ::= (MethodDecl) TypeOrVoid IDENT LPAREN FormParsOptional RPAREN DeclListVar LBRACECURLY StatementList RBRACECURLY
+
+TypeOrVoid ::= (TypeOrVoid) Type | VOID;
+
+FormParsOptional ::= (FormParsOptional) FormParams
+				| (NoFormParsOptional) /* epsilon */;
+				
+	
+StatementList ::= (StatementList) Statement 
+				| 
+				(NoStatementList) /* epsilon */;
+				
+/* method end */
+	
+/* pars type start */
+
+FormPars ::= (FormPars) Pars ParsList;
+		
+Pars ::= (Pars) Type IDENT OptionalBraces;
+
+ParsList ::= (ParsList) ParsList COMMA Pars 
+			|
+			(NoParsList) /* epsilon */;
+
+Type ::= IDENT;
+
+/* pars type end */
+
+Statement ::= OptionalLabelColon SingleStatement |
+			Statements;
+
+OptionalLabelColon ::= (OptionalLabelColon) LabelColon |
+					(NoOptionalLabelColon) /* epsilon */;
+
+LabelColon ::= Label COLON;
+
+SingleStatement ::= DesignatorStatement SEMICOLON
+				| IF
+				
+				
+				
+				;
