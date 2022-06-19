@@ -6,7 +6,6 @@
 package rs.ac.bg.etf.pp1;
 
 import java_cup.runtime.*;
-
 import org.apache.log4j.*;
 import rs.ac.bg.etf.pp1.ast.*;
 
@@ -48,28 +47,26 @@ scan with {:
 	return s;
 :}
 
-terminal Integer NUMBER;
-terminal String IDENT;
 
-terminal PROG, IDENT, LBRACECURLY, RBRACECURLY, CONST, ASSIGN, CHARCONST, BOOLCONST, EQUAL, NOTEQUAL, GREATER, GREATEREQUAL, LOWER, LOWEREQUAL;
-terminal COMMA, CLASS, EXTENDS, RECORD, LPAREN, RPAREN, VOID, PRINT, GOTO, AND, NEW, DOT, PLUS, MINUS, MUL, DIV, MOD;
-terminal IF, SEMICOLON, LPAREN, RPAREN, DO, WHILE, BREAK, CONTINUE, RETURN, READ, LBRACE, RBRACE, INCREMENT, DECREMENT;
-nonterminal Program, DeclarationList, MethodDeclList ConstDecl, VarDecl, ClassDecl, RecordDecl, Type, ConstVal, ConstDeclList;
-nonterminal OptionalBraces, VarDeclList ClassDecl, ConstDeclRepeat, VarDeclRepeat, OptionalExtends, DeclListVar;
+
+terminal IDENT, NUMBER, PROG, LBRACECURLY, RBRACECURLY, CONST, ASSIGN, CHARCONST, BOOLCONST, EQUAL, NOTEQUAL, GREATER, GREATEREQUAL;
+terminal COMMA, CLASS, EXTENDS, RECORD, LPAREN, RPAREN, VOID, PRINT, GOTO, AND, NEW, DOT, PLUS, MINUS, MUL, DIV, MOD, COLON;
+terminal IF, SEMICOLON, DO, WHILE, BREAK, CONTINUE, RETURN, READ, LBRACE, RBRACE, INCREMENT, DECREMENT,LOWER, LOWEREQUAL, OR, ELSE;
+
+nonterminal Program, DeclarationList, ConstDecl, VarDecl, ClassDecl, RecordDecl, Type, ConstVal, ConstDeclList, MethodDecl;
+nonterminal OptionalBraces, VarDeclList, ConstDeclRepeat, VarDeclRepeat, OptionalExtends, DeclListVar, DeclList;
 nonterminal OptConstructorMethod, ConstructorDecl, OptionalConstructorDecl, DeclListMethod, StatementList, TypeOrVoid;
 nonterminal FormParsOptional, Statement, FormPars, Pars, ParsList, SingleStatement, OptionalLabelColon, Label, LabelColon;
 nonterminal Condition, OptionalElse, Designator, DesignatorStatement, DesignatorStatementElements, ExprCommaList;
-nonterminal Expr, OptionalNumConst, Statements, OptionalExpression, Assignop, ActParsOptional, ActPars, CondTerm;
-nonterminal CondTermListOr, CondFactListAnd, CondFact, RelopOprOptional, Relop, OptionalMinus, Term, AddopTermList, Relop;
+nonterminal Expr, OptionalNumConst, Statements, OptionalExpression, ActParsOptional, ActPars, CondTerm;
+nonterminal CondTermListOr, CondFactListAnd, CondFact, RelopOprOptional, Relop, OptionalMinus, Term, AddopTermList;
 nonterminal Addop, Factor, MulopFactorList, Mulop, ActParsBracesOptional, ExprBracesOptional, IdentList, DotOrExpr, Assignop;
-
 
 
 Program ::= (Programc) PROG IDENT DeclarationList LBRACECURLY DeclListMethod RBRACECURLY;
 
 DeclarationList ::= (DeclarationListc) DeclarationList DeclList
-				|
-				(NoDeclarations) /* epsilon */;
+				| (NoDeclarations) /* epsilon */;
 				
 DeclList ::= (DeclListc)  
 				ConstDecl  |
@@ -77,7 +74,7 @@ DeclList ::= (DeclListc)
 				ClassDecl  | 
 				RecordDecl;
 			
-/* const start */	
+
 ConstDecl ::= (ConstDeclc) ConstDeclRepeat ConstDeclList SEMICOLON;
 
 ConstDeclRepeat ::= (ConstDeclRepeatc) CONST Type:constType IDENT ASSIGN ConstVal;
@@ -85,86 +82,66 @@ ConstDeclRepeat ::= (ConstDeclRepeatc) CONST Type:constType IDENT ASSIGN ConstVa
 ConstVal ::= (ConstValc) NUMBER | CHARCONST | BOOLCONST;
 
 ConstDeclList ::= (ConstDeclListc) ConstDeclList ConstDeclRepeat  
-				|
-				(NoConstDecl) /* epsilon */;
+				| (NoConstDecl) /* epsilon */;
 	
-/* const finish */	
 
-/* var start */
 VarDecl ::= (VarDeclc) VarDeclRepeat VarDeclList;
 
 VarDeclRepeat ::= (VarDeclRepeatc) Type:varType IDENT OptionalBraces;
 
 OptionalBraces ::= (OptionalBracesc) LBRACE RBRACE 
-				|
-				(NoOptionalBraces) /* epsilon */;
+				| (NoOptionalBraces) /* epsilon */;
 
 VarDeclList ::= (VarDeclListc) VarDeclList COMMA VarDeclRepeat  
-				|
-				(NoVarDeclList) /* epsilon */;
+				| (NoVarDeclList) /* epsilon */;
 	
-/* var end */
-
-/* class start */
 			
 ClassDecl ::= (ClassDeclc) CLASS IDENT OptionalExtends LBRACECURLY DeclListVar OptConstructorMethod RBRACECURLY;			 
 
 OptionalExtends ::= (OptionalExtendsc) EXTENDS Type;
  
 DeclListVar ::=	(DeclListVarc) DeclListVar VarDecl 
-				|
-				(NoDeclListVar) /* epsilon */;	
+				| (NoDeclListVar) /* epsilon */;	
 
 
 OptConstructorMethod ::= (OptConstructorMethodc) LBRACECURLY OptionalConstructorDecl DeclListMethod RBRACECURLY
-				|
-				(NoOptConstructorMethod) /* epsilon */;	
+				| (NoOptConstructorMethod) /* epsilon */;	
 				
 OptionalConstructorDecl ::= (OptionalConstructorDeclc) ConstructorDecl
-				|
-				(NoOptionalConstructorDecl) /* epsilon */;	
+				| (NoOptionalConstructorDecl) /* epsilon */;	
 				
 DeclListMethod ::= (DeclListMethodc) DeclListMethod MethodDecl 
-				|
-				(NoDeclListMethod) /* epsilon */;	
-
-/* class end */
+				| (NoDeclListMethod) /* epsilon */;	
 
 
 RecordDecl ::= (RecordDeclc) RECORD IDENT LBRACECURLY DeclListVar RBRACECURLY;
 
-ConstructorDecl ::= (ConstructorDeclc) IDENT LPAREN RPAREN DeclListVar LBRACECURLY StatementList RBRACECURLY
+ConstructorDecl ::= (ConstructorDeclc) IDENT LPAREN RPAREN DeclListVar LBRACECURLY StatementList RBRACECURLY;
 
-/* method start */
 
-MethodDecl ::= (MethodDeclc) TypeOrVoid IDENT LPAREN FormParsOptional RPAREN DeclListVar LBRACECURLY StatementList RBRACECURLY
+MethodDecl ::= (MethodDeclc) TypeOrVoid IDENT LPAREN FormParsOptional RPAREN DeclListVar LBRACECURLY StatementList RBRACECURLY;
 
 TypeOrVoid ::= (TypeOrVoidc) Type | VOID;
 
-FormParsOptional ::= (FormParsOptionalc) FormParams
+FormParsOptional ::= (FormParsOptionalc) FormPars
 				| (NoFormParsOptional) /* epsilon */;
 						
-/* method end */
-	
-/* pars type start */
-
+						
 FormPars ::= (FormParsc) Pars ParsList;
 		
 Pars ::= (Parsc) Type IDENT OptionalBraces;
 
 ParsList ::= (ParsListc) ParsList COMMA Pars 
-			|
-			(NoParsList) /* epsilon */;
+			| (NoParsList) /* epsilon */;
 
 Type ::= IDENT;
 
-/* pars type end */
 
-Statement ::= (Statementc) OptionalLabelColon SingleStatement |
-			Statements;
+Statement ::= (Statementc) OptionalLabelColon SingleStatement 
+			| Statements;
 
-OptionalLabelColon ::= (OptionalLabelColonc) LabelColon |
-					(NoOptionalLabelColon) /* epsilon */;
+OptionalLabelColon ::= (OptionalLabelColonc) LabelColon 
+					| (NoOptionalLabelColon) /* epsilon */;
 
 LabelColon ::= (LabelColonc) Label COLON;
 
@@ -192,7 +169,7 @@ Statements ::= (Statementsc) LBRACECURLY StatementList RBRACECURLY;
 StatementList ::= (StatementListc) StatementList Statement
 				| (NoStatementList) /* epsilon */;				
 				
-DesignatorStatement ::= (DesignatorStatementc) Designator DesignatorStatementElements 				
+DesignatorStatement ::= (DesignatorStatementc) Designator DesignatorStatementElements;				
 				
 DesignatorStatementElements ::= (DesignatorStatementElementsc) Assignop Expr
 					| LPAREN ActParsOptional RPAREN 
@@ -200,7 +177,7 @@ DesignatorStatementElements ::= (DesignatorStatementElementsc) Assignop Expr
 					| DECREMENT;				
 
 
-ActParsOptional ::=  (ActParsOptionalc) ActPars 
+ActParsOptional ::= (ActParsOptionalc) ActPars 
 				| (NoActPars) /* epsilon */;
 
 
@@ -226,15 +203,18 @@ RelopOprOptional ::= (RelopOprOptionalc) Relop Expr
 				
 Expr ::= (Exprc) OptionalMinus Term AddopTermList;
 
+OptionalMinus ::= (OptionalMinus) MINUS 
+			 | (NoOptionalMinus) /* epsilon */;
 
 AddopTermList ::= (AddopTermListc) AddopTermList Addop Term
 				| (NoAddopTermList) /* epsilon */;
 
 Term ::= (Termc) Factor MulopFactorList;
 
-MulopFactorList ::= (MulopFactorListc) MulopFactorList Mulop Factor;
+MulopFactorList ::= (MulopFactorListc) MulopFactorList Mulop Factor
+				| (NoMulopFactorList) /* epsilon */;
 
-Factor ::= (Factorcs) Designator ActParsBracesOptional
+Factor ::= (Factorc) Designator ActParsBracesOptional
 		| NUMBER
 		| CHARCONST
 		| BOOLCONST
@@ -254,10 +234,9 @@ IdentList ::= (IdentListc) IdentList DotOrExpr
 		 	| (NoIdentList) /* epsilon */;
 			
 DotOrExpr ::= (DotOrExprc) DOT IDENT 
-			| ExprBracesOptional;
+			| LBRACE Expr RBRACE;
 			
 Label ::= (Labelc) IDENT;
-
 
 Assignop ::= (Assignopc) ASSIGN;
 
@@ -268,10 +247,7 @@ Relop ::= (Relopc) EQUAL
 		| LOWER
 		| LOWEREQUAL;
 		
-		
-		
 Addop ::= (AddOpc) PLUS | MINUS;
-
 
 Mulop ::= (Mulopc) MUL | DIV | MOD;
 
