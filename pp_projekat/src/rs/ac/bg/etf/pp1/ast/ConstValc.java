@@ -1,13 +1,24 @@
 // generated with ast extension for cup
 // version 0.8
-// 19/5/2022 23:5:6
+// 20/5/2022 1:16:5
 
 
 package src.rs.ac.bg.etf.pp1.ast;
 
 public class ConstValc extends ConstVal {
 
-    public ConstValc () {
+    private Integer N1;
+
+    public ConstValc (Integer N1) {
+        this.N1=N1;
+    }
+
+    public Integer getN1() {
+        return N1;
+    }
+
+    public void setN1(Integer N1) {
+        this.N1=N1;
     }
 
     public void accept(Visitor visitor) {
@@ -29,6 +40,9 @@ public class ConstValc extends ConstVal {
         StringBuffer buffer=new StringBuffer();
         buffer.append(tab);
         buffer.append("ConstValc(\n");
+
+        buffer.append(" "+tab+N1);
+        buffer.append("\n");
 
         buffer.append(tab);
         buffer.append(") [ConstValc]");

@@ -1,28 +1,28 @@
 // generated with ast extension for cup
 // version 0.8
-// 19/5/2022 23:5:6
+// 20/5/2022 1:16:5
 
 
 package src.rs.ac.bg.etf.pp1.ast;
 
 public class Statementc extends Statement {
 
-    private OptionalLabelColon OptionalLabelColon;
+    private LabelColon LabelColon;
     private SingleStatement SingleStatement;
 
-    public Statementc (OptionalLabelColon OptionalLabelColon, SingleStatement SingleStatement) {
-        this.OptionalLabelColon=OptionalLabelColon;
-        if(OptionalLabelColon!=null) OptionalLabelColon.setParent(this);
+    public Statementc (LabelColon LabelColon, SingleStatement SingleStatement) {
+        this.LabelColon=LabelColon;
+        if(LabelColon!=null) LabelColon.setParent(this);
         this.SingleStatement=SingleStatement;
         if(SingleStatement!=null) SingleStatement.setParent(this);
     }
 
-    public OptionalLabelColon getOptionalLabelColon() {
-        return OptionalLabelColon;
+    public LabelColon getLabelColon() {
+        return LabelColon;
     }
 
-    public void setOptionalLabelColon(OptionalLabelColon OptionalLabelColon) {
-        this.OptionalLabelColon=OptionalLabelColon;
+    public void setLabelColon(LabelColon LabelColon) {
+        this.LabelColon=LabelColon;
     }
 
     public SingleStatement getSingleStatement() {
@@ -38,18 +38,18 @@ public class Statementc extends Statement {
     }
 
     public void childrenAccept(Visitor visitor) {
-        if(OptionalLabelColon!=null) OptionalLabelColon.accept(visitor);
+        if(LabelColon!=null) LabelColon.accept(visitor);
         if(SingleStatement!=null) SingleStatement.accept(visitor);
     }
 
     public void traverseTopDown(Visitor visitor) {
         accept(visitor);
-        if(OptionalLabelColon!=null) OptionalLabelColon.traverseTopDown(visitor);
+        if(LabelColon!=null) LabelColon.traverseTopDown(visitor);
         if(SingleStatement!=null) SingleStatement.traverseTopDown(visitor);
     }
 
     public void traverseBottomUp(Visitor visitor) {
-        if(OptionalLabelColon!=null) OptionalLabelColon.traverseBottomUp(visitor);
+        if(LabelColon!=null) LabelColon.traverseBottomUp(visitor);
         if(SingleStatement!=null) SingleStatement.traverseBottomUp(visitor);
         accept(visitor);
     }
@@ -59,8 +59,8 @@ public class Statementc extends Statement {
         buffer.append(tab);
         buffer.append("Statementc(\n");
 
-        if(OptionalLabelColon!=null)
-            buffer.append(OptionalLabelColon.toString("  "+tab));
+        if(LabelColon!=null)
+            buffer.append(LabelColon.toString("  "+tab));
         else
             buffer.append(tab+"  null");
         buffer.append("\n");

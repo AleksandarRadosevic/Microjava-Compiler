@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 19/5/2022 23:5:6
+// 20/5/2022 1:16:5
 
 
 package src.rs.ac.bg.etf.pp1.ast;
@@ -8,11 +8,13 @@ package src.rs.ac.bg.etf.pp1.ast;
 public class Parsc extends Pars {
 
     private Type Type;
+    private String I2;
     private OptionalBraces OptionalBraces;
 
-    public Parsc (Type Type, OptionalBraces OptionalBraces) {
+    public Parsc (Type Type, String I2, OptionalBraces OptionalBraces) {
         this.Type=Type;
         if(Type!=null) Type.setParent(this);
+        this.I2=I2;
         this.OptionalBraces=OptionalBraces;
         if(OptionalBraces!=null) OptionalBraces.setParent(this);
     }
@@ -23,6 +25,14 @@ public class Parsc extends Pars {
 
     public void setType(Type Type) {
         this.Type=Type;
+    }
+
+    public String getI2() {
+        return I2;
+    }
+
+    public void setI2(String I2) {
+        this.I2=I2;
     }
 
     public OptionalBraces getOptionalBraces() {
@@ -63,6 +73,9 @@ public class Parsc extends Pars {
             buffer.append(Type.toString("  "+tab));
         else
             buffer.append(tab+"  null");
+        buffer.append("\n");
+
+        buffer.append(" "+tab+I2);
         buffer.append("\n");
 
         if(OptionalBraces!=null)

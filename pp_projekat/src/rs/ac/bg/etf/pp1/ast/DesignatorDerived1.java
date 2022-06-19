@@ -5,24 +5,23 @@
 
 package src.rs.ac.bg.etf.pp1.ast;
 
-public class ExprCommaListc extends ExprCommaList {
+public class DesignatorDerived1 extends Designator {
 
-    private ExprCommaList ExprCommaList;
+    private String I1;
     private Expr Expr;
 
-    public ExprCommaListc (ExprCommaList ExprCommaList, Expr Expr) {
-        this.ExprCommaList=ExprCommaList;
-        if(ExprCommaList!=null) ExprCommaList.setParent(this);
+    public DesignatorDerived1 (String I1, Expr Expr) {
+        this.I1=I1;
         this.Expr=Expr;
         if(Expr!=null) Expr.setParent(this);
     }
 
-    public ExprCommaList getExprCommaList() {
-        return ExprCommaList;
+    public String getI1() {
+        return I1;
     }
 
-    public void setExprCommaList(ExprCommaList ExprCommaList) {
-        this.ExprCommaList=ExprCommaList;
+    public void setI1(String I1) {
+        this.I1=I1;
     }
 
     public Expr getExpr() {
@@ -38,18 +37,15 @@ public class ExprCommaListc extends ExprCommaList {
     }
 
     public void childrenAccept(Visitor visitor) {
-        if(ExprCommaList!=null) ExprCommaList.accept(visitor);
         if(Expr!=null) Expr.accept(visitor);
     }
 
     public void traverseTopDown(Visitor visitor) {
         accept(visitor);
-        if(ExprCommaList!=null) ExprCommaList.traverseTopDown(visitor);
         if(Expr!=null) Expr.traverseTopDown(visitor);
     }
 
     public void traverseBottomUp(Visitor visitor) {
-        if(ExprCommaList!=null) ExprCommaList.traverseBottomUp(visitor);
         if(Expr!=null) Expr.traverseBottomUp(visitor);
         accept(visitor);
     }
@@ -57,12 +53,9 @@ public class ExprCommaListc extends ExprCommaList {
     public String toString(String tab) {
         StringBuffer buffer=new StringBuffer();
         buffer.append(tab);
-        buffer.append("ExprCommaListc(\n");
+        buffer.append("DesignatorDerived1(\n");
 
-        if(ExprCommaList!=null)
-            buffer.append(ExprCommaList.toString("  "+tab));
-        else
-            buffer.append(tab+"  null");
+        buffer.append(" "+tab+I1);
         buffer.append("\n");
 
         if(Expr!=null)
@@ -72,7 +65,7 @@ public class ExprCommaListc extends ExprCommaList {
         buffer.append("\n");
 
         buffer.append(tab);
-        buffer.append(") [ExprCommaListc]");
+        buffer.append(") [DesignatorDerived1]");
         return buffer.toString();
     }
 }

@@ -1,23 +1,33 @@
 // generated with ast extension for cup
 // version 0.8
-// 19/5/2022 23:5:6
+// 20/5/2022 1:16:5
 
 
 package src.rs.ac.bg.etf.pp1.ast;
 
 public class ClassDeclc extends ClassDecl {
 
+    private String I1;
     private OptionalExtends OptionalExtends;
     private DeclListVar DeclListVar;
     private OptConstructorMethod OptConstructorMethod;
 
-    public ClassDeclc (OptionalExtends OptionalExtends, DeclListVar DeclListVar, OptConstructorMethod OptConstructorMethod) {
+    public ClassDeclc (String I1, OptionalExtends OptionalExtends, DeclListVar DeclListVar, OptConstructorMethod OptConstructorMethod) {
+        this.I1=I1;
         this.OptionalExtends=OptionalExtends;
         if(OptionalExtends!=null) OptionalExtends.setParent(this);
         this.DeclListVar=DeclListVar;
         if(DeclListVar!=null) DeclListVar.setParent(this);
         this.OptConstructorMethod=OptConstructorMethod;
         if(OptConstructorMethod!=null) OptConstructorMethod.setParent(this);
+    }
+
+    public String getI1() {
+        return I1;
+    }
+
+    public void setI1(String I1) {
+        this.I1=I1;
     }
 
     public OptionalExtends getOptionalExtends() {
@@ -72,6 +82,9 @@ public class ClassDeclc extends ClassDecl {
         StringBuffer buffer=new StringBuffer();
         buffer.append(tab);
         buffer.append("ClassDeclc(\n");
+
+        buffer.append(" "+tab+I1);
+        buffer.append("\n");
 
         if(OptionalExtends!=null)
             buffer.append(OptionalExtends.toString("  "+tab));

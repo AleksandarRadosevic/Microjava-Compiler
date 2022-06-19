@@ -1,36 +1,34 @@
 // generated with ast extension for cup
 // version 0.8
-// 19/5/2022 23:5:6
+// 20/5/2022 1:16:5
 
 
 package src.rs.ac.bg.etf.pp1.ast;
 
 public class IdentListc extends IdentList {
 
-    private IdentList IdentList;
-    private DotOrExpr DotOrExpr;
+    private String I1;
+    private String I2;
 
-    public IdentListc (IdentList IdentList, DotOrExpr DotOrExpr) {
-        this.IdentList=IdentList;
-        if(IdentList!=null) IdentList.setParent(this);
-        this.DotOrExpr=DotOrExpr;
-        if(DotOrExpr!=null) DotOrExpr.setParent(this);
+    public IdentListc (String I1, String I2) {
+        this.I1=I1;
+        this.I2=I2;
     }
 
-    public IdentList getIdentList() {
-        return IdentList;
+    public String getI1() {
+        return I1;
     }
 
-    public void setIdentList(IdentList IdentList) {
-        this.IdentList=IdentList;
+    public void setI1(String I1) {
+        this.I1=I1;
     }
 
-    public DotOrExpr getDotOrExpr() {
-        return DotOrExpr;
+    public String getI2() {
+        return I2;
     }
 
-    public void setDotOrExpr(DotOrExpr DotOrExpr) {
-        this.DotOrExpr=DotOrExpr;
+    public void setI2(String I2) {
+        this.I2=I2;
     }
 
     public void accept(Visitor visitor) {
@@ -38,19 +36,13 @@ public class IdentListc extends IdentList {
     }
 
     public void childrenAccept(Visitor visitor) {
-        if(IdentList!=null) IdentList.accept(visitor);
-        if(DotOrExpr!=null) DotOrExpr.accept(visitor);
     }
 
     public void traverseTopDown(Visitor visitor) {
         accept(visitor);
-        if(IdentList!=null) IdentList.traverseTopDown(visitor);
-        if(DotOrExpr!=null) DotOrExpr.traverseTopDown(visitor);
     }
 
     public void traverseBottomUp(Visitor visitor) {
-        if(IdentList!=null) IdentList.traverseBottomUp(visitor);
-        if(DotOrExpr!=null) DotOrExpr.traverseBottomUp(visitor);
         accept(visitor);
     }
 
@@ -59,16 +51,10 @@ public class IdentListc extends IdentList {
         buffer.append(tab);
         buffer.append("IdentListc(\n");
 
-        if(IdentList!=null)
-            buffer.append(IdentList.toString("  "+tab));
-        else
-            buffer.append(tab+"  null");
+        buffer.append(" "+tab+I1);
         buffer.append("\n");
 
-        if(DotOrExpr!=null)
-            buffer.append(DotOrExpr.toString("  "+tab));
-        else
-            buffer.append(tab+"  null");
+        buffer.append(" "+tab+I2);
         buffer.append("\n");
 
         buffer.append(tab);

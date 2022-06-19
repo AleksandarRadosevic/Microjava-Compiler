@@ -5,9 +5,9 @@
 
 package src.rs.ac.bg.etf.pp1.ast;
 
-public class ConstValDerived1 extends ConstVal {
+public class NoOptionalMinus extends OptionalMinus {
 
-    public ConstValDerived1 () {
+    public NoOptionalMinus () {
     }
 
     public void accept(Visitor visitor) {
@@ -28,10 +28,10 @@ public class ConstValDerived1 extends ConstVal {
     public String toString(String tab) {
         StringBuffer buffer=new StringBuffer();
         buffer.append(tab);
-        buffer.append("ConstValDerived1(\n");
+        buffer.append("NoOptionalMinus(\n");
 
         buffer.append(tab);
-        buffer.append(") [ConstValDerived1]");
+        buffer.append(") [NoOptionalMinus]");
         return buffer.toString();
     }
 }

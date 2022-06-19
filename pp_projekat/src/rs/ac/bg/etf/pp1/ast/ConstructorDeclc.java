@@ -1,20 +1,30 @@
 // generated with ast extension for cup
 // version 0.8
-// 19/5/2022 23:5:6
+// 20/5/2022 1:16:5
 
 
 package src.rs.ac.bg.etf.pp1.ast;
 
 public class ConstructorDeclc extends ConstructorDecl {
 
+    private String I1;
     private DeclListVar DeclListVar;
     private StatementList StatementList;
 
-    public ConstructorDeclc (DeclListVar DeclListVar, StatementList StatementList) {
+    public ConstructorDeclc (String I1, DeclListVar DeclListVar, StatementList StatementList) {
+        this.I1=I1;
         this.DeclListVar=DeclListVar;
         if(DeclListVar!=null) DeclListVar.setParent(this);
         this.StatementList=StatementList;
         if(StatementList!=null) StatementList.setParent(this);
+    }
+
+    public String getI1() {
+        return I1;
+    }
+
+    public void setI1(String I1) {
+        this.I1=I1;
     }
 
     public DeclListVar getDeclListVar() {
@@ -58,6 +68,9 @@ public class ConstructorDeclc extends ConstructorDecl {
         StringBuffer buffer=new StringBuffer();
         buffer.append(tab);
         buffer.append("ConstructorDeclc(\n");
+
+        buffer.append(" "+tab+I1);
+        buffer.append("\n");
 
         if(DeclListVar!=null)
             buffer.append(DeclListVar.toString("  "+tab));

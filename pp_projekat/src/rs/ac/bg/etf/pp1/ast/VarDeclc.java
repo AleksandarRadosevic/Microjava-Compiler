@@ -1,20 +1,31 @@
 // generated with ast extension for cup
 // version 0.8
-// 19/5/2022 23:5:6
+// 20/5/2022 1:16:5
 
 
 package src.rs.ac.bg.etf.pp1.ast;
 
 public class VarDeclc extends VarDecl {
 
+    private Type Type;
     private VarDeclRepeat VarDeclRepeat;
     private VarDeclList VarDeclList;
 
-    public VarDeclc (VarDeclRepeat VarDeclRepeat, VarDeclList VarDeclList) {
+    public VarDeclc (Type Type, VarDeclRepeat VarDeclRepeat, VarDeclList VarDeclList) {
+        this.Type=Type;
+        if(Type!=null) Type.setParent(this);
         this.VarDeclRepeat=VarDeclRepeat;
         if(VarDeclRepeat!=null) VarDeclRepeat.setParent(this);
         this.VarDeclList=VarDeclList;
         if(VarDeclList!=null) VarDeclList.setParent(this);
+    }
+
+    public Type getType() {
+        return Type;
+    }
+
+    public void setType(Type Type) {
+        this.Type=Type;
     }
 
     public VarDeclRepeat getVarDeclRepeat() {
@@ -38,17 +49,20 @@ public class VarDeclc extends VarDecl {
     }
 
     public void childrenAccept(Visitor visitor) {
+        if(Type!=null) Type.accept(visitor);
         if(VarDeclRepeat!=null) VarDeclRepeat.accept(visitor);
         if(VarDeclList!=null) VarDeclList.accept(visitor);
     }
 
     public void traverseTopDown(Visitor visitor) {
         accept(visitor);
+        if(Type!=null) Type.traverseTopDown(visitor);
         if(VarDeclRepeat!=null) VarDeclRepeat.traverseTopDown(visitor);
         if(VarDeclList!=null) VarDeclList.traverseTopDown(visitor);
     }
 
     public void traverseBottomUp(Visitor visitor) {
+        if(Type!=null) Type.traverseBottomUp(visitor);
         if(VarDeclRepeat!=null) VarDeclRepeat.traverseBottomUp(visitor);
         if(VarDeclList!=null) VarDeclList.traverseBottomUp(visitor);
         accept(visitor);
@@ -58,6 +72,12 @@ public class VarDeclc extends VarDecl {
         StringBuffer buffer=new StringBuffer();
         buffer.append(tab);
         buffer.append("VarDeclc(\n");
+
+        if(Type!=null)
+            buffer.append(Type.toString("  "+tab));
+        else
+            buffer.append(tab+"  null");
+        buffer.append("\n");
 
         if(VarDeclRepeat!=null)
             buffer.append(VarDeclRepeat.toString("  "+tab));

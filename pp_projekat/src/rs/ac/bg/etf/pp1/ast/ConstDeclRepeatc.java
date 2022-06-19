@@ -1,28 +1,27 @@
 // generated with ast extension for cup
 // version 0.8
-// 19/5/2022 23:5:6
+// 20/5/2022 1:16:5
 
 
 package src.rs.ac.bg.etf.pp1.ast;
 
 public class ConstDeclRepeatc extends ConstDeclRepeat {
 
-    private Type Type;
+    private String I1;
     private ConstVal ConstVal;
 
-    public ConstDeclRepeatc (Type Type, ConstVal ConstVal) {
-        this.Type=Type;
-        if(Type!=null) Type.setParent(this);
+    public ConstDeclRepeatc (String I1, ConstVal ConstVal) {
+        this.I1=I1;
         this.ConstVal=ConstVal;
         if(ConstVal!=null) ConstVal.setParent(this);
     }
 
-    public Type getType() {
-        return Type;
+    public String getI1() {
+        return I1;
     }
 
-    public void setType(Type Type) {
-        this.Type=Type;
+    public void setI1(String I1) {
+        this.I1=I1;
     }
 
     public ConstVal getConstVal() {
@@ -38,18 +37,15 @@ public class ConstDeclRepeatc extends ConstDeclRepeat {
     }
 
     public void childrenAccept(Visitor visitor) {
-        if(Type!=null) Type.accept(visitor);
         if(ConstVal!=null) ConstVal.accept(visitor);
     }
 
     public void traverseTopDown(Visitor visitor) {
         accept(visitor);
-        if(Type!=null) Type.traverseTopDown(visitor);
         if(ConstVal!=null) ConstVal.traverseTopDown(visitor);
     }
 
     public void traverseBottomUp(Visitor visitor) {
-        if(Type!=null) Type.traverseBottomUp(visitor);
         if(ConstVal!=null) ConstVal.traverseBottomUp(visitor);
         accept(visitor);
     }
@@ -59,10 +55,7 @@ public class ConstDeclRepeatc extends ConstDeclRepeat {
         buffer.append(tab);
         buffer.append("ConstDeclRepeatc(\n");
 
-        if(Type!=null)
-            buffer.append(Type.toString("  "+tab));
-        else
-            buffer.append(tab+"  null");
+        buffer.append(" "+tab+I1);
         buffer.append("\n");
 
         if(ConstVal!=null)

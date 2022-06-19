@@ -1,16 +1,16 @@
 // generated with ast extension for cup
 // version 0.8
-// 19/5/2022 23:5:6
+// 20/5/2022 1:16:5
 
 
 package src.rs.ac.bg.etf.pp1.ast;
 
-public class Factorcs extends Factor {
+public class Factorc extends Factor {
 
     private Designator Designator;
     private ActParsBracesOptional ActParsBracesOptional;
 
-    public Factorcs (Designator Designator, ActParsBracesOptional ActParsBracesOptional) {
+    public Factorc (Designator Designator, ActParsBracesOptional ActParsBracesOptional) {
         this.Designator=Designator;
         if(Designator!=null) Designator.setParent(this);
         this.ActParsBracesOptional=ActParsBracesOptional;
@@ -57,7 +57,7 @@ public class Factorcs extends Factor {
     public String toString(String tab) {
         StringBuffer buffer=new StringBuffer();
         buffer.append(tab);
-        buffer.append("Factorcs(\n");
+        buffer.append("Factorc(\n");
 
         if(Designator!=null)
             buffer.append(Designator.toString("  "+tab));
@@ -72,7 +72,7 @@ public class Factorcs extends Factor {
         buffer.append("\n");
 
         buffer.append(tab);
-        buffer.append(") [Factorcs]");
+        buffer.append(") [Factorc]");
         return buffer.toString();
     }
 }

@@ -1,25 +1,25 @@
 // generated with ast extension for cup
 // version 0.8
-// 19/5/2022 23:5:6
+// 20/5/2022 1:16:5
 
 
 package src.rs.ac.bg.etf.pp1.ast;
 
 public class StatementDerived1 extends Statement {
 
-    private Statements Statements;
+    private SingleStatement SingleStatement;
 
-    public StatementDerived1 (Statements Statements) {
-        this.Statements=Statements;
-        if(Statements!=null) Statements.setParent(this);
+    public StatementDerived1 (SingleStatement SingleStatement) {
+        this.SingleStatement=SingleStatement;
+        if(SingleStatement!=null) SingleStatement.setParent(this);
     }
 
-    public Statements getStatements() {
-        return Statements;
+    public SingleStatement getSingleStatement() {
+        return SingleStatement;
     }
 
-    public void setStatements(Statements Statements) {
-        this.Statements=Statements;
+    public void setSingleStatement(SingleStatement SingleStatement) {
+        this.SingleStatement=SingleStatement;
     }
 
     public void accept(Visitor visitor) {
@@ -27,16 +27,16 @@ public class StatementDerived1 extends Statement {
     }
 
     public void childrenAccept(Visitor visitor) {
-        if(Statements!=null) Statements.accept(visitor);
+        if(SingleStatement!=null) SingleStatement.accept(visitor);
     }
 
     public void traverseTopDown(Visitor visitor) {
         accept(visitor);
-        if(Statements!=null) Statements.traverseTopDown(visitor);
+        if(SingleStatement!=null) SingleStatement.traverseTopDown(visitor);
     }
 
     public void traverseBottomUp(Visitor visitor) {
-        if(Statements!=null) Statements.traverseBottomUp(visitor);
+        if(SingleStatement!=null) SingleStatement.traverseBottomUp(visitor);
         accept(visitor);
     }
 
@@ -45,8 +45,8 @@ public class StatementDerived1 extends Statement {
         buffer.append(tab);
         buffer.append("StatementDerived1(\n");
 
-        if(Statements!=null)
-            buffer.append(Statements.toString("  "+tab));
+        if(SingleStatement!=null)
+            buffer.append(SingleStatement.toString("  "+tab));
         else
             buffer.append(tab+"  null");
         buffer.append("\n");

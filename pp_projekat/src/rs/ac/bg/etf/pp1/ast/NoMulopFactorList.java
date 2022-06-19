@@ -1,13 +1,13 @@
 // generated with ast extension for cup
 // version 0.8
-// 19/5/2022 23:5:6
+// 20/5/2022 1:16:5
 
 
 package src.rs.ac.bg.etf.pp1.ast;
 
-public class NoOptionalLabelColon extends OptionalLabelColon {
+public class NoMulopFactorList extends MulopFactorList {
 
-    public NoOptionalLabelColon () {
+    public NoMulopFactorList () {
     }
 
     public void accept(Visitor visitor) {
@@ -28,10 +28,10 @@ public class NoOptionalLabelColon extends OptionalLabelColon {
     public String toString(String tab) {
         StringBuffer buffer=new StringBuffer();
         buffer.append(tab);
-        buffer.append("NoOptionalLabelColon(\n");
+        buffer.append("NoMulopFactorList(\n");
 
         buffer.append(tab);
-        buffer.append(") [NoOptionalLabelColon]");
+        buffer.append(") [NoMulopFactorList]");
         return buffer.toString();
     }
 }

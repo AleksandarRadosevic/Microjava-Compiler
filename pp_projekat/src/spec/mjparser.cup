@@ -48,15 +48,16 @@ scan with {:
 :}
 
 
-
-terminal IDENT, NUMBER, PROG, LBRACECURLY, RBRACECURLY, CONST, ASSIGN, CHARCONST, BOOLCONST, EQUAL, NOTEQUAL, GREATER, GREATEREQUAL;
+terminal Integer NUMBER;
+terminal String IDENT;
+terminal PROG, LBRACECURLY, RBRACECURLY, CONST, ASSIGN, CHARCONST, BOOLCONST, EQUAL, NOTEQUAL, GREATER, GREATEREQUAL;
 terminal COMMA, CLASS, EXTENDS, RECORD, LPAREN, RPAREN, VOID, PRINT, GOTO, AND, NEW, DOT, PLUS, MINUS, MUL, DIV, MOD, COLON;
 terminal IF, SEMICOLON, DO, WHILE, BREAK, CONTINUE, RETURN, READ, LBRACE, RBRACE, INCREMENT, DECREMENT,LOWER, LOWEREQUAL, OR, ELSE;
 
 nonterminal Program, DeclarationList, ConstDecl, VarDecl, ClassDecl, RecordDecl, Type, ConstVal, ConstDeclList, MethodDecl;
 nonterminal OptionalBraces, VarDeclList, ConstDeclRepeat, VarDeclRepeat, OptionalExtends, DeclListVar, DeclList;
 nonterminal OptConstructorMethod, ConstructorDecl, OptionalConstructorDecl, DeclListMethod, StatementList, TypeOrVoid;
-nonterminal FormParsOptional, Statement, FormPars, Pars, ParsList, SingleStatement, OptionalLabelColon, Label, LabelColon;
+nonterminal FormParsOptional, Statement, FormPars, Pars, ParsList, SingleStatement, Label, LabelColon;
 nonterminal Condition, OptionalElse, Designator, DesignatorStatement, DesignatorStatementElements, ExprCommaList;
 nonterminal Expr, OptionalNumConst, Statements, OptionalExpression, ActParsOptional, ActPars, CondTerm;
 nonterminal CondTermListOr, CondFactListAnd, CondFact, RelopOprOptional, Relop, OptionalMinus, Term, AddopTermList;
@@ -75,9 +76,9 @@ DeclList ::= (DeclListc)
 				RecordDecl;
 			
 
-ConstDecl ::= (ConstDeclc) ConstDeclRepeat ConstDeclList SEMICOLON;
+ConstDecl ::= (ConstDeclc) CONST Type:constType ConstDeclRepeat ConstDeclList SEMICOLON;
 
-ConstDeclRepeat ::= (ConstDeclRepeatc) CONST Type:constType IDENT ASSIGN ConstVal;
+ConstDeclRepeat ::= (ConstDeclRepeatc) IDENT ASSIGN ConstVal;
 
 ConstVal ::= (ConstValc) NUMBER | CHARCONST | BOOLCONST;
 
@@ -85,9 +86,9 @@ ConstDeclList ::= (ConstDeclListc) ConstDeclList ConstDeclRepeat
 				| (NoConstDecl) /* epsilon */;
 	
 
-VarDecl ::= (VarDeclc) VarDeclRepeat VarDeclList;
+VarDecl ::= (VarDeclc) Type:varType VarDeclRepeat VarDeclList SEMICOLON;
 
-VarDeclRepeat ::= (VarDeclRepeatc) Type:varType IDENT OptionalBraces;
+VarDeclRepeat ::= (VarDeclRepeatc) IDENT OptionalBraces;
 
 OptionalBraces ::= (OptionalBracesc) LBRACE RBRACE 
 				| (NoOptionalBraces) /* epsilon */;
@@ -98,7 +99,8 @@ VarDeclList ::= (VarDeclListc) VarDeclList COMMA VarDeclRepeat
 			
 ClassDecl ::= (ClassDeclc) CLASS IDENT OptionalExtends LBRACECURLY DeclListVar OptConstructorMethod RBRACECURLY;			 
 
-OptionalExtends ::= (OptionalExtendsc) EXTENDS Type;
+OptionalExtends ::= (OptionalExtendsc) EXTENDS Type
+				| (NoOptionalExtendsc) /* epsilon */;
  
 DeclListVar ::=	(DeclListVarc) DeclListVar VarDecl 
 				| (NoDeclListVar) /* epsilon */;	
@@ -134,20 +136,19 @@ Pars ::= (Parsc) Type IDENT OptionalBraces;
 ParsList ::= (ParsListc) ParsList COMMA Pars 
 			| (NoParsList) /* epsilon */;
 
-Type ::= IDENT;
+Type ::= (Typec) IDENT;
 
 
-Statement ::= (Statementc) OptionalLabelColon SingleStatement 
+Statement ::= (Statementc) LabelColon SingleStatement 
+			| SingleStatement
 			| Statements;
 
-OptionalLabelColon ::= (OptionalLabelColonc) LabelColon 
-					| (NoOptionalLabelColon) /* epsilon */;
 
 LabelColon ::= (LabelColonc) Label COLON;
 
 SingleStatement ::= (SingleStatementc) DesignatorStatement SEMICOLON
 				| IF LPAREN Condition RPAREN Statement OptionalElse
-			 	| DO Statement WHILE LPAREN RPAREN Condition SEMICOLON
+			 	| DO Statement WHILE LPAREN Condition RPAREN SEMICOLON
 				| BREAK SEMICOLON
 				| CONTINUE SEMICOLON
 				| RETURN OptionalExpression SEMICOLON
@@ -224,14 +225,16 @@ Factor ::= (Factorc) Designator ActParsBracesOptional
 ActParsBracesOptional ::= (ActParsBracesOptionalc) LPAREN ActParsOptional RPAREN 		
 						| (NoActParsBracesOptional) /* epsilon */;
 		
-ExprBracesOptional ::= (ExprBracesOptionalc) LBRACE Expr RBRACE	
+ExprBracesOptional ::= (ExprBracesOptionalc) LBRACE Expr RBRACE
 					| (NoExprBracesOptional) /* epsilon */;
 					
 					
-Designator ::= (Designatorc) IDENT IdentList;
+Designator ::= (Designatorc) IDENT 
+			| IDENT LBRACE Expr RBRACE
+			| IdentList;
 
-IdentList ::= (IdentListc) IdentList DotOrExpr
-		 	| (NoIdentList) /* epsilon */;
+IdentList ::= (IdentListc) IDENT DOT IDENT
+		 	| IDENT DOT IDENT LBRACE Expr RBRACE;
 			
 DotOrExpr ::= (DotOrExprc) DOT IDENT 
 			| LBRACE Expr RBRACE;

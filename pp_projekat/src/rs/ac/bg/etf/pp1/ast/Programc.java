@@ -1,20 +1,30 @@
 // generated with ast extension for cup
 // version 0.8
-// 19/5/2022 23:5:6
+// 20/5/2022 1:16:5
 
 
 package src.rs.ac.bg.etf.pp1.ast;
 
 public class Programc extends Program {
 
+    private String I1;
     private DeclarationList DeclarationList;
     private DeclListMethod DeclListMethod;
 
-    public Programc (DeclarationList DeclarationList, DeclListMethod DeclListMethod) {
+    public Programc (String I1, DeclarationList DeclarationList, DeclListMethod DeclListMethod) {
+        this.I1=I1;
         this.DeclarationList=DeclarationList;
         if(DeclarationList!=null) DeclarationList.setParent(this);
         this.DeclListMethod=DeclListMethod;
         if(DeclListMethod!=null) DeclListMethod.setParent(this);
+    }
+
+    public String getI1() {
+        return I1;
+    }
+
+    public void setI1(String I1) {
+        this.I1=I1;
     }
 
     public DeclarationList getDeclarationList() {
@@ -58,6 +68,9 @@ public class Programc extends Program {
         StringBuffer buffer=new StringBuffer();
         buffer.append(tab);
         buffer.append("Programc(\n");
+
+        buffer.append(" "+tab+I1);
+        buffer.append("\n");
 
         if(DeclarationList!=null)
             buffer.append(DeclarationList.toString("  "+tab));

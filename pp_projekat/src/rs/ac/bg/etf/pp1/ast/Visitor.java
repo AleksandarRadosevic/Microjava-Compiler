@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 19/5/2022 23:5:6
+// 20/5/2022 1:16:5
 
 
 package src.rs.ac.bg.etf.pp1.ast;
@@ -22,7 +22,6 @@ public interface Visitor {
     public void visit(MulopFactorList MulopFactorList);
     public void visit(ParsList ParsList);
     public void visit(DotOrExpr DotOrExpr);
-    public void visit(OptionalLabelColon OptionalLabelColon);
     public void visit(Pars Pars);
     public void visit(OptionalExtends OptionalExtends);
     public void visit(ActParsBracesOptional ActParsBracesOptional);
@@ -64,7 +63,6 @@ public interface Visitor {
     public void visit(ConstDeclRepeat ConstDeclRepeat);
     public void visit(Program Program);
     public void visit(SingleStatement SingleStatement);
-    public void visit(OptionalMinus OptionalMinus);
     public void visit(CondFactListAnd CondFactListAnd);
     public void visit(FormPars FormPars);
     public void visit(OptionalElse OptionalElse);
@@ -84,8 +82,10 @@ public interface Visitor {
     public void visit(Labelc Labelc);
     public void visit(DotOrExprDerived1 DotOrExprDerived1);
     public void visit(DotOrExprc DotOrExprc);
-    public void visit(NoIdentList NoIdentList);
+    public void visit(IdentListDerived1 IdentListDerived1);
     public void visit(IdentListc IdentListc);
+    public void visit(DesignatorDerived2 DesignatorDerived2);
+    public void visit(DesignatorDerived1 DesignatorDerived1);
     public void visit(Designatorc Designatorc);
     public void visit(NoExprBracesOptional NoExprBracesOptional);
     public void visit(ExprBracesOptionalc ExprBracesOptionalc);
@@ -96,11 +96,14 @@ public interface Visitor {
     public void visit(FactorDerived3 FactorDerived3);
     public void visit(FactorDerived2 FactorDerived2);
     public void visit(FactorDerived1 FactorDerived1);
-    public void visit(Factorcs Factorcs);
+    public void visit(Factorc Factorc);
+    public void visit(NoMulopFactorList NoMulopFactorList);
     public void visit(MulopFactorListc MulopFactorListc);
     public void visit(Termc Termc);
     public void visit(NoAddopTermList NoAddopTermList);
     public void visit(AddopTermListc AddopTermListc);
+    public void visit(NoOptionalMinus NoOptionalMinus);
+    public void visit(OptionalMinus OptionalMinus);
     public void visit(Exprc Exprc);
     public void visit(NoRelopOprOptional NoRelopOprOptional);
     public void visit(RelopOprOptionalc RelopOprOptionalc);
@@ -140,11 +143,10 @@ public interface Visitor {
     public void visit(SingleStatementDerived1 SingleStatementDerived1);
     public void visit(SingleStatementc SingleStatementc);
     public void visit(LabelColonc LabelColonc);
-    public void visit(NoOptionalLabelColon NoOptionalLabelColon);
-    public void visit(OptionalLabelColonc OptionalLabelColonc);
+    public void visit(StatementDerived2 StatementDerived2);
     public void visit(StatementDerived1 StatementDerived1);
     public void visit(Statementc Statementc);
-    public void visit(TypeDerived1 TypeDerived1);
+    public void visit(Typec Typec);
     public void visit(NoParsList NoParsList);
     public void visit(ParsListc ParsListc);
     public void visit(Parsc Parsc);
@@ -164,6 +166,7 @@ public interface Visitor {
     public void visit(OptConstructorMethodc OptConstructorMethodc);
     public void visit(NoDeclListVar NoDeclListVar);
     public void visit(DeclListVarc DeclListVarc);
+    public void visit(NoOptionalExtendsc NoOptionalExtendsc);
     public void visit(OptionalExtendsc OptionalExtendsc);
     public void visit(ClassDeclc ClassDeclc);
     public void visit(NoVarDeclList NoVarDeclList);

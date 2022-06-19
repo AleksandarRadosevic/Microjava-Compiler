@@ -1,13 +1,24 @@
 // generated with ast extension for cup
 // version 0.8
-// 19/5/2022 23:5:6
+// 20/5/2022 1:16:5
 
 
 package src.rs.ac.bg.etf.pp1.ast;
 
 public class DotOrExprc extends DotOrExpr {
 
-    public DotOrExprc () {
+    private String I1;
+
+    public DotOrExprc (String I1) {
+        this.I1=I1;
+    }
+
+    public String getI1() {
+        return I1;
+    }
+
+    public void setI1(String I1) {
+        this.I1=I1;
     }
 
     public void accept(Visitor visitor) {
@@ -29,6 +40,9 @@ public class DotOrExprc extends DotOrExpr {
         StringBuffer buffer=new StringBuffer();
         buffer.append(tab);
         buffer.append("DotOrExprc(\n");
+
+        buffer.append(" "+tab+I1);
+        buffer.append("\n");
 
         buffer.append(tab);
         buffer.append(") [DotOrExprc]");
