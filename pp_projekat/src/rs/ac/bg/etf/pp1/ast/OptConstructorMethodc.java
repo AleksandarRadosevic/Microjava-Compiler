@@ -1,28 +1,28 @@
 // generated with ast extension for cup
 // version 0.8
-// 20/5/2022 1:16:5
+// 20/5/2022 11:7:40
 
 
 package src.rs.ac.bg.etf.pp1.ast;
 
 public class OptConstructorMethodc extends OptConstructorMethod {
 
-    private OptionalConstructorDecl OptionalConstructorDecl;
+    private ConstructorDecl ConstructorDecl;
     private DeclListMethod DeclListMethod;
 
-    public OptConstructorMethodc (OptionalConstructorDecl OptionalConstructorDecl, DeclListMethod DeclListMethod) {
-        this.OptionalConstructorDecl=OptionalConstructorDecl;
-        if(OptionalConstructorDecl!=null) OptionalConstructorDecl.setParent(this);
+    public OptConstructorMethodc (ConstructorDecl ConstructorDecl, DeclListMethod DeclListMethod) {
+        this.ConstructorDecl=ConstructorDecl;
+        if(ConstructorDecl!=null) ConstructorDecl.setParent(this);
         this.DeclListMethod=DeclListMethod;
         if(DeclListMethod!=null) DeclListMethod.setParent(this);
     }
 
-    public OptionalConstructorDecl getOptionalConstructorDecl() {
-        return OptionalConstructorDecl;
+    public ConstructorDecl getConstructorDecl() {
+        return ConstructorDecl;
     }
 
-    public void setOptionalConstructorDecl(OptionalConstructorDecl OptionalConstructorDecl) {
-        this.OptionalConstructorDecl=OptionalConstructorDecl;
+    public void setConstructorDecl(ConstructorDecl ConstructorDecl) {
+        this.ConstructorDecl=ConstructorDecl;
     }
 
     public DeclListMethod getDeclListMethod() {
@@ -38,18 +38,18 @@ public class OptConstructorMethodc extends OptConstructorMethod {
     }
 
     public void childrenAccept(Visitor visitor) {
-        if(OptionalConstructorDecl!=null) OptionalConstructorDecl.accept(visitor);
+        if(ConstructorDecl!=null) ConstructorDecl.accept(visitor);
         if(DeclListMethod!=null) DeclListMethod.accept(visitor);
     }
 
     public void traverseTopDown(Visitor visitor) {
         accept(visitor);
-        if(OptionalConstructorDecl!=null) OptionalConstructorDecl.traverseTopDown(visitor);
+        if(ConstructorDecl!=null) ConstructorDecl.traverseTopDown(visitor);
         if(DeclListMethod!=null) DeclListMethod.traverseTopDown(visitor);
     }
 
     public void traverseBottomUp(Visitor visitor) {
-        if(OptionalConstructorDecl!=null) OptionalConstructorDecl.traverseBottomUp(visitor);
+        if(ConstructorDecl!=null) ConstructorDecl.traverseBottomUp(visitor);
         if(DeclListMethod!=null) DeclListMethod.traverseBottomUp(visitor);
         accept(visitor);
     }
@@ -59,8 +59,8 @@ public class OptConstructorMethodc extends OptConstructorMethod {
         buffer.append(tab);
         buffer.append("OptConstructorMethodc(\n");
 
-        if(OptionalConstructorDecl!=null)
-            buffer.append(OptionalConstructorDecl.toString("  "+tab));
+        if(ConstructorDecl!=null)
+            buffer.append(ConstructorDecl.toString("  "+tab));
         else
             buffer.append(tab+"  null");
         buffer.append("\n");

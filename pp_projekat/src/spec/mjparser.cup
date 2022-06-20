@@ -105,8 +105,8 @@ OptionalExtends ::= (OptionalExtendsc) EXTENDS Type
 DeclListVar ::=	(DeclListVarc) DeclListVar VarDecl 
 				| (NoDeclListVar) /* epsilon */;	
 
-
-OptConstructorMethod ::= (OptConstructorMethodc) LBRACECURLY OptionalConstructorDecl DeclListMethod RBRACECURLY
+/* treba da bude constructordecl optional */
+OptConstructorMethod ::= (OptConstructorMethodc) LBRACECURLY ConstructorDecl DeclListMethod RBRACECURLY
 				| (NoOptConstructorMethod) /* epsilon */;	
 				
 OptionalConstructorDecl ::= (OptionalConstructorDeclc) ConstructorDecl
@@ -147,7 +147,7 @@ Statement ::= (Statementc) LabelColon SingleStatement
 LabelColon ::= (LabelColonc) Label COLON;
 
 SingleStatement ::= (SingleStatementc) DesignatorStatement SEMICOLON
-				| IF LPAREN Condition RPAREN Statement OptionalElse
+				| IF LPAREN Condition RPAREN Statement /* ELSE Statement */
 			 	| DO Statement WHILE LPAREN Condition RPAREN SEMICOLON
 				| BREAK SEMICOLON
 				| CONTINUE SEMICOLON

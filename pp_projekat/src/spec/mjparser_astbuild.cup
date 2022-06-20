@@ -158,8 +158,8 @@ OptionalExtends ::= (OptionalExtendsc) EXTENDS Type:T1 {: RESULT=new OptionalExt
 DeclListVar ::=	(DeclListVarc) DeclListVar:D1 VarDecl:V2 {: RESULT=new DeclListVarc(D1, V2); RESULT.setLine(D1left); :} 
 				| (NoDeclListVar) {: RESULT=new NoDeclListVar(); :} /* epsilon */;	
 
-
-OptConstructorMethod ::= (OptConstructorMethodc) LBRACECURLY OptionalConstructorDecl:O1 DeclListMethod:D2 RBRACECURLY {: RESULT=new OptConstructorMethodc(O1, D2); RESULT.setLine(O1left); :}
+/* treba da bude constructordecl optional */
+OptConstructorMethod ::= (OptConstructorMethodc) LBRACECURLY ConstructorDecl:C1 DeclListMethod:D2 RBRACECURLY {: RESULT=new OptConstructorMethodc(C1, D2); RESULT.setLine(C1left); :}
 				| (NoOptConstructorMethod) {: RESULT=new NoOptConstructorMethod(); :} /* epsilon */;	
 				
 OptionalConstructorDecl ::= (OptionalConstructorDeclc) ConstructorDecl:C1 {: RESULT=new OptionalConstructorDeclc(C1); RESULT.setLine(C1left); :}
@@ -200,7 +200,7 @@ Statement ::= (Statementc) LabelColon:L1 SingleStatement:S2 {: RESULT=new Statem
 LabelColon ::= (LabelColonc) Label:L1 COLON {: RESULT=new LabelColonc(L1); RESULT.setLine(L1left); :};
 
 SingleStatement ::= (SingleStatementc) DesignatorStatement:D1 SEMICOLON {: RESULT=new SingleStatementc(D1); RESULT.setLine(D1left); :}
-				| IF LPAREN Condition:C1 RPAREN Statement:S2 OptionalElse:O3 {: RESULT=new SingleStatementDerived1(C1, S2, O3); RESULT.setLine(C1left); :}
+				| IF LPAREN Condition:C1 RPAREN Statement:S2 {: RESULT=new SingleStatementDerived1(C1, S2); RESULT.setLine(C1left); :} /* ELSE Statement */
 			 	| DO Statement:S1 WHILE LPAREN Condition:C2 RPAREN SEMICOLON {: RESULT=new SingleStatementDerived2(S1, C2); RESULT.setLine(S1left); :}
 				| BREAK SEMICOLON {: RESULT=new SingleStatementDerived3(); :}
 				| CONTINUE SEMICOLON {: RESULT=new SingleStatementDerived4(); :}
