@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 20/5/2022 21:18:47
+// 21/5/2022 0:17:36
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -8,14 +8,14 @@ package rs.ac.bg.etf.pp1.ast;
 public class VarDeclc extends VarDecl {
 
     private Type Type;
-    private String I1;
+    private String varName;
     private OptionalBraces OptionalBraces;
     private VarDeclList VarDeclList;
 
-    public VarDeclc (Type Type, String I1, OptionalBraces OptionalBraces, VarDeclList VarDeclList) {
+    public VarDeclc (Type Type, String varName, OptionalBraces OptionalBraces, VarDeclList VarDeclList) {
         this.Type=Type;
         if(Type!=null) Type.setParent(this);
-        this.I1=I1;
+        this.varName=varName;
         this.OptionalBraces=OptionalBraces;
         if(OptionalBraces!=null) OptionalBraces.setParent(this);
         this.VarDeclList=VarDeclList;
@@ -30,12 +30,12 @@ public class VarDeclc extends VarDecl {
         this.Type=Type;
     }
 
-    public String getI1() {
-        return I1;
+    public String getVarName() {
+        return varName;
     }
 
-    public void setI1(String I1) {
-        this.I1=I1;
+    public void setVarName(String varName) {
+        this.varName=varName;
     }
 
     public OptionalBraces getOptionalBraces() {
@@ -89,7 +89,7 @@ public class VarDeclc extends VarDecl {
             buffer.append(tab+"  null");
         buffer.append("\n");
 
-        buffer.append(" "+tab+I1);
+        buffer.append(" "+tab+varName);
         buffer.append("\n");
 
         if(OptionalBraces!=null)

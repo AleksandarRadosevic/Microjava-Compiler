@@ -61,16 +61,13 @@ terminal PROG, LBRACECURLY, RBRACECURLY, CONST, ASSIGN, EQUAL, NOTEQUAL, GREATER
 terminal COMMA, CLASS, EXTENDS, RECORD, LPAREN, RPAREN, VOID, PRINT, GOTO, AND, NEW, DOT, PLUS, MINUS, MUL, DIV, MOD, COLON;
 terminal IF, SEMICOLON, DO, WHILE, BREAK, CONTINUE, RETURN, READ, LBRACE, RBRACE, INCREMENT, DECREMENT,LOWER, LOWEREQUAL, OR, ELSE;
 
-nonterminal Program Program;
 nonterminal DeclarationList DeclarationList;
 nonterminal ConstDecl ConstDecl;
 nonterminal VarDecl VarDecl;
 nonterminal ClassDecl ClassDecl;
 nonterminal RecordDecl RecordDecl;
-nonterminal Type Type;
 nonterminal ConstVal ConstVal;
 nonterminal ConstDeclList ConstDeclList;
-nonterminal MethodDecl MethodDecl;
 nonterminal OptionalBraces OptionalBraces;
 nonterminal VarDeclList VarDeclList;
 nonterminal OptionalExtends OptionalExtends;
@@ -81,7 +78,6 @@ nonterminal ConstructorDecl ConstructorDecl;
 nonterminal OptionalConstructorDecl OptionalConstructorDecl;
 nonterminal DeclListMethod DeclListMethod;
 nonterminal StatementList StatementList;
-nonterminal TypeOrVoid TypeOrVoid;
 nonterminal FormParsOptional FormParsOptional;
 nonterminal Statement Statement;
 nonterminal FormPars FormPars;
@@ -92,7 +88,6 @@ nonterminal Label Label;
 nonterminal LabelColon LabelColon;
 nonterminal Condition Condition;
 nonterminal OptionalElse OptionalElse;
-nonterminal Designator Designator;
 nonterminal DesignatorStatement DesignatorStatement;
 nonterminal DesignatorStatementElements DesignatorStatementElements;
 nonterminal ExprCommaList ExprCommaList;
@@ -121,10 +116,17 @@ nonterminal IdentList IdentList;
 nonterminal DotOrExpr DotOrExpr;
 nonterminal Assignop Assignop;
 nonterminal ConditionIf ConditionIf;
+
+
+nonterminal rs.etf.pp1.symboltable.concepts.Obj ProgName, Program, MethodTypeName, MethodDecl, Designator;
+nonterminal rs.etf.pp1.symboltable.concepts.Struct Type, TypeOrVoid;
+
 precedence left ELSE;
 
 
-Program ::= (Programc) PROG IDENT:I1 DeclarationList:D2 LBRACECURLY DeclListMethod:D3 RBRACECURLY {: RESULT=new Programc(I1, D2, D3); RESULT.setLine(I1left); :};
+Program ::= (Program) PROG ProgName:p DeclarationList:D1 LBRACECURLY DeclListMethod:D2 RBRACECURLY {: RESULT=new Program(p, D1, D2); RESULT.setLine(pleft); :};
+
+ProgName ::= (ProgName) IDENT:progName {: RESULT=new ProgName(progName); RESULT.setLine(progNameleft); :};
 
 DeclarationList ::= (DeclarationListc) DeclarationList:D1 DeclList:D2 {: RESULT=new DeclarationListc(D1, D2); RESULT.setLine(D1left); :}
 				| (NoDeclarations) {: RESULT=new NoDeclarations(); :} /* epsilon */;
@@ -150,7 +152,7 @@ ConstDeclList ::= (ConstDeclListc) ConstDeclList:C1 COMMA IDENT:I2 ASSIGN ConstV
 				| (NoConstDecl) {: RESULT=new NoConstDecl(); :} /* epsilon */;
 	
 
-VarDecl ::= (VarDeclc) Type:varType IDENT:I1 OptionalBraces:O2 VarDeclList:V3 SEMICOLON {: RESULT=new VarDeclc(varType, I1, O2, V3); RESULT.setLine(varTypeleft); :};
+VarDecl ::= (VarDeclc) Type:varType IDENT:varName OptionalBraces:O1 VarDeclList:V2 SEMICOLON {: RESULT=new VarDeclc(varType, varName, O1, V2); RESULT.setLine(varTypeleft); :};
 
 OptionalBraces ::= (OptionalBracesc) LBRACE RBRACE {: RESULT=new OptionalBracesc(); :} 
 				| (NoOptionalBraces) {: RESULT=new NoOptionalBraces(); :} /* epsilon */;
@@ -183,7 +185,10 @@ RecordDecl ::= (RecordDeclc) RECORD IDENT:I1 LBRACECURLY DeclListVar:D2 RBRACECU
 ConstructorDecl ::= (ConstructorDeclc) IDENT:I1 LPAREN RPAREN DeclListVar:D2 LBRACECURLY StatementList:S3 RBRACECURLY {: RESULT=new ConstructorDeclc(I1, D2, S3); RESULT.setLine(I1left); :};
 
 
-MethodDecl ::= (MethodDeclc) TypeOrVoid:T1 IDENT:I2 LPAREN FormParsOptional:F3  DeclListVar:D4 LBRACECURLY StatementList:S5 RBRACECURLY {: RESULT=new MethodDeclc(T1, I2, F3, D4, S5); RESULT.setLine(T1left); :};
+MethodDecl ::= (MethodDeclc) MethodTypeName:M1 LPAREN FormParsOptional:F2  DeclListVar:D3 LBRACECURLY StatementList:S4 RBRACECURLY {: RESULT=new MethodDeclc(M1, F2, D3, S4); RESULT.setLine(M1left); :};
+
+MethodTypeName ::= (MethodTypeNamec) TypeOrVoid:retType IDENT:methodName {: RESULT=new MethodTypeNamec(retType, methodName); RESULT.setLine(retTypeleft); :};
+
 
 TypeOrVoid ::= (TypeOrVoidc) Type:T1 {: RESULT=new TypeOrVoidc(T1); RESULT.setLine(T1left); :} | VOID {: RESULT=new TypeOrVoidDerived1(); :};
 
@@ -200,7 +205,7 @@ Pars ::= (Parsc) Type:T1 IDENT:I2 OptionalBraces:O3 {: RESULT=new Parsc(T1, I2, 
 ParsList ::= (ParsListc) ParsList:P1 COMMA Pars:P2 {: RESULT=new ParsListc(P1, P2); RESULT.setLine(P1left); :} 
 			| (NoParsList) {: RESULT=new NoParsList(); :} /* epsilon */;
 
-Type ::= (Typec) IDENT:I1 {: RESULT=new Typec(I1); RESULT.setLine(I1left); :};
+Type ::= (Typec) IDENT:typeName {: RESULT=new Typec(typeName); RESULT.setLine(typeNameleft); :};
 
 
 Statement ::= (Statementc) LabelColon:L1 SingleStatement:S2 {: RESULT=new Statementc(L1, S2); RESULT.setLine(L1left); :} 

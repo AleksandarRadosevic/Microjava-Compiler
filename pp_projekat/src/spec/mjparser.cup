@@ -61,19 +61,26 @@ terminal PROG, LBRACECURLY, RBRACECURLY, CONST, ASSIGN, EQUAL, NOTEQUAL, GREATER
 terminal COMMA, CLASS, EXTENDS, RECORD, LPAREN, RPAREN, VOID, PRINT, GOTO, AND, NEW, DOT, PLUS, MINUS, MUL, DIV, MOD, COLON;
 terminal IF, SEMICOLON, DO, WHILE, BREAK, CONTINUE, RETURN, READ, LBRACE, RBRACE, INCREMENT, DECREMENT,LOWER, LOWEREQUAL, OR, ELSE;
 
-nonterminal Program, DeclarationList, ConstDecl, VarDecl, ClassDecl, RecordDecl, Type, ConstVal, ConstDeclList, MethodDecl;
+nonterminal DeclarationList, ConstDecl, VarDecl, ClassDecl, RecordDecl, ConstVal, ConstDeclList;
 nonterminal OptionalBraces, VarDeclList, OptionalExtends, DeclListVar, DeclList;
-nonterminal OptConstructorMethod, ConstructorDecl, OptionalConstructorDecl, DeclListMethod, StatementList, TypeOrVoid;
+nonterminal OptConstructorMethod, ConstructorDecl, OptionalConstructorDecl, DeclListMethod, StatementList;
 nonterminal FormParsOptional, Statement, FormPars, Pars, ParsList, SingleStatement, Label, LabelColon;
-nonterminal Condition, OptionalElse, Designator, DesignatorStatement, DesignatorStatementElements, ExprCommaList;
+nonterminal Condition, OptionalElse, DesignatorStatement, DesignatorStatementElements, ExprCommaList;
 nonterminal Expr, OptionalNumConst, Statements, OptionalExpression, ActParsOptional, ActPars, CondTerm;
 nonterminal CondTermListOr, CondFactListAnd, CondFact, RelopOprOptional, Relop, OptionalMinus, Term, AddopTermList;
 nonterminal Addop, Factor, MulopFactorList, Mulop, ActParsBracesOptional, ExprBracesOptional, IdentList, DotOrExpr, Assignop;
 nonterminal ConditionIf;
+
+
+nonterminal rs.etf.pp1.symboltable.concepts.Obj ProgName, Program, MethodTypeName, MethodDecl, Designator;
+nonterminal rs.etf.pp1.symboltable.concepts.Struct Type, TypeOrVoid;
+
 precedence left ELSE;
 
 
-Program ::= (Programc) PROG IDENT DeclarationList LBRACECURLY DeclListMethod RBRACECURLY;
+Program ::= (Program) PROG ProgName:p DeclarationList LBRACECURLY DeclListMethod RBRACECURLY;
+
+ProgName ::= (ProgName) IDENT:progName;
 
 DeclarationList ::= (DeclarationListc) DeclarationList DeclList
 				| (NoDeclarations) /* epsilon */;
@@ -99,7 +106,7 @@ ConstDeclList ::= (ConstDeclListc) ConstDeclList COMMA IDENT ASSIGN ConstVal
 				| (NoConstDecl) /* epsilon */;
 	
 
-VarDecl ::= (VarDeclc) Type:varType IDENT OptionalBraces VarDeclList SEMICOLON;
+VarDecl ::= (VarDeclc) Type:varType IDENT:varName OptionalBraces VarDeclList SEMICOLON;
 
 OptionalBraces ::= (OptionalBracesc) LBRACE RBRACE 
 				| (NoOptionalBraces) /* epsilon */;
@@ -132,7 +139,10 @@ RecordDecl ::= (RecordDeclc) RECORD IDENT LBRACECURLY DeclListVar RBRACECURLY;
 ConstructorDecl ::= (ConstructorDeclc) IDENT LPAREN RPAREN DeclListVar LBRACECURLY StatementList RBRACECURLY;
 
 
-MethodDecl ::= (MethodDeclc) TypeOrVoid IDENT LPAREN FormParsOptional  DeclListVar LBRACECURLY StatementList RBRACECURLY;
+MethodDecl ::= (MethodDeclc) MethodTypeName LPAREN FormParsOptional  DeclListVar LBRACECURLY StatementList RBRACECURLY;
+
+MethodTypeName ::= (MethodTypeNamec) TypeOrVoid:retType IDENT:methodName;
+
 
 TypeOrVoid ::= (TypeOrVoidc) Type | VOID;
 
@@ -149,7 +159,7 @@ Pars ::= (Parsc) Type IDENT OptionalBraces;
 ParsList ::= (ParsListc) ParsList COMMA Pars 
 			| (NoParsList) /* epsilon */;
 
-Type ::= (Typec) IDENT;
+Type ::= (Typec) IDENT:typeName;
 
 
 Statement ::= (Statementc) LabelColon SingleStatement 
@@ -249,8 +259,8 @@ ExprBracesOptional ::= (ExprBracesOptionalc) LBRACE Expr RBRACE
 					| (NoExprBracesOptional) /* epsilon */;
 					
 					
-Designator ::= (Designatorc) IDENT 
-			| IDENT LBRACE Expr RBRACE
+Designator ::= (Designatorc) IDENT:name 
+			| IDENT:name LBRACE Expr RBRACE
 			| IdentList;
 
 IdentList ::= (IdentListc) IDENT DOT IDENT

@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 20/5/2022 21:18:47
+// 21/5/2022 0:17:36
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -11,11 +11,11 @@ public interface Visitor {
     public void visit(ActParsOptional ActParsOptional);
     public void visit(OptionalNumConst OptionalNumConst);
     public void visit(DeclListVar DeclListVar);
-    public void visit(Mulop Mulop);
     public void visit(MethodDecl MethodDecl);
+    public void visit(Mulop Mulop);
     public void visit(ConstructorDecl ConstructorDecl);
-    public void visit(ExprCommaList ExprCommaList);
     public void visit(DeclListMethod DeclListMethod);
+    public void visit(ExprCommaList ExprCommaList);
     public void visit(Relop Relop);
     public void visit(Assignop Assignop);
     public void visit(LabelColon LabelColon);
@@ -47,10 +47,11 @@ public interface Visitor {
     public void visit(Label Label);
     public void visit(OptionalConstructorDecl OptionalConstructorDecl);
     public void visit(VarDeclList VarDeclList);
-    public void visit(Expr Expr);
     public void visit(ConstVal ConstVal);
+    public void visit(Expr Expr);
     public void visit(ActPars ActPars);
     public void visit(TypeOrVoid TypeOrVoid);
+    public void visit(MethodTypeName MethodTypeName);
     public void visit(DesignatorStatement DesignatorStatement);
     public void visit(Statement Statement);
     public void visit(VarDecl VarDecl);
@@ -60,7 +61,6 @@ public interface Visitor {
     public void visit(ConstDecl ConstDecl);
     public void visit(CondFact CondFact);
     public void visit(OptionalExpression OptionalExpression);
-    public void visit(Program Program);
     public void visit(SingleStatement SingleStatement);
     public void visit(CondFactListAnd CondFactListAnd);
     public void visit(FormPars FormPars);
@@ -159,6 +159,7 @@ public interface Visitor {
     public void visit(FormParsOptionalc FormParsOptionalc);
     public void visit(TypeOrVoidDerived1 TypeOrVoidDerived1);
     public void visit(TypeOrVoidc TypeOrVoidc);
+    public void visit(MethodTypeNamec MethodTypeNamec);
     public void visit(MethodDeclc MethodDeclc);
     public void visit(ConstructorDeclc ConstructorDeclc);
     public void visit(RecordDeclc RecordDeclc);
@@ -192,6 +193,7 @@ public interface Visitor {
     public void visit(DeclListc DeclListc);
     public void visit(NoDeclarations NoDeclarations);
     public void visit(DeclarationListc DeclarationListc);
-    public void visit(Programc Programc);
+    public void visit(ProgName ProgName);
+    public void visit(Program Program);
 
 }

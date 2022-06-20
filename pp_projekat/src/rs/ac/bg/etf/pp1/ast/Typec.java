@@ -1,24 +1,24 @@
 // generated with ast extension for cup
 // version 0.8
-// 20/5/2022 21:18:47
+// 21/5/2022 0:17:36
 
 
 package rs.ac.bg.etf.pp1.ast;
 
 public class Typec extends Type {
 
-    private String I1;
+    private String typeName;
 
-    public Typec (String I1) {
-        this.I1=I1;
+    public Typec (String typeName) {
+        this.typeName=typeName;
     }
 
-    public String getI1() {
-        return I1;
+    public String getTypeName() {
+        return typeName;
     }
 
-    public void setI1(String I1) {
-        this.I1=I1;
+    public void setTypeName(String typeName) {
+        this.typeName=typeName;
     }
 
     public void accept(Visitor visitor) {
@@ -41,7 +41,7 @@ public class Typec extends Type {
         buffer.append(tab);
         buffer.append("Typec(\n");
 
-        buffer.append(" "+tab+I1);
+        buffer.append(" "+tab+typeName);
         buffer.append("\n");
 
         buffer.append(tab);
