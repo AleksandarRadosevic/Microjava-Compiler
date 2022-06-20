@@ -12,7 +12,7 @@ import rs.ac.bg.etf.pp1.ast.*;
 parser code {:
 
 	Logger log = Logger.getLogger(getClass());
-   
+   	int lineDetected;
    
     // slede redefinisani metodi za prijavu gresaka radi izmene teksta poruke
      
@@ -31,14 +31,19 @@ parser code {:
 
     public void report_error(String message, Object info) {
     	StringBuilder msg = new StringBuilder(message); 
-    	if (info instanceof Symbol)
+    	if (info instanceof Symbol){
             msg.append (" na liniji ").append(((Symbol)info).left);
+            lineDetected = ((Symbol)info).left;
+        }
         log.error(msg.toString());
     }
 
 
 :}
 
+init with {:
+	lineDetected = 0;
+:}
 
 scan with {:
 	Symbol s = this.getScanner().next_token();
@@ -115,7 +120,7 @@ nonterminal ExprBracesOptional ExprBracesOptional;
 nonterminal IdentList IdentList;
 nonterminal DotOrExpr DotOrExpr;
 nonterminal Assignop Assignop;
-
+nonterminal ConditionIf ConditionIf;
 precedence left ELSE;
 
 
@@ -133,13 +138,15 @@ DeclList ::= (DeclListc)
 
 ConstDecl ::= (ConstDeclc) CONST Type:constType IDENT:I1 ASSIGN ConstVal:C2 ConstDeclList:C3 SEMICOLON {: RESULT=new ConstDeclc(constType, I1, C2, C3); RESULT.setLine(constTypeleft); :}
 			| (ErrorConstDeclEnd) error SEMICOLON:l
-		    {: parser.report_error("Izvrsen oporavak do , u liniji " + lleft, null);  :} {: RESULT=new ErrorConstDeclEnd(); :}
+		    {: parser.report_error("Izvrsen oporavak do ; u liniji " + lleft, null);  :} {: RESULT=new ErrorConstDeclEnd(); :}
 		    ;
 
 
 ConstVal ::= (ConstValc) NUMBER:N1 {: RESULT=new ConstValc(N1); RESULT.setLine(N1left); :} | CHARCONST:C1 {: RESULT=new ConstValDerived1(C1); RESULT.setLine(C1left); :} | BOOLCONST:B1 {: RESULT=new ConstValDerived2(B1); RESULT.setLine(B1left); :};
 
 ConstDeclList ::= (ConstDeclListc) ConstDeclList:C1 COMMA IDENT:I2 ASSIGN ConstVal:C3 {: RESULT=new ConstDeclListc(C1, I2, C3); RESULT.setLine(C1left); :}  
+				| (ErrorComma) error
+		    	{: parser.report_error("Izvrsen oporavak do , u okviru definisanje globalnih promenljivih ", null);  :} {: RESULT=new ErrorComma(); :}
 				| (NoConstDecl) {: RESULT=new NoConstDecl(); :} /* epsilon */;
 	
 
@@ -176,15 +183,17 @@ RecordDecl ::= (RecordDeclc) RECORD IDENT:I1 LBRACECURLY DeclListVar:D2 RBRACECU
 ConstructorDecl ::= (ConstructorDeclc) IDENT:I1 LPAREN RPAREN DeclListVar:D2 LBRACECURLY StatementList:S3 RBRACECURLY {: RESULT=new ConstructorDeclc(I1, D2, S3); RESULT.setLine(I1left); :};
 
 
-MethodDecl ::= (MethodDeclc) TypeOrVoid:T1 IDENT:I2 LPAREN FormParsOptional:F3 RPAREN DeclListVar:D4 LBRACECURLY StatementList:S5 RBRACECURLY {: RESULT=new MethodDeclc(T1, I2, F3, D4, S5); RESULT.setLine(T1left); :};
+MethodDecl ::= (MethodDeclc) TypeOrVoid:T1 IDENT:I2 LPAREN FormParsOptional:F3  DeclListVar:D4 LBRACECURLY StatementList:S5 RBRACECURLY {: RESULT=new MethodDeclc(T1, I2, F3, D4, S5); RESULT.setLine(T1left); :};
 
 TypeOrVoid ::= (TypeOrVoidc) Type:T1 {: RESULT=new TypeOrVoidc(T1); RESULT.setLine(T1left); :} | VOID {: RESULT=new TypeOrVoidDerived1(); :};
 
 FormParsOptional ::= (FormParsOptionalc) FormPars:F1 {: RESULT=new FormParsOptionalc(F1); RESULT.setLine(F1left); :}
-				| (NoFormParsOptional) {: RESULT=new NoFormParsOptional(); :} /* epsilon */;
+				| RPAREN {: RESULT=new FormParsOptionalDerived1(); :};
 						
 						
-FormPars ::= (FormParsc) Pars:P1 ParsList:P2 {: RESULT=new FormParsc(P1, P2); RESULT.setLine(P1left); :};
+FormPars ::= (FormParsc) Pars:P1 ParsList:P2 RPAREN {: RESULT=new FormParsc(P1, P2); RESULT.setLine(P1left); :}
+			| (ErrorFormPars) error RPAREN:l
+		   	{: parser.report_error("Izvrsen oporavak do ) u liniji "+ lleft, null);  :} {: RESULT=new ErrorFormPars(); :};
 		
 Pars ::= (Parsc) Type:T1 IDENT:I2 OptionalBraces:O3 {: RESULT=new Parsc(T1, I2, O3); RESULT.setLine(T1left); :};
 
@@ -196,7 +205,7 @@ Type ::= (Typec) IDENT:I1 {: RESULT=new Typec(I1); RESULT.setLine(I1left); :};
 
 Statement ::= (Statementc) LabelColon:L1 SingleStatement:S2 {: RESULT=new Statementc(L1, S2); RESULT.setLine(L1left); :} 
 			| (ErrorStmt) error SEMICOLON:l
-		   	{: parser.report_error("Izvrsen oporavak1 do ; u liniji " + lleft, null);  :} {: RESULT=new ErrorStmt(); :}
+		   	{: parser.report_error("Izvrsen oporavak do ; u liniji " + lleft, null);  :} {: RESULT=new ErrorStmt(); :}
 			| SingleStatement:S1 {: RESULT=new StatementDerived1(S1); RESULT.setLine(S1left); :}
 			| Statements:S1 {: RESULT=new StatementDerived2(S1); RESULT.setLine(S1left); :};
 			
@@ -205,7 +214,8 @@ Statement ::= (Statementc) LabelColon:L1 SingleStatement:S2 {: RESULT=new Statem
 LabelColon ::= (LabelColonc) Label:L1 COLON {: RESULT=new LabelColonc(L1); RESULT.setLine(L1left); :};
 
 SingleStatement ::= (SingleStatementc) DesignatorStatement:D1 SEMICOLON {: RESULT=new SingleStatementc(D1); RESULT.setLine(D1left); :}
-				| (IfStmt) IF LPAREN Condition:C1 RPAREN Statement:S2 ELSE Statement:S3 {: RESULT=new IfStmt(C1, S2, S3); RESULT.setLine(C1left); :} 
+				| (IfStmt) IF LPAREN ConditionIf:C1 Statement:S2 ELSE Statement:S3 {: RESULT=new IfStmt(C1, S2, S3); RESULT.setLine(C1left); :} 
+				| (NoElseStmt) IF LPAREN ConditionIf:C1 Statement:S2 {: RESULT=new NoElseStmt(C1, S2); RESULT.setLine(C1left); :}
 			 	| (DoStmt) DO Statement:S1 WHILE LPAREN Condition:C2 RPAREN SEMICOLON {: RESULT=new DoStmt(S1, C2); RESULT.setLine(S1left); :}
 				| (BreakStmt) BREAK SEMICOLON {: RESULT=new BreakStmt(); :}
 				| (ContinueStmt) CONTINUE SEMICOLON {: RESULT=new ContinueStmt(); :}
@@ -245,6 +255,9 @@ ActPars ::= (ActParsc) Expr:E1 ExprCommaList:E2 {: RESULT=new ActParsc(E1, E2); 
 ExprCommaList ::= (ExprCommaListc) ExprCommaList:E1 COMMA Expr:E2 {: RESULT=new ExprCommaListc(E1, E2); RESULT.setLine(E1left); :} 
 				| (NoExprCommaList) {: RESULT=new NoExprCommaList(); :} /* epsilon */;
 
+ConditionIf ::= (ConditionIfc) CondTerm:C1 CondTermListOr:C2 RPAREN {: RESULT=new ConditionIfc(C1, C2); RESULT.setLine(C1left); :}
+			| (ErrorConditionIf) error RPAREN
+		   	{: parser.report_error("Izvrsen oporavak do ) u liniji " + parser.lineDetected, null);  :} {: RESULT=new ErrorConditionIf(); :};
 
 Condition ::= (Conditionc) CondTerm:C1 CondTermListOr:C2 {: RESULT=new Conditionc(C1, C2); RESULT.setLine(C1left); :};
 CondTermListOr ::= (CondTermListOrc) CondTermListOr:C1 OR CondTerm:C2 {: RESULT=new CondTermListOrc(C1, C2); RESULT.setLine(C1left); :}

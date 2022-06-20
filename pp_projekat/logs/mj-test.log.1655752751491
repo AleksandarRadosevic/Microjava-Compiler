@@ -1,0 +1,267 @@
+INFO  21:18:59,293 - Compiling source file: C:\Users\Aleksandar\Desktop\PP\projekat\PP_Projekat\pp_projekat\test\program.mj
+INFO  21:18:59,333 - #6 program
+INFO  21:18:59,333 - #4 MJProgram
+INFO  21:18:59,333 - #9 const
+INFO  21:18:59,333 - #4 int
+INFO  21:18:59,334 - #4 a
+INFO  21:18:59,334 - #10 =
+INFO  21:18:59,334 - #2 2
+INFO  21:18:59,334 - #18 ,
+INFO  21:18:59,334 - #4 x
+INFO  21:18:59,334 - #10 =
+INFO  21:18:59,335 - #2 3
+INFO  21:18:59,335 - #18 ,
+INFO  21:18:59,335 - #4 b
+INFO  21:18:59,335 - #10 =
+INFO  21:18:59,335 - #2 4
+INFO  21:18:59,335 - #18 ,
+INFO  21:18:59,335 - #4 c
+INFO  21:18:59,335 - #10 =
+INFO  21:18:59,335 - #2 6
+INFO  21:18:59,335 - #37 ;
+INFO  21:18:59,335 - #4 int
+INFO  21:18:59,336 - #4 y
+INFO  21:18:59,336 - #37 ;
+INFO  21:18:59,337 - #7 {
+INFO  21:18:59,338 - #4 int
+INFO  21:18:59,339 - #4 main
+INFO  21:18:59,339 - #22 (
+INFO  21:18:59,339 - #4 int
+INFO  21:18:59,339 - #4 a
+INFO  21:18:59,339 - #23 )
+INFO  21:18:59,340 - #7 {
+INFO  21:18:59,340 - #25 print
+INFO  21:18:59,341 - #22 (
+INFO  21:18:59,341 - #2 1
+INFO  21:18:59,342 - #23 )
+INFO  21:18:59,343 - #37 ;
+INFO  21:18:59,343 - #36 if
+INFO  21:18:59,344 - #22 (
+INFO  21:18:59,344 - #4 x
+INFO  21:18:59,344 - #11 ==
+INFO  21:18:59,345 - #2 2
+INFO  21:18:59,345 - #4 a
+ERROR 21:18:59,346 - 
+Sintaksna greska na liniji 6
+INFO  21:18:59,346 - #23 )
+INFO  21:18:59,346 - #4 x
+INFO  21:18:59,346 - #10 =
+INFO  21:18:59,346 - #4 y
+ERROR 21:18:59,347 - Izvrsen oporavak do ) u liniji 5
+INFO  21:18:59,348 - #30 +
+INFO  21:18:59,349 - #2 5
+INFO  21:18:59,349 - #37 ;
+INFO  21:18:59,350 - #51 else
+INFO  21:18:59,350 - #4 x
+INFO  21:18:59,350 - #10 =
+INFO  21:18:59,350 - #2 4
+INFO  21:18:59,350 - #37 ;
+INFO  21:18:59,350 - #25 print
+INFO  21:18:59,350 - #22 (
+INFO  21:18:59,350 - #2 2
+INFO  21:18:59,350 - #23 )
+INFO  21:18:59,350 - #37 ;
+INFO  21:18:59,350 - #8 }
+INFO  21:18:59,350 - #8 }
+INFO  21:18:59,351 - Programc(
+ MJProgram
+  DeclarationListc(
+    DeclarationListc(
+      NoDeclarations(
+      ) [NoDeclarations]
+      DeclListc(
+        ConstDeclc(
+          Typec(
+           int
+          ) [Typec]
+         a
+          ConstValc(
+           2
+          ) [ConstValc]
+          ConstDeclListc(
+            ConstDeclListc(
+              ConstDeclListc(
+                NoConstDecl(
+                ) [NoConstDecl]
+               x
+                ConstValc(
+                 3
+                ) [ConstValc]
+              ) [ConstDeclListc]
+             b
+              ConstValc(
+               4
+              ) [ConstValc]
+            ) [ConstDeclListc]
+           c
+            ConstValc(
+             6
+            ) [ConstValc]
+          ) [ConstDeclListc]
+        ) [ConstDeclc]
+      ) [DeclListc]
+    ) [DeclarationListc]
+    DeclListDerived1(
+      VarDeclc(
+        Typec(
+         int
+        ) [Typec]
+       y
+        NoOptionalBraces(
+        ) [NoOptionalBraces]
+        NoVarDeclList(
+        ) [NoVarDeclList]
+      ) [VarDeclc]
+    ) [DeclListDerived1]
+  ) [DeclarationListc]
+  DeclListMethodc(
+    NoDeclListMethod(
+    ) [NoDeclListMethod]
+    MethodDeclc(
+      TypeOrVoidc(
+        Typec(
+         int
+        ) [Typec]
+      ) [TypeOrVoidc]
+     main
+      FormParsOptionalc(
+        FormParsc(
+          Parsc(
+            Typec(
+             int
+            ) [Typec]
+           a
+            NoOptionalBraces(
+            ) [NoOptionalBraces]
+          ) [Parsc]
+          NoParsList(
+          ) [NoParsList]
+        ) [FormParsc]
+      ) [FormParsOptionalc]
+      NoDeclListVar(
+      ) [NoDeclListVar]
+      StatementListc(
+        StatementListc(
+          StatementListc(
+            NoStatementList(
+            ) [NoStatementList]
+            StatementDerived1(
+              PrintStmt(
+                Exprc(
+                  NoOptionalMinus(
+                  ) [NoOptionalMinus]
+                  Termc(
+                    FactorDerived1(
+                     1
+                    ) [FactorDerived1]
+                    NoMulopFactorList(
+                    ) [NoMulopFactorList]
+                  ) [Termc]
+                  NoAddopTermList(
+                  ) [NoAddopTermList]
+                ) [Exprc]
+                NoOptionalNumConst(
+                ) [NoOptionalNumConst]
+              ) [PrintStmt]
+            ) [StatementDerived1]
+          ) [StatementListc]
+          StatementDerived1(
+            IfStmt(
+              ErrorConditionIf(
+              ) [ErrorConditionIf]
+              StatementDerived1(
+                SingleStatementc(
+                  DesignatorStatementc(
+                    Designatorc(
+                     x
+                    ) [Designatorc]
+                    DesignatorStatementElementsc(
+                      Assignopc(
+                      ) [Assignopc]
+                      Exprc(
+                        NoOptionalMinus(
+                        ) [NoOptionalMinus]
+                        Termc(
+                          Factorc(
+                            Designatorc(
+                             y
+                            ) [Designatorc]
+                            NoActParsBracesOptional(
+                            ) [NoActParsBracesOptional]
+                          ) [Factorc]
+                          NoMulopFactorList(
+                          ) [NoMulopFactorList]
+                        ) [Termc]
+                        AddopTermListc(
+                          NoAddopTermList(
+                          ) [NoAddopTermList]
+                          AddOpc(
+                          ) [AddOpc]
+                          Termc(
+                            FactorDerived1(
+                             5
+                            ) [FactorDerived1]
+                            NoMulopFactorList(
+                            ) [NoMulopFactorList]
+                          ) [Termc]
+                        ) [AddopTermListc]
+                      ) [Exprc]
+                    ) [DesignatorStatementElementsc]
+                  ) [DesignatorStatementc]
+                ) [SingleStatementc]
+              ) [StatementDerived1]
+              StatementDerived1(
+                SingleStatementc(
+                  DesignatorStatementc(
+                    Designatorc(
+                     x
+                    ) [Designatorc]
+                    DesignatorStatementElementsc(
+                      Assignopc(
+                      ) [Assignopc]
+                      Exprc(
+                        NoOptionalMinus(
+                        ) [NoOptionalMinus]
+                        Termc(
+                          FactorDerived1(
+                           4
+                          ) [FactorDerived1]
+                          NoMulopFactorList(
+                          ) [NoMulopFactorList]
+                        ) [Termc]
+                        NoAddopTermList(
+                        ) [NoAddopTermList]
+                      ) [Exprc]
+                    ) [DesignatorStatementElementsc]
+                  ) [DesignatorStatementc]
+                ) [SingleStatementc]
+              ) [StatementDerived1]
+            ) [IfStmt]
+          ) [StatementDerived1]
+        ) [StatementListc]
+        StatementDerived1(
+          PrintStmt(
+            Exprc(
+              NoOptionalMinus(
+              ) [NoOptionalMinus]
+              Termc(
+                FactorDerived1(
+                 2
+                ) [FactorDerived1]
+                NoMulopFactorList(
+                ) [NoMulopFactorList]
+              ) [Termc]
+              NoAddopTermList(
+              ) [NoAddopTermList]
+            ) [Exprc]
+            NoOptionalNumConst(
+            ) [NoOptionalNumConst]
+          ) [PrintStmt]
+        ) [StatementDerived1]
+      ) [StatementListc]
+    ) [MethodDeclc]
+  ) [DeclListMethodc]
+) [Programc]
+INFO  21:18:59,352 - ===================================
+INFO  21:18:59,354 -  Print count calls = 2
+INFO  21:18:59,354 -  Deklarisanih promenljivih ima = 1

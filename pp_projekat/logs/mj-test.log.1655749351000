@@ -1,0 +1,191 @@
+INFO  20:22:14,018 - Compiling source file: C:\Users\Aleksandar\Desktop\PP\projekat\PP_Projekat\pp_projekat\test\program.mj
+INFO  20:22:14,057 - #6 program
+INFO  20:22:14,057 - #4 MJProgram
+INFO  20:22:14,057 - #9 const
+INFO  20:22:14,057 - #4 int
+INFO  20:22:14,057 - #4 x
+INFO  20:22:14,058 - #10 =
+INFO  20:22:14,058 - #2 2
+INFO  20:22:14,058 - #29 .
+ERROR 20:22:14,058 - 
+Sintaksna greska na liniji 2
+INFO  20:22:14,058 - #2 1
+INFO  20:22:14,058 - #18 ,
+INFO  20:22:14,058 - #4 a
+INFO  20:22:14,058 - #10 =
+INFO  20:22:14,059 - #2 3
+INFO  20:22:14,059 - #18 ,
+INFO  20:22:14,059 - #4 b
+INFO  20:22:14,059 - #10 =
+INFO  20:22:14,059 - #2 4
+INFO  20:22:14,059 - #18 ,
+INFO  20:22:14,059 - #4 c
+INFO  20:22:14,059 - #10 =
+INFO  20:22:14,059 - #2 6
+INFO  20:22:14,059 - #37 ;
+INFO  20:22:14,059 - #4 int
+INFO  20:22:14,059 - #4 y
+INFO  20:22:14,059 - #37 ;
+ERROR 20:22:14,060 - Izvrsen oporavak do ; u liniji 2
+INFO  20:22:14,061 - #7 {
+INFO  20:22:14,061 - #4 int
+INFO  20:22:14,062 - #4 main
+INFO  20:22:14,062 - #22 (
+INFO  20:22:14,062 - #2 4
+ERROR 20:22:14,062 - 
+Sintaksna greska na liniji 4
+INFO  20:22:14,062 - #4 a
+INFO  20:22:14,062 - #23 )
+INFO  20:22:14,062 - #7 {
+INFO  20:22:14,062 - #25 print
+INFO  20:22:14,062 - #22 (
+ERROR 20:22:14,062 - Izvrsen oporavak do ) u liniji 4
+INFO  20:22:14,063 - #2 1
+INFO  20:22:14,064 - #23 )
+INFO  20:22:14,065 - #37 ;
+INFO  20:22:14,065 - #4 x
+INFO  20:22:14,065 - #10 =
+INFO  20:22:14,065 - #4 y
+INFO  20:22:14,066 - #30 +
+INFO  20:22:14,066 - #2 5
+INFO  20:22:14,067 - #37 ;
+INFO  20:22:14,067 - #25 print
+INFO  20:22:14,067 - #22 (
+INFO  20:22:14,067 - #2 2
+INFO  20:22:14,067 - #23 )
+INFO  20:22:14,067 - #37 ;
+INFO  20:22:14,067 - #8 }
+INFO  20:22:14,067 - #8 }
+INFO  20:22:14,068 - Programc(
+ MJProgram
+  DeclarationListc(
+    DeclarationListc(
+      NoDeclarations(
+      ) [NoDeclarations]
+      DeclListc(
+        ErrorConstDeclEnd(
+        ) [ErrorConstDeclEnd]
+      ) [DeclListc]
+    ) [DeclarationListc]
+    DeclListDerived1(
+      VarDeclc(
+        Typec(
+         int
+        ) [Typec]
+       y
+        NoOptionalBraces(
+        ) [NoOptionalBraces]
+        NoVarDeclList(
+        ) [NoVarDeclList]
+      ) [VarDeclc]
+    ) [DeclListDerived1]
+  ) [DeclarationListc]
+  DeclListMethodc(
+    NoDeclListMethod(
+    ) [NoDeclListMethod]
+    MethodDeclc(
+      TypeOrVoidc(
+        Typec(
+         int
+        ) [Typec]
+      ) [TypeOrVoidc]
+     main
+      FormParsOptionalc(
+        ErrorFormPars(
+        ) [ErrorFormPars]
+      ) [FormParsOptionalc]
+      NoDeclListVar(
+      ) [NoDeclListVar]
+      StatementListc(
+        StatementListc(
+          StatementListc(
+            NoStatementList(
+            ) [NoStatementList]
+            StatementDerived1(
+              PrintStmt(
+                Exprc(
+                  NoOptionalMinus(
+                  ) [NoOptionalMinus]
+                  Termc(
+                    FactorDerived1(
+                     1
+                    ) [FactorDerived1]
+                    NoMulopFactorList(
+                    ) [NoMulopFactorList]
+                  ) [Termc]
+                  NoAddopTermList(
+                  ) [NoAddopTermList]
+                ) [Exprc]
+                NoOptionalNumConst(
+                ) [NoOptionalNumConst]
+              ) [PrintStmt]
+            ) [StatementDerived1]
+          ) [StatementListc]
+          StatementDerived1(
+            SingleStatementc(
+              DesignatorStatementc(
+                Designatorc(
+                 x
+                ) [Designatorc]
+                DesignatorStatementElementsc(
+                  Assignopc(
+                  ) [Assignopc]
+                  Exprc(
+                    NoOptionalMinus(
+                    ) [NoOptionalMinus]
+                    Termc(
+                      Factorc(
+                        Designatorc(
+                         y
+                        ) [Designatorc]
+                        NoActParsBracesOptional(
+                        ) [NoActParsBracesOptional]
+                      ) [Factorc]
+                      NoMulopFactorList(
+                      ) [NoMulopFactorList]
+                    ) [Termc]
+                    AddopTermListc(
+                      NoAddopTermList(
+                      ) [NoAddopTermList]
+                      AddOpc(
+                      ) [AddOpc]
+                      Termc(
+                        FactorDerived1(
+                         5
+                        ) [FactorDerived1]
+                        NoMulopFactorList(
+                        ) [NoMulopFactorList]
+                      ) [Termc]
+                    ) [AddopTermListc]
+                  ) [Exprc]
+                ) [DesignatorStatementElementsc]
+              ) [DesignatorStatementc]
+            ) [SingleStatementc]
+          ) [StatementDerived1]
+        ) [StatementListc]
+        StatementDerived1(
+          PrintStmt(
+            Exprc(
+              NoOptionalMinus(
+              ) [NoOptionalMinus]
+              Termc(
+                FactorDerived1(
+                 2
+                ) [FactorDerived1]
+                NoMulopFactorList(
+                ) [NoMulopFactorList]
+              ) [Termc]
+              NoAddopTermList(
+              ) [NoAddopTermList]
+            ) [Exprc]
+            NoOptionalNumConst(
+            ) [NoOptionalNumConst]
+          ) [PrintStmt]
+        ) [StatementDerived1]
+      ) [StatementListc]
+    ) [MethodDeclc]
+  ) [DeclListMethodc]
+) [Programc]
+INFO  20:22:14,068 - ===================================
+INFO  20:22:14,071 -  Print count calls = 2
+INFO  20:22:14,071 -  Deklarisanih promenljivih ima = 1

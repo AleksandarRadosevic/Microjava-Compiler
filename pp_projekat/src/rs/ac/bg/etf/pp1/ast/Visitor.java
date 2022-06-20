@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 20/5/2022 17:36:31
+// 20/5/2022 21:18:47
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -29,6 +29,7 @@ public interface Visitor {
     public void visit(Addop Addop);
     public void visit(OptionalBraces OptionalBraces);
     public void visit(ExprBracesOptional ExprBracesOptional);
+    public void visit(ConditionIf ConditionIf);
     public void visit(RecordDecl RecordDecl);
     public void visit(Factor Factor);
     public void visit(CondTerm CondTerm);
@@ -112,6 +113,8 @@ public interface Visitor {
     public void visit(NoCondTermListOr NoCondTermListOr);
     public void visit(CondTermListOrc CondTermListOrc);
     public void visit(Conditionc Conditionc);
+    public void visit(ErrorConditionIf ErrorConditionIf);
+    public void visit(ConditionIfc ConditionIfc);
     public void visit(NoExprCommaList NoExprCommaList);
     public void visit(ExprCommaListc ExprCommaListc);
     public void visit(ActParsc ActParsc);
@@ -138,6 +141,7 @@ public interface Visitor {
     public void visit(ContinueStmt ContinueStmt);
     public void visit(BreakStmt BreakStmt);
     public void visit(DoStmt DoStmt);
+    public void visit(NoElseStmt NoElseStmt);
     public void visit(IfStmt IfStmt);
     public void visit(SingleStatementc SingleStatementc);
     public void visit(LabelColonc LabelColonc);
@@ -149,8 +153,9 @@ public interface Visitor {
     public void visit(NoParsList NoParsList);
     public void visit(ParsListc ParsListc);
     public void visit(Parsc Parsc);
+    public void visit(ErrorFormPars ErrorFormPars);
     public void visit(FormParsc FormParsc);
-    public void visit(NoFormParsOptional NoFormParsOptional);
+    public void visit(FormParsOptionalDerived1 FormParsOptionalDerived1);
     public void visit(FormParsOptionalc FormParsOptionalc);
     public void visit(TypeOrVoidDerived1 TypeOrVoidDerived1);
     public void visit(TypeOrVoidc TypeOrVoidc);
@@ -174,6 +179,7 @@ public interface Visitor {
     public void visit(OptionalBracesc OptionalBracesc);
     public void visit(VarDeclc VarDeclc);
     public void visit(NoConstDecl NoConstDecl);
+    public void visit(ErrorComma ErrorComma);
     public void visit(ConstDeclListc ConstDeclListc);
     public void visit(ConstValDerived2 ConstValDerived2);
     public void visit(ConstValDerived1 ConstValDerived1);

@@ -12,7 +12,7 @@ import rs.ac.bg.etf.pp1.ast.*;
 parser code {:
 
 	Logger log = Logger.getLogger(getClass());
-   
+   	int lineDetected;
    
     // slede redefinisani metodi za prijavu gresaka radi izmene teksta poruke
      
@@ -31,14 +31,19 @@ parser code {:
 
     public void report_error(String message, Object info) {
     	StringBuilder msg = new StringBuilder(message); 
-    	if (info instanceof Symbol)
+    	if (info instanceof Symbol){
             msg.append (" na liniji ").append(((Symbol)info).left);
+            lineDetected = ((Symbol)info).left;
+        }
         log.error(msg.toString());
     }
 
 
 :}
 
+init with {:
+	lineDetected = 0;
+:}
 
 scan with {:
 	Symbol s = this.getScanner().next_token();
@@ -64,7 +69,7 @@ nonterminal Condition, OptionalElse, Designator, DesignatorStatement, Designator
 nonterminal Expr, OptionalNumConst, Statements, OptionalExpression, ActParsOptional, ActPars, CondTerm;
 nonterminal CondTermListOr, CondFactListAnd, CondFact, RelopOprOptional, Relop, OptionalMinus, Term, AddopTermList;
 nonterminal Addop, Factor, MulopFactorList, Mulop, ActParsBracesOptional, ExprBracesOptional, IdentList, DotOrExpr, Assignop;
-
+nonterminal ConditionIf;
 precedence left ELSE;
 
 
@@ -82,13 +87,15 @@ DeclList ::= (DeclListc)
 
 ConstDecl ::= (ConstDeclc) CONST Type:constType IDENT ASSIGN ConstVal ConstDeclList SEMICOLON
 			| (ErrorConstDeclEnd) error SEMICOLON:l
-		    {: parser.report_error("Izvrsen oporavak do , u liniji " + lleft, null);  :}
+		    {: parser.report_error("Izvrsen oporavak do ; u liniji " + lleft, null);  :}
 		    ;
 
 
 ConstVal ::= (ConstValc) NUMBER | CHARCONST | BOOLCONST;
 
 ConstDeclList ::= (ConstDeclListc) ConstDeclList COMMA IDENT ASSIGN ConstVal  
+				| (ErrorComma) error
+		    	{: parser.report_error("Izvrsen oporavak do , u okviru definisanje globalnih promenljivih ", null);  :}
 				| (NoConstDecl) /* epsilon */;
 	
 
@@ -125,15 +132,17 @@ RecordDecl ::= (RecordDeclc) RECORD IDENT LBRACECURLY DeclListVar RBRACECURLY;
 ConstructorDecl ::= (ConstructorDeclc) IDENT LPAREN RPAREN DeclListVar LBRACECURLY StatementList RBRACECURLY;
 
 
-MethodDecl ::= (MethodDeclc) TypeOrVoid IDENT LPAREN FormParsOptional RPAREN DeclListVar LBRACECURLY StatementList RBRACECURLY;
+MethodDecl ::= (MethodDeclc) TypeOrVoid IDENT LPAREN FormParsOptional  DeclListVar LBRACECURLY StatementList RBRACECURLY;
 
 TypeOrVoid ::= (TypeOrVoidc) Type | VOID;
 
 FormParsOptional ::= (FormParsOptionalc) FormPars
-				| (NoFormParsOptional) /* epsilon */;
+				| RPAREN;
 						
 						
-FormPars ::= (FormParsc) Pars ParsList;
+FormPars ::= (FormParsc) Pars ParsList RPAREN
+			| (ErrorFormPars) error RPAREN:l
+		   	{: parser.report_error("Izvrsen oporavak do ) u liniji "+ lleft, null);  :};
 		
 Pars ::= (Parsc) Type IDENT OptionalBraces;
 
@@ -145,7 +154,7 @@ Type ::= (Typec) IDENT;
 
 Statement ::= (Statementc) LabelColon SingleStatement 
 			| (ErrorStmt) error SEMICOLON:l
-		   	{: parser.report_error("Izvrsen oporavak1 do ; u liniji " + lleft, null);  :}
+		   	{: parser.report_error("Izvrsen oporavak do ; u liniji " + lleft, null);  :}
 			| SingleStatement
 			| Statements;
 			
@@ -154,7 +163,8 @@ Statement ::= (Statementc) LabelColon SingleStatement
 LabelColon ::= (LabelColonc) Label COLON;
 
 SingleStatement ::= (SingleStatementc) DesignatorStatement SEMICOLON
-				| (IfStmt) IF LPAREN Condition RPAREN Statement ELSE Statement 
+				| (IfStmt) IF LPAREN ConditionIf Statement ELSE Statement 
+				| (NoElseStmt) IF LPAREN ConditionIf Statement
 			 	| (DoStmt) DO Statement WHILE LPAREN Condition RPAREN SEMICOLON
 				| (BreakStmt) BREAK SEMICOLON
 				| (ContinueStmt) CONTINUE SEMICOLON
@@ -194,6 +204,9 @@ ActPars ::= (ActParsc) Expr ExprCommaList;
 ExprCommaList ::= (ExprCommaListc) ExprCommaList COMMA Expr 
 				| (NoExprCommaList) /* epsilon */;
 
+ConditionIf ::= (ConditionIfc) CondTerm CondTermListOr RPAREN
+			| (ErrorConditionIf) error RPAREN
+		   	{: parser.report_error("Izvrsen oporavak do ) u liniji " + parser.lineDetected, null);  :};
 
 Condition ::= (Conditionc) CondTerm CondTermListOr;
 CondTermListOr ::= (CondTermListOrc) CondTermListOr OR CondTerm

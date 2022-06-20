@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 20/5/2022 17:36:31
+// 20/5/2022 21:18:47
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -29,6 +29,7 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(Addop Addop) { }
     public void visit(OptionalBraces OptionalBraces) { }
     public void visit(ExprBracesOptional ExprBracesOptional) { }
+    public void visit(ConditionIf ConditionIf) { }
     public void visit(RecordDecl RecordDecl) { }
     public void visit(Factor Factor) { }
     public void visit(CondTerm CondTerm) { }
@@ -112,6 +113,8 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(NoCondTermListOr NoCondTermListOr) { visit(); }
     public void visit(CondTermListOrc CondTermListOrc) { visit(); }
     public void visit(Conditionc Conditionc) { visit(); }
+    public void visit(ErrorConditionIf ErrorConditionIf) { visit(); }
+    public void visit(ConditionIfc ConditionIfc) { visit(); }
     public void visit(NoExprCommaList NoExprCommaList) { visit(); }
     public void visit(ExprCommaListc ExprCommaListc) { visit(); }
     public void visit(ActParsc ActParsc) { visit(); }
@@ -138,6 +141,7 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(ContinueStmt ContinueStmt) { visit(); }
     public void visit(BreakStmt BreakStmt) { visit(); }
     public void visit(DoStmt DoStmt) { visit(); }
+    public void visit(NoElseStmt NoElseStmt) { visit(); }
     public void visit(IfStmt IfStmt) { visit(); }
     public void visit(SingleStatementc SingleStatementc) { visit(); }
     public void visit(LabelColonc LabelColonc) { visit(); }
@@ -149,8 +153,9 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(NoParsList NoParsList) { visit(); }
     public void visit(ParsListc ParsListc) { visit(); }
     public void visit(Parsc Parsc) { visit(); }
+    public void visit(ErrorFormPars ErrorFormPars) { visit(); }
     public void visit(FormParsc FormParsc) { visit(); }
-    public void visit(NoFormParsOptional NoFormParsOptional) { visit(); }
+    public void visit(FormParsOptionalDerived1 FormParsOptionalDerived1) { visit(); }
     public void visit(FormParsOptionalc FormParsOptionalc) { visit(); }
     public void visit(TypeOrVoidDerived1 TypeOrVoidDerived1) { visit(); }
     public void visit(TypeOrVoidc TypeOrVoidc) { visit(); }
@@ -174,6 +179,7 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(OptionalBracesc OptionalBracesc) { visit(); }
     public void visit(VarDeclc VarDeclc) { visit(); }
     public void visit(NoConstDecl NoConstDecl) { visit(); }
+    public void visit(ErrorComma ErrorComma) { visit(); }
     public void visit(ConstDeclListc ConstDeclListc) { visit(); }
     public void visit(ConstValDerived2 ConstValDerived2) { visit(); }
     public void visit(ConstValDerived1 ConstValDerived1) { visit(); }

@@ -1,0 +1,163 @@
+INFO  20:01:35,532 - Compiling source file: C:\Users\Aleksandar\Desktop\PP\projekat\PP_Projekat\pp_projekat\test\program.mj
+INFO  20:01:35,574 - #6 program
+INFO  20:01:35,574 - #4 MJProgram
+INFO  20:01:35,574 - #9 const
+INFO  20:01:35,575 - #4 int
+INFO  20:01:35,575 - #4 x
+INFO  20:01:35,575 - #10 =
+INFO  20:01:35,575 - #2 2
+INFO  20:01:35,575 - #29 .
+ERROR 20:01:35,575 - 
+Sintaksna greska na liniji 2
+INFO  20:01:35,575 - #2 1
+INFO  20:01:35,575 - #18 ,
+INFO  20:01:35,575 - #4 a
+INFO  20:01:35,576 - #10 =
+INFO  20:01:35,576 - #2 3
+INFO  20:01:35,576 - #18 ,
+INFO  20:01:35,576 - #4 b
+INFO  20:01:35,576 - #10 =
+INFO  20:01:35,576 - #2 4
+INFO  20:01:35,576 - #18 ,
+INFO  20:01:35,576 - #4 c
+INFO  20:01:35,576 - #10 =
+INFO  20:01:35,580 - #2 6
+INFO  20:01:35,580 - #37 ;
+INFO  20:01:35,580 - #4 int
+INFO  20:01:35,580 - #4 y
+INFO  20:01:35,580 - #37 ;
+ERROR 20:01:35,580 - Izvrsen oporavak do ; u liniji 2
+INFO  20:01:35,582 - #7 {
+INFO  20:01:35,582 - #4 int
+INFO  20:01:35,582 - #4 main
+INFO  20:01:35,582 - #22 (
+INFO  20:01:35,583 - #4 int
+INFO  20:01:35,583 - #4 a
+INFO  20:01:35,583 - #23 )
+INFO  20:01:35,583 - #7 {
+INFO  20:01:35,584 - #25 print
+INFO  20:01:35,584 - #22 (
+INFO  20:01:35,584 - #2 1
+INFO  20:01:35,585 - #23 )
+INFO  20:01:35,587 - #37 ;
+INFO  20:01:35,587 - #4 x
+INFO  20:01:35,587 - #10 =
+INFO  20:01:35,587 - #4 y
+INFO  20:01:35,588 - #30 +
+INFO  20:01:35,588 - #2 5
+INFO  20:01:35,589 - #30 +
+INFO  20:01:35,589 - #37 ;
+ERROR 20:01:35,589 - 
+Sintaksna greska na liniji 8
+INFO  20:01:35,589 - #25 print
+INFO  20:01:35,589 - #22 (
+INFO  20:01:35,589 - #2 2
+ERROR 20:01:35,590 - Izvrsen oporavak1 do ; u liniji 8
+INFO  20:01:35,590 - #23 )
+INFO  20:01:35,590 - #37 ;
+INFO  20:01:35,590 - #8 }
+INFO  20:01:35,590 - #8 }
+INFO  20:01:35,591 - Programc(
+ MJProgram
+  DeclarationListc(
+    DeclarationListc(
+      NoDeclarations(
+      ) [NoDeclarations]
+      DeclListc(
+        ErrorConstDeclEnd(
+        ) [ErrorConstDeclEnd]
+      ) [DeclListc]
+    ) [DeclarationListc]
+    DeclListDerived1(
+      VarDeclc(
+        Typec(
+         int
+        ) [Typec]
+       y
+        NoOptionalBraces(
+        ) [NoOptionalBraces]
+        NoVarDeclList(
+        ) [NoVarDeclList]
+      ) [VarDeclc]
+    ) [DeclListDerived1]
+  ) [DeclarationListc]
+  DeclListMethodc(
+    NoDeclListMethod(
+    ) [NoDeclListMethod]
+    MethodDeclc(
+      TypeOrVoidc(
+        Typec(
+         int
+        ) [Typec]
+      ) [TypeOrVoidc]
+     main
+      FormParsOptionalc(
+        FormParsc(
+          Parsc(
+            Typec(
+             int
+            ) [Typec]
+           a
+            NoOptionalBraces(
+            ) [NoOptionalBraces]
+          ) [Parsc]
+          NoParsList(
+          ) [NoParsList]
+        ) [FormParsc]
+      ) [FormParsOptionalc]
+      NoDeclListVar(
+      ) [NoDeclListVar]
+      StatementListc(
+        StatementListc(
+          StatementListc(
+            NoStatementList(
+            ) [NoStatementList]
+            StatementDerived1(
+              PrintStmt(
+                Exprc(
+                  NoOptionalMinus(
+                  ) [NoOptionalMinus]
+                  Termc(
+                    FactorDerived1(
+                     1
+                    ) [FactorDerived1]
+                    NoMulopFactorList(
+                    ) [NoMulopFactorList]
+                  ) [Termc]
+                  NoAddopTermList(
+                  ) [NoAddopTermList]
+                ) [Exprc]
+                NoOptionalNumConst(
+                ) [NoOptionalNumConst]
+              ) [PrintStmt]
+            ) [StatementDerived1]
+          ) [StatementListc]
+          ErrorStmt(
+          ) [ErrorStmt]
+        ) [StatementListc]
+        StatementDerived1(
+          PrintStmt(
+            Exprc(
+              NoOptionalMinus(
+              ) [NoOptionalMinus]
+              Termc(
+                FactorDerived1(
+                 2
+                ) [FactorDerived1]
+                NoMulopFactorList(
+                ) [NoMulopFactorList]
+              ) [Termc]
+              NoAddopTermList(
+              ) [NoAddopTermList]
+            ) [Exprc]
+            NoOptionalNumConst(
+            ) [NoOptionalNumConst]
+          ) [PrintStmt]
+        ) [StatementDerived1]
+      ) [StatementListc]
+    ) [MethodDeclc]
+  ) [DeclListMethodc]
+) [Programc]
+INFO  20:01:35,591 - ===================================
+INFO  20:01:35,593 -  Print count calls = 2
+INFO  20:01:35,593 -  Deklarisanih promenljivih ima = 1

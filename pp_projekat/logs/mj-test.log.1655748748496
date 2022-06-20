@@ -1,0 +1,59 @@
+INFO  20:11:56,946 - Compiling source file: C:\Users\Aleksandar\Desktop\PP\projekat\PP_Projekat\pp_projekat\test\program.mj
+INFO  20:11:56,989 - #6 program
+INFO  20:11:56,989 - #4 MJProgram
+INFO  20:11:56,990 - #9 const
+INFO  20:11:56,990 - #4 int
+INFO  20:11:56,990 - #4 x
+INFO  20:11:56,990 - #10 =
+INFO  20:11:56,990 - #2 2
+INFO  20:11:56,990 - #29 .
+ERROR 20:11:56,991 - 
+Sintaksna greska na liniji 2
+INFO  20:11:56,991 - #2 1
+INFO  20:11:56,991 - #18 ,
+INFO  20:11:56,991 - #4 a
+INFO  20:11:56,991 - #10 =
+INFO  20:11:56,992 - #2 3
+INFO  20:11:56,992 - #18 ,
+INFO  20:11:56,992 - #4 b
+INFO  20:11:56,992 - #10 =
+INFO  20:11:56,992 - #2 4
+INFO  20:11:56,992 - #18 ,
+INFO  20:11:56,992 - #4 c
+INFO  20:11:56,992 - #10 =
+INFO  20:11:56,993 - #2 6
+INFO  20:11:56,993 - #37 ;
+INFO  20:11:56,993 - #4 int
+INFO  20:11:56,993 - #4 y
+INFO  20:11:56,993 - #37 ;
+ERROR 20:11:56,993 - Izvrsen oporavak do ; u liniji 2
+INFO  20:11:56,995 - #7 {
+INFO  20:11:56,995 - #4 int
+INFO  20:11:56,996 - #4 main
+INFO  20:11:56,996 - #22 (
+INFO  20:11:56,996 - #2 4
+ERROR 20:11:56,996 - 
+Sintaksna greska na liniji 4
+INFO  20:11:56,996 - #4 a
+INFO  20:11:56,996 - #23 )
+INFO  20:11:56,996 - #7 {
+INFO  20:11:56,996 - #25 print
+INFO  20:11:56,996 - #22 (
+INFO  20:11:56,996 - #2 1
+INFO  20:11:56,996 - #23 )
+INFO  20:11:56,996 - #37 ;
+INFO  20:11:56,996 - #4 x
+INFO  20:11:56,996 - #10 =
+INFO  20:11:56,996 - #4 y
+INFO  20:11:56,997 - #30 +
+INFO  20:11:56,997 - #2 5
+INFO  20:11:56,997 - #30 +
+INFO  20:11:56,997 - #37 ;
+INFO  20:11:56,997 - #25 print
+INFO  20:11:56,997 - #22 (
+INFO  20:11:56,997 - #2 2
+INFO  20:11:56,997 - #23 )
+INFO  20:11:56,997 - #37 ;
+INFO  20:11:56,997 - #8 }
+INFO  20:11:56,997 - #8 }
+ERROR 20:11:56,997 - Fatalna greska, parsiranje se ne moze nastaviti na liniji 12
