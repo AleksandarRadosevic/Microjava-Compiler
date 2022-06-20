@@ -116,6 +116,9 @@ nonterminal IdentList IdentList;
 nonterminal DotOrExpr DotOrExpr;
 nonterminal Assignop Assignop;
 
+precedence left ELSE;
+
+
 Program ::= (Programc) PROG IDENT:I1 DeclarationList:D2 LBRACECURLY DeclListMethod:D3 RBRACECURLY {: RESULT=new Programc(I1, D2, D3); RESULT.setLine(I1left); :};
 
 DeclarationList ::= (DeclarationListc) DeclarationList:D1 DeclList:D2 {: RESULT=new DeclarationListc(D1, D2); RESULT.setLine(D1left); :}
@@ -128,7 +131,10 @@ DeclList ::= (DeclListc)
 				RecordDecl:R1 {: RESULT=new DeclListDerived3(R1); RESULT.setLine(R1left); :};
 			
 
-ConstDecl ::= (ConstDeclc) CONST Type:constType IDENT:I1 ASSIGN ConstVal:C2 ConstDeclList:C3 SEMICOLON {: RESULT=new ConstDeclc(constType, I1, C2, C3); RESULT.setLine(constTypeleft); :};
+ConstDecl ::= (ConstDeclc) CONST Type:constType IDENT:I1 ASSIGN ConstVal:C2 ConstDeclList:C3 SEMICOLON {: RESULT=new ConstDeclc(constType, I1, C2, C3); RESULT.setLine(constTypeleft); :}
+			| (ErrorConstDeclEnd) error SEMICOLON:l
+		    {: parser.report_error("Izvrsen oporavak do , u liniji " + lleft, null);  :} {: RESULT=new ErrorConstDeclEnd(); :}
+		    ;
 
 
 ConstVal ::= (ConstValc) NUMBER:N1 {: RESULT=new ConstValc(N1); RESULT.setLine(N1left); :} | CHARCONST:C1 {: RESULT=new ConstValDerived1(C1); RESULT.setLine(C1left); :} | BOOLCONST:B1 {: RESULT=new ConstValDerived2(B1); RESULT.setLine(B1left); :};
@@ -189,14 +195,17 @@ Type ::= (Typec) IDENT:I1 {: RESULT=new Typec(I1); RESULT.setLine(I1left); :};
 
 
 Statement ::= (Statementc) LabelColon:L1 SingleStatement:S2 {: RESULT=new Statementc(L1, S2); RESULT.setLine(L1left); :} 
+			| (ErrorStmt) error SEMICOLON:l
+		   	{: parser.report_error("Izvrsen oporavak1 do ; u liniji " + lleft, null);  :} {: RESULT=new ErrorStmt(); :}
 			| SingleStatement:S1 {: RESULT=new StatementDerived1(S1); RESULT.setLine(S1left); :}
 			| Statements:S1 {: RESULT=new StatementDerived2(S1); RESULT.setLine(S1left); :};
+			
 
 
 LabelColon ::= (LabelColonc) Label:L1 COLON {: RESULT=new LabelColonc(L1); RESULT.setLine(L1left); :};
 
 SingleStatement ::= (SingleStatementc) DesignatorStatement:D1 SEMICOLON {: RESULT=new SingleStatementc(D1); RESULT.setLine(D1left); :}
-				| (IfStmt) IF LPAREN Condition:C1 RPAREN Statement:S2 {: RESULT=new IfStmt(C1, S2); RESULT.setLine(C1left); :} /* ELSE Statement */
+				| (IfStmt) IF LPAREN Condition:C1 RPAREN Statement:S2 ELSE Statement:S3 {: RESULT=new IfStmt(C1, S2, S3); RESULT.setLine(C1left); :} 
 			 	| (DoStmt) DO Statement:S1 WHILE LPAREN Condition:C2 RPAREN SEMICOLON {: RESULT=new DoStmt(S1, C2); RESULT.setLine(S1left); :}
 				| (BreakStmt) BREAK SEMICOLON {: RESULT=new BreakStmt(); :}
 				| (ContinueStmt) CONTINUE SEMICOLON {: RESULT=new ContinueStmt(); :}

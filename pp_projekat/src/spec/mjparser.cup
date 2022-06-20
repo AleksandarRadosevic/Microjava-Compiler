@@ -65,6 +65,9 @@ nonterminal Expr, OptionalNumConst, Statements, OptionalExpression, ActParsOptio
 nonterminal CondTermListOr, CondFactListAnd, CondFact, RelopOprOptional, Relop, OptionalMinus, Term, AddopTermList;
 nonterminal Addop, Factor, MulopFactorList, Mulop, ActParsBracesOptional, ExprBracesOptional, IdentList, DotOrExpr, Assignop;
 
+precedence left ELSE;
+
+
 Program ::= (Programc) PROG IDENT DeclarationList LBRACECURLY DeclListMethod RBRACECURLY;
 
 DeclarationList ::= (DeclarationListc) DeclarationList DeclList
@@ -77,7 +80,10 @@ DeclList ::= (DeclListc)
 				RecordDecl;
 			
 
-ConstDecl ::= (ConstDeclc) CONST Type:constType IDENT ASSIGN ConstVal ConstDeclList SEMICOLON;
+ConstDecl ::= (ConstDeclc) CONST Type:constType IDENT ASSIGN ConstVal ConstDeclList SEMICOLON
+			| (ErrorConstDeclEnd) error SEMICOLON:l
+		    {: parser.report_error("Izvrsen oporavak do , u liniji " + lleft, null);  :}
+		    ;
 
 
 ConstVal ::= (ConstValc) NUMBER | CHARCONST | BOOLCONST;
@@ -138,14 +144,17 @@ Type ::= (Typec) IDENT;
 
 
 Statement ::= (Statementc) LabelColon SingleStatement 
+			| (ErrorStmt) error SEMICOLON:l
+		   	{: parser.report_error("Izvrsen oporavak1 do ; u liniji " + lleft, null);  :}
 			| SingleStatement
 			| Statements;
+			
 
 
 LabelColon ::= (LabelColonc) Label COLON;
 
 SingleStatement ::= (SingleStatementc) DesignatorStatement SEMICOLON
-				| (IfStmt) IF LPAREN Condition RPAREN Statement /* ELSE Statement */
+				| (IfStmt) IF LPAREN Condition RPAREN Statement ELSE Statement 
 			 	| (DoStmt) DO Statement WHILE LPAREN Condition RPAREN SEMICOLON
 				| (BreakStmt) BREAK SEMICOLON
 				| (ContinueStmt) CONTINUE SEMICOLON

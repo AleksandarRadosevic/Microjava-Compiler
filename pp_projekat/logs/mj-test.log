@@ -1,30 +1,141 @@
-INFO  14:25:46,059 - Compiling source file: C:\Users\Aleksandar\Desktop\PP\projekat\PP_Projekat\pp_projekat\test\program.mj
-INFO  14:25:46,100 - #6 program
-INFO  14:25:46,100 - #4 MJProgram
-INFO  14:25:46,100 - #4 int
-INFO  14:25:46,101 - #4 x
-INFO  14:25:46,101 - #37 ;
-INFO  14:25:46,102 - #4 int
-INFO  14:25:46,102 - #4 y
-INFO  14:25:46,102 - #37 ;
-INFO  14:25:46,102 - #7 {
-INFO  14:25:46,102 - #4 int
-INFO  14:25:46,103 - #4 main
-INFO  14:25:46,103 - #22 (
-INFO  14:25:46,103 - #23 )
-INFO  14:25:46,103 - #7 {
-INFO  14:25:46,104 - #25 print
-INFO  14:25:46,104 - #22 (
-INFO  14:25:46,104 - #2 1
-INFO  14:25:46,105 - #23 )
-INFO  14:25:46,106 - #37 ;
-INFO  14:25:46,106 - #4 x
-INFO  14:25:46,106 - #10 =
-INFO  14:25:46,106 - #4 y
-INFO  14:25:46,111 - #30 +
-INFO  14:25:46,112 - #2 5
-INFO  14:25:46,112 - #30 +
-INFO  14:25:46,112 - #37 ;
-ERROR 14:25:46,113 - 
+INFO  17:36:47,755 - Compiling source file: C:\Users\Aleksandar\Desktop\PP\projekat\PP_Projekat\pp_projekat\test\program.mj
+INFO  17:36:47,796 - #6 program
+INFO  17:36:47,796 - #4 MJProgram
+INFO  17:36:47,796 - #9 const
+INFO  17:36:47,797 - #4 int
+INFO  17:36:47,797 - #4 x
+INFO  17:36:47,797 - #10 =
+INFO  17:36:47,797 - #2 2
+INFO  17:36:47,797 - #29 .
+ERROR 17:36:47,797 - 
+Sintaksna greska na liniji 2
+INFO  17:36:47,797 - #2 2
+INFO  17:36:47,797 - #18 ,
+INFO  17:36:47,797 - #4 a
+INFO  17:36:47,798 - #10 =
+INFO  17:36:47,798 - #2 3
+INFO  17:36:47,798 - #37 ;
+INFO  17:36:47,798 - #4 int
+INFO  17:36:47,798 - #4 y
+INFO  17:36:47,798 - #37 ;
+ERROR 17:36:47,798 - Izvrsen oporavak do , u liniji 2
+INFO  17:36:47,800 - #7 {
+INFO  17:36:47,800 - #4 int
+INFO  17:36:47,801 - #4 main
+INFO  17:36:47,801 - #22 (
+INFO  17:36:47,801 - #23 )
+INFO  17:36:47,801 - #7 {
+INFO  17:36:47,802 - #25 print
+INFO  17:36:47,802 - #22 (
+INFO  17:36:47,802 - #2 1
+INFO  17:36:47,803 - #23 )
+INFO  17:36:47,804 - #37 ;
+INFO  17:36:47,804 - #4 x
+INFO  17:36:47,804 - #10 =
+INFO  17:36:47,804 - #4 y
+INFO  17:36:47,805 - #30 +
+INFO  17:36:47,805 - #2 5
+INFO  17:36:47,806 - #30 +
+INFO  17:36:47,806 - #37 ;
+ERROR 17:36:47,806 - 
 Sintaksna greska na liniji 8
-ERROR 14:25:46,113 - Fatalna greska, parsiranje se ne moze nastaviti na liniji 8
+INFO  17:36:47,806 - #25 print
+INFO  17:36:47,806 - #22 (
+INFO  17:36:47,806 - #2 2
+ERROR 17:36:47,807 - Izvrsen oporavak1 do ; u liniji 8
+INFO  17:36:47,807 - #23 )
+INFO  17:36:47,807 - #37 ;
+INFO  17:36:47,807 - #8 }
+INFO  17:36:47,807 - #8 }
+INFO  17:36:47,808 - Programc(
+ MJProgram
+  DeclarationListc(
+    DeclarationListc(
+      NoDeclarations(
+      ) [NoDeclarations]
+      DeclListc(
+        ErrorConstDeclEnd(
+        ) [ErrorConstDeclEnd]
+      ) [DeclListc]
+    ) [DeclarationListc]
+    DeclListDerived1(
+      VarDeclc(
+        Typec(
+         int
+        ) [Typec]
+       y
+        NoOptionalBraces(
+        ) [NoOptionalBraces]
+        NoVarDeclList(
+        ) [NoVarDeclList]
+      ) [VarDeclc]
+    ) [DeclListDerived1]
+  ) [DeclarationListc]
+  DeclListMethodc(
+    NoDeclListMethod(
+    ) [NoDeclListMethod]
+    MethodDeclc(
+      TypeOrVoidc(
+        Typec(
+         int
+        ) [Typec]
+      ) [TypeOrVoidc]
+     main
+      NoFormParsOptional(
+      ) [NoFormParsOptional]
+      NoDeclListVar(
+      ) [NoDeclListVar]
+      StatementListc(
+        StatementListc(
+          StatementListc(
+            NoStatementList(
+            ) [NoStatementList]
+            StatementDerived1(
+              PrintStmt(
+                Exprc(
+                  NoOptionalMinus(
+                  ) [NoOptionalMinus]
+                  Termc(
+                    FactorDerived1(
+                     1
+                    ) [FactorDerived1]
+                    NoMulopFactorList(
+                    ) [NoMulopFactorList]
+                  ) [Termc]
+                  NoAddopTermList(
+                  ) [NoAddopTermList]
+                ) [Exprc]
+                NoOptionalNumConst(
+                ) [NoOptionalNumConst]
+              ) [PrintStmt]
+            ) [StatementDerived1]
+          ) [StatementListc]
+          ErrorStmt(
+          ) [ErrorStmt]
+        ) [StatementListc]
+        StatementDerived1(
+          PrintStmt(
+            Exprc(
+              NoOptionalMinus(
+              ) [NoOptionalMinus]
+              Termc(
+                FactorDerived1(
+                 2
+                ) [FactorDerived1]
+                NoMulopFactorList(
+                ) [NoMulopFactorList]
+              ) [Termc]
+              NoAddopTermList(
+              ) [NoAddopTermList]
+            ) [Exprc]
+            NoOptionalNumConst(
+            ) [NoOptionalNumConst]
+          ) [PrintStmt]
+        ) [StatementDerived1]
+      ) [StatementListc]
+    ) [MethodDeclc]
+  ) [DeclListMethodc]
+) [Programc]
+INFO  17:36:47,808 - ===================================
+INFO  17:36:47,811 -  Print count calls = 2
+INFO  17:36:47,811 -  Deklarisanih promenljivih ima = 1

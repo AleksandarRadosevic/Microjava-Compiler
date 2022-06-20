@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 20/5/2022 14:14:38
+// 20/5/2022 17:36:31
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -9,12 +9,15 @@ public class IfStmt extends SingleStatement {
 
     private Condition Condition;
     private Statement Statement;
+    private Statement Statement1;
 
-    public IfStmt (Condition Condition, Statement Statement) {
+    public IfStmt (Condition Condition, Statement Statement, Statement Statement1) {
         this.Condition=Condition;
         if(Condition!=null) Condition.setParent(this);
         this.Statement=Statement;
         if(Statement!=null) Statement.setParent(this);
+        this.Statement1=Statement1;
+        if(Statement1!=null) Statement1.setParent(this);
     }
 
     public Condition getCondition() {
@@ -33,6 +36,14 @@ public class IfStmt extends SingleStatement {
         this.Statement=Statement;
     }
 
+    public Statement getStatement1() {
+        return Statement1;
+    }
+
+    public void setStatement1(Statement Statement1) {
+        this.Statement1=Statement1;
+    }
+
     public void accept(Visitor visitor) {
         visitor.visit(this);
     }
@@ -40,17 +51,20 @@ public class IfStmt extends SingleStatement {
     public void childrenAccept(Visitor visitor) {
         if(Condition!=null) Condition.accept(visitor);
         if(Statement!=null) Statement.accept(visitor);
+        if(Statement1!=null) Statement1.accept(visitor);
     }
 
     public void traverseTopDown(Visitor visitor) {
         accept(visitor);
         if(Condition!=null) Condition.traverseTopDown(visitor);
         if(Statement!=null) Statement.traverseTopDown(visitor);
+        if(Statement1!=null) Statement1.traverseTopDown(visitor);
     }
 
     public void traverseBottomUp(Visitor visitor) {
         if(Condition!=null) Condition.traverseBottomUp(visitor);
         if(Statement!=null) Statement.traverseBottomUp(visitor);
+        if(Statement1!=null) Statement1.traverseBottomUp(visitor);
         accept(visitor);
     }
 
@@ -67,6 +81,12 @@ public class IfStmt extends SingleStatement {
 
         if(Statement!=null)
             buffer.append(Statement.toString("  "+tab));
+        else
+            buffer.append(tab+"  null");
+        buffer.append("\n");
+
+        if(Statement1!=null)
+            buffer.append(Statement1.toString("  "+tab));
         else
             buffer.append(tab+"  null");
         buffer.append("\n");

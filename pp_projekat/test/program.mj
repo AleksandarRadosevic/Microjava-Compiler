@@ -1,5 +1,5 @@
 program MJProgram
-	int x; int y;
+	const int x = 2.2, a = 3; int y;
 {
 	int main() {
 		
