@@ -1,0 +1,40 @@
+INFO  14:25:13,354 - Compiling source file: C:\Users\Aleksandar\Desktop\PP\projekat\PP_Projekat\pp_projekat\test\program.mj
+INFO  14:25:13,396 - #6 program
+INFO  14:25:13,396 - #4 Program
+INFO  14:25:13,396 - #19 class
+INFO  14:25:13,397 - #4 A
+INFO  14:25:13,397 - #7 {
+INFO  14:25:13,397 - #4 int
+INFO  14:25:13,398 - #4 x
+INFO  14:25:13,398 - #44 [
+INFO  14:25:13,398 - #45 ]
+INFO  14:25:13,398 - #18 ,
+INFO  14:25:13,399 - #4 y
+INFO  14:25:13,399 - #44 [
+INFO  14:25:13,399 - #45 ]
+INFO  14:25:13,399 - #37 ;
+INFO  14:25:13,400 - #8 }
+INFO  14:25:13,400 - #9 const
+INFO  14:25:13,401 - #4 int
+INFO  14:25:13,401 - #4 pi
+INFO  14:25:13,401 - #10 =
+INFO  14:25:13,401 - #2 3
+INFO  14:25:13,401 - #18 ,
+INFO  14:25:13,402 - #4 e
+INFO  14:25:13,406 - #10 =
+INFO  14:25:13,406 - #2 2
+INFO  14:25:13,406 - #37 ;
+INFO  14:25:13,406 - #19 class
+INFO  14:25:13,406 - #4 B
+INFO  14:25:13,406 - #20 extends
+INFO  14:25:13,406 - #4 A
+INFO  14:25:13,406 - #7 {
+INFO  14:25:13,406 - #4 int
+INFO  14:25:13,406 - #4 i
+INFO  14:25:13,406 - #37 ;
+INFO  14:25:13,407 - #7 {
+INFO  14:25:13,407 - #4 int
+INFO  14:25:13,407 - #4 getValue
+ERROR 14:25:13,407 - 
+Sintaksna greska na liniji 7
+ERROR 14:25:13,407 - Fatalna greska, parsiranje se ne moze nastaviti na liniji 7

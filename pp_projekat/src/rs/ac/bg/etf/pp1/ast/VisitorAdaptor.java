@@ -1,9 +1,9 @@
 // generated with ast extension for cup
 // version 0.8
-// 20/5/2022 11:7:40
+// 20/5/2022 14:14:38
 
 
-package src.rs.ac.bg.etf.pp1.ast;
+package rs.ac.bg.etf.pp1.ast;
 
 public abstract class VisitorAdaptor implements Visitor { 
 
@@ -44,7 +44,6 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(ConstDeclList ConstDeclList) { }
     public void visit(CondTermListOr CondTermListOr) { }
     public void visit(Label Label) { }
-    public void visit(VarDeclRepeat VarDeclRepeat) { }
     public void visit(OptionalConstructorDecl OptionalConstructorDecl) { }
     public void visit(VarDeclList VarDeclList) { }
     public void visit(Expr Expr) { }
@@ -53,14 +52,13 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(TypeOrVoid TypeOrVoid) { }
     public void visit(DesignatorStatement DesignatorStatement) { }
     public void visit(Statement Statement) { }
-    public void visit(DesignatorStatementElements DesignatorStatementElements) { }
     public void visit(VarDecl VarDecl) { }
+    public void visit(DesignatorStatementElements DesignatorStatementElements) { }
     public void visit(Type Type) { }
     public void visit(ClassDecl ClassDecl) { }
     public void visit(ConstDecl ConstDecl) { }
     public void visit(CondFact CondFact) { }
     public void visit(OptionalExpression OptionalExpression) { }
-    public void visit(ConstDeclRepeat ConstDeclRepeat) { }
     public void visit(Program Program) { }
     public void visit(SingleStatement SingleStatement) { }
     public void visit(CondFactListAnd CondFactListAnd) { }
@@ -133,14 +131,14 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(OptionalExpressionc OptionalExpressionc) { visit(); }
     public void visit(NoOptionalElse NoOptionalElse) { visit(); }
     public void visit(OptionalElsec OptionalElsec) { visit(); }
-    public void visit(SingleStatementDerived8 SingleStatementDerived8) { visit(); }
-    public void visit(SingleStatementDerived7 SingleStatementDerived7) { visit(); }
-    public void visit(SingleStatementDerived6 SingleStatementDerived6) { visit(); }
-    public void visit(SingleStatementDerived5 SingleStatementDerived5) { visit(); }
-    public void visit(SingleStatementDerived4 SingleStatementDerived4) { visit(); }
-    public void visit(SingleStatementDerived3 SingleStatementDerived3) { visit(); }
-    public void visit(SingleStatementDerived2 SingleStatementDerived2) { visit(); }
-    public void visit(SingleStatementDerived1 SingleStatementDerived1) { visit(); }
+    public void visit(GotoStmt GotoStmt) { visit(); }
+    public void visit(PrintStmt PrintStmt) { visit(); }
+    public void visit(ReadStmt ReadStmt) { visit(); }
+    public void visit(ReturnStmt ReturnStmt) { visit(); }
+    public void visit(ContinueStmt ContinueStmt) { visit(); }
+    public void visit(BreakStmt BreakStmt) { visit(); }
+    public void visit(DoStmt DoStmt) { visit(); }
+    public void visit(IfStmt IfStmt) { visit(); }
     public void visit(SingleStatementc SingleStatementc) { visit(); }
     public void visit(LabelColonc LabelColonc) { visit(); }
     public void visit(StatementDerived2 StatementDerived2) { visit(); }
@@ -173,14 +171,12 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(VarDeclListc VarDeclListc) { visit(); }
     public void visit(NoOptionalBraces NoOptionalBraces) { visit(); }
     public void visit(OptionalBracesc OptionalBracesc) { visit(); }
-    public void visit(VarDeclRepeatc VarDeclRepeatc) { visit(); }
     public void visit(VarDeclc VarDeclc) { visit(); }
     public void visit(NoConstDecl NoConstDecl) { visit(); }
     public void visit(ConstDeclListc ConstDeclListc) { visit(); }
     public void visit(ConstValDerived2 ConstValDerived2) { visit(); }
     public void visit(ConstValDerived1 ConstValDerived1) { visit(); }
     public void visit(ConstValc ConstValc) { visit(); }
-    public void visit(ConstDeclRepeatc ConstDeclRepeatc) { visit(); }
     public void visit(ConstDeclc ConstDeclc) { visit(); }
     public void visit(DeclListDerived3 DeclListDerived3) { visit(); }
     public void visit(DeclListDerived2 DeclListDerived2) { visit(); }

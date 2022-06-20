@@ -1,9 +1,9 @@
 // generated with ast extension for cup
 // version 0.8
-// 20/5/2022 11:7:40
+// 20/5/2022 14:14:38
 
 
-package src.rs.ac.bg.etf.pp1.ast;
+package rs.ac.bg.etf.pp1.ast;
 
 public interface Visitor { 
 
@@ -44,7 +44,6 @@ public interface Visitor {
     public void visit(ConstDeclList ConstDeclList);
     public void visit(CondTermListOr CondTermListOr);
     public void visit(Label Label);
-    public void visit(VarDeclRepeat VarDeclRepeat);
     public void visit(OptionalConstructorDecl OptionalConstructorDecl);
     public void visit(VarDeclList VarDeclList);
     public void visit(Expr Expr);
@@ -53,14 +52,13 @@ public interface Visitor {
     public void visit(TypeOrVoid TypeOrVoid);
     public void visit(DesignatorStatement DesignatorStatement);
     public void visit(Statement Statement);
-    public void visit(DesignatorStatementElements DesignatorStatementElements);
     public void visit(VarDecl VarDecl);
+    public void visit(DesignatorStatementElements DesignatorStatementElements);
     public void visit(Type Type);
     public void visit(ClassDecl ClassDecl);
     public void visit(ConstDecl ConstDecl);
     public void visit(CondFact CondFact);
     public void visit(OptionalExpression OptionalExpression);
-    public void visit(ConstDeclRepeat ConstDeclRepeat);
     public void visit(Program Program);
     public void visit(SingleStatement SingleStatement);
     public void visit(CondFactListAnd CondFactListAnd);
@@ -133,14 +131,14 @@ public interface Visitor {
     public void visit(OptionalExpressionc OptionalExpressionc);
     public void visit(NoOptionalElse NoOptionalElse);
     public void visit(OptionalElsec OptionalElsec);
-    public void visit(SingleStatementDerived8 SingleStatementDerived8);
-    public void visit(SingleStatementDerived7 SingleStatementDerived7);
-    public void visit(SingleStatementDerived6 SingleStatementDerived6);
-    public void visit(SingleStatementDerived5 SingleStatementDerived5);
-    public void visit(SingleStatementDerived4 SingleStatementDerived4);
-    public void visit(SingleStatementDerived3 SingleStatementDerived3);
-    public void visit(SingleStatementDerived2 SingleStatementDerived2);
-    public void visit(SingleStatementDerived1 SingleStatementDerived1);
+    public void visit(GotoStmt GotoStmt);
+    public void visit(PrintStmt PrintStmt);
+    public void visit(ReadStmt ReadStmt);
+    public void visit(ReturnStmt ReturnStmt);
+    public void visit(ContinueStmt ContinueStmt);
+    public void visit(BreakStmt BreakStmt);
+    public void visit(DoStmt DoStmt);
+    public void visit(IfStmt IfStmt);
     public void visit(SingleStatementc SingleStatementc);
     public void visit(LabelColonc LabelColonc);
     public void visit(StatementDerived2 StatementDerived2);
@@ -173,14 +171,12 @@ public interface Visitor {
     public void visit(VarDeclListc VarDeclListc);
     public void visit(NoOptionalBraces NoOptionalBraces);
     public void visit(OptionalBracesc OptionalBracesc);
-    public void visit(VarDeclRepeatc VarDeclRepeatc);
     public void visit(VarDeclc VarDeclc);
     public void visit(NoConstDecl NoConstDecl);
     public void visit(ConstDeclListc ConstDeclListc);
     public void visit(ConstValDerived2 ConstValDerived2);
     public void visit(ConstValDerived1 ConstValDerived1);
     public void visit(ConstValc ConstValc);
-    public void visit(ConstDeclRepeatc ConstDeclRepeatc);
     public void visit(ConstDeclc ConstDeclc);
     public void visit(DeclListDerived3 DeclListDerived3);
     public void visit(DeclListDerived2 DeclListDerived2);

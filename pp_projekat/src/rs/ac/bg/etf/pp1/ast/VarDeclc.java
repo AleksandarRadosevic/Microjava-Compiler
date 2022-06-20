@@ -1,21 +1,23 @@
 // generated with ast extension for cup
 // version 0.8
-// 20/5/2022 11:7:40
+// 20/5/2022 14:14:38
 
 
-package src.rs.ac.bg.etf.pp1.ast;
+package rs.ac.bg.etf.pp1.ast;
 
 public class VarDeclc extends VarDecl {
 
     private Type Type;
-    private VarDeclRepeat VarDeclRepeat;
+    private String I1;
+    private OptionalBraces OptionalBraces;
     private VarDeclList VarDeclList;
 
-    public VarDeclc (Type Type, VarDeclRepeat VarDeclRepeat, VarDeclList VarDeclList) {
+    public VarDeclc (Type Type, String I1, OptionalBraces OptionalBraces, VarDeclList VarDeclList) {
         this.Type=Type;
         if(Type!=null) Type.setParent(this);
-        this.VarDeclRepeat=VarDeclRepeat;
-        if(VarDeclRepeat!=null) VarDeclRepeat.setParent(this);
+        this.I1=I1;
+        this.OptionalBraces=OptionalBraces;
+        if(OptionalBraces!=null) OptionalBraces.setParent(this);
         this.VarDeclList=VarDeclList;
         if(VarDeclList!=null) VarDeclList.setParent(this);
     }
@@ -28,12 +30,20 @@ public class VarDeclc extends VarDecl {
         this.Type=Type;
     }
 
-    public VarDeclRepeat getVarDeclRepeat() {
-        return VarDeclRepeat;
+    public String getI1() {
+        return I1;
     }
 
-    public void setVarDeclRepeat(VarDeclRepeat VarDeclRepeat) {
-        this.VarDeclRepeat=VarDeclRepeat;
+    public void setI1(String I1) {
+        this.I1=I1;
+    }
+
+    public OptionalBraces getOptionalBraces() {
+        return OptionalBraces;
+    }
+
+    public void setOptionalBraces(OptionalBraces OptionalBraces) {
+        this.OptionalBraces=OptionalBraces;
     }
 
     public VarDeclList getVarDeclList() {
@@ -50,20 +60,20 @@ public class VarDeclc extends VarDecl {
 
     public void childrenAccept(Visitor visitor) {
         if(Type!=null) Type.accept(visitor);
-        if(VarDeclRepeat!=null) VarDeclRepeat.accept(visitor);
+        if(OptionalBraces!=null) OptionalBraces.accept(visitor);
         if(VarDeclList!=null) VarDeclList.accept(visitor);
     }
 
     public void traverseTopDown(Visitor visitor) {
         accept(visitor);
         if(Type!=null) Type.traverseTopDown(visitor);
-        if(VarDeclRepeat!=null) VarDeclRepeat.traverseTopDown(visitor);
+        if(OptionalBraces!=null) OptionalBraces.traverseTopDown(visitor);
         if(VarDeclList!=null) VarDeclList.traverseTopDown(visitor);
     }
 
     public void traverseBottomUp(Visitor visitor) {
         if(Type!=null) Type.traverseBottomUp(visitor);
-        if(VarDeclRepeat!=null) VarDeclRepeat.traverseBottomUp(visitor);
+        if(OptionalBraces!=null) OptionalBraces.traverseBottomUp(visitor);
         if(VarDeclList!=null) VarDeclList.traverseBottomUp(visitor);
         accept(visitor);
     }
@@ -79,8 +89,11 @@ public class VarDeclc extends VarDecl {
             buffer.append(tab+"  null");
         buffer.append("\n");
 
-        if(VarDeclRepeat!=null)
-            buffer.append(VarDeclRepeat.toString("  "+tab));
+        buffer.append(" "+tab+I1);
+        buffer.append("\n");
+
+        if(OptionalBraces!=null)
+            buffer.append(OptionalBraces.toString("  "+tab));
         else
             buffer.append(tab+"  null");
         buffer.append("\n");

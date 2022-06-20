@@ -7,9 +7,16 @@
 				<exclude name="sym_old.java"/>
 				<exclude name="util/Log4JUtils.java"/>
 				<exclude name="Yylex.java"/>
+				<exclude name="RuleVisitor.java"/>
+				<exclude name="MJParser.java"/>
 			</fileset>
 		</delete>
-
+		<delete>
+			<fileset dir="./src/spec">
+				<exclude name="mjlexer.lex"/>
+				<exclude name="mjparser.cup"/>
+			</fileset>
+		</delete>
 	</target>
 
 
@@ -30,14 +37,18 @@
 			<arg value="src.rs.ac.bg.etf.pp1.ast"/>
 			<arg value="-parser"/>
 			<arg value="MJParser"/>
-			<arg value="-dump_states"/>
+			<!-- <arg value="-dump_states"/> -->
 			<arg value="-buildtree"/>
 			<arg value="./src/spec/mjparser.cup"/>
 		</java>
 	</target>
 
+	<target name="repackage" depends="parserGen">
+		<!-- Replaces all of the references to the old package name in files in the "src" directory -->
+		<replace dir="src" value="rs.ac.bg.etf.pp1.ast" token="src.rs.ac.bg.etf.pp1.ast" summary="true"/>
+	</target>
 
-	<target name="compile" depends="lexerGen">
+	<target name="compile" depends="repackage">
 		<javac srcdir="src/rs/ac/bg/etf/pp1" includeantruntime="false">
 			<classpath>
 				<pathelement path="lib/JFlex.jar"/>
@@ -47,9 +58,5 @@
 		</javac>
 
 	</target>
-
-
-
-
 </project>
 

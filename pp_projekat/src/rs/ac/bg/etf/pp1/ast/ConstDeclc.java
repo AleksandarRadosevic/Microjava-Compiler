@@ -1,21 +1,23 @@
 // generated with ast extension for cup
 // version 0.8
-// 20/5/2022 11:7:40
+// 20/5/2022 14:14:38
 
 
-package src.rs.ac.bg.etf.pp1.ast;
+package rs.ac.bg.etf.pp1.ast;
 
 public class ConstDeclc extends ConstDecl {
 
     private Type Type;
-    private ConstDeclRepeat ConstDeclRepeat;
+    private String I1;
+    private ConstVal ConstVal;
     private ConstDeclList ConstDeclList;
 
-    public ConstDeclc (Type Type, ConstDeclRepeat ConstDeclRepeat, ConstDeclList ConstDeclList) {
+    public ConstDeclc (Type Type, String I1, ConstVal ConstVal, ConstDeclList ConstDeclList) {
         this.Type=Type;
         if(Type!=null) Type.setParent(this);
-        this.ConstDeclRepeat=ConstDeclRepeat;
-        if(ConstDeclRepeat!=null) ConstDeclRepeat.setParent(this);
+        this.I1=I1;
+        this.ConstVal=ConstVal;
+        if(ConstVal!=null) ConstVal.setParent(this);
         this.ConstDeclList=ConstDeclList;
         if(ConstDeclList!=null) ConstDeclList.setParent(this);
     }
@@ -28,12 +30,20 @@ public class ConstDeclc extends ConstDecl {
         this.Type=Type;
     }
 
-    public ConstDeclRepeat getConstDeclRepeat() {
-        return ConstDeclRepeat;
+    public String getI1() {
+        return I1;
     }
 
-    public void setConstDeclRepeat(ConstDeclRepeat ConstDeclRepeat) {
-        this.ConstDeclRepeat=ConstDeclRepeat;
+    public void setI1(String I1) {
+        this.I1=I1;
+    }
+
+    public ConstVal getConstVal() {
+        return ConstVal;
+    }
+
+    public void setConstVal(ConstVal ConstVal) {
+        this.ConstVal=ConstVal;
     }
 
     public ConstDeclList getConstDeclList() {
@@ -50,20 +60,20 @@ public class ConstDeclc extends ConstDecl {
 
     public void childrenAccept(Visitor visitor) {
         if(Type!=null) Type.accept(visitor);
-        if(ConstDeclRepeat!=null) ConstDeclRepeat.accept(visitor);
+        if(ConstVal!=null) ConstVal.accept(visitor);
         if(ConstDeclList!=null) ConstDeclList.accept(visitor);
     }
 
     public void traverseTopDown(Visitor visitor) {
         accept(visitor);
         if(Type!=null) Type.traverseTopDown(visitor);
-        if(ConstDeclRepeat!=null) ConstDeclRepeat.traverseTopDown(visitor);
+        if(ConstVal!=null) ConstVal.traverseTopDown(visitor);
         if(ConstDeclList!=null) ConstDeclList.traverseTopDown(visitor);
     }
 
     public void traverseBottomUp(Visitor visitor) {
         if(Type!=null) Type.traverseBottomUp(visitor);
-        if(ConstDeclRepeat!=null) ConstDeclRepeat.traverseBottomUp(visitor);
+        if(ConstVal!=null) ConstVal.traverseBottomUp(visitor);
         if(ConstDeclList!=null) ConstDeclList.traverseBottomUp(visitor);
         accept(visitor);
     }
@@ -79,8 +89,11 @@ public class ConstDeclc extends ConstDecl {
             buffer.append(tab+"  null");
         buffer.append("\n");
 
-        if(ConstDeclRepeat!=null)
-            buffer.append(ConstDeclRepeat.toString("  "+tab));
+        buffer.append(" "+tab+I1);
+        buffer.append("\n");
+
+        if(ConstVal!=null)
+            buffer.append(ConstVal.toString("  "+tab));
         else
             buffer.append(tab+"  null");
         buffer.append("\n");

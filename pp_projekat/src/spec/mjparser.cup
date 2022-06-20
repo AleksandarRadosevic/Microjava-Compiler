@@ -48,21 +48,22 @@ scan with {:
 :}
 
 
-terminal Integer NUMBER;
+terminal Integer NUMBER, BOOLCONST;
 terminal String IDENT;
-terminal PROG, LBRACECURLY, RBRACECURLY, CONST, ASSIGN, CHARCONST, BOOLCONST, EQUAL, NOTEQUAL, GREATER, GREATEREQUAL;
+terminal Character CHARCONST;
+
+terminal PROG, LBRACECURLY, RBRACECURLY, CONST, ASSIGN, EQUAL, NOTEQUAL, GREATER, GREATEREQUAL, THIS, SUPER, ENUM;
 terminal COMMA, CLASS, EXTENDS, RECORD, LPAREN, RPAREN, VOID, PRINT, GOTO, AND, NEW, DOT, PLUS, MINUS, MUL, DIV, MOD, COLON;
 terminal IF, SEMICOLON, DO, WHILE, BREAK, CONTINUE, RETURN, READ, LBRACE, RBRACE, INCREMENT, DECREMENT,LOWER, LOWEREQUAL, OR, ELSE;
 
 nonterminal Program, DeclarationList, ConstDecl, VarDecl, ClassDecl, RecordDecl, Type, ConstVal, ConstDeclList, MethodDecl;
-nonterminal OptionalBraces, VarDeclList, ConstDeclRepeat, VarDeclRepeat, OptionalExtends, DeclListVar, DeclList;
+nonterminal OptionalBraces, VarDeclList, OptionalExtends, DeclListVar, DeclList;
 nonterminal OptConstructorMethod, ConstructorDecl, OptionalConstructorDecl, DeclListMethod, StatementList, TypeOrVoid;
 nonterminal FormParsOptional, Statement, FormPars, Pars, ParsList, SingleStatement, Label, LabelColon;
 nonterminal Condition, OptionalElse, Designator, DesignatorStatement, DesignatorStatementElements, ExprCommaList;
 nonterminal Expr, OptionalNumConst, Statements, OptionalExpression, ActParsOptional, ActPars, CondTerm;
 nonterminal CondTermListOr, CondFactListAnd, CondFact, RelopOprOptional, Relop, OptionalMinus, Term, AddopTermList;
 nonterminal Addop, Factor, MulopFactorList, Mulop, ActParsBracesOptional, ExprBracesOptional, IdentList, DotOrExpr, Assignop;
-
 
 Program ::= (Programc) PROG IDENT DeclarationList LBRACECURLY DeclListMethod RBRACECURLY;
 
@@ -76,24 +77,21 @@ DeclList ::= (DeclListc)
 				RecordDecl;
 			
 
-ConstDecl ::= (ConstDeclc) CONST Type:constType ConstDeclRepeat ConstDeclList SEMICOLON;
+ConstDecl ::= (ConstDeclc) CONST Type:constType IDENT ASSIGN ConstVal ConstDeclList SEMICOLON;
 
-ConstDeclRepeat ::= (ConstDeclRepeatc) IDENT ASSIGN ConstVal;
 
 ConstVal ::= (ConstValc) NUMBER | CHARCONST | BOOLCONST;
 
-ConstDeclList ::= (ConstDeclListc) ConstDeclList ConstDeclRepeat  
+ConstDeclList ::= (ConstDeclListc) ConstDeclList COMMA IDENT ASSIGN ConstVal  
 				| (NoConstDecl) /* epsilon */;
 	
 
-VarDecl ::= (VarDeclc) Type:varType VarDeclRepeat VarDeclList SEMICOLON;
-
-VarDeclRepeat ::= (VarDeclRepeatc) IDENT OptionalBraces;
+VarDecl ::= (VarDeclc) Type:varType IDENT OptionalBraces VarDeclList SEMICOLON;
 
 OptionalBraces ::= (OptionalBracesc) LBRACE RBRACE 
 				| (NoOptionalBraces) /* epsilon */;
 
-VarDeclList ::= (VarDeclListc) VarDeclList COMMA VarDeclRepeat  
+VarDeclList ::= (VarDeclListc) VarDeclList COMMA IDENT OptionalBraces  
 				| (NoVarDeclList) /* epsilon */;
 	
 			
@@ -147,14 +145,14 @@ Statement ::= (Statementc) LabelColon SingleStatement
 LabelColon ::= (LabelColonc) Label COLON;
 
 SingleStatement ::= (SingleStatementc) DesignatorStatement SEMICOLON
-				| IF LPAREN Condition RPAREN Statement /* ELSE Statement */
-			 	| DO Statement WHILE LPAREN Condition RPAREN SEMICOLON
-				| BREAK SEMICOLON
-				| CONTINUE SEMICOLON
-				| RETURN OptionalExpression SEMICOLON
-				| READ LPAREN Designator RPAREN SEMICOLON
-				| PRINT LPAREN Expr OptionalNumConst RPAREN SEMICOLON
-				| GOTO Label SEMICOLON;
+				| (IfStmt) IF LPAREN Condition RPAREN Statement /* ELSE Statement */
+			 	| (DoStmt) DO Statement WHILE LPAREN Condition RPAREN SEMICOLON
+				| (BreakStmt) BREAK SEMICOLON
+				| (ContinueStmt) CONTINUE SEMICOLON
+				| (ReturnStmt) RETURN OptionalExpression SEMICOLON
+				| (ReadStmt) READ LPAREN Designator RPAREN SEMICOLON
+				| (PrintStmt) PRINT LPAREN Expr OptionalNumConst RPAREN SEMICOLON
+				| (GotoStmt) GOTO Label SEMICOLON;
 				
 OptionalElse ::= (OptionalElsec) ELSE Statement
 				| (NoOptionalElse) /* epsilon */;

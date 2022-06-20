@@ -1,0 +1,5 @@
+INFO  12:01:04,768 - Compiling source file: C:\Users\Aleksandar\Desktop\PP\projekat\PP_Projekat\pp_projekat\test\program.mj
+INFO  12:01:04,809 - #1 program
+ERROR 12:01:04,809 - 
+Sintaksna greska na liniji 1
+ERROR 12:01:04,809 - Fatalna greska, parsiranje se ne moze nastaviti na liniji 1

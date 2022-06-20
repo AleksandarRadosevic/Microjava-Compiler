@@ -1,0 +1,25 @@
+INFO  14:12:40,363 - Compiling source file: C:\Users\Aleksandar\Desktop\PP\projekat\PP_Projekat\pp_projekat\test\program.mj
+INFO  14:12:40,402 - #6 program
+INFO  14:12:40,402 - #4 Program
+INFO  14:12:40,402 - #19 class
+INFO  14:12:40,403 - #4 A
+INFO  14:12:40,403 - #7 {
+INFO  14:12:40,403 - #4 int
+INFO  14:12:40,404 - #4 x
+INFO  14:12:40,404 - #44 [
+INFO  14:12:40,404 - #45 ]
+INFO  14:12:40,404 - #18 ,
+INFO  14:12:40,405 - #4 y
+INFO  14:12:40,405 - #44 [
+INFO  14:12:40,405 - #45 ]
+INFO  14:12:40,405 - #37 ;
+INFO  14:12:40,405 - #8 }
+INFO  14:12:40,406 - #9 const
+INFO  14:12:40,406 - #4 int
+INFO  14:12:40,406 - #4 pi
+INFO  14:12:40,406 - #10 =
+INFO  14:12:40,406 - #2 3
+INFO  14:12:40,406 - #18 ,
+ERROR 14:12:40,407 - 
+Sintaksna greska na liniji 3
+ERROR 14:12:40,407 - Fatalna greska, parsiranje se ne moze nastaviti na liniji 3

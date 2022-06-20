@@ -1,13 +1,24 @@
 // generated with ast extension for cup
 // version 0.8
-// 20/5/2022 11:7:40
+// 20/5/2022 14:14:38
 
 
-package src.rs.ac.bg.etf.pp1.ast;
+package rs.ac.bg.etf.pp1.ast;
 
 public class ConstValDerived2 extends ConstVal {
 
-    public ConstValDerived2 () {
+    private Integer B1;
+
+    public ConstValDerived2 (Integer B1) {
+        this.B1=B1;
+    }
+
+    public Integer getB1() {
+        return B1;
+    }
+
+    public void setB1(Integer B1) {
+        this.B1=B1;
     }
 
     public void accept(Visitor visitor) {
@@ -29,6 +40,9 @@ public class ConstValDerived2 extends ConstVal {
         StringBuffer buffer=new StringBuffer();
         buffer.append(tab);
         buffer.append("ConstValDerived2(\n");
+
+        buffer.append(" "+tab+B1);
+        buffer.append("\n");
 
         buffer.append(tab);
         buffer.append(") [ConstValDerived2]");
