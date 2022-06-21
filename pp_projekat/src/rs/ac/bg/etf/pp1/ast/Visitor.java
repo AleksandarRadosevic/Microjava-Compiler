@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 21/5/2022 0:17:36
+// 21/5/2022 11:58:1
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -24,7 +24,6 @@ public interface Visitor {
     public void visit(DotOrExpr DotOrExpr);
     public void visit(Pars Pars);
     public void visit(OptionalExtends OptionalExtends);
-    public void visit(ActParsBracesOptional ActParsBracesOptional);
     public void visit(StatementList StatementList);
     public void visit(Addop Addop);
     public void visit(OptionalBraces OptionalBraces);
@@ -47,8 +46,8 @@ public interface Visitor {
     public void visit(Label Label);
     public void visit(OptionalConstructorDecl OptionalConstructorDecl);
     public void visit(VarDeclList VarDeclList);
-    public void visit(ConstVal ConstVal);
     public void visit(Expr Expr);
+    public void visit(ConstVal ConstVal);
     public void visit(ActPars ActPars);
     public void visit(TypeOrVoid TypeOrVoid);
     public void visit(MethodTypeName MethodTypeName);
@@ -83,13 +82,14 @@ public interface Visitor {
     public void visit(DotOrExprc DotOrExprc);
     public void visit(IdentListDerived1 IdentListDerived1);
     public void visit(IdentListc IdentListc);
+    public void visit(DesignatorName DesignatorName);
+    public void visit(DesignatorDerived3 DesignatorDerived3);
     public void visit(DesignatorDerived2 DesignatorDerived2);
     public void visit(DesignatorDerived1 DesignatorDerived1);
     public void visit(Designatorc Designatorc);
     public void visit(NoExprBracesOptional NoExprBracesOptional);
     public void visit(ExprBracesOptionalc ExprBracesOptionalc);
-    public void visit(NoActParsBracesOptional NoActParsBracesOptional);
-    public void visit(ActParsBracesOptionalc ActParsBracesOptionalc);
+    public void visit(FuncCall FuncCall);
     public void visit(FactorDerived5 FactorDerived5);
     public void visit(FactorDerived4 FactorDerived4);
     public void visit(FactorDerived3 FactorDerived3);

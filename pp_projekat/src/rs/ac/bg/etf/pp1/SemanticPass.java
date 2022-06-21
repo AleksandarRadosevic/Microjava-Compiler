@@ -89,11 +89,23 @@ public class SemanticPass extends VisitorAdaptor {
     }
     
     public void visit(Designatorc designator) {
-    	Obj obj = Tab.find(designator.getName());
+    	Obj obj = Tab.find(designator.getDesignatorName().getName());
     	if(obj == Tab.noObj){
-			report_error("Greska na liniji " + designator.getLine()+ " : ime "+designator.getName()+" nije deklarisano! ", null);
+			report_error("Greska na liniji " + designator.getLine()+ " : ime "+designator.getDesignatorName().getName()+" nije deklarisano! ", null);
     	}
     	designator.obj = obj;
+    }
+    
+    
+    public void visit(FuncCall funcCall ) {
+    	Obj func = funcCall.getDesignator().obj;
+    	if(Obj.Meth == func.getKind()){
+			report_info("Pronadjen poziv funkcije " + func.getName() + " na liniji " + funcCall.getLine(), null);
+			funcCall.struct = func.getType();
+    	}else{
+			report_error("Greska na liniji " + funcCall.getLine()+" : ime " + func.getName() + " nije funkcija!", null);
+			funcCall.struct = Tab.noType;
+    	}
     }
     
 }

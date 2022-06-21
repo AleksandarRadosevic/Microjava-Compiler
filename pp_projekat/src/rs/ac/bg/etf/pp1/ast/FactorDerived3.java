@@ -1,24 +1,36 @@
 // generated with ast extension for cup
 // version 0.8
-// 21/5/2022 0:17:36
+// 21/5/2022 11:58:1
 
 
 package rs.ac.bg.etf.pp1.ast;
 
 public class FactorDerived3 extends Factor {
 
-    private Integer B1;
+    private Type Type;
+    private ExprBracesOptional ExprBracesOptional;
 
-    public FactorDerived3 (Integer B1) {
-        this.B1=B1;
+    public FactorDerived3 (Type Type, ExprBracesOptional ExprBracesOptional) {
+        this.Type=Type;
+        if(Type!=null) Type.setParent(this);
+        this.ExprBracesOptional=ExprBracesOptional;
+        if(ExprBracesOptional!=null) ExprBracesOptional.setParent(this);
     }
 
-    public Integer getB1() {
-        return B1;
+    public Type getType() {
+        return Type;
     }
 
-    public void setB1(Integer B1) {
-        this.B1=B1;
+    public void setType(Type Type) {
+        this.Type=Type;
+    }
+
+    public ExprBracesOptional getExprBracesOptional() {
+        return ExprBracesOptional;
+    }
+
+    public void setExprBracesOptional(ExprBracesOptional ExprBracesOptional) {
+        this.ExprBracesOptional=ExprBracesOptional;
     }
 
     public void accept(Visitor visitor) {
@@ -26,13 +38,19 @@ public class FactorDerived3 extends Factor {
     }
 
     public void childrenAccept(Visitor visitor) {
+        if(Type!=null) Type.accept(visitor);
+        if(ExprBracesOptional!=null) ExprBracesOptional.accept(visitor);
     }
 
     public void traverseTopDown(Visitor visitor) {
         accept(visitor);
+        if(Type!=null) Type.traverseTopDown(visitor);
+        if(ExprBracesOptional!=null) ExprBracesOptional.traverseTopDown(visitor);
     }
 
     public void traverseBottomUp(Visitor visitor) {
+        if(Type!=null) Type.traverseBottomUp(visitor);
+        if(ExprBracesOptional!=null) ExprBracesOptional.traverseBottomUp(visitor);
         accept(visitor);
     }
 
@@ -41,7 +59,16 @@ public class FactorDerived3 extends Factor {
         buffer.append(tab);
         buffer.append("FactorDerived3(\n");
 
-        buffer.append(" "+tab+B1);
+        if(Type!=null)
+            buffer.append(Type.toString("  "+tab));
+        else
+            buffer.append(tab+"  null");
+        buffer.append("\n");
+
+        if(ExprBracesOptional!=null)
+            buffer.append(ExprBracesOptional.toString("  "+tab));
+        else
+            buffer.append(tab+"  null");
         buffer.append("\n");
 
         buffer.append(tab);

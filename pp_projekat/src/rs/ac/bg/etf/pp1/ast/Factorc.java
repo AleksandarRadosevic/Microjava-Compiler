@@ -1,36 +1,24 @@
 // generated with ast extension for cup
 // version 0.8
-// 21/5/2022 0:17:36
+// 21/5/2022 11:58:1
 
 
 package rs.ac.bg.etf.pp1.ast;
 
 public class Factorc extends Factor {
 
-    private Designator Designator;
-    private ActParsBracesOptional ActParsBracesOptional;
+    private Integer N1;
 
-    public Factorc (Designator Designator, ActParsBracesOptional ActParsBracesOptional) {
-        this.Designator=Designator;
-        if(Designator!=null) Designator.setParent(this);
-        this.ActParsBracesOptional=ActParsBracesOptional;
-        if(ActParsBracesOptional!=null) ActParsBracesOptional.setParent(this);
+    public Factorc (Integer N1) {
+        this.N1=N1;
     }
 
-    public Designator getDesignator() {
-        return Designator;
+    public Integer getN1() {
+        return N1;
     }
 
-    public void setDesignator(Designator Designator) {
-        this.Designator=Designator;
-    }
-
-    public ActParsBracesOptional getActParsBracesOptional() {
-        return ActParsBracesOptional;
-    }
-
-    public void setActParsBracesOptional(ActParsBracesOptional ActParsBracesOptional) {
-        this.ActParsBracesOptional=ActParsBracesOptional;
+    public void setN1(Integer N1) {
+        this.N1=N1;
     }
 
     public void accept(Visitor visitor) {
@@ -38,19 +26,13 @@ public class Factorc extends Factor {
     }
 
     public void childrenAccept(Visitor visitor) {
-        if(Designator!=null) Designator.accept(visitor);
-        if(ActParsBracesOptional!=null) ActParsBracesOptional.accept(visitor);
     }
 
     public void traverseTopDown(Visitor visitor) {
         accept(visitor);
-        if(Designator!=null) Designator.traverseTopDown(visitor);
-        if(ActParsBracesOptional!=null) ActParsBracesOptional.traverseTopDown(visitor);
     }
 
     public void traverseBottomUp(Visitor visitor) {
-        if(Designator!=null) Designator.traverseBottomUp(visitor);
-        if(ActParsBracesOptional!=null) ActParsBracesOptional.traverseBottomUp(visitor);
         accept(visitor);
     }
 
@@ -59,16 +41,7 @@ public class Factorc extends Factor {
         buffer.append(tab);
         buffer.append("Factorc(\n");
 
-        if(Designator!=null)
-            buffer.append(Designator.toString("  "+tab));
-        else
-            buffer.append(tab+"  null");
-        buffer.append("\n");
-
-        if(ActParsBracesOptional!=null)
-            buffer.append(ActParsBracesOptional.toString("  "+tab));
-        else
-            buffer.append(tab+"  null");
+        buffer.append(" "+tab+N1);
         buffer.append("\n");
 
         buffer.append(tab);

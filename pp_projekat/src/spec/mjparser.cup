@@ -66,14 +66,14 @@ nonterminal OptionalBraces, VarDeclList, OptionalExtends, DeclListVar, DeclList;
 nonterminal OptConstructorMethod, ConstructorDecl, OptionalConstructorDecl, DeclListMethod, StatementList;
 nonterminal FormParsOptional, Statement, FormPars, Pars, ParsList, SingleStatement, Label, LabelColon;
 nonterminal Condition, OptionalElse, DesignatorStatement, DesignatorStatementElements, ExprCommaList;
-nonterminal Expr, OptionalNumConst, Statements, OptionalExpression, ActParsOptional, ActPars, CondTerm;
-nonterminal CondTermListOr, CondFactListAnd, CondFact, RelopOprOptional, Relop, OptionalMinus, Term, AddopTermList;
-nonterminal Addop, Factor, MulopFactorList, Mulop, ActParsBracesOptional, ExprBracesOptional, IdentList, DotOrExpr, Assignop;
+nonterminal OptionalNumConst, Statements, OptionalExpression, ActParsOptional, ActPars, CondTerm;
+nonterminal CondTermListOr, CondFactListAnd, CondFact, RelopOprOptional, Relop, OptionalMinus, AddopTermList;
+nonterminal Addop, MulopFactorList, Mulop, ExprBracesOptional, IdentList, DotOrExpr, Assignop;
 nonterminal ConditionIf;
 
 
-nonterminal rs.etf.pp1.symboltable.concepts.Obj ProgName, Program, MethodTypeName, MethodDecl, Designator;
-nonterminal rs.etf.pp1.symboltable.concepts.Struct Type, TypeOrVoid;
+nonterminal rs.etf.pp1.symboltable.concepts.Obj ProgName, Program, MethodTypeName, MethodDecl, Designator, DesignatorName;
+nonterminal rs.etf.pp1.symboltable.concepts.Struct Type, TypeOrVoid, Term, Factor, Expr;
 
 precedence left ELSE;
 
@@ -245,23 +245,25 @@ Term ::= (Termc) Factor MulopFactorList;
 MulopFactorList ::= (MulopFactorListc) MulopFactorList Mulop Factor
 				| (NoMulopFactorList) /* epsilon */;
 
-Factor ::= (Factorc) Designator ActParsBracesOptional
-		| NUMBER
+Factor ::= (Factorc) NUMBER
 		| CHARCONST
 		| BOOLCONST
 		| NEW Type ExprBracesOptional
-		| LPAREN Expr RPAREN;
-		
-ActParsBracesOptional ::= (ActParsBracesOptionalc) LPAREN ActParsOptional RPAREN 		
-						| (NoActParsBracesOptional) /* epsilon */;
-		
+		| LPAREN Expr RPAREN
+		| Designator
+		| (FuncCall) Designator:func LPAREN ActParsOptional RPAREN;
+				
 ExprBracesOptional ::= (ExprBracesOptionalc) LBRACE Expr RBRACE
 					| (NoExprBracesOptional) /* epsilon */;
 					
 					
-Designator ::= (Designatorc) IDENT:name 
-			| IDENT:name LBRACE Expr RBRACE
-			| IdentList;
+Designator ::= (Designatorc) DesignatorName 
+			| DesignatorName DOT DesignatorName
+			| DesignatorName LBRACE Expr RBRACE
+			| DesignatorName DOT DesignatorName LBRACE Expr RBRACE;
+
+DesignatorName ::= (DesignatorName) IDENT:name;
+
 
 IdentList ::= (IdentListc) IDENT DOT IDENT
 		 	| IDENT DOT IDENT LBRACE Expr RBRACE;

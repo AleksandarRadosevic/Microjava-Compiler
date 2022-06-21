@@ -1,35 +1,36 @@
 // generated with ast extension for cup
 // version 0.8
-// 21/5/2022 0:17:36
+// 21/5/2022 11:58:1
 
 
 package rs.ac.bg.etf.pp1.ast;
 
 public class DesignatorDerived1 extends Designator {
 
-    private String I1;
-    private Expr Expr;
+    private DesignatorName DesignatorName;
+    private DesignatorName DesignatorName1;
 
-    public DesignatorDerived1 (String I1, Expr Expr) {
-        this.I1=I1;
-        this.Expr=Expr;
-        if(Expr!=null) Expr.setParent(this);
+    public DesignatorDerived1 (DesignatorName DesignatorName, DesignatorName DesignatorName1) {
+        this.DesignatorName=DesignatorName;
+        if(DesignatorName!=null) DesignatorName.setParent(this);
+        this.DesignatorName1=DesignatorName1;
+        if(DesignatorName1!=null) DesignatorName1.setParent(this);
     }
 
-    public String getI1() {
-        return I1;
+    public DesignatorName getDesignatorName() {
+        return DesignatorName;
     }
 
-    public void setI1(String I1) {
-        this.I1=I1;
+    public void setDesignatorName(DesignatorName DesignatorName) {
+        this.DesignatorName=DesignatorName;
     }
 
-    public Expr getExpr() {
-        return Expr;
+    public DesignatorName getDesignatorName1() {
+        return DesignatorName1;
     }
 
-    public void setExpr(Expr Expr) {
-        this.Expr=Expr;
+    public void setDesignatorName1(DesignatorName DesignatorName1) {
+        this.DesignatorName1=DesignatorName1;
     }
 
     public void accept(Visitor visitor) {
@@ -37,16 +38,19 @@ public class DesignatorDerived1 extends Designator {
     }
 
     public void childrenAccept(Visitor visitor) {
-        if(Expr!=null) Expr.accept(visitor);
+        if(DesignatorName!=null) DesignatorName.accept(visitor);
+        if(DesignatorName1!=null) DesignatorName1.accept(visitor);
     }
 
     public void traverseTopDown(Visitor visitor) {
         accept(visitor);
-        if(Expr!=null) Expr.traverseTopDown(visitor);
+        if(DesignatorName!=null) DesignatorName.traverseTopDown(visitor);
+        if(DesignatorName1!=null) DesignatorName1.traverseTopDown(visitor);
     }
 
     public void traverseBottomUp(Visitor visitor) {
-        if(Expr!=null) Expr.traverseBottomUp(visitor);
+        if(DesignatorName!=null) DesignatorName.traverseBottomUp(visitor);
+        if(DesignatorName1!=null) DesignatorName1.traverseBottomUp(visitor);
         accept(visitor);
     }
 
@@ -55,11 +59,14 @@ public class DesignatorDerived1 extends Designator {
         buffer.append(tab);
         buffer.append("DesignatorDerived1(\n");
 
-        buffer.append(" "+tab+I1);
+        if(DesignatorName!=null)
+            buffer.append(DesignatorName.toString("  "+tab));
+        else
+            buffer.append(tab+"  null");
         buffer.append("\n");
 
-        if(Expr!=null)
-            buffer.append(Expr.toString("  "+tab));
+        if(DesignatorName1!=null)
+            buffer.append(DesignatorName1.toString("  "+tab));
         else
             buffer.append(tab+"  null");
         buffer.append("\n");

@@ -1,36 +1,25 @@
 // generated with ast extension for cup
 // version 0.8
-// 21/5/2022 0:17:36
+// 21/5/2022 11:58:1
 
 
 package rs.ac.bg.etf.pp1.ast;
 
 public class FactorDerived4 extends Factor {
 
-    private Type Type;
-    private ExprBracesOptional ExprBracesOptional;
+    private Expr Expr;
 
-    public FactorDerived4 (Type Type, ExprBracesOptional ExprBracesOptional) {
-        this.Type=Type;
-        if(Type!=null) Type.setParent(this);
-        this.ExprBracesOptional=ExprBracesOptional;
-        if(ExprBracesOptional!=null) ExprBracesOptional.setParent(this);
+    public FactorDerived4 (Expr Expr) {
+        this.Expr=Expr;
+        if(Expr!=null) Expr.setParent(this);
     }
 
-    public Type getType() {
-        return Type;
+    public Expr getExpr() {
+        return Expr;
     }
 
-    public void setType(Type Type) {
-        this.Type=Type;
-    }
-
-    public ExprBracesOptional getExprBracesOptional() {
-        return ExprBracesOptional;
-    }
-
-    public void setExprBracesOptional(ExprBracesOptional ExprBracesOptional) {
-        this.ExprBracesOptional=ExprBracesOptional;
+    public void setExpr(Expr Expr) {
+        this.Expr=Expr;
     }
 
     public void accept(Visitor visitor) {
@@ -38,19 +27,16 @@ public class FactorDerived4 extends Factor {
     }
 
     public void childrenAccept(Visitor visitor) {
-        if(Type!=null) Type.accept(visitor);
-        if(ExprBracesOptional!=null) ExprBracesOptional.accept(visitor);
+        if(Expr!=null) Expr.accept(visitor);
     }
 
     public void traverseTopDown(Visitor visitor) {
         accept(visitor);
-        if(Type!=null) Type.traverseTopDown(visitor);
-        if(ExprBracesOptional!=null) ExprBracesOptional.traverseTopDown(visitor);
+        if(Expr!=null) Expr.traverseTopDown(visitor);
     }
 
     public void traverseBottomUp(Visitor visitor) {
-        if(Type!=null) Type.traverseBottomUp(visitor);
-        if(ExprBracesOptional!=null) ExprBracesOptional.traverseBottomUp(visitor);
+        if(Expr!=null) Expr.traverseBottomUp(visitor);
         accept(visitor);
     }
 
@@ -59,14 +45,8 @@ public class FactorDerived4 extends Factor {
         buffer.append(tab);
         buffer.append("FactorDerived4(\n");
 
-        if(Type!=null)
-            buffer.append(Type.toString("  "+tab));
-        else
-            buffer.append(tab+"  null");
-        buffer.append("\n");
-
-        if(ExprBracesOptional!=null)
-            buffer.append(ExprBracesOptional.toString("  "+tab));
+        if(Expr!=null)
+            buffer.append(Expr.toString("  "+tab));
         else
             buffer.append(tab+"  null");
         buffer.append("\n");

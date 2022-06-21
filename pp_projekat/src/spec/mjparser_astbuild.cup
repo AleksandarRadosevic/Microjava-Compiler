@@ -91,7 +91,6 @@ nonterminal OptionalElse OptionalElse;
 nonterminal DesignatorStatement DesignatorStatement;
 nonterminal DesignatorStatementElements DesignatorStatementElements;
 nonterminal ExprCommaList ExprCommaList;
-nonterminal Expr Expr;
 nonterminal OptionalNumConst OptionalNumConst;
 nonterminal Statements Statements;
 nonterminal OptionalExpression OptionalExpression;
@@ -104,13 +103,10 @@ nonterminal CondFact CondFact;
 nonterminal RelopOprOptional RelopOprOptional;
 nonterminal Relop Relop;
 nonterminal OptionalMinus OptionalMinus;
-nonterminal Term Term;
 nonterminal AddopTermList AddopTermList;
 nonterminal Addop Addop;
-nonterminal Factor Factor;
 nonterminal MulopFactorList MulopFactorList;
 nonterminal Mulop Mulop;
-nonterminal ActParsBracesOptional ActParsBracesOptional;
 nonterminal ExprBracesOptional ExprBracesOptional;
 nonterminal IdentList IdentList;
 nonterminal DotOrExpr DotOrExpr;
@@ -118,8 +114,8 @@ nonterminal Assignop Assignop;
 nonterminal ConditionIf ConditionIf;
 
 
-nonterminal rs.etf.pp1.symboltable.concepts.Obj ProgName, Program, MethodTypeName, MethodDecl, Designator;
-nonterminal rs.etf.pp1.symboltable.concepts.Struct Type, TypeOrVoid;
+nonterminal rs.etf.pp1.symboltable.concepts.Obj ProgName, Program, MethodTypeName, MethodDecl, Designator, DesignatorName;
+nonterminal rs.etf.pp1.symboltable.concepts.Struct Type, TypeOrVoid, Term, Factor, Expr;
 
 precedence left ELSE;
 
@@ -291,23 +287,25 @@ Term ::= (Termc) Factor:F1 MulopFactorList:M2 {: RESULT=new Termc(F1, M2); RESUL
 MulopFactorList ::= (MulopFactorListc) MulopFactorList:M1 Mulop:M2 Factor:F3 {: RESULT=new MulopFactorListc(M1, M2, F3); RESULT.setLine(M1left); :}
 				| (NoMulopFactorList) {: RESULT=new NoMulopFactorList(); :} /* epsilon */;
 
-Factor ::= (Factorc) Designator:D1 ActParsBracesOptional:A2 {: RESULT=new Factorc(D1, A2); RESULT.setLine(D1left); :}
-		| NUMBER:N1 {: RESULT=new FactorDerived1(N1); RESULT.setLine(N1left); :}
-		| CHARCONST:C1 {: RESULT=new FactorDerived2(C1); RESULT.setLine(C1left); :}
-		| BOOLCONST:B1 {: RESULT=new FactorDerived3(B1); RESULT.setLine(B1left); :}
-		| NEW Type:T1 ExprBracesOptional:E2 {: RESULT=new FactorDerived4(T1, E2); RESULT.setLine(T1left); :}
-		| LPAREN Expr:E1 RPAREN {: RESULT=new FactorDerived5(E1); RESULT.setLine(E1left); :};
-		
-ActParsBracesOptional ::= (ActParsBracesOptionalc) LPAREN ActParsOptional:A1 RPAREN {: RESULT=new ActParsBracesOptionalc(A1); RESULT.setLine(A1left); :} 		
-						| (NoActParsBracesOptional) {: RESULT=new NoActParsBracesOptional(); :} /* epsilon */;
-		
+Factor ::= (Factorc) NUMBER:N1 {: RESULT=new Factorc(N1); RESULT.setLine(N1left); :}
+		| CHARCONST:C1 {: RESULT=new FactorDerived1(C1); RESULT.setLine(C1left); :}
+		| BOOLCONST:B1 {: RESULT=new FactorDerived2(B1); RESULT.setLine(B1left); :}
+		| NEW Type:T1 ExprBracesOptional:E2 {: RESULT=new FactorDerived3(T1, E2); RESULT.setLine(T1left); :}
+		| LPAREN Expr:E1 RPAREN {: RESULT=new FactorDerived4(E1); RESULT.setLine(E1left); :}
+		| Designator:D1 {: RESULT=new FactorDerived5(D1); RESULT.setLine(D1left); :}
+		| (FuncCall) Designator:func LPAREN ActParsOptional:A1 RPAREN {: RESULT=new FuncCall(func, A1); RESULT.setLine(funcleft); :};
+				
 ExprBracesOptional ::= (ExprBracesOptionalc) LBRACE Expr:E1 RBRACE {: RESULT=new ExprBracesOptionalc(E1); RESULT.setLine(E1left); :}
 					| (NoExprBracesOptional) {: RESULT=new NoExprBracesOptional(); :} /* epsilon */;
 					
 					
-Designator ::= (Designatorc) IDENT:I1 {: RESULT=new Designatorc(I1); RESULT.setLine(I1left); :} 
-			| IDENT:I1 LBRACE Expr:E2 RBRACE {: RESULT=new DesignatorDerived1(I1, E2); RESULT.setLine(I1left); :}
-			| IdentList:I1 {: RESULT=new DesignatorDerived2(I1); RESULT.setLine(I1left); :};
+Designator ::= (Designatorc) DesignatorName:D1 {: RESULT=new Designatorc(D1); RESULT.setLine(D1left); :} 
+			| DesignatorName:D1 DOT DesignatorName:D2 {: RESULT=new DesignatorDerived1(D1, D2); RESULT.setLine(D1left); :}
+			| DesignatorName:D1 LBRACE Expr:E2 RBRACE {: RESULT=new DesignatorDerived2(D1, E2); RESULT.setLine(D1left); :}
+			| DesignatorName:D1 DOT DesignatorName:D2 LBRACE Expr:E3 RBRACE {: RESULT=new DesignatorDerived3(D1, D2, E3); RESULT.setLine(D1left); :};
+
+DesignatorName ::= (DesignatorName) IDENT:name {: RESULT=new DesignatorName(name); RESULT.setLine(nameleft); :};
+
 
 IdentList ::= (IdentListc) IDENT:I1 DOT IDENT:I2 {: RESULT=new IdentListc(I1, I2); RESULT.setLine(I1left); :}
 		 	| IDENT:I1 DOT IDENT:I2 LBRACE Expr:E3 RBRACE {: RESULT=new IdentListDerived1(I1, I2, E3); RESULT.setLine(I1left); :};

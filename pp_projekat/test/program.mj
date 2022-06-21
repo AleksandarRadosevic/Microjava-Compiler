@@ -1,11 +1,13 @@
 program MJProgram
-	const int a = 2, x = 3, b = 4, c = 6; int y;
+	int x; int y;
 {
-	int main(int a) {
+
+	int main() {
+		
 		print(1);
-		if (x==!2a)
-			x = y + 5;
-		else x = 4;
+		
+		x = 5 + 3;
+		
 		print(2);
 	}
 }
