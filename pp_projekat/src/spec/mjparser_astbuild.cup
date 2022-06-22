@@ -53,7 +53,8 @@ scan with {:
 :}
 
 
-terminal Integer NUMBER, BOOLCONST;
+terminal Integer NUMBER;
+terminal Boolean BOOLCONST;
 terminal String IDENT;
 terminal Character CHARCONST;
 
@@ -113,6 +114,8 @@ nonterminal DotOrExpr DotOrExpr;
 nonterminal Assignop Assignop;
 nonterminal ConditionIf ConditionIf;
 nonterminal IdentListelem IdentListelem;
+nonterminal VarDeclGlobal VarDeclGlobal;
+nonterminal VarDeclListGlobal VarDeclListGlobal;
 
 
 nonterminal rs.etf.pp1.symboltable.concepts.Obj ProgName, Program, MethodTypeName, MethodDecl, Designator, DesignatorName;
@@ -128,14 +131,12 @@ ProgName ::= (ProgNamec) IDENT:progName {: RESULT=new ProgNamec(progName); RESUL
 DeclarationList ::= (DeclarationListc) DeclarationList:D1 DeclList:D2 {: RESULT=new DeclarationListc(D1, D2); RESULT.setLine(D1left); :}
 				| (NoDeclarations) {: RESULT=new NoDeclarations(); :} /* epsilon */;
 				
-DeclList ::= (DeclListc)  
-				ConstDecl:C1 {: RESULT=new DeclListc(C1); RESULT.setLine(C1left); :}  |
-				VarDecl:V1 {: RESULT=new DeclListDerived1(V1); RESULT.setLine(V1left); :}    | 
-				ClassDecl:C1 {: RESULT=new DeclListDerived2(C1); RESULT.setLine(C1left); :}  | 
-				RecordDecl:R1 {: RESULT=new DeclListDerived3(R1); RESULT.setLine(R1left); :};
-			
+DeclList ::= (DeclListc)  ConstDecl:C1 {: RESULT=new DeclListc(C1); RESULT.setLine(C1left); :}
+			| VarDeclGlobal:V1 {: RESULT=new DeclListDerived1(V1); RESULT.setLine(V1left); :}
+			| ClassDecl:C1 {: RESULT=new DeclListDerived2(C1); RESULT.setLine(C1left); :}
+			| RecordDecl:R1 {: RESULT=new DeclListDerived3(R1); RESULT.setLine(R1left); :};
 
-ConstDecl ::= (ConstDeclc) CONST Type:constType IDENT:I1 ASSIGN ConstVal:C2 ConstDeclList:C3 SEMICOLON {: RESULT=new ConstDeclc(constType, I1, C2, C3); RESULT.setLine(constTypeleft); :}
+ConstDecl ::= (ConstDeclc) CONST Type:constType IDENT:name ASSIGN ConstVal:C1 ConstDeclList:C2 SEMICOLON {: RESULT=new ConstDeclc(constType, name, C1, C2); RESULT.setLine(constTypeleft); :}
 			| (ErrorConstDeclEnd) error SEMICOLON:l
 		    {: parser.report_error("Izvrsen oporavak do ; u liniji " + lleft, null);  :} {: RESULT=new ErrorConstDeclEnd(); :}
 		    ;
@@ -149,6 +150,8 @@ ConstDeclList ::= (ConstDeclListc) ConstDeclList:C1 COMMA IDENT:I2 ASSIGN ConstV
 				| (NoConstDecl) {: RESULT=new NoConstDecl(); :} /* epsilon */;
 	
 
+VarDeclGlobal ::= (VarDeclGlobalc) Type:varType IDENT:varName OptionalBraces:O1 VarDeclListGlobal:V2 SEMICOLON {: RESULT=new VarDeclGlobalc(varType, varName, O1, V2); RESULT.setLine(varTypeleft); :};
+
 VarDecl ::= (VarDeclc) Type:varType IDENT:varName OptionalBraces:O1 VarDeclList:V2 SEMICOLON {: RESULT=new VarDeclc(varType, varName, O1, V2); RESULT.setLine(varTypeleft); :};
 
 OptionalBraces ::= (OptionalBracesc) LBRACE RBRACE {: RESULT=new OptionalBracesc(); :} 
@@ -156,8 +159,12 @@ OptionalBraces ::= (OptionalBracesc) LBRACE RBRACE {: RESULT=new OptionalBracesc
 
 VarDeclList ::= (VarDeclListc) VarDeclList:V1 COMMA IDENT:I2 OptionalBraces:O3 {: RESULT=new VarDeclListc(V1, I2, O3); RESULT.setLine(V1left); :}  
 				| (NoVarDeclList) {: RESULT=new NoVarDeclList(); :} /* epsilon */;
-	
 			
+				
+VarDeclListGlobal ::= (VarDeclListGlobalc) VarDeclListGlobal:V1 COMMA IDENT:I2 OptionalBraces:O3 {: RESULT=new VarDeclListGlobalc(V1, I2, O3); RESULT.setLine(V1left); :}  
+				| (NoVarDeclListGlobalc) {: RESULT=new NoVarDeclListGlobalc(); :} /* epsilon */;
+								
+				
 ClassDecl ::= (ClassDeclc) CLASS IDENT:I1 OptionalExtends:O2 LBRACECURLY DeclListVar:D3 OptConstructorMethod:O4 RBRACECURLY {: RESULT=new ClassDeclc(I1, O2, D3, O4); RESULT.setLine(I1left); :};			 
 
 OptionalExtends ::= (OptionalExtendsc) EXTENDS Type:T1 {: RESULT=new OptionalExtendsc(T1); RESULT.setLine(T1left); :}

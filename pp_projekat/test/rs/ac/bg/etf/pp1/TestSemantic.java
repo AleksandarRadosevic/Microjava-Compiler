@@ -47,9 +47,9 @@ public class TestSemantic {
 			log.info(prog.toString(""));
 			log.info("===================================");
 	        Struct boolType=new Struct(Struct.Bool);
-	        Obj boolObj=Tab.insert(Obj.Type, "bool", boolType);
-	        boolObj.setAdr(-1);
-	        boolObj.setLevel(-1);
+	        Obj objBool=Tab.insert(Obj.Type, "bool", boolType);
+	        objBool.setAdr(-1);
+	        objBool.setLevel(-1);
 	        
 	        
 	        

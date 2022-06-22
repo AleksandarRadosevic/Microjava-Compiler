@@ -53,7 +53,8 @@ scan with {:
 :}
 
 
-terminal Integer NUMBER, BOOLCONST;
+terminal Integer NUMBER;
+terminal Boolean BOOLCONST;
 terminal String IDENT;
 terminal Character CHARCONST;
 
@@ -69,7 +70,7 @@ nonterminal Condition, OptionalElse, DesignatorStatement, DesignatorStatementEle
 nonterminal OptionalNumConst, Statements, OptionalExpression, ActParsOptional, ActPars, CondTerm;
 nonterminal CondTermListOr, CondFactListAnd, CondFact, RelopOprOptional, Relop, OptionalMinus, AddopTermList;
 nonterminal Addop, MulopFactorList, Mulop, ExprBracesOptional, IdentList, DotOrExpr, Assignop;
-nonterminal ConditionIf, IdentListelem;
+nonterminal ConditionIf, IdentListelem, VarDeclGlobal, VarDeclListGlobal;
 
 
 nonterminal rs.etf.pp1.symboltable.concepts.Obj ProgName, Program, MethodTypeName, MethodDecl, Designator, DesignatorName;
@@ -85,14 +86,12 @@ ProgName ::= (ProgNamec) IDENT:progName;
 DeclarationList ::= (DeclarationListc) DeclarationList DeclList
 				| (NoDeclarations) /* epsilon */;
 				
-DeclList ::= (DeclListc)  
-				ConstDecl  |
-				VarDecl    | 
-				ClassDecl  | 
-				RecordDecl;
-			
+DeclList ::= (DeclListc)  ConstDecl
+			| VarDeclGlobal
+			| ClassDecl
+			| RecordDecl;
 
-ConstDecl ::= (ConstDeclc) CONST Type:constType IDENT ASSIGN ConstVal ConstDeclList SEMICOLON
+ConstDecl ::= (ConstDeclc) CONST Type:constType IDENT:name ASSIGN ConstVal ConstDeclList SEMICOLON
 			| (ErrorConstDeclEnd) error SEMICOLON:l
 		    {: parser.report_error("Izvrsen oporavak do ; u liniji " + lleft, null);  :}
 		    ;
@@ -106,6 +105,8 @@ ConstDeclList ::= (ConstDeclListc) ConstDeclList COMMA IDENT ASSIGN ConstVal
 				| (NoConstDecl) /* epsilon */;
 	
 
+VarDeclGlobal ::= (VarDeclGlobalc) Type:varType IDENT:varName OptionalBraces VarDeclListGlobal SEMICOLON;
+
 VarDecl ::= (VarDeclc) Type:varType IDENT:varName OptionalBraces VarDeclList SEMICOLON;
 
 OptionalBraces ::= (OptionalBracesc) LBRACE RBRACE 
@@ -113,8 +114,12 @@ OptionalBraces ::= (OptionalBracesc) LBRACE RBRACE
 
 VarDeclList ::= (VarDeclListc) VarDeclList COMMA IDENT OptionalBraces  
 				| (NoVarDeclList) /* epsilon */;
-	
 			
+				
+VarDeclListGlobal ::= (VarDeclListGlobalc) VarDeclListGlobal COMMA IDENT OptionalBraces  
+				| (NoVarDeclListGlobalc) /* epsilon */;
+								
+				
 ClassDecl ::= (ClassDeclc) CLASS IDENT OptionalExtends LBRACECURLY DeclListVar OptConstructorMethod RBRACECURLY;			 
 
 OptionalExtends ::= (OptionalExtendsc) EXTENDS Type

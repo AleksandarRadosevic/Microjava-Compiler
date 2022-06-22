@@ -1,23 +1,23 @@
 // generated with ast extension for cup
 // version 0.8
-// 22/5/2022 13:57:32
+// 22/5/2022 15:59:35
 
 
 package rs.ac.bg.etf.pp1.ast;
 
 public class ConstValDerived2 extends ConstVal {
 
-    private Integer B1;
+    private Boolean B1;
 
-    public ConstValDerived2 (Integer B1) {
+    public ConstValDerived2 (Boolean B1) {
         this.B1=B1;
     }
 
-    public Integer getB1() {
+    public Boolean getB1() {
         return B1;
     }
 
-    public void setB1(Integer B1) {
+    public void setB1(Boolean B1) {
         this.B1=B1;
     }
 

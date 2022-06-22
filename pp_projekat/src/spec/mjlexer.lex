@@ -31,6 +31,10 @@ import java_cup.runtime.Symbol;
 	return new_symbol(sym.EOF);
 %eofval}
 
+
+
+boolLiteral = "true"|"false"
+
 %%
 
 " " { }
@@ -92,8 +96,9 @@ import java_cup.runtime.Symbol;
 
 [0-9]+  						{ return new_symbol (sym.NUMBER, new Integer (yytext())); }
 ([a-z]|[A-Z])[a-z|A-Z|0-9|_]* 	{ return new_symbol (sym.IDENT, yytext()); }
-("true"|"false") 				{return new_symbol (sym.BOOLCONST, yytext().equals("true") ? 1 : 0); }
-"'"."'" 						{return new_symbol (sym.CHARCONST,new Character( yytext().charAt(1))); }
+"true"	 						{ return new_symbol (sym.BOOLCONST, new Boolean(yytext())); }
+"false"	 						{ return new_symbol (sym.BOOLCONST, new Boolean(yytext())); }
+"'"."'" 						{ return new_symbol (sym.CHARCONST,new Character( yytext().charAt(1))); }
 
 
 

@@ -1,12 +1,13 @@
 // generated with ast extension for cup
 // version 0.8
-// 22/5/2022 13:57:33
+// 22/5/2022 15:59:35
 
 
 package rs.ac.bg.etf.pp1.ast;
 
 public abstract class VisitorAdaptor implements Visitor { 
 
+    public void visit(VarDeclGlobal VarDeclGlobal) { }
     public void visit(DeclarationList DeclarationList) { }
     public void visit(ActParsOptional ActParsOptional) { }
     public void visit(OptionalNumConst OptionalNumConst) { }
@@ -63,6 +64,7 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(CondFact CondFact) { }
     public void visit(OptionalExpression OptionalExpression) { }
     public void visit(Program Program) { }
+    public void visit(VarDeclListGlobal VarDeclListGlobal) { }
     public void visit(SingleStatement SingleStatement) { }
     public void visit(CondFactListAnd CondFactListAnd) { }
     public void visit(FormPars FormPars) { }
@@ -178,11 +180,14 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(NoOptionalExtendsc NoOptionalExtendsc) { visit(); }
     public void visit(OptionalExtendsc OptionalExtendsc) { visit(); }
     public void visit(ClassDeclc ClassDeclc) { visit(); }
+    public void visit(NoVarDeclListGlobalc NoVarDeclListGlobalc) { visit(); }
+    public void visit(VarDeclListGlobalc VarDeclListGlobalc) { visit(); }
     public void visit(NoVarDeclList NoVarDeclList) { visit(); }
     public void visit(VarDeclListc VarDeclListc) { visit(); }
     public void visit(NoOptionalBraces NoOptionalBraces) { visit(); }
     public void visit(OptionalBracesc OptionalBracesc) { visit(); }
     public void visit(VarDeclc VarDeclc) { visit(); }
+    public void visit(VarDeclGlobalc VarDeclGlobalc) { visit(); }
     public void visit(NoConstDecl NoConstDecl) { visit(); }
     public void visit(ErrorComma ErrorComma) { visit(); }
     public void visit(ConstDeclListc ConstDeclListc) { visit(); }

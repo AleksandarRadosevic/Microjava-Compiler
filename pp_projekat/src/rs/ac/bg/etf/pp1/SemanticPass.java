@@ -10,8 +10,9 @@ public class SemanticPass extends VisitorAdaptor {
 	
 	int printCallCount = 0;
 	int varDeclCount = 0;
+	int varDeclGlobalCount = 0;
 	Obj currentMethod = null;
-
+	//Struct currentType;
 	Logger log = Logger.getLogger(getClass());
 
 	public void report_error(String message, SyntaxNode info) {
@@ -30,9 +31,24 @@ public class SemanticPass extends VisitorAdaptor {
 		log.info(msg.toString());
 	}
 
+	
+	public void visit(ConstDeclc constVar) {
+		// mozda proveriti da li je dva puta definisana konstanta
+		System.out.println(constVar.getType().struct.getKind());
+		Tab.insert(Obj.Con, constVar.getName(), constVar.getType().struct);
+	}
+	
+	
 	public void visit(VarDeclc varDecl) {
 		varDeclCount++;
+		System.out.println(varDecl.getType().struct.getKind());
 		Obj varNode = Tab.insert(Obj.Var, varDecl.getVarName(), varDecl.getType().struct);
+	}
+
+	public void visit(VarDeclGlobalc varDeclGlobal) {
+		varDeclGlobalCount++;
+		System.out.println("Globalna promenljiva "+ varDeclGlobal.getVarName()+ " prepoznata" );
+		Obj varNode = Tab.insert(Obj.Var, varDeclGlobal.getVarName(), varDeclGlobal.getType().struct);
 	}
 
 	public void visit(PrintStmt print) {
@@ -41,7 +57,6 @@ public class SemanticPass extends VisitorAdaptor {
 
 	public void visit(ProgNamec progName) {
 		progName.obj = Tab.insert(Obj.Prog, progName.getProgName(), Tab.noType);
-		System.out.println(progName.obj.getLevel());
 		Tab.openScope();
 	}
 
@@ -61,6 +76,7 @@ public class SemanticPass extends VisitorAdaptor {
 			if (Obj.Type == obj.getKind()) {
 				// dodela odgovarajuceg tipa 
 				type.struct = obj.getType();
+				//currentType=type.struct;
 			}
 			else {
     			report_error("Greska: Ime " + type.getTypeName() + " ne predstavlja tip!", type);
