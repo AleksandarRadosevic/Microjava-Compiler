@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 22/5/2022 12:55:29
+// 22/5/2022 13:57:33
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -13,6 +13,7 @@ public interface Visitor {
     public void visit(DeclListVar DeclListVar);
     public void visit(MethodDecl MethodDecl);
     public void visit(Mulop Mulop);
+    public void visit(IdentListelem IdentListelem);
     public void visit(ConstructorDecl ConstructorDecl);
     public void visit(DeclListMethod DeclListMethod);
     public void visit(ExprCommaList ExprCommaList);
@@ -82,12 +83,11 @@ public interface Visitor {
     public void visit(Labelc Labelc);
     public void visit(DotOrExprDerived1 DotOrExprDerived1);
     public void visit(DotOrExprc DotOrExprc);
-    public void visit(IdentListDerived1 IdentListDerived1);
+    public void visit(IdentListelemDerived1 IdentListelemDerived1);
+    public void visit(IdentListelemc IdentListelemc);
+    public void visit(NoIdentList NoIdentList);
     public void visit(IdentListc IdentListc);
     public void visit(DesignatorName DesignatorName);
-    public void visit(DesignatorDerived3 DesignatorDerived3);
-    public void visit(DesignatorDerived2 DesignatorDerived2);
-    public void visit(DesignatorDerived1 DesignatorDerived1);
     public void visit(Designatorc Designatorc);
     public void visit(NoExprBracesOptional NoExprBracesOptional);
     public void visit(ExprBracesOptionalc ExprBracesOptionalc);
@@ -154,6 +154,7 @@ public interface Visitor {
     public void visit(Typec Typec);
     public void visit(NoParsList NoParsList);
     public void visit(ParsListc ParsListc);
+    public void visit(ParsDerived1 ParsDerived1);
     public void visit(Parsc Parsc);
     public void visit(ErrorFormPars ErrorFormPars);
     public void visit(FormParsc FormParsc);

@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 22/5/2022 12:55:29
+// 22/5/2022 13:57:33
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -13,6 +13,7 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(DeclListVar DeclListVar) { }
     public void visit(MethodDecl MethodDecl) { }
     public void visit(Mulop Mulop) { }
+    public void visit(IdentListelem IdentListelem) { }
     public void visit(ConstructorDecl ConstructorDecl) { }
     public void visit(DeclListMethod DeclListMethod) { }
     public void visit(ExprCommaList ExprCommaList) { }
@@ -82,12 +83,11 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(Labelc Labelc) { visit(); }
     public void visit(DotOrExprDerived1 DotOrExprDerived1) { visit(); }
     public void visit(DotOrExprc DotOrExprc) { visit(); }
-    public void visit(IdentListDerived1 IdentListDerived1) { visit(); }
+    public void visit(IdentListelemDerived1 IdentListelemDerived1) { visit(); }
+    public void visit(IdentListelemc IdentListelemc) { visit(); }
+    public void visit(NoIdentList NoIdentList) { visit(); }
     public void visit(IdentListc IdentListc) { visit(); }
     public void visit(DesignatorName DesignatorName) { visit(); }
-    public void visit(DesignatorDerived3 DesignatorDerived3) { visit(); }
-    public void visit(DesignatorDerived2 DesignatorDerived2) { visit(); }
-    public void visit(DesignatorDerived1 DesignatorDerived1) { visit(); }
     public void visit(Designatorc Designatorc) { visit(); }
     public void visit(NoExprBracesOptional NoExprBracesOptional) { visit(); }
     public void visit(ExprBracesOptionalc ExprBracesOptionalc) { visit(); }
@@ -154,6 +154,7 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(Typec Typec) { visit(); }
     public void visit(NoParsList NoParsList) { visit(); }
     public void visit(ParsListc ParsListc) { visit(); }
+    public void visit(ParsDerived1 ParsDerived1) { visit(); }
     public void visit(Parsc Parsc) { visit(); }
     public void visit(ErrorFormPars ErrorFormPars) { visit(); }
     public void visit(FormParsc FormParsc) { visit(); }

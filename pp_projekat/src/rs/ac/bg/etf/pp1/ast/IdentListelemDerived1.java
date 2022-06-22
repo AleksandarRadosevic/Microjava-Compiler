@@ -1,28 +1,17 @@
 // generated with ast extension for cup
 // version 0.8
-// 22/5/2022 12:55:29
+// 22/5/2022 13:57:32
 
 
 package rs.ac.bg.etf.pp1.ast;
 
-public class DesignatorDerived2 extends Designator {
+public class IdentListelemDerived1 extends IdentListelem {
 
-    private DesignatorName DesignatorName;
     private Expr Expr;
 
-    public DesignatorDerived2 (DesignatorName DesignatorName, Expr Expr) {
-        this.DesignatorName=DesignatorName;
-        if(DesignatorName!=null) DesignatorName.setParent(this);
+    public IdentListelemDerived1 (Expr Expr) {
         this.Expr=Expr;
         if(Expr!=null) Expr.setParent(this);
-    }
-
-    public DesignatorName getDesignatorName() {
-        return DesignatorName;
-    }
-
-    public void setDesignatorName(DesignatorName DesignatorName) {
-        this.DesignatorName=DesignatorName;
     }
 
     public Expr getExpr() {
@@ -38,18 +27,15 @@ public class DesignatorDerived2 extends Designator {
     }
 
     public void childrenAccept(Visitor visitor) {
-        if(DesignatorName!=null) DesignatorName.accept(visitor);
         if(Expr!=null) Expr.accept(visitor);
     }
 
     public void traverseTopDown(Visitor visitor) {
         accept(visitor);
-        if(DesignatorName!=null) DesignatorName.traverseTopDown(visitor);
         if(Expr!=null) Expr.traverseTopDown(visitor);
     }
 
     public void traverseBottomUp(Visitor visitor) {
-        if(DesignatorName!=null) DesignatorName.traverseBottomUp(visitor);
         if(Expr!=null) Expr.traverseBottomUp(visitor);
         accept(visitor);
     }
@@ -57,13 +43,7 @@ public class DesignatorDerived2 extends Designator {
     public String toString(String tab) {
         StringBuffer buffer=new StringBuffer();
         buffer.append(tab);
-        buffer.append("DesignatorDerived2(\n");
-
-        if(DesignatorName!=null)
-            buffer.append(DesignatorName.toString("  "+tab));
-        else
-            buffer.append(tab+"  null");
-        buffer.append("\n");
+        buffer.append("IdentListelemDerived1(\n");
 
         if(Expr!=null)
             buffer.append(Expr.toString("  "+tab));
@@ -72,7 +52,7 @@ public class DesignatorDerived2 extends Designator {
         buffer.append("\n");
 
         buffer.append(tab);
-        buffer.append(") [DesignatorDerived2]");
+        buffer.append(") [IdentListelemDerived1]");
         return buffer.toString();
     }
 }

@@ -1,0 +1,1058 @@
+INFO  13:30:42,853 - Compiling source file: C:\Users\Aleksandar\Desktop\PP\projekat\PP_Projekat\pp_projekat\test\program.mj
+INFO  13:30:42,899 - #6 program
+INFO  13:30:42,899 - #4 Program
+INFO  13:30:42,899 - #19 class
+INFO  13:30:42,899 - #4 A
+INFO  13:30:42,899 - #7 {
+INFO  13:30:42,900 - #4 int
+INFO  13:30:42,900 - #4 x
+INFO  13:30:42,901 - #44 [
+INFO  13:30:42,901 - #45 ]
+INFO  13:30:42,901 - #18 ,
+INFO  13:30:42,902 - #4 y
+INFO  13:30:42,902 - #44 [
+INFO  13:30:42,902 - #45 ]
+INFO  13:30:42,902 - #37 ;
+INFO  13:30:42,902 - #8 }
+INFO  13:30:42,903 - #9 const
+INFO  13:30:42,903 - #4 int
+INFO  13:30:42,903 - #4 pi
+INFO  13:30:42,903 - #10 =
+INFO  13:30:42,903 - #2 3
+INFO  13:30:42,903 - #18 ,
+INFO  13:30:42,904 - #4 e
+INFO  13:30:42,904 - #10 =
+INFO  13:30:42,904 - #2 2
+INFO  13:30:42,904 - #37 ;
+INFO  13:30:42,904 - #19 class
+INFO  13:30:42,904 - #4 B
+INFO  13:30:42,904 - #20 extends
+INFO  13:30:42,904 - #4 A
+INFO  13:30:42,904 - #7 {
+INFO  13:30:42,904 - #4 int
+INFO  13:30:42,904 - #4 i
+INFO  13:30:42,904 - #37 ;
+INFO  13:30:42,905 - #7 {
+INFO  13:30:42,905 - #4 int
+INFO  13:30:42,905 - #4 getValue
+INFO  13:30:42,905 - #22 (
+INFO  13:30:42,905 - #4 int
+INFO  13:30:42,905 - #4 a
+INFO  13:30:42,906 - #23 )
+INFO  13:30:42,906 - #4 int
+INFO  13:30:42,906 - #4 b
+INFO  13:30:42,906 - #37 ;
+INFO  13:30:42,906 - #4 bool
+INFO  13:30:42,906 - #4 c
+INFO  13:30:42,906 - #37 ;
+INFO  13:30:42,907 - #7 {
+INFO  13:30:42,907 - #42 return
+INFO  13:30:42,907 - #4 i
+INFO  13:30:42,908 - #30 +
+INFO  13:30:42,909 - #4 x
+INFO  13:30:42,909 - #44 [
+INFO  13:30:42,909 - #2 0
+INFO  13:30:42,910 - #45 ]
+INFO  13:30:42,910 - #30 +
+INFO  13:30:42,910 - #4 a
+INFO  13:30:42,910 - #37 ;
+INFO  13:30:42,910 - #8 }
+INFO  13:30:42,910 - #24 void
+INFO  13:30:42,910 - #4 m
+INFO  13:30:42,910 - #22 (
+INFO  13:30:42,911 - #23 )
+INFO  13:30:42,911 - #7 {
+INFO  13:30:42,911 - #8 }
+INFO  13:30:42,911 - #8 }
+INFO  13:30:42,911 - #8 }
+INFO  13:30:42,911 - #19 class
+INFO  13:30:42,911 - #4 C
+INFO  13:30:42,911 - #20 extends
+INFO  13:30:42,911 - #4 B
+INFO  13:30:42,911 - #7 {
+INFO  13:30:42,911 - #4 A
+INFO  13:30:42,911 - #4 theA
+INFO  13:30:42,911 - #37 ;
+INFO  13:30:42,912 - #4 int
+INFO  13:30:42,912 - #4 a
+INFO  13:30:42,912 - #37 ;
+INFO  13:30:42,912 - #8 }
+INFO  13:30:42,912 - #7 {
+INFO  13:30:42,912 - #24 void
+INFO  13:30:42,912 - #4 main
+INFO  13:30:42,912 - #22 (
+INFO  13:30:42,912 - #23 )
+INFO  13:30:42,912 - #4 A
+INFO  13:30:42,912 - #4 a
+INFO  13:30:42,912 - #37 ;
+INFO  13:30:42,912 - #4 C
+INFO  13:30:42,912 - #4 c
+INFO  13:30:42,912 - #37 ;
+INFO  13:30:42,912 - #4 int
+INFO  13:30:42,912 - #4 i
+INFO  13:30:42,912 - #37 ;
+INFO  13:30:42,912 - #4 int
+INFO  13:30:42,912 - #4 x
+INFO  13:30:42,912 - #44 [
+INFO  13:30:42,913 - #45 ]
+INFO  13:30:42,913 - #37 ;
+INFO  13:30:42,913 - #4 char
+INFO  13:30:42,913 - #4 ch
+INFO  13:30:42,913 - #37 ;
+INFO  13:30:42,913 - #7 {
+INFO  13:30:42,913 - #4 a
+INFO  13:30:42,913 - #10 =
+INFO  13:30:42,913 - #28 new
+INFO  13:30:42,914 - #4 A
+INFO  13:30:42,914 - #37 ;
+INFO  13:30:42,915 - #4 a
+INFO  13:30:42,915 - #29 .
+INFO  13:30:42,915 - #4 x
+INFO  13:30:42,915 - #10 =
+INFO  13:30:42,916 - #28 new
+INFO  13:30:42,916 - #4 int
+INFO  13:30:42,916 - #44 [
+INFO  13:30:42,916 - #2 5
+INFO  13:30:42,916 - #45 ]
+INFO  13:30:42,916 - #37 ;
+INFO  13:30:42,916 - #4 a
+INFO  13:30:42,916 - #29 .
+INFO  13:30:42,916 - #4 y
+INFO  13:30:42,916 - #10 =
+INFO  13:30:42,916 - #28 new
+INFO  13:30:42,916 - #4 int
+INFO  13:30:42,916 - #44 [
+INFO  13:30:42,916 - #2 5
+INFO  13:30:42,916 - #45 ]
+INFO  13:30:42,916 - #37 ;
+INFO  13:30:42,916 - #4 c
+INFO  13:30:42,916 - #10 =
+INFO  13:30:42,917 - #28 new
+INFO  13:30:42,917 - #4 C
+INFO  13:30:42,917 - #37 ;
+INFO  13:30:42,917 - #4 c
+INFO  13:30:42,917 - #29 .
+INFO  13:30:42,917 - #4 theA
+INFO  13:30:42,917 - #10 =
+INFO  13:30:42,917 - #4 a
+INFO  13:30:42,917 - #37 ;
+INFO  13:30:42,917 - #4 c
+INFO  13:30:42,917 - #29 .
+INFO  13:30:42,917 - #4 x
+INFO  13:30:42,917 - #10 =
+INFO  13:30:42,917 - #28 new
+INFO  13:30:42,917 - #4 int
+INFO  13:30:42,917 - #44 [
+INFO  13:30:42,917 - #2 5
+INFO  13:30:42,917 - #45 ]
+INFO  13:30:42,917 - #37 ;
+INFO  13:30:42,918 - #4 x
+INFO  13:30:42,918 - #10 =
+INFO  13:30:42,918 - #28 new
+INFO  13:30:42,918 - #4 int
+INFO  13:30:42,918 - #44 [
+INFO  13:30:42,918 - #2 3
+INFO  13:30:42,918 - #45 ]
+INFO  13:30:42,918 - #37 ;
+INFO  13:30:42,918 - #43 read
+INFO  13:30:42,918 - #22 (
+INFO  13:30:42,918 - #4 c
+INFO  13:30:42,918 - #29 .
+INFO  13:30:42,918 - #4 i
+INFO  13:30:42,918 - #23 )
+INFO  13:30:42,918 - #37 ;
+INFO  13:30:42,918 - #4 i
+INFO  13:30:42,918 - #10 =
+INFO  13:30:42,918 - #2 0
+INFO  13:30:42,918 - #37 ;
+INFO  13:30:42,918 - #38 do
+INFO  13:30:42,918 - #7 {
+INFO  13:30:42,919 - #43 read
+INFO  13:30:42,919 - #22 (
+INFO  13:30:42,919 - #4 c
+INFO  13:30:42,919 - #29 .
+INFO  13:30:42,919 - #4 x
+INFO  13:30:42,919 - #44 [
+INFO  13:30:42,919 - #4 i
+INFO  13:30:42,919 - #45 ]
+INFO  13:30:42,919 - #23 )
+INFO  13:30:42,919 - #37 ;
+INFO  13:30:42,919 - #43 read
+INFO  13:30:42,919 - #22 (
+INFO  13:30:42,919 - #4 c
+INFO  13:30:42,919 - #29 .
+INFO  13:30:42,919 - #4 theA
+INFO  13:30:42,919 - #29 .
+ERROR 13:30:42,919 - 
+Sintaksna greska na liniji 22
+INFO  13:30:42,919 - #4 x
+INFO  13:30:42,919 - #44 [
+INFO  13:30:42,919 - #4 i
+INFO  13:30:42,920 - #45 ]
+INFO  13:30:42,920 - #23 )
+INFO  13:30:42,920 - #37 ;
+INFO  13:30:42,920 - #4 i
+INFO  13:30:42,920 - #46 ++
+INFO  13:30:42,920 - #37 ;
+ERROR 13:30:42,920 - Izvrsen oporavak do ; u liniji 22
+INFO  13:30:42,921 - #8 }
+INFO  13:30:42,921 - #39 while
+INFO  13:30:42,921 - #22 (
+INFO  13:30:42,921 - #4 i
+INFO  13:30:42,921 - #48 <
+INFO  13:30:42,921 - #2 5
+INFO  13:30:42,922 - #23 )
+INFO  13:30:42,923 - #37 ;
+INFO  13:30:42,923 - #25 print
+INFO  13:30:42,923 - #22 (
+INFO  13:30:42,923 - #4 c
+INFO  13:30:42,923 - #29 .
+INFO  13:30:42,923 - #4 getValue
+INFO  13:30:42,923 - #22 (
+INFO  13:30:42,923 - #4 c
+INFO  13:30:42,923 - #29 .
+INFO  13:30:42,923 - #4 theA
+INFO  13:30:42,923 - #29 .
+ERROR 13:30:42,923 - 
+Sintaksna greska na liniji 25
+INFO  13:30:42,923 - #4 x
+INFO  13:30:42,923 - #44 [
+INFO  13:30:42,923 - #2 0
+INFO  13:30:42,923 - #45 ]
+INFO  13:30:42,923 - #23 )
+INFO  13:30:42,923 - #23 )
+INFO  13:30:42,923 - #37 ;
+INFO  13:30:42,923 - #4 c
+INFO  13:30:42,923 - #29 .
+INFO  13:30:42,924 - #4 m
+ERROR 13:30:42,924 - Izvrsen oporavak do ; u liniji 25
+INFO  13:30:42,924 - #22 (
+INFO  13:30:42,924 - #23 )
+INFO  13:30:42,924 - #37 ;
+INFO  13:30:42,924 - #8 }
+INFO  13:30:42,924 - #8 }
+INFO  13:30:42,929 - Programc(
+  ProgNamec(
+   Program
+  ) [ProgNamec]
+  DeclarationListc(
+    DeclarationListc(
+      DeclarationListc(
+        DeclarationListc(
+          NoDeclarations(
+          ) [NoDeclarations]
+          DeclListDerived2(
+            ClassDeclc(
+             A
+              NoOptionalExtendsc(
+              ) [NoOptionalExtendsc]
+              DeclListVarc(
+                NoDeclListVar(
+                ) [NoDeclListVar]
+                VarDeclc(
+                  Typec(
+                   int
+                  ) [Typec]
+                 x
+                  OptionalBracesc(
+                  ) [OptionalBracesc]
+                  VarDeclListc(
+                    NoVarDeclList(
+                    ) [NoVarDeclList]
+                   y
+                    OptionalBracesc(
+                    ) [OptionalBracesc]
+                  ) [VarDeclListc]
+                ) [VarDeclc]
+              ) [DeclListVarc]
+              NoOptConstructorMethod(
+              ) [NoOptConstructorMethod]
+            ) [ClassDeclc]
+          ) [DeclListDerived2]
+        ) [DeclarationListc]
+        DeclListc(
+          ConstDeclc(
+            Typec(
+             int
+            ) [Typec]
+           pi
+            ConstValc(
+             3
+            ) [ConstValc]
+            ConstDeclListc(
+              NoConstDecl(
+              ) [NoConstDecl]
+             e
+              ConstValc(
+               2
+              ) [ConstValc]
+            ) [ConstDeclListc]
+          ) [ConstDeclc]
+        ) [DeclListc]
+      ) [DeclarationListc]
+      DeclListDerived2(
+        ClassDeclc(
+         B
+          OptionalExtendsc(
+            Typec(
+             A
+            ) [Typec]
+          ) [OptionalExtendsc]
+          DeclListVarc(
+            NoDeclListVar(
+            ) [NoDeclListVar]
+            VarDeclc(
+              Typec(
+               int
+              ) [Typec]
+             i
+              NoOptionalBraces(
+              ) [NoOptionalBraces]
+              NoVarDeclList(
+              ) [NoVarDeclList]
+            ) [VarDeclc]
+          ) [DeclListVarc]
+          OptConstructorMethodc(
+            DeclListMethodc(
+              DeclListMethodc(
+                NoDeclListMethod(
+                ) [NoDeclListMethod]
+                MethodDeclc(
+                  MethodTypeNamec(
+                    Typec(
+                     int
+                    ) [Typec]
+                   getValue
+                  ) [MethodTypeNamec]
+                  FormParsOptionalc(
+                    FormParsc(
+                      Parsc(
+                        Typec(
+                         int
+                        ) [Typec]
+                       a
+                      ) [Parsc]
+                      NoParsList(
+                      ) [NoParsList]
+                    ) [FormParsc]
+                  ) [FormParsOptionalc]
+                  DeclListVarc(
+                    DeclListVarc(
+                      NoDeclListVar(
+                      ) [NoDeclListVar]
+                      VarDeclc(
+                        Typec(
+                         int
+                        ) [Typec]
+                       b
+                        NoOptionalBraces(
+                        ) [NoOptionalBraces]
+                        NoVarDeclList(
+                        ) [NoVarDeclList]
+                      ) [VarDeclc]
+                    ) [DeclListVarc]
+                    VarDeclc(
+                      Typec(
+                       bool
+                      ) [Typec]
+                     c
+                      NoOptionalBraces(
+                      ) [NoOptionalBraces]
+                      NoVarDeclList(
+                      ) [NoVarDeclList]
+                    ) [VarDeclc]
+                  ) [DeclListVarc]
+                  StatementListc(
+                    NoStatementList(
+                    ) [NoStatementList]
+                    StatementDerived1(
+                      ReturnStmt(
+                        OptionalExpressionc(
+                          Exprc(
+                            NoOptionalMinus(
+                            ) [NoOptionalMinus]
+                            Termc(
+                              FactorDerived5(
+                                Designatorc(
+                                  DesignatorName(
+                                   i
+                                  ) [DesignatorName]
+                                ) [Designatorc]
+                              ) [FactorDerived5]
+                              NoMulopFactorList(
+                              ) [NoMulopFactorList]
+                            ) [Termc]
+                            AddopTermListc(
+                              AddopTermListc(
+                                NoAddopTermList(
+                                ) [NoAddopTermList]
+                                AddOpc(
+                                ) [AddOpc]
+                                Termc(
+                                  FactorDerived5(
+                                    DesignatorDerived2(
+                                      DesignatorName(
+                                       x
+                                      ) [DesignatorName]
+                                      Exprc(
+                                        NoOptionalMinus(
+                                        ) [NoOptionalMinus]
+                                        Termc(
+                                          Factorc(
+                                           0
+                                          ) [Factorc]
+                                          NoMulopFactorList(
+                                          ) [NoMulopFactorList]
+                                        ) [Termc]
+                                        NoAddopTermList(
+                                        ) [NoAddopTermList]
+                                      ) [Exprc]
+                                    ) [DesignatorDerived2]
+                                  ) [FactorDerived5]
+                                  NoMulopFactorList(
+                                  ) [NoMulopFactorList]
+                                ) [Termc]
+                              ) [AddopTermListc]
+                              AddOpc(
+                              ) [AddOpc]
+                              Termc(
+                                FactorDerived5(
+                                  Designatorc(
+                                    DesignatorName(
+                                     a
+                                    ) [DesignatorName]
+                                  ) [Designatorc]
+                                ) [FactorDerived5]
+                                NoMulopFactorList(
+                                ) [NoMulopFactorList]
+                              ) [Termc]
+                            ) [AddopTermListc]
+                          ) [Exprc]
+                        ) [OptionalExpressionc]
+                      ) [ReturnStmt]
+                    ) [StatementDerived1]
+                  ) [StatementListc]
+                ) [MethodDeclc]
+              ) [DeclListMethodc]
+              MethodDeclc(
+                VoidFunc(
+                 m
+                ) [VoidFunc]
+                FormParsOptionalDerived1(
+                ) [FormParsOptionalDerived1]
+                NoDeclListVar(
+                ) [NoDeclListVar]
+                NoStatementList(
+                ) [NoStatementList]
+              ) [MethodDeclc]
+            ) [DeclListMethodc]
+          ) [OptConstructorMethodc]
+        ) [ClassDeclc]
+      ) [DeclListDerived2]
+    ) [DeclarationListc]
+    DeclListDerived2(
+      ClassDeclc(
+       C
+        OptionalExtendsc(
+          Typec(
+           B
+          ) [Typec]
+        ) [OptionalExtendsc]
+        DeclListVarc(
+          DeclListVarc(
+            NoDeclListVar(
+            ) [NoDeclListVar]
+            VarDeclc(
+              Typec(
+               A
+              ) [Typec]
+             theA
+              NoOptionalBraces(
+              ) [NoOptionalBraces]
+              NoVarDeclList(
+              ) [NoVarDeclList]
+            ) [VarDeclc]
+          ) [DeclListVarc]
+          VarDeclc(
+            Typec(
+             int
+            ) [Typec]
+           a
+            NoOptionalBraces(
+            ) [NoOptionalBraces]
+            NoVarDeclList(
+            ) [NoVarDeclList]
+          ) [VarDeclc]
+        ) [DeclListVarc]
+        NoOptConstructorMethod(
+        ) [NoOptConstructorMethod]
+      ) [ClassDeclc]
+    ) [DeclListDerived2]
+  ) [DeclarationListc]
+  DeclListMethodc(
+    NoDeclListMethod(
+    ) [NoDeclListMethod]
+    MethodDeclc(
+      VoidFunc(
+       main
+      ) [VoidFunc]
+      FormParsOptionalDerived1(
+      ) [FormParsOptionalDerived1]
+      DeclListVarc(
+        DeclListVarc(
+          DeclListVarc(
+            DeclListVarc(
+              DeclListVarc(
+                NoDeclListVar(
+                ) [NoDeclListVar]
+                VarDeclc(
+                  Typec(
+                   A
+                  ) [Typec]
+                 a
+                  NoOptionalBraces(
+                  ) [NoOptionalBraces]
+                  NoVarDeclList(
+                  ) [NoVarDeclList]
+                ) [VarDeclc]
+              ) [DeclListVarc]
+              VarDeclc(
+                Typec(
+                 C
+                ) [Typec]
+               c
+                NoOptionalBraces(
+                ) [NoOptionalBraces]
+                NoVarDeclList(
+                ) [NoVarDeclList]
+              ) [VarDeclc]
+            ) [DeclListVarc]
+            VarDeclc(
+              Typec(
+               int
+              ) [Typec]
+             i
+              NoOptionalBraces(
+              ) [NoOptionalBraces]
+              NoVarDeclList(
+              ) [NoVarDeclList]
+            ) [VarDeclc]
+          ) [DeclListVarc]
+          VarDeclc(
+            Typec(
+             int
+            ) [Typec]
+           x
+            OptionalBracesc(
+            ) [OptionalBracesc]
+            NoVarDeclList(
+            ) [NoVarDeclList]
+          ) [VarDeclc]
+        ) [DeclListVarc]
+        VarDeclc(
+          Typec(
+           char
+          ) [Typec]
+         ch
+          NoOptionalBraces(
+          ) [NoOptionalBraces]
+          NoVarDeclList(
+          ) [NoVarDeclList]
+        ) [VarDeclc]
+      ) [DeclListVarc]
+      StatementListc(
+        StatementListc(
+          StatementListc(
+            StatementListc(
+              StatementListc(
+                StatementListc(
+                  StatementListc(
+                    StatementListc(
+                      StatementListc(
+                        StatementListc(
+                          StatementListc(
+                            StatementListc(
+                              NoStatementList(
+                              ) [NoStatementList]
+                              StatementDerived1(
+                                SingleStatementc(
+                                  DesignatorStatementc(
+                                    Designatorc(
+                                      DesignatorName(
+                                       a
+                                      ) [DesignatorName]
+                                    ) [Designatorc]
+                                    DesignatorStatementElementsc(
+                                      Assignopc(
+                                      ) [Assignopc]
+                                      Exprc(
+                                        NoOptionalMinus(
+                                        ) [NoOptionalMinus]
+                                        Termc(
+                                          FactorDerived3(
+                                            Typec(
+                                             A
+                                            ) [Typec]
+                                            NoExprBracesOptional(
+                                            ) [NoExprBracesOptional]
+                                          ) [FactorDerived3]
+                                          NoMulopFactorList(
+                                          ) [NoMulopFactorList]
+                                        ) [Termc]
+                                        NoAddopTermList(
+                                        ) [NoAddopTermList]
+                                      ) [Exprc]
+                                    ) [DesignatorStatementElementsc]
+                                  ) [DesignatorStatementc]
+                                ) [SingleStatementc]
+                              ) [StatementDerived1]
+                            ) [StatementListc]
+                            StatementDerived1(
+                              SingleStatementc(
+                                DesignatorStatementc(
+                                  DesignatorDerived1(
+                                    DesignatorName(
+                                     a
+                                    ) [DesignatorName]
+                                    DesignatorName(
+                                     x
+                                    ) [DesignatorName]
+                                  ) [DesignatorDerived1]
+                                  DesignatorStatementElementsc(
+                                    Assignopc(
+                                    ) [Assignopc]
+                                    Exprc(
+                                      NoOptionalMinus(
+                                      ) [NoOptionalMinus]
+                                      Termc(
+                                        FactorDerived3(
+                                          Typec(
+                                           int
+                                          ) [Typec]
+                                          ExprBracesOptionalc(
+                                            Exprc(
+                                              NoOptionalMinus(
+                                              ) [NoOptionalMinus]
+                                              Termc(
+                                                Factorc(
+                                                 5
+                                                ) [Factorc]
+                                                NoMulopFactorList(
+                                                ) [NoMulopFactorList]
+                                              ) [Termc]
+                                              NoAddopTermList(
+                                              ) [NoAddopTermList]
+                                            ) [Exprc]
+                                          ) [ExprBracesOptionalc]
+                                        ) [FactorDerived3]
+                                        NoMulopFactorList(
+                                        ) [NoMulopFactorList]
+                                      ) [Termc]
+                                      NoAddopTermList(
+                                      ) [NoAddopTermList]
+                                    ) [Exprc]
+                                  ) [DesignatorStatementElementsc]
+                                ) [DesignatorStatementc]
+                              ) [SingleStatementc]
+                            ) [StatementDerived1]
+                          ) [StatementListc]
+                          StatementDerived1(
+                            SingleStatementc(
+                              DesignatorStatementc(
+                                DesignatorDerived1(
+                                  DesignatorName(
+                                   a
+                                  ) [DesignatorName]
+                                  DesignatorName(
+                                   y
+                                  ) [DesignatorName]
+                                ) [DesignatorDerived1]
+                                DesignatorStatementElementsc(
+                                  Assignopc(
+                                  ) [Assignopc]
+                                  Exprc(
+                                    NoOptionalMinus(
+                                    ) [NoOptionalMinus]
+                                    Termc(
+                                      FactorDerived3(
+                                        Typec(
+                                         int
+                                        ) [Typec]
+                                        ExprBracesOptionalc(
+                                          Exprc(
+                                            NoOptionalMinus(
+                                            ) [NoOptionalMinus]
+                                            Termc(
+                                              Factorc(
+                                               5
+                                              ) [Factorc]
+                                              NoMulopFactorList(
+                                              ) [NoMulopFactorList]
+                                            ) [Termc]
+                                            NoAddopTermList(
+                                            ) [NoAddopTermList]
+                                          ) [Exprc]
+                                        ) [ExprBracesOptionalc]
+                                      ) [FactorDerived3]
+                                      NoMulopFactorList(
+                                      ) [NoMulopFactorList]
+                                    ) [Termc]
+                                    NoAddopTermList(
+                                    ) [NoAddopTermList]
+                                  ) [Exprc]
+                                ) [DesignatorStatementElementsc]
+                              ) [DesignatorStatementc]
+                            ) [SingleStatementc]
+                          ) [StatementDerived1]
+                        ) [StatementListc]
+                        StatementDerived1(
+                          SingleStatementc(
+                            DesignatorStatementc(
+                              Designatorc(
+                                DesignatorName(
+                                 c
+                                ) [DesignatorName]
+                              ) [Designatorc]
+                              DesignatorStatementElementsc(
+                                Assignopc(
+                                ) [Assignopc]
+                                Exprc(
+                                  NoOptionalMinus(
+                                  ) [NoOptionalMinus]
+                                  Termc(
+                                    FactorDerived3(
+                                      Typec(
+                                       C
+                                      ) [Typec]
+                                      NoExprBracesOptional(
+                                      ) [NoExprBracesOptional]
+                                    ) [FactorDerived3]
+                                    NoMulopFactorList(
+                                    ) [NoMulopFactorList]
+                                  ) [Termc]
+                                  NoAddopTermList(
+                                  ) [NoAddopTermList]
+                                ) [Exprc]
+                              ) [DesignatorStatementElementsc]
+                            ) [DesignatorStatementc]
+                          ) [SingleStatementc]
+                        ) [StatementDerived1]
+                      ) [StatementListc]
+                      StatementDerived1(
+                        SingleStatementc(
+                          DesignatorStatementc(
+                            DesignatorDerived1(
+                              DesignatorName(
+                               c
+                              ) [DesignatorName]
+                              DesignatorName(
+                               theA
+                              ) [DesignatorName]
+                            ) [DesignatorDerived1]
+                            DesignatorStatementElementsc(
+                              Assignopc(
+                              ) [Assignopc]
+                              Exprc(
+                                NoOptionalMinus(
+                                ) [NoOptionalMinus]
+                                Termc(
+                                  FactorDerived5(
+                                    Designatorc(
+                                      DesignatorName(
+                                       a
+                                      ) [DesignatorName]
+                                    ) [Designatorc]
+                                  ) [FactorDerived5]
+                                  NoMulopFactorList(
+                                  ) [NoMulopFactorList]
+                                ) [Termc]
+                                NoAddopTermList(
+                                ) [NoAddopTermList]
+                              ) [Exprc]
+                            ) [DesignatorStatementElementsc]
+                          ) [DesignatorStatementc]
+                        ) [SingleStatementc]
+                      ) [StatementDerived1]
+                    ) [StatementListc]
+                    StatementDerived1(
+                      SingleStatementc(
+                        DesignatorStatementc(
+                          DesignatorDerived1(
+                            DesignatorName(
+                             c
+                            ) [DesignatorName]
+                            DesignatorName(
+                             x
+                            ) [DesignatorName]
+                          ) [DesignatorDerived1]
+                          DesignatorStatementElementsc(
+                            Assignopc(
+                            ) [Assignopc]
+                            Exprc(
+                              NoOptionalMinus(
+                              ) [NoOptionalMinus]
+                              Termc(
+                                FactorDerived3(
+                                  Typec(
+                                   int
+                                  ) [Typec]
+                                  ExprBracesOptionalc(
+                                    Exprc(
+                                      NoOptionalMinus(
+                                      ) [NoOptionalMinus]
+                                      Termc(
+                                        Factorc(
+                                         5
+                                        ) [Factorc]
+                                        NoMulopFactorList(
+                                        ) [NoMulopFactorList]
+                                      ) [Termc]
+                                      NoAddopTermList(
+                                      ) [NoAddopTermList]
+                                    ) [Exprc]
+                                  ) [ExprBracesOptionalc]
+                                ) [FactorDerived3]
+                                NoMulopFactorList(
+                                ) [NoMulopFactorList]
+                              ) [Termc]
+                              NoAddopTermList(
+                              ) [NoAddopTermList]
+                            ) [Exprc]
+                          ) [DesignatorStatementElementsc]
+                        ) [DesignatorStatementc]
+                      ) [SingleStatementc]
+                    ) [StatementDerived1]
+                  ) [StatementListc]
+                  StatementDerived1(
+                    SingleStatementc(
+                      DesignatorStatementc(
+                        Designatorc(
+                          DesignatorName(
+                           x
+                          ) [DesignatorName]
+                        ) [Designatorc]
+                        DesignatorStatementElementsc(
+                          Assignopc(
+                          ) [Assignopc]
+                          Exprc(
+                            NoOptionalMinus(
+                            ) [NoOptionalMinus]
+                            Termc(
+                              FactorDerived3(
+                                Typec(
+                                 int
+                                ) [Typec]
+                                ExprBracesOptionalc(
+                                  Exprc(
+                                    NoOptionalMinus(
+                                    ) [NoOptionalMinus]
+                                    Termc(
+                                      Factorc(
+                                       3
+                                      ) [Factorc]
+                                      NoMulopFactorList(
+                                      ) [NoMulopFactorList]
+                                    ) [Termc]
+                                    NoAddopTermList(
+                                    ) [NoAddopTermList]
+                                  ) [Exprc]
+                                ) [ExprBracesOptionalc]
+                              ) [FactorDerived3]
+                              NoMulopFactorList(
+                              ) [NoMulopFactorList]
+                            ) [Termc]
+                            NoAddopTermList(
+                            ) [NoAddopTermList]
+                          ) [Exprc]
+                        ) [DesignatorStatementElementsc]
+                      ) [DesignatorStatementc]
+                    ) [SingleStatementc]
+                  ) [StatementDerived1]
+                ) [StatementListc]
+                StatementDerived1(
+                  ReadStmt(
+                    DesignatorDerived1(
+                      DesignatorName(
+                       c
+                      ) [DesignatorName]
+                      DesignatorName(
+                       i
+                      ) [DesignatorName]
+                    ) [DesignatorDerived1]
+                  ) [ReadStmt]
+                ) [StatementDerived1]
+              ) [StatementListc]
+              StatementDerived1(
+                SingleStatementc(
+                  DesignatorStatementc(
+                    Designatorc(
+                      DesignatorName(
+                       i
+                      ) [DesignatorName]
+                    ) [Designatorc]
+                    DesignatorStatementElementsc(
+                      Assignopc(
+                      ) [Assignopc]
+                      Exprc(
+                        NoOptionalMinus(
+                        ) [NoOptionalMinus]
+                        Termc(
+                          Factorc(
+                           0
+                          ) [Factorc]
+                          NoMulopFactorList(
+                          ) [NoMulopFactorList]
+                        ) [Termc]
+                        NoAddopTermList(
+                        ) [NoAddopTermList]
+                      ) [Exprc]
+                    ) [DesignatorStatementElementsc]
+                  ) [DesignatorStatementc]
+                ) [SingleStatementc]
+              ) [StatementDerived1]
+            ) [StatementListc]
+            StatementDerived1(
+              DoStmt(
+                StatementDerived2(
+                  Statementsc(
+                    StatementListc(
+                      StatementListc(
+                        StatementListc(
+                          NoStatementList(
+                          ) [NoStatementList]
+                          StatementDerived1(
+                            ReadStmt(
+                              DesignatorDerived3(
+                                DesignatorName(
+                                 c
+                                ) [DesignatorName]
+                                DesignatorName(
+                                 x
+                                ) [DesignatorName]
+                                Exprc(
+                                  NoOptionalMinus(
+                                  ) [NoOptionalMinus]
+                                  Termc(
+                                    FactorDerived5(
+                                      Designatorc(
+                                        DesignatorName(
+                                         i
+                                        ) [DesignatorName]
+                                      ) [Designatorc]
+                                    ) [FactorDerived5]
+                                    NoMulopFactorList(
+                                    ) [NoMulopFactorList]
+                                  ) [Termc]
+                                  NoAddopTermList(
+                                  ) [NoAddopTermList]
+                                ) [Exprc]
+                              ) [DesignatorDerived3]
+                            ) [ReadStmt]
+                          ) [StatementDerived1]
+                        ) [StatementListc]
+                        ErrorStmt(
+                        ) [ErrorStmt]
+                      ) [StatementListc]
+                      StatementDerived1(
+                        SingleStatementc(
+                          DesignatorStatementc(
+                            Designatorc(
+                              DesignatorName(
+                               i
+                              ) [DesignatorName]
+                            ) [Designatorc]
+                            DesignatorStatementElementsDerived2(
+                            ) [DesignatorStatementElementsDerived2]
+                          ) [DesignatorStatementc]
+                        ) [SingleStatementc]
+                      ) [StatementDerived1]
+                    ) [StatementListc]
+                  ) [Statementsc]
+                ) [StatementDerived2]
+                Conditionc(
+                  CondTermc(
+                    CondFactc(
+                      Exprc(
+                        NoOptionalMinus(
+                        ) [NoOptionalMinus]
+                        Termc(
+                          FactorDerived5(
+                            Designatorc(
+                              DesignatorName(
+                               i
+                              ) [DesignatorName]
+                            ) [Designatorc]
+                          ) [FactorDerived5]
+                          NoMulopFactorList(
+                          ) [NoMulopFactorList]
+                        ) [Termc]
+                        NoAddopTermList(
+                        ) [NoAddopTermList]
+                      ) [Exprc]
+                      RelopOprOptionalc(
+                        RelopDerived4(
+                        ) [RelopDerived4]
+                        Exprc(
+                          NoOptionalMinus(
+                          ) [NoOptionalMinus]
+                          Termc(
+                            Factorc(
+                             5
+                            ) [Factorc]
+                            NoMulopFactorList(
+                            ) [NoMulopFactorList]
+                          ) [Termc]
+                          NoAddopTermList(
+                          ) [NoAddopTermList]
+                        ) [Exprc]
+                      ) [RelopOprOptionalc]
+                    ) [CondFactc]
+                    NoCondFactListAnd(
+                    ) [NoCondFactListAnd]
+                  ) [CondTermc]
+                  NoCondTermListOr(
+                  ) [NoCondTermListOr]
+                ) [Conditionc]
+              ) [DoStmt]
+            ) [StatementDerived1]
+          ) [StatementListc]
+          ErrorStmt(
+          ) [ErrorStmt]
+        ) [StatementListc]
+        StatementDerived1(
+          SingleStatementc(
+            DesignatorStatementc(
+              DesignatorDerived1(
+                DesignatorName(
+                 c
+                ) [DesignatorName]
+                DesignatorName(
+                 m
+                ) [DesignatorName]
+              ) [DesignatorDerived1]
+              DesignatorStatementElementsDerived1(
+                NoActPars(
+                ) [NoActPars]
+              ) [DesignatorStatementElementsDerived1]
+            ) [DesignatorStatementc]
+          ) [SingleStatementc]
+        ) [StatementDerived1]
+      ) [StatementListc]
+    ) [MethodDeclc]
+  ) [DeclListMethodc]
+) [Programc]
+INFO  13:30:42,930 - ===================================
+ERROR 13:30:42,932 - Nije pronadjen tip A u tabeli simbola! 
+INFO  13:30:42,933 - Obradjuje se funkcija getValue na liniji 7
+ERROR 13:30:42,933 - Greska na liniji 7 : ime a nije deklarisano! 
+INFO  13:30:42,933 - Obradjuje se funkcija m na liniji 8
+ERROR 13:30:42,933 - Nije pronadjen tip B u tabeli simbola! 
+ERROR 13:30:42,933 - Nije pronadjen tip A u tabeli simbola! 
+INFO  13:30:42,933 - Obradjuje se funkcija main na liniji 13
+ERROR 13:30:42,933 - Nije pronadjen tip A u tabeli simbola! 
+ERROR 13:30:42,933 - Nije pronadjen tip C u tabeli simbola! 
+ERROR 13:30:42,933 - Nije pronadjen tip A u tabeli simbola! 
+ERROR 13:30:42,933 - Nije pronadjen tip C u tabeli simbola! 
+INFO  13:30:42,933 -  Print count calls = 0
+INFO  13:30:42,933 -  Deklarisanih promenljivih ima = 11
+INFO  13:30:42,933 - ===================================

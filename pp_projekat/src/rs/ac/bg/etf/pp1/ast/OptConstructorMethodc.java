@@ -1,28 +1,17 @@
 // generated with ast extension for cup
 // version 0.8
-// 22/5/2022 12:55:29
+// 22/5/2022 13:57:32
 
 
 package rs.ac.bg.etf.pp1.ast;
 
 public class OptConstructorMethodc extends OptConstructorMethod {
 
-    private ConstructorDecl ConstructorDecl;
     private DeclListMethod DeclListMethod;
 
-    public OptConstructorMethodc (ConstructorDecl ConstructorDecl, DeclListMethod DeclListMethod) {
-        this.ConstructorDecl=ConstructorDecl;
-        if(ConstructorDecl!=null) ConstructorDecl.setParent(this);
+    public OptConstructorMethodc (DeclListMethod DeclListMethod) {
         this.DeclListMethod=DeclListMethod;
         if(DeclListMethod!=null) DeclListMethod.setParent(this);
-    }
-
-    public ConstructorDecl getConstructorDecl() {
-        return ConstructorDecl;
-    }
-
-    public void setConstructorDecl(ConstructorDecl ConstructorDecl) {
-        this.ConstructorDecl=ConstructorDecl;
     }
 
     public DeclListMethod getDeclListMethod() {
@@ -38,18 +27,15 @@ public class OptConstructorMethodc extends OptConstructorMethod {
     }
 
     public void childrenAccept(Visitor visitor) {
-        if(ConstructorDecl!=null) ConstructorDecl.accept(visitor);
         if(DeclListMethod!=null) DeclListMethod.accept(visitor);
     }
 
     public void traverseTopDown(Visitor visitor) {
         accept(visitor);
-        if(ConstructorDecl!=null) ConstructorDecl.traverseTopDown(visitor);
         if(DeclListMethod!=null) DeclListMethod.traverseTopDown(visitor);
     }
 
     public void traverseBottomUp(Visitor visitor) {
-        if(ConstructorDecl!=null) ConstructorDecl.traverseBottomUp(visitor);
         if(DeclListMethod!=null) DeclListMethod.traverseBottomUp(visitor);
         accept(visitor);
     }
@@ -58,12 +44,6 @@ public class OptConstructorMethodc extends OptConstructorMethod {
         StringBuffer buffer=new StringBuffer();
         buffer.append(tab);
         buffer.append("OptConstructorMethodc(\n");
-
-        if(ConstructorDecl!=null)
-            buffer.append(ConstructorDecl.toString("  "+tab));
-        else
-            buffer.append(tab+"  null");
-        buffer.append("\n");
 
         if(DeclListMethod!=null)
             buffer.append(DeclListMethod.toString("  "+tab));

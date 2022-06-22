@@ -1,34 +1,36 @@
 // generated with ast extension for cup
 // version 0.8
-// 22/5/2022 12:55:29
+// 22/5/2022 13:57:32
 
 
 package rs.ac.bg.etf.pp1.ast;
 
 public class IdentListc extends IdentList {
 
-    private String I1;
-    private String I2;
+    private IdentList IdentList;
+    private IdentListelem IdentListelem;
 
-    public IdentListc (String I1, String I2) {
-        this.I1=I1;
-        this.I2=I2;
+    public IdentListc (IdentList IdentList, IdentListelem IdentListelem) {
+        this.IdentList=IdentList;
+        if(IdentList!=null) IdentList.setParent(this);
+        this.IdentListelem=IdentListelem;
+        if(IdentListelem!=null) IdentListelem.setParent(this);
     }
 
-    public String getI1() {
-        return I1;
+    public IdentList getIdentList() {
+        return IdentList;
     }
 
-    public void setI1(String I1) {
-        this.I1=I1;
+    public void setIdentList(IdentList IdentList) {
+        this.IdentList=IdentList;
     }
 
-    public String getI2() {
-        return I2;
+    public IdentListelem getIdentListelem() {
+        return IdentListelem;
     }
 
-    public void setI2(String I2) {
-        this.I2=I2;
+    public void setIdentListelem(IdentListelem IdentListelem) {
+        this.IdentListelem=IdentListelem;
     }
 
     public void accept(Visitor visitor) {
@@ -36,13 +38,19 @@ public class IdentListc extends IdentList {
     }
 
     public void childrenAccept(Visitor visitor) {
+        if(IdentList!=null) IdentList.accept(visitor);
+        if(IdentListelem!=null) IdentListelem.accept(visitor);
     }
 
     public void traverseTopDown(Visitor visitor) {
         accept(visitor);
+        if(IdentList!=null) IdentList.traverseTopDown(visitor);
+        if(IdentListelem!=null) IdentListelem.traverseTopDown(visitor);
     }
 
     public void traverseBottomUp(Visitor visitor) {
+        if(IdentList!=null) IdentList.traverseBottomUp(visitor);
+        if(IdentListelem!=null) IdentListelem.traverseBottomUp(visitor);
         accept(visitor);
     }
 
@@ -51,10 +59,16 @@ public class IdentListc extends IdentList {
         buffer.append(tab);
         buffer.append("IdentListc(\n");
 
-        buffer.append(" "+tab+I1);
+        if(IdentList!=null)
+            buffer.append(IdentList.toString("  "+tab));
+        else
+            buffer.append(tab+"  null");
         buffer.append("\n");
 
-        buffer.append(" "+tab+I2);
+        if(IdentListelem!=null)
+            buffer.append(IdentListelem.toString("  "+tab));
+        else
+            buffer.append(tab+"  null");
         buffer.append("\n");
 
         buffer.append(tab);

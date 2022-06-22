@@ -69,7 +69,7 @@ nonterminal Condition, OptionalElse, DesignatorStatement, DesignatorStatementEle
 nonterminal OptionalNumConst, Statements, OptionalExpression, ActParsOptional, ActPars, CondTerm;
 nonterminal CondTermListOr, CondFactListAnd, CondFact, RelopOprOptional, Relop, OptionalMinus, AddopTermList;
 nonterminal Addop, MulopFactorList, Mulop, ExprBracesOptional, IdentList, DotOrExpr, Assignop;
-nonterminal ConditionIf;
+nonterminal ConditionIf, IdentListelem;
 
 
 nonterminal rs.etf.pp1.symboltable.concepts.Obj ProgName, Program, MethodTypeName, MethodDecl, Designator, DesignatorName;
@@ -124,7 +124,7 @@ DeclListVar ::=	(DeclListVarc) DeclListVar VarDecl
 				| (NoDeclListVar) /* epsilon */;	
 
 /* treba da bude constructordecl optional */
-OptConstructorMethod ::= (OptConstructorMethodc) LBRACECURLY ConstructorDecl DeclListMethod RBRACECURLY
+OptConstructorMethod ::= (OptConstructorMethodc) LBRACECURLY DeclListMethod RBRACECURLY
 				| (NoOptConstructorMethod) /* epsilon */;	
 				
 OptionalConstructorDecl ::= (OptionalConstructorDeclc) ConstructorDecl
@@ -139,7 +139,7 @@ RecordDecl ::= (RecordDeclc) RECORD IDENT LBRACECURLY DeclListVar RBRACECURLY;
 ConstructorDecl ::= (ConstructorDeclc) IDENT LPAREN RPAREN DeclListVar LBRACECURLY StatementList RBRACECURLY;
 
 
-MethodDecl ::= (MethodDeclc) MethodTypeName LPAREN FormParsOptional  DeclListVar LBRACECURLY StatementList RBRACECURLY;
+MethodDecl ::= (MethodDeclc) MethodTypeName LPAREN FormParsOptional DeclListVar LBRACECURLY StatementList RBRACECURLY;
 
 MethodTypeName ::= (MethodTypeNamec) Type:varType IDENT:methodName
 				| (VoidFunc) VOID IDENT:methodName;
@@ -155,7 +155,8 @@ FormPars ::= (FormParsc) Pars ParsList RPAREN
 			| (ErrorFormPars) error RPAREN:l
 		   	{: parser.report_error("Izvrsen oporavak do ) u liniji "+ lleft, null);  :};
 		
-Pars ::= (Parsc) Type IDENT OptionalBraces;
+Pars ::= (Parsc) Type IDENT
+	  | Type IDENT LBRACE RBRACE;
 
 ParsList ::= (ParsListc) ParsList COMMA Pars 
 			| (NoParsList) /* epsilon */;
@@ -258,17 +259,17 @@ ExprBracesOptional ::= (ExprBracesOptionalc) LBRACE Expr RBRACE
 					| (NoExprBracesOptional) /* epsilon */;
 					
 					
-Designator ::= (Designatorc) DesignatorName 
-			| DesignatorName DOT DesignatorName
-			| DesignatorName LBRACE Expr RBRACE
-			| DesignatorName DOT DesignatorName LBRACE Expr RBRACE;
+Designator ::= (Designatorc) DesignatorName IdentList;
 
 DesignatorName ::= (DesignatorName) IDENT:name;
 
 
-IdentList ::= (IdentListc) IDENT DOT IDENT
-		 	| IDENT DOT IDENT LBRACE Expr RBRACE;
-			
+IdentList ::= (IdentListc) IdentList IdentListelem
+			| (NoIdentList) /* epsilon */;
+
+IdentListelem ::= (IdentListelemc) DOT IDENT
+				| LBRACE Expr RBRACE;
+	
 DotOrExpr ::= (DotOrExprc) DOT IDENT 
 			| LBRACE Expr RBRACE;
 			
