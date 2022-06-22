@@ -1,0 +1,109 @@
+INFO  00:49:45,698 - Compiling source file: C:\Users\Aleksandar\Desktop\PP\projekat\PP_Projekat\pp_projekat\test\program.mj
+INFO  00:49:45,740 - #6 program
+INFO  00:49:45,740 - #4 MJProgram
+INFO  00:49:45,740 - #4 int
+INFO  00:49:45,740 - #4 x
+INFO  00:49:45,740 - #37 ;
+INFO  00:49:45,742 - #4 int
+INFO  00:49:45,742 - #4 y
+INFO  00:49:45,742 - #37 ;
+INFO  00:49:45,742 - #7 {
+INFO  00:49:45,742 - #24 void
+INFO  00:49:45,743 - #4 main
+INFO  00:49:45,743 - #22 (
+INFO  00:49:45,743 - #23 )
+INFO  00:49:45,743 - #7 {
+INFO  00:49:45,744 - #4 x
+INFO  00:49:45,744 - #10 =
+INFO  00:49:45,745 - #2 3
+INFO  00:49:45,746 - #37 ;
+INFO  00:49:45,747 - #8 }
+INFO  00:49:45,747 - #8 }
+INFO  00:49:45,751 - Programc(
+  ProgNamec(
+   MJProgram
+  ) [ProgNamec]
+  DeclarationListc(
+    DeclarationListc(
+      NoDeclarations(
+      ) [NoDeclarations]
+      DeclListDerived1(
+        VarDeclc(
+          Typec(
+           int
+          ) [Typec]
+         x
+          NoOptionalBraces(
+          ) [NoOptionalBraces]
+          NoVarDeclList(
+          ) [NoVarDeclList]
+        ) [VarDeclc]
+      ) [DeclListDerived1]
+    ) [DeclarationListc]
+    DeclListDerived1(
+      VarDeclc(
+        Typec(
+         int
+        ) [Typec]
+       y
+        NoOptionalBraces(
+        ) [NoOptionalBraces]
+        NoVarDeclList(
+        ) [NoVarDeclList]
+      ) [VarDeclc]
+    ) [DeclListDerived1]
+  ) [DeclarationListc]
+  DeclListMethodc(
+    NoDeclListMethod(
+    ) [NoDeclListMethod]
+    MethodDeclc(
+      MethodTypeNamec(
+        TypeOrVoidDerived1(
+        ) [TypeOrVoidDerived1]
+       main
+      ) [MethodTypeNamec]
+      FormParsOptionalDerived1(
+      ) [FormParsOptionalDerived1]
+      NoDeclListVar(
+      ) [NoDeclListVar]
+      StatementListc(
+        NoStatementList(
+        ) [NoStatementList]
+        StatementDerived1(
+          SingleStatementc(
+            DesignatorStatementc(
+              Designatorc(
+                DesignatorName(
+                 x
+                ) [DesignatorName]
+              ) [Designatorc]
+              DesignatorStatementElementsc(
+                Assignopc(
+                ) [Assignopc]
+                Exprc(
+                  NoOptionalMinus(
+                  ) [NoOptionalMinus]
+                  Termc(
+                    Factorc(
+                     3
+                    ) [Factorc]
+                    NoMulopFactorList(
+                    ) [NoMulopFactorList]
+                  ) [Termc]
+                  NoAddopTermList(
+                  ) [NoAddopTermList]
+                ) [Exprc]
+              ) [DesignatorStatementElementsc]
+            ) [DesignatorStatementc]
+          ) [SingleStatementc]
+        ) [StatementDerived1]
+      ) [StatementListc]
+    ) [MethodDeclc]
+  ) [DeclListMethodc]
+) [Programc]
+INFO  00:49:45,751 - ===================================
+INFO  00:49:45,757 - Deklarisana promenljiva x na liniji 2
+INFO  00:49:45,758 - Deklarisana promenljiva y na liniji 2
+INFO  00:49:45,758 -  Print count calls = 0
+INFO  00:49:45,758 -  Deklarisanih promenljivih ima = 2
+INFO  00:49:45,758 - ===================================

@@ -1,0 +1,54 @@
+INFO  13:14:22,466 - Compiling source file: C:\Users\Aleksandar\Desktop\PP\projekat\PP_Projekat\pp_projekat\test\program.mj
+INFO  13:14:22,507 - #6 program
+INFO  13:14:22,508 - #4 MJProgram
+INFO  13:14:22,508 - #4 int
+INFO  13:14:22,508 - #4 x
+INFO  13:14:22,508 - #37 ;
+INFO  13:14:22,509 - #4 int
+INFO  13:14:22,510 - #4 y
+INFO  13:14:22,510 - #37 ;
+INFO  13:14:22,510 - #7 {
+INFO  13:14:22,510 - #8 }
+INFO  13:14:22,514 - Programc(
+  ProgNamec(
+   MJProgram
+  ) [ProgNamec]
+  DeclarationListc(
+    DeclarationListc(
+      NoDeclarations(
+      ) [NoDeclarations]
+      DeclListDerived1(
+        VarDeclc(
+          Typec(
+           int
+          ) [Typec]
+         x
+          NoOptionalBraces(
+          ) [NoOptionalBraces]
+          NoVarDeclList(
+          ) [NoVarDeclList]
+        ) [VarDeclc]
+      ) [DeclListDerived1]
+    ) [DeclarationListc]
+    DeclListDerived1(
+      VarDeclc(
+        Typec(
+         int
+        ) [Typec]
+       y
+        NoOptionalBraces(
+        ) [NoOptionalBraces]
+        NoVarDeclList(
+        ) [NoVarDeclList]
+      ) [VarDeclc]
+    ) [DeclListDerived1]
+  ) [DeclarationListc]
+  NoDeclListMethod(
+  ) [NoDeclListMethod]
+) [Programc]
+INFO  13:14:22,515 - ===================================
+INFO  13:14:22,517 - Deklarisana promenljiva x na liniji 2
+INFO  13:14:22,517 - Deklarisana promenljiva y na liniji 2
+INFO  13:14:22,517 -  Print count calls = 0
+INFO  13:14:22,517 -  Deklarisanih promenljivih ima = 2
+INFO  13:14:22,517 - ===================================

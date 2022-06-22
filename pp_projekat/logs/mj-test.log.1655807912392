@@ -1,0 +1,17 @@
+INFO  12:37:51,288 - Compiling source file: C:\Users\Aleksandar\Desktop\PP\projekat\PP_Projekat\pp_projekat\test\program.mj
+INFO  12:37:51,328 - #6 program
+INFO  12:37:51,328 - #4 MJProgram
+INFO  12:37:51,328 - #4 int
+INFO  12:37:51,329 - #4 x
+INFO  12:37:51,329 - #37 ;
+INFO  12:37:51,330 - #4 int
+INFO  12:37:51,330 - #4 y
+INFO  12:37:51,330 - #37 ;
+INFO  12:37:51,330 - #7 {
+INFO  12:37:51,330 - #4 int
+INFO  12:37:51,331 - #4 c
+INFO  12:37:51,331 - #37 ;
+ERROR 12:37:51,331 - 
+Sintaksna greska na liniji 5
+INFO  12:37:51,331 - #8 }
+ERROR 12:37:51,332 - Fatalna greska, parsiranje se ne moze nastaviti na liniji 6

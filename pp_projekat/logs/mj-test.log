@@ -1,178 +1,243 @@
-INFO  12:01:34,400 - Compiling source file: C:\Users\Aleksandar\Desktop\PP\projekat\PP_Projekat\pp_projekat\test\program.mj
-INFO  12:01:34,440 - #6 program
-INFO  12:01:34,440 - #4 MJProgram
-INFO  12:01:34,440 - #4 int
-INFO  12:01:34,441 - #4 x
-INFO  12:01:34,441 - #37 ;
-INFO  12:01:34,442 - #4 int
-INFO  12:01:34,442 - #4 y
-INFO  12:01:34,442 - #37 ;
-INFO  12:01:34,442 - #7 {
-INFO  12:01:34,443 - #4 int
-INFO  12:01:34,443 - #4 main
-INFO  12:01:34,443 - #22 (
-INFO  12:01:34,443 - #23 )
-INFO  12:01:34,443 - #7 {
-INFO  12:01:34,444 - #25 print
-INFO  12:01:34,444 - #22 (
-INFO  12:01:34,444 - #2 1
-INFO  12:01:34,445 - #23 )
-INFO  12:01:34,446 - #37 ;
-INFO  12:01:34,447 - #4 x
-INFO  12:01:34,447 - #10 =
-INFO  12:01:34,447 - #2 5
-INFO  12:01:34,448 - #30 +
-INFO  12:01:34,448 - #2 3
-INFO  12:01:34,449 - #37 ;
-INFO  12:01:34,449 - #25 print
-INFO  12:01:34,449 - #22 (
-INFO  12:01:34,449 - #2 2
-INFO  12:01:34,450 - #23 )
-INFO  12:01:34,450 - #37 ;
-INFO  12:01:34,450 - #8 }
-INFO  12:01:34,450 - #8 }
-INFO  12:01:34,454 - Program(
-  ProgName(
-   MJProgram
-  ) [ProgName]
-  DeclarationListc(
-    DeclarationListc(
-      NoDeclarations(
-      ) [NoDeclarations]
-      DeclListDerived1(
-        VarDeclc(
-          Typec(
-           int
-          ) [Typec]
-         x
-          NoOptionalBraces(
-          ) [NoOptionalBraces]
-          NoVarDeclList(
-          ) [NoVarDeclList]
-        ) [VarDeclc]
-      ) [DeclListDerived1]
-    ) [DeclarationListc]
-    DeclListDerived1(
-      VarDeclc(
-        Typec(
-         int
-        ) [Typec]
-       y
-        NoOptionalBraces(
-        ) [NoOptionalBraces]
-        NoVarDeclList(
-        ) [NoVarDeclList]
-      ) [VarDeclc]
-    ) [DeclListDerived1]
-  ) [DeclarationListc]
-  DeclListMethodc(
-    NoDeclListMethod(
-    ) [NoDeclListMethod]
-    MethodDeclc(
-      MethodTypeNamec(
-        TypeOrVoidc(
-          Typec(
-           int
-          ) [Typec]
-        ) [TypeOrVoidc]
-       main
-      ) [MethodTypeNamec]
-      FormParsOptionalDerived1(
-      ) [FormParsOptionalDerived1]
-      NoDeclListVar(
-      ) [NoDeclListVar]
-      StatementListc(
-        StatementListc(
-          StatementListc(
-            NoStatementList(
-            ) [NoStatementList]
-            StatementDerived1(
-              PrintStmt(
-                Exprc(
-                  NoOptionalMinus(
-                  ) [NoOptionalMinus]
-                  Termc(
-                    Factorc(
-                     1
-                    ) [Factorc]
-                    NoMulopFactorList(
-                    ) [NoMulopFactorList]
-                  ) [Termc]
-                  NoAddopTermList(
-                  ) [NoAddopTermList]
-                ) [Exprc]
-                NoOptionalNumConst(
-                ) [NoOptionalNumConst]
-              ) [PrintStmt]
-            ) [StatementDerived1]
-          ) [StatementListc]
-          StatementDerived1(
-            SingleStatementc(
-              DesignatorStatementc(
-                Designatorc(
-                  DesignatorName(
-                   x
-                  ) [DesignatorName]
-                ) [Designatorc]
-                DesignatorStatementElementsc(
-                  Assignopc(
-                  ) [Assignopc]
-                  Exprc(
-                    NoOptionalMinus(
-                    ) [NoOptionalMinus]
-                    Termc(
-                      Factorc(
-                       5
-                      ) [Factorc]
-                      NoMulopFactorList(
-                      ) [NoMulopFactorList]
-                    ) [Termc]
-                    AddopTermListc(
-                      NoAddopTermList(
-                      ) [NoAddopTermList]
-                      AddOpc(
-                      ) [AddOpc]
-                      Termc(
-                        Factorc(
-                         3
-                        ) [Factorc]
-                        NoMulopFactorList(
-                        ) [NoMulopFactorList]
-                      ) [Termc]
-                    ) [AddopTermListc]
-                  ) [Exprc]
-                ) [DesignatorStatementElementsc]
-              ) [DesignatorStatementc]
-            ) [SingleStatementc]
-          ) [StatementDerived1]
-        ) [StatementListc]
-        StatementDerived1(
-          PrintStmt(
-            Exprc(
-              NoOptionalMinus(
-              ) [NoOptionalMinus]
-              Termc(
-                Factorc(
-                 2
-                ) [Factorc]
-                NoMulopFactorList(
-                ) [NoMulopFactorList]
-              ) [Termc]
-              NoAddopTermList(
-              ) [NoAddopTermList]
-            ) [Exprc]
-            NoOptionalNumConst(
-            ) [NoOptionalNumConst]
-          ) [PrintStmt]
-        ) [StatementDerived1]
-      ) [StatementListc]
-    ) [MethodDeclc]
-  ) [DeclListMethodc]
-) [Program]
-INFO  12:01:34,454 - ===================================
-INFO  12:01:34,458 - Deklarisana promenljiva x na liniji 2
-INFO  12:01:34,458 - Deklarisana promenljiva y na liniji 2
-INFO  12:01:34,458 - Obradjuje se funkcija main na liniji 5
-INFO  12:01:34,458 -  Print count calls = 2
-INFO  12:01:34,458 -  Deklarisanih promenljivih ima = 2
-INFO  12:01:34,460 - ===================================
+INFO  13:07:54,215 - Compiling source file: C:\Users\Aleksandar\Desktop\PP\projekat\PP_Projekat\pp_projekat\test\program.mj
+INFO  13:07:54,257 - #6 program
+INFO  13:07:54,257 - #4 Program
+INFO  13:07:54,257 - #19 class
+INFO  13:07:54,258 - #4 A
+INFO  13:07:54,258 - #7 {
+INFO  13:07:54,258 - #4 int
+INFO  13:07:54,259 - #4 x
+INFO  13:07:54,259 - #44 [
+INFO  13:07:54,259 - #45 ]
+INFO  13:07:54,259 - #18 ,
+INFO  13:07:54,260 - #4 y
+INFO  13:07:54,260 - #44 [
+INFO  13:07:54,260 - #45 ]
+INFO  13:07:54,260 - #37 ;
+INFO  13:07:54,260 - #8 }
+INFO  13:07:54,261 - #9 const
+INFO  13:07:54,262 - #4 int
+INFO  13:07:54,262 - #4 pi
+INFO  13:07:54,262 - #10 =
+INFO  13:07:54,262 - #2 3
+INFO  13:07:54,262 - #18 ,
+INFO  13:07:54,262 - #4 e
+INFO  13:07:54,267 - #10 =
+INFO  13:07:54,267 - #2 2
+INFO  13:07:54,267 - #37 ;
+INFO  13:07:54,267 - #19 class
+INFO  13:07:54,267 - #4 B
+INFO  13:07:54,267 - #20 extends
+INFO  13:07:54,267 - #4 A
+INFO  13:07:54,267 - #7 {
+INFO  13:07:54,267 - #4 int
+INFO  13:07:54,267 - #4 i
+INFO  13:07:54,267 - #37 ;
+INFO  13:07:54,268 - #7 {
+INFO  13:07:54,268 - #4 int
+INFO  13:07:54,268 - #4 getValue
+ERROR 13:07:54,268 - 
+Sintaksna greska na liniji 7
+INFO  13:07:54,268 - #22 (
+INFO  13:07:54,268 - #4 int
+INFO  13:07:54,268 - #4 a
+INFO  13:07:54,269 - #23 )
+INFO  13:07:54,269 - #4 int
+INFO  13:07:54,269 - #4 b
+INFO  13:07:54,269 - #37 ;
+INFO  13:07:54,269 - #4 int
+INFO  13:07:54,269 - #4 c
+INFO  13:07:54,269 - #37 ;
+ERROR 13:07:54,269 - Izvrsen oporavak do ; u liniji 4
+INFO  13:07:54,270 - #7 {
+INFO  13:07:54,270 - #42 return
+ERROR 13:07:54,270 - 
+Sintaksna greska na liniji 7
+INFO  13:07:54,270 - #15 this
+INFO  13:07:54,270 - #29 .
+INFO  13:07:54,270 - #4 i
+INFO  13:07:54,270 - #30 +
+INFO  13:07:54,271 - #15 this
+INFO  13:07:54,271 - #29 .
+INFO  13:07:54,271 - #4 x
+INFO  13:07:54,271 - #44 [
+INFO  13:07:54,271 - #2 0
+INFO  13:07:54,271 - #45 ]
+INFO  13:07:54,271 - #30 +
+INFO  13:07:54,271 - #4 a
+INFO  13:07:54,271 - #37 ;
+INFO  13:07:54,271 - #8 }
+INFO  13:07:54,271 - #24 void
+INFO  13:07:54,271 - #4 m
+INFO  13:07:54,271 - #22 (
+INFO  13:07:54,272 - #23 )
+INFO  13:07:54,272 - #7 {
+INFO  13:07:54,272 - #8 }
+INFO  13:07:54,272 - #8 }
+INFO  13:07:54,272 - #8 }
+INFO  13:07:54,272 - #19 class
+INFO  13:07:54,272 - #4 C
+INFO  13:07:54,272 - #20 extends
+INFO  13:07:54,272 - #4 B
+INFO  13:07:54,272 - #7 {
+INFO  13:07:54,272 - #4 A
+INFO  13:07:54,272 - #4 theA
+INFO  13:07:54,272 - #37 ;
+INFO  13:07:54,272 - #4 int
+INFO  13:07:54,272 - #4 a
+INFO  13:07:54,272 - #37 ;
+ERROR 13:07:54,272 - Izvrsen oporavak do ; u liniji 7
+INFO  13:07:54,272 - #8 }
+ERROR 13:07:54,272 - 
+Sintaksna greska na liniji 11
+INFO  13:07:54,272 - #7 {
+INFO  13:07:54,272 - #24 void
+INFO  13:07:54,273 - #4 main
+INFO  13:07:54,273 - #22 (
+INFO  13:07:54,273 - #23 )
+INFO  13:07:54,273 - #4 A
+INFO  13:07:54,273 - #4 a
+INFO  13:07:54,273 - #37 ;
+INFO  13:07:54,273 - #4 C
+INFO  13:07:54,273 - #4 c
+INFO  13:07:54,273 - #37 ;
+ERROR 13:07:54,273 - Izvrsen oporavak do ; u liniji 11
+INFO  13:07:54,273 - #4 int
+INFO  13:07:54,273 - #4 i
+INFO  13:07:54,273 - #37 ;
+INFO  13:07:54,273 - #4 int
+INFO  13:07:54,273 - #4 x
+INFO  13:07:54,273 - #44 [
+INFO  13:07:54,273 - #45 ]
+INFO  13:07:54,274 - #37 ;
+INFO  13:07:54,274 - #4 char
+INFO  13:07:54,274 - #4 ch
+INFO  13:07:54,274 - #37 ;
+INFO  13:07:54,274 - #7 {
+INFO  13:07:54,274 - #4 a
+INFO  13:07:54,274 - #10 =
+ERROR 13:07:54,274 - 
+Sintaksna greska na liniji 14
+INFO  13:07:54,275 - #28 new
+INFO  13:07:54,275 - #4 A
+INFO  13:07:54,275 - #37 ;
+INFO  13:07:54,275 - #4 a
+INFO  13:07:54,275 - #29 .
+INFO  13:07:54,276 - #4 x
+INFO  13:07:54,276 - #10 =
+INFO  13:07:54,276 - #28 new
+INFO  13:07:54,276 - #4 int
+INFO  13:07:54,276 - #44 [
+INFO  13:07:54,276 - #2 5
+INFO  13:07:54,276 - #45 ]
+INFO  13:07:54,276 - #37 ;
+INFO  13:07:54,276 - #4 a
+INFO  13:07:54,277 - #29 .
+INFO  13:07:54,277 - #4 y
+INFO  13:07:54,277 - #10 =
+INFO  13:07:54,277 - #28 new
+INFO  13:07:54,277 - #4 int
+INFO  13:07:54,277 - #44 [
+INFO  13:07:54,277 - #2 5
+INFO  13:07:54,277 - #45 ]
+INFO  13:07:54,278 - #37 ;
+INFO  13:07:54,278 - #4 c
+INFO  13:07:54,278 - #10 =
+INFO  13:07:54,278 - #28 new
+INFO  13:07:54,278 - #4 C
+INFO  13:07:54,278 - #37 ;
+INFO  13:07:54,278 - #4 c
+INFO  13:07:54,278 - #29 .
+INFO  13:07:54,278 - #4 theA
+INFO  13:07:54,278 - #10 =
+INFO  13:07:54,278 - #4 a
+INFO  13:07:54,278 - #37 ;
+INFO  13:07:54,278 - #4 c
+INFO  13:07:54,278 - #29 .
+INFO  13:07:54,278 - #4 x
+INFO  13:07:54,278 - #10 =
+INFO  13:07:54,278 - #28 new
+INFO  13:07:54,278 - #4 int
+INFO  13:07:54,279 - #44 [
+INFO  13:07:54,279 - #2 5
+INFO  13:07:54,279 - #45 ]
+INFO  13:07:54,279 - #37 ;
+INFO  13:07:54,279 - #4 x
+INFO  13:07:54,279 - #10 =
+INFO  13:07:54,279 - #28 new
+INFO  13:07:54,279 - #4 int
+INFO  13:07:54,279 - #44 [
+INFO  13:07:54,279 - #2 3
+INFO  13:07:54,279 - #45 ]
+INFO  13:07:54,279 - #37 ;
+INFO  13:07:54,279 - #43 read
+INFO  13:07:54,279 - #22 (
+INFO  13:07:54,279 - #4 c
+INFO  13:07:54,279 - #29 .
+INFO  13:07:54,279 - #4 i
+INFO  13:07:54,280 - #23 )
+INFO  13:07:54,280 - #37 ;
+INFO  13:07:54,280 - #4 i
+INFO  13:07:54,280 - #10 =
+INFO  13:07:54,280 - #2 0
+INFO  13:07:54,280 - #37 ;
+INFO  13:07:54,280 - #38 do
+INFO  13:07:54,280 - #7 {
+INFO  13:07:54,280 - #43 read
+INFO  13:07:54,280 - #22 (
+INFO  13:07:54,280 - #4 c
+INFO  13:07:54,280 - #29 .
+INFO  13:07:54,280 - #4 x
+INFO  13:07:54,280 - #44 [
+INFO  13:07:54,280 - #4 i
+INFO  13:07:54,280 - #45 ]
+INFO  13:07:54,280 - #23 )
+INFO  13:07:54,280 - #37 ;
+INFO  13:07:54,280 - #43 read
+INFO  13:07:54,280 - #22 (
+INFO  13:07:54,280 - #4 c
+INFO  13:07:54,280 - #29 .
+INFO  13:07:54,280 - #4 theA
+INFO  13:07:54,281 - #29 .
+INFO  13:07:54,281 - #4 x
+INFO  13:07:54,281 - #44 [
+INFO  13:07:54,281 - #4 i
+INFO  13:07:54,281 - #45 ]
+INFO  13:07:54,281 - #23 )
+INFO  13:07:54,281 - #37 ;
+INFO  13:07:54,281 - #4 i
+INFO  13:07:54,281 - #46 ++
+INFO  13:07:54,281 - #37 ;
+INFO  13:07:54,281 - #8 }
+INFO  13:07:54,281 - #39 while
+INFO  13:07:54,281 - #22 (
+INFO  13:07:54,281 - #4 i
+INFO  13:07:54,281 - #48 <
+INFO  13:07:54,281 - #2 5
+INFO  13:07:54,281 - #23 )
+INFO  13:07:54,281 - #37 ;
+INFO  13:07:54,281 - #25 print
+INFO  13:07:54,281 - #22 (
+INFO  13:07:54,282 - #4 c
+INFO  13:07:54,282 - #29 .
+INFO  13:07:54,282 - #4 getValue
+INFO  13:07:54,282 - #22 (
+INFO  13:07:54,282 - #4 c
+INFO  13:07:54,282 - #29 .
+INFO  13:07:54,282 - #4 theA
+INFO  13:07:54,282 - #29 .
+INFO  13:07:54,282 - #4 x
+INFO  13:07:54,282 - #44 [
+INFO  13:07:54,282 - #2 0
+INFO  13:07:54,282 - #45 ]
+INFO  13:07:54,282 - #23 )
+INFO  13:07:54,282 - #23 )
+INFO  13:07:54,282 - #37 ;
+INFO  13:07:54,282 - #4 c
+INFO  13:07:54,282 - #29 .
+INFO  13:07:54,282 - #4 m
+INFO  13:07:54,282 - #22 (
+INFO  13:07:54,282 - #23 )
+INFO  13:07:54,282 - #37 ;
+INFO  13:07:54,282 - #8 }
+INFO  13:07:54,282 - #8 }
+ERROR 13:07:54,282 - Fatalna greska, parsiranje se ne moze nastaviti na liniji 28

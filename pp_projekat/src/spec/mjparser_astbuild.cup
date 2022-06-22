@@ -120,9 +120,9 @@ nonterminal rs.etf.pp1.symboltable.concepts.Struct Type, TypeOrVoid, Term, Facto
 precedence left ELSE;
 
 
-Program ::= (Program) PROG ProgName:p DeclarationList:D1 LBRACECURLY DeclListMethod:D2 RBRACECURLY {: RESULT=new Program(p, D1, D2); RESULT.setLine(pleft); :};
+Program ::= (Programc) PROG ProgName:p DeclarationList:D1 LBRACECURLY DeclListMethod:D2 RBRACECURLY {: RESULT=new Programc(p, D1, D2); RESULT.setLine(pleft); :};
 
-ProgName ::= (ProgName) IDENT:progName {: RESULT=new ProgName(progName); RESULT.setLine(progNameleft); :};
+ProgName ::= (ProgNamec) IDENT:progName {: RESULT=new ProgNamec(progName); RESULT.setLine(progNameleft); :};
 
 DeclarationList ::= (DeclarationListc) DeclarationList:D1 DeclList:D2 {: RESULT=new DeclarationListc(D1, D2); RESULT.setLine(D1left); :}
 				| (NoDeclarations) {: RESULT=new NoDeclarations(); :} /* epsilon */;
@@ -183,10 +183,11 @@ ConstructorDecl ::= (ConstructorDeclc) IDENT:I1 LPAREN RPAREN DeclListVar:D2 LBR
 
 MethodDecl ::= (MethodDeclc) MethodTypeName:M1 LPAREN FormParsOptional:F2  DeclListVar:D3 LBRACECURLY StatementList:S4 RBRACECURLY {: RESULT=new MethodDeclc(M1, F2, D3, S4); RESULT.setLine(M1left); :};
 
-MethodTypeName ::= (MethodTypeNamec) TypeOrVoid:retType IDENT:methodName {: RESULT=new MethodTypeNamec(retType, methodName); RESULT.setLine(retTypeleft); :};
+MethodTypeName ::= (MethodTypeNamec) Type:varType IDENT:methodName {: RESULT=new MethodTypeNamec(varType, methodName); RESULT.setLine(varTypeleft); :}
+				| (VoidFunc) VOID IDENT:methodName {: RESULT=new VoidFunc(methodName); RESULT.setLine(methodNameleft); :};
 
 
-TypeOrVoid ::= (TypeOrVoidc) Type:T1 {: RESULT=new TypeOrVoidc(T1); RESULT.setLine(T1left); :} | VOID {: RESULT=new TypeOrVoidDerived1(); :};
+TypeOrVoid ::= (TypeOrVoidc) Type:returnType {: RESULT=new TypeOrVoidc(returnType); RESULT.setLine(returnTypeleft); :} | VOID {: RESULT=new TypeOrVoidDerived1(); :};
 
 FormParsOptional ::= (FormParsOptionalc) FormPars:F1 {: RESULT=new FormParsOptionalc(F1); RESULT.setLine(F1left); :}
 				| RPAREN {: RESULT=new FormParsOptionalDerived1(); :};

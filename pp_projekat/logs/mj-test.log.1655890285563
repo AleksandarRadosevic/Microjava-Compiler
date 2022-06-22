@@ -1,0 +1,42 @@
+INFO  00:51:43,847 - Compiling source file: C:\Users\Aleksandar\Desktop\PP\projekat\PP_Projekat\pp_projekat\test\program.mj
+INFO  00:51:43,887 - #6 program
+INFO  00:51:43,887 - #4 MJProgram
+INFO  00:51:43,887 - #7 {
+INFO  00:51:43,888 - #4 int
+INFO  00:51:43,888 - #4 main
+INFO  00:51:43,888 - #22 (
+INFO  00:51:43,889 - #23 )
+INFO  00:51:43,889 - #7 {
+INFO  00:51:43,890 - #8 }
+INFO  00:51:43,890 - #8 }
+INFO  00:51:43,894 - Programc(
+  ProgNamec(
+   MJProgram
+  ) [ProgNamec]
+  NoDeclarations(
+  ) [NoDeclarations]
+  DeclListMethodc(
+    NoDeclListMethod(
+    ) [NoDeclListMethod]
+    MethodDeclc(
+      MethodTypeNamec(
+        TypeOrVoidc(
+          Typec(
+           int
+          ) [Typec]
+        ) [TypeOrVoidc]
+       main
+      ) [MethodTypeNamec]
+      FormParsOptionalDerived1(
+      ) [FormParsOptionalDerived1]
+      NoDeclListVar(
+      ) [NoDeclListVar]
+      NoStatementList(
+      ) [NoStatementList]
+    ) [MethodDeclc]
+  ) [DeclListMethodc]
+) [Programc]
+INFO  00:51:43,894 - ===================================
+INFO  00:51:43,896 -  Print count calls = 0
+INFO  00:51:43,896 -  Deklarisanih promenljivih ima = 0
+INFO  00:51:43,896 - ===================================

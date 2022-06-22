@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 21/5/2022 11:58:1
+// 22/5/2022 12:55:29
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -52,6 +52,7 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(TypeOrVoid TypeOrVoid) { }
     public void visit(MethodTypeName MethodTypeName) { }
     public void visit(DesignatorStatement DesignatorStatement) { }
+    public void visit(ProgName ProgName) { }
     public void visit(Statement Statement) { }
     public void visit(VarDecl VarDecl) { }
     public void visit(DesignatorStatementElements DesignatorStatementElements) { }
@@ -60,6 +61,7 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(ConstDecl ConstDecl) { }
     public void visit(CondFact CondFact) { }
     public void visit(OptionalExpression OptionalExpression) { }
+    public void visit(Program Program) { }
     public void visit(SingleStatement SingleStatement) { }
     public void visit(CondFactListAnd CondFactListAnd) { }
     public void visit(FormPars FormPars) { }
@@ -159,6 +161,7 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(FormParsOptionalc FormParsOptionalc) { visit(); }
     public void visit(TypeOrVoidDerived1 TypeOrVoidDerived1) { visit(); }
     public void visit(TypeOrVoidc TypeOrVoidc) { visit(); }
+    public void visit(VoidFunc VoidFunc) { visit(); }
     public void visit(MethodTypeNamec MethodTypeNamec) { visit(); }
     public void visit(MethodDeclc MethodDeclc) { visit(); }
     public void visit(ConstructorDeclc ConstructorDeclc) { visit(); }
@@ -193,8 +196,8 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(DeclListc DeclListc) { visit(); }
     public void visit(NoDeclarations NoDeclarations) { visit(); }
     public void visit(DeclarationListc DeclarationListc) { visit(); }
-    public void visit(ProgName ProgName) { visit(); }
-    public void visit(Program Program) { visit(); }
+    public void visit(ProgNamec ProgNamec) { visit(); }
+    public void visit(Programc Programc) { visit(); }
 
 
     public void visit() { }

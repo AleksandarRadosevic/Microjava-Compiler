@@ -1,0 +1,18 @@
+INFO  13:09:20,912 - Compiling source file: C:\Users\Aleksandar\Desktop\PP\projekat\PP_Projekat\pp_projekat\test\program.mj
+INFO  13:09:20,952 - #6 program
+INFO  13:09:20,952 - #4 MJProgram
+INFO  13:09:20,952 - #7 {
+INFO  13:09:20,953 - #8 }
+INFO  13:09:20,958 - Program(
+  ProgName(
+   MJProgram
+  ) [ProgName]
+  NoDeclarations(
+  ) [NoDeclarations]
+  NoDeclListMethod(
+  ) [NoDeclListMethod]
+) [Program]
+INFO  13:09:20,958 - ===================================
+INFO  13:09:20,960 -  Print count calls = 0
+INFO  13:09:20,960 -  Deklarisanih promenljivih ima = 0
+INFO  13:09:20,960 - ===================================

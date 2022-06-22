@@ -78,9 +78,9 @@ nonterminal rs.etf.pp1.symboltable.concepts.Struct Type, TypeOrVoid, Term, Facto
 precedence left ELSE;
 
 
-Program ::= (Program) PROG ProgName:p DeclarationList LBRACECURLY DeclListMethod RBRACECURLY;
+Program ::= (Programc) PROG ProgName:p DeclarationList LBRACECURLY DeclListMethod RBRACECURLY;
 
-ProgName ::= (ProgName) IDENT:progName;
+ProgName ::= (ProgNamec) IDENT:progName;
 
 DeclarationList ::= (DeclarationListc) DeclarationList DeclList
 				| (NoDeclarations) /* epsilon */;
@@ -141,10 +141,11 @@ ConstructorDecl ::= (ConstructorDeclc) IDENT LPAREN RPAREN DeclListVar LBRACECUR
 
 MethodDecl ::= (MethodDeclc) MethodTypeName LPAREN FormParsOptional  DeclListVar LBRACECURLY StatementList RBRACECURLY;
 
-MethodTypeName ::= (MethodTypeNamec) TypeOrVoid:retType IDENT:methodName;
+MethodTypeName ::= (MethodTypeNamec) Type:varType IDENT:methodName
+				| (VoidFunc) VOID IDENT:methodName;
 
 
-TypeOrVoid ::= (TypeOrVoidc) Type | VOID;
+TypeOrVoid ::= (TypeOrVoidc) Type:returnType | VOID;
 
 FormParsOptional ::= (FormParsOptionalc) FormPars
 				| RPAREN;

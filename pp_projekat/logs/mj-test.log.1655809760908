@@ -1,0 +1,15 @@
+INFO  13:08:54,341 - Compiling source file: C:\Users\Aleksandar\Desktop\PP\projekat\PP_Projekat\pp_projekat\test\program.mj
+INFO  13:08:54,379 - #6 program
+INFO  13:08:54,380 - #4 MJProgram
+INFO  13:08:54,380 - #7 {
+INFO  13:08:54,381 - #8 }
+INFO  13:08:54,385 - Program(
+  ProgName(
+   MJProgram
+  ) [ProgName]
+  NoDeclarations(
+  ) [NoDeclarations]
+  NoDeclListMethod(
+  ) [NoDeclListMethod]
+) [Program]
+INFO  13:08:54,385 - ===================================

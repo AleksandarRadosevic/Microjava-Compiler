@@ -1,5 +1,6 @@
 package rs.ac.bg.etf.pp1;
-
+import rs.etf.pp1.symboltable.concepts.Obj;
+import rs.etf.pp1.symboltable.concepts.Struct;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -38,10 +39,20 @@ public class TestSemantic {
 	        
 	        Program prog = (Program)(s.value); 
 	        Tab.init();
+	        
+	        
+	        
+	        
 			// ispis sintaksnog stabla
 			log.info(prog.toString(""));
 			log.info("===================================");
-
+	        Struct boolType=new Struct(Struct.Bool);
+	        Obj boolObj=Tab.insert(Obj.Type, "bool", boolType);
+	        boolObj.setAdr(-1);
+	        boolObj.setLevel(-1);
+	        
+	        
+	        
 			// ispis prepoznatih programskih konstrukcija
 			SemanticPass v = new SemanticPass();
 			prog.traverseBottomUp(v); 

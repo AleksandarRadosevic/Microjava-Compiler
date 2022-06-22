@@ -1,0 +1,59 @@
+INFO  11:46:32,924 - Compiling source file: C:\Users\Aleksandar\Desktop\PP\projekat\PP_Projekat\pp_projekat\test\program.mj
+INFO  11:46:32,966 - #6 program
+INFO  11:46:32,967 - #4 MJProgram
+INFO  11:46:32,967 - #7 {
+INFO  11:46:32,967 - #4 int
+INFO  11:46:32,968 - #4 main
+INFO  11:46:32,968 - #22 (
+INFO  11:46:32,968 - #23 )
+INFO  11:46:32,968 - #4 int
+INFO  11:46:32,969 - #4 x
+INFO  11:46:32,969 - #37 ;
+INFO  11:46:32,970 - #7 {
+INFO  11:46:32,970 - #8 }
+INFO  11:46:32,971 - #8 }
+INFO  11:46:32,974 - Programc(
+  ProgNamec(
+   MJProgram
+  ) [ProgNamec]
+  NoDeclarations(
+  ) [NoDeclarations]
+  DeclListMethodc(
+    NoDeclListMethod(
+    ) [NoDeclListMethod]
+    MethodDeclc(
+      MethodTypeNamec(
+        TypeOrVoidc(
+          Typec(
+           int
+          ) [Typec]
+        ) [TypeOrVoidc]
+       main
+      ) [MethodTypeNamec]
+      FormParsOptionalDerived1(
+      ) [FormParsOptionalDerived1]
+      DeclListVarc(
+        NoDeclListVar(
+        ) [NoDeclListVar]
+        VarDeclc(
+          Typec(
+           int
+          ) [Typec]
+         x
+          NoOptionalBraces(
+          ) [NoOptionalBraces]
+          NoVarDeclList(
+          ) [NoVarDeclList]
+        ) [VarDeclc]
+      ) [DeclListVarc]
+      NoStatementList(
+      ) [NoStatementList]
+    ) [MethodDeclc]
+  ) [DeclListMethodc]
+) [Programc]
+INFO  11:46:32,975 - ===================================
+INFO  11:46:32,977 - Obradjuje se funkcija main na liniji 3
+INFO  11:46:32,977 - Deklarisana promenljiva x na liniji 3
+INFO  11:46:32,977 -  Print count calls = 0
+INFO  11:46:32,977 -  Deklarisanih promenljivih ima = 1
+INFO  11:46:32,977 - ===================================

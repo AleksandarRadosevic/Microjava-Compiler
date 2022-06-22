@@ -1,0 +1,16 @@
+INFO  12:36:41,946 - Compiling source file: C:\Users\Aleksandar\Desktop\PP\projekat\PP_Projekat\pp_projekat\test\program.mj
+INFO  12:36:41,985 - #6 program
+INFO  12:36:41,985 - #4 MJProgram
+INFO  12:36:41,985 - #4 int
+INFO  12:36:41,985 - #4 x
+INFO  12:36:41,986 - #37 ;
+INFO  12:36:41,986 - #4 int
+INFO  12:36:41,987 - #4 y
+INFO  12:36:41,987 - #37 ;
+INFO  12:36:41,987 - #7 {
+INFO  12:36:41,987 - #8 }
+INFO  12:36:41,993 - Deklarisana promenljiva x na liniji 2
+INFO  12:36:41,993 - Deklarisana promenljiva y na liniji 2
+INFO  12:36:41,993 -  Print count calls = 0
+INFO  12:36:41,993 -  Deklarisanih promenljivih ima = 2
+INFO  12:36:41,993 - ===================================

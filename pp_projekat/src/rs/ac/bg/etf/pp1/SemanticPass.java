@@ -32,30 +32,27 @@ public class SemanticPass extends VisitorAdaptor {
 
 	public void visit(VarDeclc varDecl) {
 		varDeclCount++;
-		report_info("Deklarisana promenljiva "+ varDecl.getVarName(), varDecl);
 		Obj varNode = Tab.insert(Obj.Var, varDecl.getVarName(), varDecl.getType().struct);
-
 	}
 
 	public void visit(PrintStmt print) {
 		printCallCount++;
 	}
 
-	public void visit(ProgName progName) {
+	public void visit(ProgNamec progName) {
 		progName.obj = Tab.insert(Obj.Prog, progName.getProgName(), Tab.noType);
+		System.out.println(progName.obj.getLevel());
 		Tab.openScope();
 	}
 
-	public void visit(Program program) {
+	public void visit(Programc program) {
 		// add local symbols in program scope
 		Tab.chainLocalSymbols(program.getProgName().obj);
 		Tab.closeScope();
-
 	}
 
 	public void visit(Typec type) {
 		Obj obj = Tab.find(type.getTypeName());
-
 		if (obj == Tab.noObj) {
     		report_error("Nije pronadjen tip " + type.getTypeName() + " u tabeli simbola! ", null);
     		type.struct = Tab.noType;
@@ -74,15 +71,14 @@ public class SemanticPass extends VisitorAdaptor {
 	}
 
 	public void visit(MethodTypeNamec methodTypeName) {
-		currentMethod = Tab.insert(Obj.Meth, methodTypeName.getMethodName(),methodTypeName.getTypeOrVoid().struct);
+		this.currentMethod = Tab.insert(Obj.Meth, methodTypeName.getMethodName(),methodTypeName.getType().struct);
 		methodTypeName.obj = currentMethod;
     	Tab.openScope();
 		report_info("Obradjuje se funkcija " + methodTypeName.getMethodName(), methodTypeName);
 	}
 	
-    public void visit(MethodDecl methodDecl){
-
-    	Tab.chainLocalSymbols(currentMethod);
+    public void visit(MethodDeclc methodDecl){
+    	Tab.chainLocalSymbols(this.currentMethod);
     	Tab.closeScope();
     	
     	currentMethod = null;
@@ -107,6 +103,11 @@ public class SemanticPass extends VisitorAdaptor {
 			funcCall.struct = Tab.noType;
     	}
     }
-    
+	public void visit(VoidFunc methodTypeName) {
+		this.currentMethod = Tab.insert(Obj.Meth, methodTypeName.getMethodName(),Tab.noType);
+		methodTypeName.obj = currentMethod;
+    	Tab.openScope();
+		report_info("Obradjuje se funkcija " + methodTypeName.getMethodName(), methodTypeName);
+	}
 }
 

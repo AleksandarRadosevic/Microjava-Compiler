@@ -1,27 +1,27 @@
 // generated with ast extension for cup
 // version 0.8
-// 21/5/2022 11:58:1
+// 22/5/2022 12:55:29
 
 
 package rs.ac.bg.etf.pp1.ast;
 
 public class MethodTypeNamec extends MethodTypeName {
 
-    private TypeOrVoid TypeOrVoid;
+    private Type Type;
     private String methodName;
 
-    public MethodTypeNamec (TypeOrVoid TypeOrVoid, String methodName) {
-        this.TypeOrVoid=TypeOrVoid;
-        if(TypeOrVoid!=null) TypeOrVoid.setParent(this);
+    public MethodTypeNamec (Type Type, String methodName) {
+        this.Type=Type;
+        if(Type!=null) Type.setParent(this);
         this.methodName=methodName;
     }
 
-    public TypeOrVoid getTypeOrVoid() {
-        return TypeOrVoid;
+    public Type getType() {
+        return Type;
     }
 
-    public void setTypeOrVoid(TypeOrVoid TypeOrVoid) {
-        this.TypeOrVoid=TypeOrVoid;
+    public void setType(Type Type) {
+        this.Type=Type;
     }
 
     public String getMethodName() {
@@ -37,16 +37,16 @@ public class MethodTypeNamec extends MethodTypeName {
     }
 
     public void childrenAccept(Visitor visitor) {
-        if(TypeOrVoid!=null) TypeOrVoid.accept(visitor);
+        if(Type!=null) Type.accept(visitor);
     }
 
     public void traverseTopDown(Visitor visitor) {
         accept(visitor);
-        if(TypeOrVoid!=null) TypeOrVoid.traverseTopDown(visitor);
+        if(Type!=null) Type.traverseTopDown(visitor);
     }
 
     public void traverseBottomUp(Visitor visitor) {
-        if(TypeOrVoid!=null) TypeOrVoid.traverseBottomUp(visitor);
+        if(Type!=null) Type.traverseBottomUp(visitor);
         accept(visitor);
     }
 
@@ -55,8 +55,8 @@ public class MethodTypeNamec extends MethodTypeName {
         buffer.append(tab);
         buffer.append("MethodTypeNamec(\n");
 
-        if(TypeOrVoid!=null)
-            buffer.append(TypeOrVoid.toString("  "+tab));
+        if(Type!=null)
+            buffer.append(Type.toString("  "+tab));
         else
             buffer.append(tab+"  null");
         buffer.append("\n");

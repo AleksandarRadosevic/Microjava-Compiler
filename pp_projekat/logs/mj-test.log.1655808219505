@@ -1,0 +1,140 @@
+INFO  12:43:19,405 - Compiling source file: C:\Users\Aleksandar\Desktop\PP\projekat\PP_Projekat\pp_projekat\test\program.mj
+INFO  12:43:19,445 - #6 program
+INFO  12:43:19,445 - #4 MJProgram
+INFO  12:43:19,445 - #4 int
+INFO  12:43:19,446 - #4 x
+INFO  12:43:19,446 - #37 ;
+INFO  12:43:19,447 - #4 int
+INFO  12:43:19,447 - #4 y
+INFO  12:43:19,447 - #37 ;
+INFO  12:43:19,448 - #7 {
+INFO  12:43:19,448 - #24 void
+INFO  12:43:19,448 - #4 main
+INFO  12:43:19,448 - #22 (
+INFO  12:43:19,449 - #23 )
+INFO  12:43:19,449 - #7 {
+INFO  12:43:19,449 - #4 x
+INFO  12:43:19,450 - #10 =
+INFO  12:43:19,450 - #4 y
+INFO  12:43:19,452 - #30 +
+INFO  12:43:19,453 - #2 5
+INFO  12:43:19,453 - #30 +
+INFO  12:43:19,454 - #2 3
+INFO  12:43:19,454 - #37 ;
+INFO  12:43:19,454 - #8 }
+INFO  12:43:19,454 - #8 }
+INFO  12:43:19,458 - Program(
+  ProgName(
+   MJProgram
+  ) [ProgName]
+  DeclarationListc(
+    DeclarationListc(
+      NoDeclarations(
+      ) [NoDeclarations]
+      DeclListDerived1(
+        VarDeclc(
+          Typec(
+           int
+          ) [Typec]
+         x
+          NoOptionalBraces(
+          ) [NoOptionalBraces]
+          NoVarDeclList(
+          ) [NoVarDeclList]
+        ) [VarDeclc]
+      ) [DeclListDerived1]
+    ) [DeclarationListc]
+    DeclListDerived1(
+      VarDeclc(
+        Typec(
+         int
+        ) [Typec]
+       y
+        NoOptionalBraces(
+        ) [NoOptionalBraces]
+        NoVarDeclList(
+        ) [NoVarDeclList]
+      ) [VarDeclc]
+    ) [DeclListDerived1]
+  ) [DeclarationListc]
+  DeclListMethodc(
+    NoDeclListMethod(
+    ) [NoDeclListMethod]
+    MethodDeclc(
+      MethodTypeNamec(
+        TypeOrVoidDerived1(
+        ) [TypeOrVoidDerived1]
+       main
+      ) [MethodTypeNamec]
+      FormParsOptionalDerived1(
+      ) [FormParsOptionalDerived1]
+      NoDeclListVar(
+      ) [NoDeclListVar]
+      StatementListc(
+        NoStatementList(
+        ) [NoStatementList]
+        StatementDerived1(
+          SingleStatementc(
+            DesignatorStatementc(
+              Designatorc(
+                DesignatorName(
+                 x
+                ) [DesignatorName]
+              ) [Designatorc]
+              DesignatorStatementElementsc(
+                Assignopc(
+                ) [Assignopc]
+                Exprc(
+                  NoOptionalMinus(
+                  ) [NoOptionalMinus]
+                  Termc(
+                    FactorDerived5(
+                      Designatorc(
+                        DesignatorName(
+                         y
+                        ) [DesignatorName]
+                      ) [Designatorc]
+                    ) [FactorDerived5]
+                    NoMulopFactorList(
+                    ) [NoMulopFactorList]
+                  ) [Termc]
+                  AddopTermListc(
+                    AddopTermListc(
+                      NoAddopTermList(
+                      ) [NoAddopTermList]
+                      AddOpc(
+                      ) [AddOpc]
+                      Termc(
+                        Factorc(
+                         5
+                        ) [Factorc]
+                        NoMulopFactorList(
+                        ) [NoMulopFactorList]
+                      ) [Termc]
+                    ) [AddopTermListc]
+                    AddOpc(
+                    ) [AddOpc]
+                    Termc(
+                      Factorc(
+                       3
+                      ) [Factorc]
+                      NoMulopFactorList(
+                      ) [NoMulopFactorList]
+                    ) [Termc]
+                  ) [AddopTermListc]
+                ) [Exprc]
+              ) [DesignatorStatementElementsc]
+            ) [DesignatorStatementc]
+          ) [SingleStatementc]
+        ) [StatementDerived1]
+      ) [StatementListc]
+    ) [MethodDeclc]
+  ) [DeclListMethodc]
+) [Program]
+INFO  12:43:19,458 - ===================================
+INFO  12:43:19,460 - Deklarisana promenljiva x na liniji 2
+INFO  12:43:19,460 - Deklarisana promenljiva y na liniji 2
+INFO  12:43:19,461 - Obradjuje se funkcija main na liniji 5
+INFO  12:43:19,461 -  Print count calls = 0
+INFO  12:43:19,461 -  Deklarisanih promenljivih ima = 2
+INFO  12:43:19,461 - ===================================

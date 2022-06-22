@@ -1,0 +1,53 @@
+INFO  11:45:32,807 - Compiling source file: C:\Users\Aleksandar\Desktop\PP\projekat\PP_Projekat\pp_projekat\test\program.mj
+INFO  11:45:32,852 - #6 program
+INFO  11:45:32,852 - #4 MJProgram
+INFO  11:45:32,852 - #7 {
+INFO  11:45:32,853 - #4 int
+INFO  11:45:32,853 - #4 main
+INFO  11:45:32,853 - #22 (
+INFO  11:45:32,853 - #23 )
+INFO  11:45:32,854 - #7 {
+INFO  11:45:32,854 - #4 int
+INFO  11:45:32,855 - #4 x
+ERROR 11:45:32,855 - 
+Sintaksna greska na liniji 4
+INFO  11:45:32,855 - #37 ;
+INFO  11:45:32,855 - #8 }
+INFO  11:45:32,855 - #8 }
+ERROR 11:45:32,856 - Izvrsen oporavak do ; u liniji 4
+INFO  11:45:32,860 - Programc(
+  ProgNamec(
+   MJProgram
+  ) [ProgNamec]
+  NoDeclarations(
+  ) [NoDeclarations]
+  DeclListMethodc(
+    NoDeclListMethod(
+    ) [NoDeclListMethod]
+    MethodDeclc(
+      MethodTypeNamec(
+        TypeOrVoidc(
+          Typec(
+           int
+          ) [Typec]
+        ) [TypeOrVoidc]
+       main
+      ) [MethodTypeNamec]
+      FormParsOptionalDerived1(
+      ) [FormParsOptionalDerived1]
+      NoDeclListVar(
+      ) [NoDeclListVar]
+      StatementListc(
+        NoStatementList(
+        ) [NoStatementList]
+        ErrorStmt(
+        ) [ErrorStmt]
+      ) [StatementListc]
+    ) [MethodDeclc]
+  ) [DeclListMethodc]
+) [Programc]
+INFO  11:45:32,860 - ===================================
+INFO  11:45:32,862 - Obradjuje se funkcija main na liniji 3
+INFO  11:45:32,862 -  Print count calls = 0
+INFO  11:45:32,862 -  Deklarisanih promenljivih ima = 0
+INFO  11:45:32,862 - ===================================

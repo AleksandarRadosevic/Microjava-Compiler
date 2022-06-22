@@ -1,0 +1,68 @@
+INFO  12:26:57,725 - Compiling source file: C:\Users\Aleksandar\Desktop\PP\projekat\PP_Projekat\pp_projekat\test\program.mj
+INFO  12:26:57,768 - #6 program
+INFO  12:26:57,768 - #4 MJProgram
+INFO  12:26:57,768 - #4 int
+INFO  12:26:57,769 - #4 x
+INFO  12:26:57,769 - #37 ;
+INFO  12:26:57,770 - #4 int
+INFO  12:26:57,771 - #4 y
+INFO  12:26:57,771 - #37 ;
+INFO  12:26:57,771 - #7 {
+INFO  12:26:57,771 - #4 int
+INFO  12:26:57,771 - #4 k
+INFO  12:26:57,772 - #22 (
+INFO  12:26:57,772 - #23 )
+INFO  12:26:57,772 - #4 int
+INFO  12:26:57,772 - #4 c
+INFO  12:26:57,773 - #37 ;
+INFO  12:26:57,773 - #7 {
+INFO  12:26:57,773 - #4 c
+INFO  12:26:57,773 - #10 =
+INFO  12:26:57,774 - #2 2
+INFO  12:26:57,775 - #37 ;
+INFO  12:26:57,776 - #42 return
+INFO  12:26:57,780 - #4 c
+INFO  12:26:57,780 - #30 +
+INFO  12:26:57,780 - #2 2
+INFO  12:26:57,781 - #37 ;
+INFO  12:26:57,781 - #8 }
+INFO  12:26:57,781 - #4 int
+INFO  12:26:57,781 - #4 main
+INFO  12:26:57,781 - #22 (
+INFO  12:26:57,781 - #23 )
+INFO  12:26:57,781 - #7 {
+INFO  12:26:57,781 - #25 print
+INFO  12:26:57,781 - #22 (
+INFO  12:26:57,782 - #2 1
+INFO  12:26:57,782 - #23 )
+INFO  12:26:57,782 - #37 ;
+INFO  12:26:57,782 - #4 x
+INFO  12:26:57,782 - #10 =
+INFO  12:26:57,782 - #4 y
+INFO  12:26:57,782 - #30 +
+INFO  12:26:57,782 - #2 5
+INFO  12:26:57,783 - #30 +
+INFO  12:26:57,783 - #2 3
+INFO  12:26:57,783 - #37 ;
+INFO  12:26:57,783 - #25 print
+INFO  12:26:57,783 - #22 (
+INFO  12:26:57,783 - #2 2
+INFO  12:26:57,783 - #23 )
+INFO  12:26:57,783 - #37 ;
+INFO  12:26:57,783 - #4 k
+INFO  12:26:57,783 - #22 (
+INFO  12:26:57,783 - #23 )
+INFO  12:26:57,783 - #37 ;
+INFO  12:26:57,784 - #42 return
+INFO  12:26:57,784 - #2 1
+INFO  12:26:57,784 - #37 ;
+INFO  12:26:57,784 - #8 }
+INFO  12:26:57,784 - #8 }
+INFO  12:26:57,789 - Deklarisana promenljiva x na liniji 2
+INFO  12:26:57,789 - Deklarisana promenljiva y na liniji 2
+INFO  12:26:57,789 - Obradjuje se funkcija k na liniji 5
+INFO  12:26:57,789 - Deklarisana promenljiva c na liniji 5
+INFO  12:26:57,790 - Obradjuje se funkcija main na liniji 10
+INFO  12:26:57,790 -  Print count calls = 2
+INFO  12:26:57,790 -  Deklarisanih promenljivih ima = 3
+INFO  12:26:57,790 - ===================================
