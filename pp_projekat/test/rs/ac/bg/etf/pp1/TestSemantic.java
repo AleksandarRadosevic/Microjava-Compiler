@@ -44,7 +44,7 @@ public class TestSemantic {
 	        
 	        
 			// ispis sintaksnog stabla
-			log.info(prog.toString(""));
+			//log.info(prog.toString(""));
 			log.info("===================================");
 	        Struct boolType=new Struct(Struct.Bool);
 	        Obj objBool=Tab.insert(Obj.Type, "bool", boolType);

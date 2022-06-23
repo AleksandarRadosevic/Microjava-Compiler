@@ -89,6 +89,12 @@ boolLiteral = "true"|"false"
 "]" 			{ return new_symbol(sym.RBRACE,yytext());}
 "{" 			{ return new_symbol(sym.LBRACECURLY,yytext());}
 "}" 			{ return new_symbol(sym.RBRACECURLY,yytext());}
+"true"	 		{ return new_symbol(sym.BOOLCONST, new Boolean(yytext())); }
+"false"	 		{ return new_symbol(sym.BOOLCONST, new Boolean(yytext())); }
+"^"		 		{ return new_symbol(sym.DEGREE,yytext()); }
+"..."			{ return new_symbol(sym.THREEDOTS,yytext()); }
+
+
 
 "//" {yybegin(COMMENT);}
 <COMMENT> . {yybegin(COMMENT);}
@@ -96,8 +102,6 @@ boolLiteral = "true"|"false"
 
 [0-9]+  						{ return new_symbol (sym.NUMBER, new Integer (yytext())); }
 ([a-z]|[A-Z])[a-z|A-Z|0-9|_]* 	{ return new_symbol (sym.IDENT, yytext()); }
-"true"	 						{ return new_symbol (sym.BOOLCONST, new Boolean(yytext())); }
-"false"	 						{ return new_symbol (sym.BOOLCONST, new Boolean(yytext())); }
 "'"."'" 						{ return new_symbol (sym.CHARCONST,new Character( yytext().charAt(1))); }
 
 

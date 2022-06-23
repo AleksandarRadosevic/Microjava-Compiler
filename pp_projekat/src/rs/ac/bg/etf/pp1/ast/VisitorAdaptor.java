@@ -1,12 +1,13 @@
 // generated with ast extension for cup
 // version 0.8
-// 22/5/2022 15:59:35
+// 23/5/2022 21:16:23
 
 
 package rs.ac.bg.etf.pp1.ast;
 
 public abstract class VisitorAdaptor implements Visitor { 
 
+    public void visit(Expop Expop) { }
     public void visit(VarDeclGlobal VarDeclGlobal) { }
     public void visit(DeclarationList DeclarationList) { }
     public void visit(ActParsOptional ActParsOptional) { }
@@ -53,23 +54,27 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(ActPars ActPars) { }
     public void visit(TypeOrVoid TypeOrVoid) { }
     public void visit(MethodTypeName MethodTypeName) { }
+    public void visit(VarArgs VarArgs) { }
     public void visit(DesignatorStatement DesignatorStatement) { }
     public void visit(ProgName ProgName) { }
     public void visit(Statement Statement) { }
     public void visit(VarDecl VarDecl) { }
     public void visit(DesignatorStatementElements DesignatorStatementElements) { }
     public void visit(Type Type) { }
+    public void visit(BaseExp BaseExp) { }
     public void visit(ClassDecl ClassDecl) { }
     public void visit(ConstDecl ConstDecl) { }
     public void visit(CondFact CondFact) { }
     public void visit(OptionalExpression OptionalExpression) { }
     public void visit(Program Program) { }
     public void visit(VarDeclListGlobal VarDeclListGlobal) { }
+    public void visit(ListBaseExp ListBaseExp) { }
     public void visit(SingleStatement SingleStatement) { }
     public void visit(CondFactListAnd CondFactListAnd) { }
     public void visit(FormPars FormPars) { }
     public void visit(OptionalElse OptionalElse) { }
     public void visit(AddopTermList AddopTermList) { }
+    public void visit(VarArgsc VarArgsc) { visit(); }
     public void visit(MulopDerived2 MulopDerived2) { visit(); }
     public void visit(MulopDerived1 MulopDerived1) { visit(); }
     public void visit(Mulopc Mulopc) { visit(); }
@@ -90,15 +95,22 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(NoIdentList NoIdentList) { visit(); }
     public void visit(IdentListc IdentListc) { visit(); }
     public void visit(DesignatorName DesignatorName) { visit(); }
+    public void visit(DesignatorDerived3 DesignatorDerived3) { visit(); }
+    public void visit(DesignatorDerived2 DesignatorDerived2) { visit(); }
+    public void visit(DesignatorDerived1 DesignatorDerived1) { visit(); }
     public void visit(Designatorc Designatorc) { visit(); }
     public void visit(NoExprBracesOptional NoExprBracesOptional) { visit(); }
     public void visit(ExprBracesOptionalc ExprBracesOptionalc) { visit(); }
     public void visit(FuncCall FuncCall) { visit(); }
-    public void visit(FactorDerived5 FactorDerived5) { visit(); }
-    public void visit(FactorDerived4 FactorDerived4) { visit(); }
-    public void visit(FactorDerived3 FactorDerived3) { visit(); }
-    public void visit(FactorDerived2 FactorDerived2) { visit(); }
-    public void visit(FactorDerived1 FactorDerived1) { visit(); }
+    public void visit(BaseExpDerived5 BaseExpDerived5) { visit(); }
+    public void visit(BaseExpDerived4 BaseExpDerived4) { visit(); }
+    public void visit(BaseExpDerived3 BaseExpDerived3) { visit(); }
+    public void visit(BaseExpDerived2 BaseExpDerived2) { visit(); }
+    public void visit(BaseExpDerived1 BaseExpDerived1) { visit(); }
+    public void visit(BaseExpc BaseExpc) { visit(); }
+    public void visit(NoListBaseExpc NoListBaseExpc) { visit(); }
+    public void visit(ListBaseExpc ListBaseExpc) { visit(); }
+    public void visit(Expopc Expopc) { visit(); }
     public void visit(Factorc Factorc) { visit(); }
     public void visit(NoMulopFactorList NoMulopFactorList) { visit(); }
     public void visit(MulopFactorListc MulopFactorListc) { visit(); }
@@ -160,6 +172,8 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(Parsc Parsc) { visit(); }
     public void visit(ErrorFormPars ErrorFormPars) { visit(); }
     public void visit(FormParsc FormParsc) { visit(); }
+    public void visit(FormParsOptionalDerived3 FormParsOptionalDerived3) { visit(); }
+    public void visit(FormParsOptionalDerived2 FormParsOptionalDerived2) { visit(); }
     public void visit(FormParsOptionalDerived1 FormParsOptionalDerived1) { visit(); }
     public void visit(FormParsOptionalc FormParsOptionalc) { visit(); }
     public void visit(TypeOrVoidDerived1 TypeOrVoidDerived1) { visit(); }

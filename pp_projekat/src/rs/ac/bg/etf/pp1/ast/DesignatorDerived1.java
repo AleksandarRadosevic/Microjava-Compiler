@@ -1,17 +1,28 @@
 // generated with ast extension for cup
 // version 0.8
-// 22/5/2022 15:59:35
+// 23/5/2022 21:16:23
 
 
 package rs.ac.bg.etf.pp1.ast;
 
-public class FactorDerived4 extends Factor {
+public class DesignatorDerived1 extends Designator {
 
+    private DesignatorName DesignatorName;
     private Expr Expr;
 
-    public FactorDerived4 (Expr Expr) {
+    public DesignatorDerived1 (DesignatorName DesignatorName, Expr Expr) {
+        this.DesignatorName=DesignatorName;
+        if(DesignatorName!=null) DesignatorName.setParent(this);
         this.Expr=Expr;
         if(Expr!=null) Expr.setParent(this);
+    }
+
+    public DesignatorName getDesignatorName() {
+        return DesignatorName;
+    }
+
+    public void setDesignatorName(DesignatorName DesignatorName) {
+        this.DesignatorName=DesignatorName;
     }
 
     public Expr getExpr() {
@@ -27,15 +38,18 @@ public class FactorDerived4 extends Factor {
     }
 
     public void childrenAccept(Visitor visitor) {
+        if(DesignatorName!=null) DesignatorName.accept(visitor);
         if(Expr!=null) Expr.accept(visitor);
     }
 
     public void traverseTopDown(Visitor visitor) {
         accept(visitor);
+        if(DesignatorName!=null) DesignatorName.traverseTopDown(visitor);
         if(Expr!=null) Expr.traverseTopDown(visitor);
     }
 
     public void traverseBottomUp(Visitor visitor) {
+        if(DesignatorName!=null) DesignatorName.traverseBottomUp(visitor);
         if(Expr!=null) Expr.traverseBottomUp(visitor);
         accept(visitor);
     }
@@ -43,7 +57,13 @@ public class FactorDerived4 extends Factor {
     public String toString(String tab) {
         StringBuffer buffer=new StringBuffer();
         buffer.append(tab);
-        buffer.append("FactorDerived4(\n");
+        buffer.append("DesignatorDerived1(\n");
+
+        if(DesignatorName!=null)
+            buffer.append(DesignatorName.toString("  "+tab));
+        else
+            buffer.append(tab+"  null");
+        buffer.append("\n");
 
         if(Expr!=null)
             buffer.append(Expr.toString("  "+tab));
@@ -52,7 +72,7 @@ public class FactorDerived4 extends Factor {
         buffer.append("\n");
 
         buffer.append(tab);
-        buffer.append(") [FactorDerived4]");
+        buffer.append(") [DesignatorDerived1]");
         return buffer.toString();
     }
 }

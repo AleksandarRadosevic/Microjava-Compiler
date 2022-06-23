@@ -32,34 +32,63 @@ public class SemanticPass extends VisitorAdaptor {
 	}
 
 	
+	//definisanje konstansti
 	public void visit(ConstDeclc constVar) {
 		// mozda proveriti da li je dva puta definisana konstanta
-		System.out.println(constVar.getType().struct.getKind());
-		Tab.insert(Obj.Con, constVar.getName(), constVar.getType().struct);
+		Obj obj = Tab.find(constVar.getName());
+		if (obj!=Tab.noObj) {
+			System.out.println("Globalna konstanta moze biti definisana najvise jednom");
+		}
+		else Tab.insert(Obj.Con, constVar.getName(), constVar.getType().struct);
 	}
 	
-	
+	//definisanje promenljivih
 	public void visit(VarDeclc varDecl) {
 		varDeclCount++;
-		System.out.println(varDecl.getType().struct.getKind());
-		Obj varNode = Tab.insert(Obj.Var, varDecl.getVarName(), varDecl.getType().struct);
-	}
+		Obj obj = Tab.currentScope.findSymbol(varDecl.getVarName());
+		
+		if (obj!=Tab.noObj && obj!=null) {
+			//System.out.println("Scope za "+varDecl.getVarName()+" je "+obj.getLevel());
+			System.out.println("Ime lokalne promenljive ne sme biti deklarisano vise puta unutar istog opsega");
+		}
+		else {
+			Obj varNode = Tab.insert(Obj.Var, varDecl.getVarName(), varDecl.getType().struct);
+			//System.out.println("Scope za "+varDecl.getVarName()+" je "+varNode.getLevel());
 
+		}
+	}
+	//parametri u funkciji
+	public void visit(Parsc formPar) {
+		varDeclCount++;
+		//System.out.println("Lokalni parametar je ");
+		//System.out.println(formPar.getName());
+		Obj varNode = Tab.insert(Obj.Var, formPar.getName(), formPar.getType().struct);
+	}
+	
+	// definisanje globalnih promenljiva 
 	public void visit(VarDeclGlobalc varDeclGlobal) {
 		varDeclGlobalCount++;
-		System.out.println("Globalna promenljiva "+ varDeclGlobal.getVarName()+ " prepoznata" );
-		Obj varNode = Tab.insert(Obj.Var, varDeclGlobal.getVarName(), varDeclGlobal.getType().struct);
+		Obj obj = Tab.currentScope.findSymbol(varDeclGlobal.getVarName());
+		if (obj!=Tab.noObj && obj!=null) {
+			System.out.println("Ime globalne promenljive ne sme biti deklarisano vise puta unutar istog opsega");
+		}
+		else {
+			Obj varNode = Tab.insert(Obj.Var, varDeclGlobal.getVarName(), varDeclGlobal.getType().struct);
+		}
 	}
 
+	
 	public void visit(PrintStmt print) {
 		printCallCount++;
 	}
 
+	//definisanje imena programa
 	public void visit(ProgNamec progName) {
 		progName.obj = Tab.insert(Obj.Prog, progName.getProgName(), Tab.noType);
 		Tab.openScope();
 	}
 
+	//zatvaranje programa
 	public void visit(Programc program) {
 		// add local symbols in program scope
 		Tab.chainLocalSymbols(program.getProgName().obj);
@@ -85,18 +114,20 @@ public class SemanticPass extends VisitorAdaptor {
 		}
 
 	}
-
+	
+	//definisanje metoda
 	public void visit(MethodTypeNamec methodTypeName) {
 		this.currentMethod = Tab.insert(Obj.Meth, methodTypeName.getMethodName(),methodTypeName.getType().struct);
 		methodTypeName.obj = currentMethod;
+		//System.out.println("Otvoren scoope za fju "+methodTypeName.getMethodName());
     	Tab.openScope();
-		report_info("Obradjuje se funkcija " + methodTypeName.getMethodName(), methodTypeName);
+		//report_info("Obradjuje se funkcija " + methodTypeName.getMethodName(), methodTypeName);
 	}
 	
+	//zavrseno definisanje metoda
     public void visit(MethodDeclc methodDecl){
     	Tab.chainLocalSymbols(this.currentMethod);
     	Tab.closeScope();
-    	
     	currentMethod = null;
     }
     
@@ -108,7 +139,7 @@ public class SemanticPass extends VisitorAdaptor {
     	designator.obj = obj;
     }
     
-    
+    // poziv funkcije
     public void visit(FuncCall funcCall ) {
     	Obj func = funcCall.getDesignator().obj;
     	if(Obj.Meth == func.getKind()){

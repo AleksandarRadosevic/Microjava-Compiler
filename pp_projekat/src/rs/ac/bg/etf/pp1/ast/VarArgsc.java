@@ -1,20 +1,19 @@
 // generated with ast extension for cup
 // version 0.8
-// 22/5/2022 15:59:35
+// 23/5/2022 21:16:23
 
 
 package rs.ac.bg.etf.pp1.ast;
 
-public class FactorDerived3 extends Factor {
+public class VarArgsc extends VarArgs {
 
     private Type Type;
-    private ExprBracesOptional ExprBracesOptional;
+    private String I2;
 
-    public FactorDerived3 (Type Type, ExprBracesOptional ExprBracesOptional) {
+    public VarArgsc (Type Type, String I2) {
         this.Type=Type;
         if(Type!=null) Type.setParent(this);
-        this.ExprBracesOptional=ExprBracesOptional;
-        if(ExprBracesOptional!=null) ExprBracesOptional.setParent(this);
+        this.I2=I2;
     }
 
     public Type getType() {
@@ -25,12 +24,12 @@ public class FactorDerived3 extends Factor {
         this.Type=Type;
     }
 
-    public ExprBracesOptional getExprBracesOptional() {
-        return ExprBracesOptional;
+    public String getI2() {
+        return I2;
     }
 
-    public void setExprBracesOptional(ExprBracesOptional ExprBracesOptional) {
-        this.ExprBracesOptional=ExprBracesOptional;
+    public void setI2(String I2) {
+        this.I2=I2;
     }
 
     public void accept(Visitor visitor) {
@@ -39,25 +38,22 @@ public class FactorDerived3 extends Factor {
 
     public void childrenAccept(Visitor visitor) {
         if(Type!=null) Type.accept(visitor);
-        if(ExprBracesOptional!=null) ExprBracesOptional.accept(visitor);
     }
 
     public void traverseTopDown(Visitor visitor) {
         accept(visitor);
         if(Type!=null) Type.traverseTopDown(visitor);
-        if(ExprBracesOptional!=null) ExprBracesOptional.traverseTopDown(visitor);
     }
 
     public void traverseBottomUp(Visitor visitor) {
         if(Type!=null) Type.traverseBottomUp(visitor);
-        if(ExprBracesOptional!=null) ExprBracesOptional.traverseBottomUp(visitor);
         accept(visitor);
     }
 
     public String toString(String tab) {
         StringBuffer buffer=new StringBuffer();
         buffer.append(tab);
-        buffer.append("FactorDerived3(\n");
+        buffer.append("VarArgsc(\n");
 
         if(Type!=null)
             buffer.append(Type.toString("  "+tab));
@@ -65,14 +61,11 @@ public class FactorDerived3 extends Factor {
             buffer.append(tab+"  null");
         buffer.append("\n");
 
-        if(ExprBracesOptional!=null)
-            buffer.append(ExprBracesOptional.toString("  "+tab));
-        else
-            buffer.append(tab+"  null");
+        buffer.append(" "+tab+I2);
         buffer.append("\n");
 
         buffer.append(tab);
-        buffer.append(") [FactorDerived3]");
+        buffer.append(") [VarArgsc]");
         return buffer.toString();
     }
 }

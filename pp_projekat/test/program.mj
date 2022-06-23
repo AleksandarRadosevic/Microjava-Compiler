@@ -3,10 +3,10 @@
 program test302
 
 const int jedan = 1;
-
+const int dd=2;
 int i;
 bool ibool;
-
+int pom;
 int niz2;
 
 int niz[];

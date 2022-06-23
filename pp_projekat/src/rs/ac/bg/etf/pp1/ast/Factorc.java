@@ -1,24 +1,36 @@
 // generated with ast extension for cup
 // version 0.8
-// 22/5/2022 15:59:35
+// 23/5/2022 21:16:23
 
 
 package rs.ac.bg.etf.pp1.ast;
 
 public class Factorc extends Factor {
 
-    private Integer N1;
+    private BaseExp BaseExp;
+    private ListBaseExp ListBaseExp;
 
-    public Factorc (Integer N1) {
-        this.N1=N1;
+    public Factorc (BaseExp BaseExp, ListBaseExp ListBaseExp) {
+        this.BaseExp=BaseExp;
+        if(BaseExp!=null) BaseExp.setParent(this);
+        this.ListBaseExp=ListBaseExp;
+        if(ListBaseExp!=null) ListBaseExp.setParent(this);
     }
 
-    public Integer getN1() {
-        return N1;
+    public BaseExp getBaseExp() {
+        return BaseExp;
     }
 
-    public void setN1(Integer N1) {
-        this.N1=N1;
+    public void setBaseExp(BaseExp BaseExp) {
+        this.BaseExp=BaseExp;
+    }
+
+    public ListBaseExp getListBaseExp() {
+        return ListBaseExp;
+    }
+
+    public void setListBaseExp(ListBaseExp ListBaseExp) {
+        this.ListBaseExp=ListBaseExp;
     }
 
     public void accept(Visitor visitor) {
@@ -26,13 +38,19 @@ public class Factorc extends Factor {
     }
 
     public void childrenAccept(Visitor visitor) {
+        if(BaseExp!=null) BaseExp.accept(visitor);
+        if(ListBaseExp!=null) ListBaseExp.accept(visitor);
     }
 
     public void traverseTopDown(Visitor visitor) {
         accept(visitor);
+        if(BaseExp!=null) BaseExp.traverseTopDown(visitor);
+        if(ListBaseExp!=null) ListBaseExp.traverseTopDown(visitor);
     }
 
     public void traverseBottomUp(Visitor visitor) {
+        if(BaseExp!=null) BaseExp.traverseBottomUp(visitor);
+        if(ListBaseExp!=null) ListBaseExp.traverseBottomUp(visitor);
         accept(visitor);
     }
 
@@ -41,7 +59,16 @@ public class Factorc extends Factor {
         buffer.append(tab);
         buffer.append("Factorc(\n");
 
-        buffer.append(" "+tab+N1);
+        if(BaseExp!=null)
+            buffer.append(BaseExp.toString("  "+tab));
+        else
+            buffer.append(tab+"  null");
+        buffer.append("\n");
+
+        if(ListBaseExp!=null)
+            buffer.append(ListBaseExp.toString("  "+tab));
+        else
+            buffer.append(tab+"  null");
         buffer.append("\n");
 
         buffer.append(tab);

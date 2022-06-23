@@ -1,24 +1,24 @@
 // generated with ast extension for cup
 // version 0.8
-// 22/5/2022 15:59:35
+// 23/5/2022 21:16:23
 
 
 package rs.ac.bg.etf.pp1.ast;
 
-public class FactorDerived2 extends Factor {
+public class BaseExpc extends BaseExp {
 
-    private Boolean B1;
+    private Integer N1;
 
-    public FactorDerived2 (Boolean B1) {
-        this.B1=B1;
+    public BaseExpc (Integer N1) {
+        this.N1=N1;
     }
 
-    public Boolean getB1() {
-        return B1;
+    public Integer getN1() {
+        return N1;
     }
 
-    public void setB1(Boolean B1) {
-        this.B1=B1;
+    public void setN1(Integer N1) {
+        this.N1=N1;
     }
 
     public void accept(Visitor visitor) {
@@ -39,13 +39,13 @@ public class FactorDerived2 extends Factor {
     public String toString(String tab) {
         StringBuffer buffer=new StringBuffer();
         buffer.append(tab);
-        buffer.append("FactorDerived2(\n");
+        buffer.append("BaseExpc(\n");
 
-        buffer.append(" "+tab+B1);
+        buffer.append(" "+tab+N1);
         buffer.append("\n");
 
         buffer.append(tab);
-        buffer.append(") [FactorDerived2]");
+        buffer.append(") [BaseExpc]");
         return buffer.toString();
     }
 }
