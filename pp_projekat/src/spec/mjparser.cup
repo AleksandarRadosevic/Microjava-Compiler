@@ -98,7 +98,9 @@ ConstDecl ::= (ConstDeclc) CONST Type:constType IDENT:name ASSIGN ConstVal Const
 		    ;
 
 
-ConstVal ::= (ConstValc) NUMBER | CHARCONST | BOOLCONST;
+ConstVal ::= (ConstInt) NUMBER |
+			(ConstChar) CHARCONST |
+			(ConstBool) BOOLCONST;
 
 ConstDeclList ::= (ConstDeclListc) ConstDeclList COMMA IDENT ASSIGN ConstVal  
 				| (ErrorComma) error
@@ -145,7 +147,7 @@ RecordDecl ::= (RecordDeclc) RECORD IDENT LBRACECURLY DeclListVar RBRACECURLY;
 ConstructorDecl ::= (ConstructorDeclc) IDENT LPAREN RPAREN DeclListVar LBRACECURLY StatementList RBRACECURLY;
 
 
-MethodDecl ::= (MethodDeclc) MethodTypeName LPAREN FormParsOptional  DeclListVar LBRACECURLY StatementList RBRACECURLY;
+MethodDecl ::= (MethodDeclc) MethodTypeName LPAREN FormParsOptional:pars  DeclListVar LBRACECURLY StatementList RBRACECURLY;
 
 MethodTypeName ::= (MethodTypeNamec) Type:varType IDENT:methodName
 				| (VoidFunc) VOID IDENT:methodName;
@@ -207,7 +209,10 @@ Statements ::= (Statementsc) LBRACECURLY StatementList RBRACECURLY;
 StatementList ::= (StatementListc) StatementList Statement
 				| (NoStatementList) /* epsilon */;				
 				
-DesignatorStatement ::= (DesignatorStatementc) Designator DesignatorStatementElements;				
+DesignatorStatement ::= (DesignatorAssign) Designator Assignop Expr
+					| (DesignatorMethod) Designator LPAREN ActParsOptional RPAREN
+					| (DesignatorIncrement) Designator INCREMENT
+					| (DesignatorDecrement) Designator DECREMENT;				
 				
 DesignatorStatementElements ::= (DesignatorStatementElementsc) Assignop Expr
 					| LPAREN ActParsOptional RPAREN 
@@ -278,9 +283,9 @@ ExprBracesOptional ::= (ExprBracesOptionalc) LBRACE Expr RBRACE
 					
 					
 Designator ::= (Designatorc) DesignatorName 
-			| DesignatorName LBRACE Expr RBRACE
+			| (ArrayElem) DesignatorName LBRACE Expr RBRACE
 			| DesignatorName DOT IDENT
-			| DesignatorName DOT IDENT LBRACE Expr RBRACE;
+			| (ArrayElemClass) DesignatorName DOT IDENT LBRACE Expr RBRACE;
 
 DesignatorName ::= (DesignatorName) IDENT:name;
 

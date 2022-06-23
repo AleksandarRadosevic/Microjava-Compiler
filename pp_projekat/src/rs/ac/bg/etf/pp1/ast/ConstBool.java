@@ -1,15 +1,15 @@
 // generated with ast extension for cup
 // version 0.8
-// 23/5/2022 21:16:23
+// 24/5/2022 1:28:59
 
 
 package rs.ac.bg.etf.pp1.ast;
 
-public class ConstValDerived2 extends ConstVal {
+public class ConstBool extends ConstVal {
 
     private Boolean B1;
 
-    public ConstValDerived2 (Boolean B1) {
+    public ConstBool (Boolean B1) {
         this.B1=B1;
     }
 
@@ -39,13 +39,13 @@ public class ConstValDerived2 extends ConstVal {
     public String toString(String tab) {
         StringBuffer buffer=new StringBuffer();
         buffer.append(tab);
-        buffer.append("ConstValDerived2(\n");
+        buffer.append("ConstBool(\n");
 
         buffer.append(" "+tab+B1);
         buffer.append("\n");
 
         buffer.append(tab);
-        buffer.append(") [ConstValDerived2]");
+        buffer.append(") [ConstBool]");
         return buffer.toString();
     }
 }

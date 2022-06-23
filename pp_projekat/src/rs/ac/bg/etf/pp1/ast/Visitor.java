@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 23/5/2022 21:16:23
+// 24/5/2022 1:28:59
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -95,9 +95,9 @@ public interface Visitor {
     public void visit(NoIdentList NoIdentList);
     public void visit(IdentListc IdentListc);
     public void visit(DesignatorName DesignatorName);
-    public void visit(DesignatorDerived3 DesignatorDerived3);
-    public void visit(DesignatorDerived2 DesignatorDerived2);
+    public void visit(ArrayElemClass ArrayElemClass);
     public void visit(DesignatorDerived1 DesignatorDerived1);
+    public void visit(ArrayElem ArrayElem);
     public void visit(Designatorc Designatorc);
     public void visit(NoExprBracesOptional NoExprBracesOptional);
     public void visit(ExprBracesOptionalc ExprBracesOptionalc);
@@ -140,7 +140,10 @@ public interface Visitor {
     public void visit(DesignatorStatementElementsDerived2 DesignatorStatementElementsDerived2);
     public void visit(DesignatorStatementElementsDerived1 DesignatorStatementElementsDerived1);
     public void visit(DesignatorStatementElementsc DesignatorStatementElementsc);
-    public void visit(DesignatorStatementc DesignatorStatementc);
+    public void visit(DesignatorDecrement DesignatorDecrement);
+    public void visit(DesignatorIncrement DesignatorIncrement);
+    public void visit(DesignatorMethod DesignatorMethod);
+    public void visit(DesignatorAssign DesignatorAssign);
     public void visit(NoStatementList NoStatementList);
     public void visit(StatementListc StatementListc);
     public void visit(Statementsc Statementsc);
@@ -205,9 +208,9 @@ public interface Visitor {
     public void visit(NoConstDecl NoConstDecl);
     public void visit(ErrorComma ErrorComma);
     public void visit(ConstDeclListc ConstDeclListc);
-    public void visit(ConstValDerived2 ConstValDerived2);
-    public void visit(ConstValDerived1 ConstValDerived1);
-    public void visit(ConstValc ConstValc);
+    public void visit(ConstBool ConstBool);
+    public void visit(ConstChar ConstChar);
+    public void visit(ConstInt ConstInt);
     public void visit(ErrorConstDeclEnd ErrorConstDeclEnd);
     public void visit(ConstDeclc ConstDeclc);
     public void visit(DeclListDerived3 DeclListDerived3);

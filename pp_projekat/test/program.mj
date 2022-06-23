@@ -2,15 +2,15 @@
 
 program test302
 
-const int jedan = 1;
-const int dd=2;
+const int jedan = 4;
+const bool a = false;
+
 int i;
 bool ibool;
-int pom;
+
 int niz2;
 
 int niz[];
-int a;
 
 {
 	

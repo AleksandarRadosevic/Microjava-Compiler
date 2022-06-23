@@ -1,20 +1,23 @@
 // generated with ast extension for cup
 // version 0.8
-// 23/5/2022 21:16:23
+// 24/5/2022 1:28:59
 
 
 package rs.ac.bg.etf.pp1.ast;
 
-public class DesignatorStatementc extends DesignatorStatement {
+public class DesignatorAssign extends DesignatorStatement {
 
     private Designator Designator;
-    private DesignatorStatementElements DesignatorStatementElements;
+    private Assignop Assignop;
+    private Expr Expr;
 
-    public DesignatorStatementc (Designator Designator, DesignatorStatementElements DesignatorStatementElements) {
+    public DesignatorAssign (Designator Designator, Assignop Assignop, Expr Expr) {
         this.Designator=Designator;
         if(Designator!=null) Designator.setParent(this);
-        this.DesignatorStatementElements=DesignatorStatementElements;
-        if(DesignatorStatementElements!=null) DesignatorStatementElements.setParent(this);
+        this.Assignop=Assignop;
+        if(Assignop!=null) Assignop.setParent(this);
+        this.Expr=Expr;
+        if(Expr!=null) Expr.setParent(this);
     }
 
     public Designator getDesignator() {
@@ -25,12 +28,20 @@ public class DesignatorStatementc extends DesignatorStatement {
         this.Designator=Designator;
     }
 
-    public DesignatorStatementElements getDesignatorStatementElements() {
-        return DesignatorStatementElements;
+    public Assignop getAssignop() {
+        return Assignop;
     }
 
-    public void setDesignatorStatementElements(DesignatorStatementElements DesignatorStatementElements) {
-        this.DesignatorStatementElements=DesignatorStatementElements;
+    public void setAssignop(Assignop Assignop) {
+        this.Assignop=Assignop;
+    }
+
+    public Expr getExpr() {
+        return Expr;
+    }
+
+    public void setExpr(Expr Expr) {
+        this.Expr=Expr;
     }
 
     public void accept(Visitor visitor) {
@@ -39,25 +50,28 @@ public class DesignatorStatementc extends DesignatorStatement {
 
     public void childrenAccept(Visitor visitor) {
         if(Designator!=null) Designator.accept(visitor);
-        if(DesignatorStatementElements!=null) DesignatorStatementElements.accept(visitor);
+        if(Assignop!=null) Assignop.accept(visitor);
+        if(Expr!=null) Expr.accept(visitor);
     }
 
     public void traverseTopDown(Visitor visitor) {
         accept(visitor);
         if(Designator!=null) Designator.traverseTopDown(visitor);
-        if(DesignatorStatementElements!=null) DesignatorStatementElements.traverseTopDown(visitor);
+        if(Assignop!=null) Assignop.traverseTopDown(visitor);
+        if(Expr!=null) Expr.traverseTopDown(visitor);
     }
 
     public void traverseBottomUp(Visitor visitor) {
         if(Designator!=null) Designator.traverseBottomUp(visitor);
-        if(DesignatorStatementElements!=null) DesignatorStatementElements.traverseBottomUp(visitor);
+        if(Assignop!=null) Assignop.traverseBottomUp(visitor);
+        if(Expr!=null) Expr.traverseBottomUp(visitor);
         accept(visitor);
     }
 
     public String toString(String tab) {
         StringBuffer buffer=new StringBuffer();
         buffer.append(tab);
-        buffer.append("DesignatorStatementc(\n");
+        buffer.append("DesignatorAssign(\n");
 
         if(Designator!=null)
             buffer.append(Designator.toString("  "+tab));
@@ -65,14 +79,20 @@ public class DesignatorStatementc extends DesignatorStatement {
             buffer.append(tab+"  null");
         buffer.append("\n");
 
-        if(DesignatorStatementElements!=null)
-            buffer.append(DesignatorStatementElements.toString("  "+tab));
+        if(Assignop!=null)
+            buffer.append(Assignop.toString("  "+tab));
+        else
+            buffer.append(tab+"  null");
+        buffer.append("\n");
+
+        if(Expr!=null)
+            buffer.append(Expr.toString("  "+tab));
         else
             buffer.append(tab+"  null");
         buffer.append("\n");
 
         buffer.append(tab);
-        buffer.append(") [DesignatorStatementc]");
+        buffer.append(") [DesignatorAssign]");
         return buffer.toString();
     }
 }

@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 23/5/2022 21:16:23
+// 24/5/2022 1:28:59
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -95,9 +95,9 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(NoIdentList NoIdentList) { visit(); }
     public void visit(IdentListc IdentListc) { visit(); }
     public void visit(DesignatorName DesignatorName) { visit(); }
-    public void visit(DesignatorDerived3 DesignatorDerived3) { visit(); }
-    public void visit(DesignatorDerived2 DesignatorDerived2) { visit(); }
+    public void visit(ArrayElemClass ArrayElemClass) { visit(); }
     public void visit(DesignatorDerived1 DesignatorDerived1) { visit(); }
+    public void visit(ArrayElem ArrayElem) { visit(); }
     public void visit(Designatorc Designatorc) { visit(); }
     public void visit(NoExprBracesOptional NoExprBracesOptional) { visit(); }
     public void visit(ExprBracesOptionalc ExprBracesOptionalc) { visit(); }
@@ -140,7 +140,10 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(DesignatorStatementElementsDerived2 DesignatorStatementElementsDerived2) { visit(); }
     public void visit(DesignatorStatementElementsDerived1 DesignatorStatementElementsDerived1) { visit(); }
     public void visit(DesignatorStatementElementsc DesignatorStatementElementsc) { visit(); }
-    public void visit(DesignatorStatementc DesignatorStatementc) { visit(); }
+    public void visit(DesignatorDecrement DesignatorDecrement) { visit(); }
+    public void visit(DesignatorIncrement DesignatorIncrement) { visit(); }
+    public void visit(DesignatorMethod DesignatorMethod) { visit(); }
+    public void visit(DesignatorAssign DesignatorAssign) { visit(); }
     public void visit(NoStatementList NoStatementList) { visit(); }
     public void visit(StatementListc StatementListc) { visit(); }
     public void visit(Statementsc Statementsc) { visit(); }
@@ -205,9 +208,9 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(NoConstDecl NoConstDecl) { visit(); }
     public void visit(ErrorComma ErrorComma) { visit(); }
     public void visit(ConstDeclListc ConstDeclListc) { visit(); }
-    public void visit(ConstValDerived2 ConstValDerived2) { visit(); }
-    public void visit(ConstValDerived1 ConstValDerived1) { visit(); }
-    public void visit(ConstValc ConstValc) { visit(); }
+    public void visit(ConstBool ConstBool) { visit(); }
+    public void visit(ConstChar ConstChar) { visit(); }
+    public void visit(ConstInt ConstInt) { visit(); }
     public void visit(ErrorConstDeclEnd ErrorConstDeclEnd) { visit(); }
     public void visit(ConstDeclc ConstDeclc) { visit(); }
     public void visit(DeclListDerived3 DeclListDerived3) { visit(); }

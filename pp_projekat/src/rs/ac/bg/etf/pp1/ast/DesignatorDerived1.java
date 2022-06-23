@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 23/5/2022 21:16:23
+// 24/5/2022 1:28:59
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -8,13 +8,12 @@ package rs.ac.bg.etf.pp1.ast;
 public class DesignatorDerived1 extends Designator {
 
     private DesignatorName DesignatorName;
-    private Expr Expr;
+    private String I2;
 
-    public DesignatorDerived1 (DesignatorName DesignatorName, Expr Expr) {
+    public DesignatorDerived1 (DesignatorName DesignatorName, String I2) {
         this.DesignatorName=DesignatorName;
         if(DesignatorName!=null) DesignatorName.setParent(this);
-        this.Expr=Expr;
-        if(Expr!=null) Expr.setParent(this);
+        this.I2=I2;
     }
 
     public DesignatorName getDesignatorName() {
@@ -25,12 +24,12 @@ public class DesignatorDerived1 extends Designator {
         this.DesignatorName=DesignatorName;
     }
 
-    public Expr getExpr() {
-        return Expr;
+    public String getI2() {
+        return I2;
     }
 
-    public void setExpr(Expr Expr) {
-        this.Expr=Expr;
+    public void setI2(String I2) {
+        this.I2=I2;
     }
 
     public void accept(Visitor visitor) {
@@ -39,18 +38,15 @@ public class DesignatorDerived1 extends Designator {
 
     public void childrenAccept(Visitor visitor) {
         if(DesignatorName!=null) DesignatorName.accept(visitor);
-        if(Expr!=null) Expr.accept(visitor);
     }
 
     public void traverseTopDown(Visitor visitor) {
         accept(visitor);
         if(DesignatorName!=null) DesignatorName.traverseTopDown(visitor);
-        if(Expr!=null) Expr.traverseTopDown(visitor);
     }
 
     public void traverseBottomUp(Visitor visitor) {
         if(DesignatorName!=null) DesignatorName.traverseBottomUp(visitor);
-        if(Expr!=null) Expr.traverseBottomUp(visitor);
         accept(visitor);
     }
 
@@ -65,10 +61,7 @@ public class DesignatorDerived1 extends Designator {
             buffer.append(tab+"  null");
         buffer.append("\n");
 
-        if(Expr!=null)
-            buffer.append(Expr.toString("  "+tab));
-        else
-            buffer.append(tab+"  null");
+        buffer.append(" "+tab+I2);
         buffer.append("\n");
 
         buffer.append(tab);

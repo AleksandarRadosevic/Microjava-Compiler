@@ -146,7 +146,9 @@ ConstDecl ::= (ConstDeclc) CONST Type:constType IDENT:name ASSIGN ConstVal:C1 Co
 		    ;
 
 
-ConstVal ::= (ConstValc) NUMBER:N1 {: RESULT=new ConstValc(N1); RESULT.setLine(N1left); :} | CHARCONST:C1 {: RESULT=new ConstValDerived1(C1); RESULT.setLine(C1left); :} | BOOLCONST:B1 {: RESULT=new ConstValDerived2(B1); RESULT.setLine(B1left); :};
+ConstVal ::= (ConstInt) NUMBER:N1 {: RESULT=new ConstInt(N1); RESULT.setLine(N1left); :} |
+			(ConstChar) CHARCONST:C1 {: RESULT=new ConstChar(C1); RESULT.setLine(C1left); :} |
+			(ConstBool) BOOLCONST:B1 {: RESULT=new ConstBool(B1); RESULT.setLine(B1left); :};
 
 ConstDeclList ::= (ConstDeclListc) ConstDeclList:C1 COMMA IDENT:I2 ASSIGN ConstVal:C3 {: RESULT=new ConstDeclListc(C1, I2, C3); RESULT.setLine(C1left); :}  
 				| (ErrorComma) error
@@ -193,7 +195,7 @@ RecordDecl ::= (RecordDeclc) RECORD IDENT:I1 LBRACECURLY DeclListVar:D2 RBRACECU
 ConstructorDecl ::= (ConstructorDeclc) IDENT:I1 LPAREN RPAREN DeclListVar:D2 LBRACECURLY StatementList:S3 RBRACECURLY {: RESULT=new ConstructorDeclc(I1, D2, S3); RESULT.setLine(I1left); :};
 
 
-MethodDecl ::= (MethodDeclc) MethodTypeName:M1 LPAREN FormParsOptional:F2  DeclListVar:D3 LBRACECURLY StatementList:S4 RBRACECURLY {: RESULT=new MethodDeclc(M1, F2, D3, S4); RESULT.setLine(M1left); :};
+MethodDecl ::= (MethodDeclc) MethodTypeName:M1 LPAREN FormParsOptional:pars  DeclListVar:D2 LBRACECURLY StatementList:S3 RBRACECURLY {: RESULT=new MethodDeclc(M1, pars, D2, S3); RESULT.setLine(M1left); :};
 
 MethodTypeName ::= (MethodTypeNamec) Type:varType IDENT:methodName {: RESULT=new MethodTypeNamec(varType, methodName); RESULT.setLine(varTypeleft); :}
 				| (VoidFunc) VOID IDENT:methodName {: RESULT=new VoidFunc(methodName); RESULT.setLine(methodNameleft); :};
@@ -255,7 +257,10 @@ Statements ::= (Statementsc) LBRACECURLY StatementList:S1 RBRACECURLY {: RESULT=
 StatementList ::= (StatementListc) StatementList:S1 Statement:S2 {: RESULT=new StatementListc(S1, S2); RESULT.setLine(S1left); :}
 				| (NoStatementList) {: RESULT=new NoStatementList(); :} /* epsilon */;				
 				
-DesignatorStatement ::= (DesignatorStatementc) Designator:D1 DesignatorStatementElements:D2 {: RESULT=new DesignatorStatementc(D1, D2); RESULT.setLine(D1left); :};				
+DesignatorStatement ::= (DesignatorAssign) Designator:D1 Assignop:A2 Expr:E3 {: RESULT=new DesignatorAssign(D1, A2, E3); RESULT.setLine(D1left); :}
+					| (DesignatorMethod) Designator:D1 LPAREN ActParsOptional:A2 RPAREN {: RESULT=new DesignatorMethod(D1, A2); RESULT.setLine(D1left); :}
+					| (DesignatorIncrement) Designator:D1 INCREMENT {: RESULT=new DesignatorIncrement(D1); RESULT.setLine(D1left); :}
+					| (DesignatorDecrement) Designator:D1 DECREMENT {: RESULT=new DesignatorDecrement(D1); RESULT.setLine(D1left); :};				
 				
 DesignatorStatementElements ::= (DesignatorStatementElementsc) Assignop:A1 Expr:E2 {: RESULT=new DesignatorStatementElementsc(A1, E2); RESULT.setLine(A1left); :}
 					| LPAREN ActParsOptional:A1 RPAREN {: RESULT=new DesignatorStatementElementsDerived1(A1); RESULT.setLine(A1left); :} 
@@ -326,9 +331,9 @@ ExprBracesOptional ::= (ExprBracesOptionalc) LBRACE Expr:E1 RBRACE {: RESULT=new
 					
 					
 Designator ::= (Designatorc) DesignatorName:D1 {: RESULT=new Designatorc(D1); RESULT.setLine(D1left); :} 
-			| DesignatorName:D1 LBRACE Expr:E2 RBRACE {: RESULT=new DesignatorDerived1(D1, E2); RESULT.setLine(D1left); :}
-			| DesignatorName:D1 DOT IDENT:I2 {: RESULT=new DesignatorDerived2(D1, I2); RESULT.setLine(D1left); :}
-			| DesignatorName:D1 DOT IDENT:I2 LBRACE Expr:E3 RBRACE {: RESULT=new DesignatorDerived3(D1, I2, E3); RESULT.setLine(D1left); :};
+			| (ArrayElem) DesignatorName:D1 LBRACE Expr:E2 RBRACE {: RESULT=new ArrayElem(D1, E2); RESULT.setLine(D1left); :}
+			| DesignatorName:D1 DOT IDENT:I2 {: RESULT=new DesignatorDerived1(D1, I2); RESULT.setLine(D1left); :}
+			| (ArrayElemClass) DesignatorName:D1 DOT IDENT:I2 LBRACE Expr:E3 RBRACE {: RESULT=new ArrayElemClass(D1, I2, E3); RESULT.setLine(D1left); :};
 
 DesignatorName ::= (DesignatorName) IDENT:name {: RESULT=new DesignatorName(name); RESULT.setLine(nameleft); :};
 
