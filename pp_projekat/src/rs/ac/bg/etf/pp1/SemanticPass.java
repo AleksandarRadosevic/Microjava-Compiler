@@ -215,10 +215,7 @@ public class SemanticPass extends VisitorAdaptor {
 			report_error("Promenljiva nije deklarisana", arrayElem);
 			return ;
 		}
-		arrayElem.obj = obj;
-
-		//System.out.println("Uspesna detekcija pristupu elemanta niza");
-		//uspeh
+		arrayElem.obj = new Obj(Obj.Elem, arrayElem.getDesignatorName().getName(),obj.getType().getElemType());
     }
     
     public void visit(Designatorc designator) {
@@ -335,7 +332,11 @@ public class SemanticPass extends VisitorAdaptor {
 	}
 	
 	public void visit(ReadStmt readStmt) {
-		
+		if (!(readStmt.getDesignator().obj.getType().getKind()==Obj.Elem || 
+				readStmt.getDesignator().obj.getType().getKind()==Obj.Var || 
+				readStmt.getDesignator().obj.getType().getKind()==Obj.Fld)) {
+			report_error("Greska mogu se citati promenljive elementi niza ili polja u klasi", readStmt);
+		}
 		
 	}
 	
