@@ -215,7 +215,8 @@ public class SemanticPass extends VisitorAdaptor {
 			report_error("Promenljiva nije deklarisana", arrayElem);
 			return ;
 		}
-		arrayElem.obj = new Obj(Obj.Elem, arrayElem.getDesignatorName().getName(),obj.getType().getElemType());
+		if (arrayElem.obj==null)
+			arrayElem.obj = new Obj(Obj.Elem, arrayElem.getDesignatorName().getName(),obj.getType().getElemType());
     }
     
     public void visit(Designatorc designator) {
@@ -297,7 +298,7 @@ public class SemanticPass extends VisitorAdaptor {
 		if (breakLoop && breakLoopLine>whileStmt.getLine() && breakLoopLine<whileStmt.getCondition().getLine()+whileStmt.getLine()) {
 			breakLoop = false;
 			report_info("Gotovo izvrsavanje petlje", whileStmt);
-			return;
+			//return;
 			//System.out.println("Gotovo izvrsavanje petlje pronadjen break na liniji "+breakLoopLine);
 		}
 		else if (breakLoop) {
@@ -332,10 +333,16 @@ public class SemanticPass extends VisitorAdaptor {
 	}
 	
 	public void visit(ReadStmt readStmt) {
-		if (!(readStmt.getDesignator().obj.getType().getKind()==Obj.Elem || 
-				readStmt.getDesignator().obj.getType().getKind()==Obj.Var || 
-				readStmt.getDesignator().obj.getType().getKind()==Obj.Fld)) {
+		if (!(readStmt.getDesignator().obj.getKind()==Obj.Elem || 
+				readStmt.getDesignator().obj.getKind()==Obj.Var || readStmt.getDesignator().obj.getKind()==Obj.Fld)) {
+			report_error("Polje u okviru read iskaza mora biti element niza ili promenljiva ili polje klase", readStmt);
+			return;
+		}
+		if (!(readStmt.getDesignator().obj.getType().getKind()==Struct.Int || 
+				readStmt.getDesignator().obj.getType().getKind()==Struct.Bool || 
+				readStmt.getDesignator().obj.getType().getKind()==Struct.Char)) {
 			report_error("Greska mogu se citati promenljive elementi niza ili polja u klasi", readStmt);
+			return;
 		}
 		
 	}
