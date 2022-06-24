@@ -1,16 +1,16 @@
 // generated with ast extension for cup
 // version 0.8
-// 24/5/2022 1:28:59
+// 24/5/2022 15:43:50
 
 
 package rs.ac.bg.etf.pp1.ast;
 
-public class DoStmt extends SingleStatement {
+public class DoWhileStmt extends SingleStatement {
 
     private Statement Statement;
     private Condition Condition;
 
-    public DoStmt (Statement Statement, Condition Condition) {
+    public DoWhileStmt (Statement Statement, Condition Condition) {
         this.Statement=Statement;
         if(Statement!=null) Statement.setParent(this);
         this.Condition=Condition;
@@ -57,7 +57,7 @@ public class DoStmt extends SingleStatement {
     public String toString(String tab) {
         StringBuffer buffer=new StringBuffer();
         buffer.append(tab);
-        buffer.append("DoStmt(\n");
+        buffer.append("DoWhileStmt(\n");
 
         if(Statement!=null)
             buffer.append(Statement.toString("  "+tab));
@@ -72,7 +72,7 @@ public class DoStmt extends SingleStatement {
         buffer.append("\n");
 
         buffer.append(tab);
-        buffer.append(") [DoStmt]");
+        buffer.append(") [DoWhileStmt]");
         return buffer.toString();
     }
 }

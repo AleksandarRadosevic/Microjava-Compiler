@@ -14,10 +14,27 @@ public class SemanticPass extends VisitorAdaptor {
 	Obj currentMethod = null;
 	boolean mainExists = false;
 	Struct constType = null; 
+	
 	boolean hasReturn = false;
+	
+	// used for checking if break appears
+	boolean breakLoop;
+	int breakLoopLine;
+	
+	// used for checking if continue appears
+	boolean continueLoop;
+	int continueLoopLine;
+	
+	boolean isArray = false;
+	
+	
+	
 	//Struct currentType;
 	Logger log = Logger.getLogger(getClass());
-
+	
+	// report messages start
+	//--------------------------------------
+	
 	public void report_error(String message, SyntaxNode info) {
 		StringBuilder msg = new StringBuilder(message);
 		int line = (info == null) ? 0 : info.getLine();
@@ -33,9 +50,14 @@ public class SemanticPass extends VisitorAdaptor {
 			msg.append(" na liniji ").append(line);
 		log.info(msg.toString());
 	}
-
+	//---------------------------------------------
+	// report messages end
 	
-	//definisanje konstansti
+	
+	
+	// var declarations start 
+	// --------------------------------
+	
 	public void visit(ConstDeclc constVar) {
 		// mozda proveriti da li je dva puta definisana konstanta
 		Obj obj = Tab.find(constVar.getName());
@@ -43,7 +65,7 @@ public class SemanticPass extends VisitorAdaptor {
 			report_error("Globalna konstanta moze biti definisana jednom", constVar);
 		}
 		else {
-			if (constType.assignableTo(constVar.getType().struct) || constType.getKind()==constVar.getType().struct.getKind()) {
+			if (constType.getKind()==constVar.getType().struct.getKind()) {
 				Tab.insert(Obj.Con, constVar.getName(), constVar.getType().struct);
 			}
 			else report_error("Konstanti mora biti dodeljen isti tip", constVar);
@@ -52,34 +74,37 @@ public class SemanticPass extends VisitorAdaptor {
 	
 	
 	public void visit(ConstInt intVal) {
-		constType=Tab.intType;
-		
+		constType=new Struct(Struct.Int);	
 	}
 	
 	public void visit(ConstChar intVal) {
-		constType=Tab.charType;
-
+		constType=new Struct(Struct.Char);
 	}
 	
 	public void visit(ConstBool intVal) {
 		constType=new Struct(Struct.Bool);
 	}
 	
-	//definisanje promenljivih
+	
 	public void visit(VarDeclc varDecl) {
 		varDeclCount++;
 		Obj obj = Tab.currentScope.findSymbol(varDecl.getVarName());
 		
 		if (obj!=Tab.noObj && obj!=null) {
-			//System.out.println("Scope za "+varDecl.getVarName()+" je "+obj.getLevel());
-			System.out.println("Ime lokalne promenljive ne sme biti deklarisano vise puta unutar istog opsega");
+			report_error("Ime lokalne promenljive ne sme biti deklarisano vise puta unutar istog opsega", varDecl);
 		}
 		else {
-			Obj varNode = Tab.insert(Obj.Var, varDecl.getVarName(), varDecl.getType().struct);
-			//System.out.println("Scope za "+varDecl.getVarName()+" je "+varNode.getLevel());
+			Struct str;
+			if (isArray) {
+				str = new Struct(Struct.Array, varDecl.getType().struct);
+				isArray = false;
+			}
+			else str = varDecl.getType().struct;
+			Obj varNode = Tab.insert(Obj.Var, varDecl.getVarName(), str);
 		}
 	}
-	//parametri u funkciji
+	
+	// arguments in function
 	public void visit(Parsc formPar) {
 		if (this.currentMethod.getName().equals("main")) {
 			System.out.println("Main ne sme imati parametre");
@@ -91,18 +116,35 @@ public class SemanticPass extends VisitorAdaptor {
 		Obj varNode = Tab.insert(Obj.Var, formPar.getName(), formPar.getType().struct);
 	}
 	
-	// definisanje globalnih promenljiva 
+	
+	// global var
 	public void visit(VarDeclGlobalc varDeclGlobal) {
 		varDeclGlobalCount++;
 		Obj obj = Tab.currentScope.findSymbol(varDeclGlobal.getVarName());
 		if (obj!=Tab.noObj && obj!=null) {
-			System.out.println("Ime globalne promenljive ne sme biti deklarisano vise puta unutar istog opsega");
+			report_error("Ime globalne promenljive ne sme biti deklarisano vise puta unutar istog opsega",varDeclGlobal);
 		}
 		else {
-			Obj varNode = Tab.insert(Obj.Var, varDeclGlobal.getVarName(), varDeclGlobal.getType().struct);
+			Struct str;
+			if (isArray) {
+				str = new Struct(Struct.Array, varDeclGlobal.getType().struct);
+				isArray = false;
+			}
+			else str = varDeclGlobal.getType().struct;
+			Obj varNode = Tab.insert(Obj.Var, varDeclGlobal.getVarName(), str);
+			
 		}
 	}
-
+	//----------------------------------------
+	
+	public void visit(OptionalBracesc op) {
+		isArray = true;
+	}
+	
+	
+	
+	// var declarations end
+	
 	
 	public void visit(PrintStmt print) {
 		printCallCount++;
@@ -114,7 +156,7 @@ public class SemanticPass extends VisitorAdaptor {
 		Tab.openScope();
 	}
 
-	//zatvaranje programa
+	//
 	public void visit(Programc program) {
 		// add local symbols in program scope
 		Tab.chainLocalSymbols(program.getProgName().obj);
@@ -170,9 +212,11 @@ public class SemanticPass extends VisitorAdaptor {
     public void visit(ArrayElem arrayElem) {
 		Obj obj = Tab.find(arrayElem.getDesignatorName().getName());
 		if (obj==Tab.noObj || obj==null) {
-			System.out.println("Promenljiva nije deklarisana ");
+			report_error("Promenljiva nije deklarisana", arrayElem);
 			return ;
 		}
+		arrayElem.obj = obj;
+
 		//System.out.println("Uspesna detekcija pristupu elemanta niza");
 		//uspeh
     }
@@ -196,6 +240,7 @@ public class SemanticPass extends VisitorAdaptor {
 			funcCall.struct = Tab.noType;
     	}
     }
+    
 	public void visit(VoidFunc methodTypeName) {
 		this.currentMethod = Tab.insert(Obj.Meth, methodTypeName.getMethodName(),Tab.noType);
 		if (methodTypeName.getMethodName().equals("main"))
@@ -214,7 +259,86 @@ public class SemanticPass extends VisitorAdaptor {
 	}
 	
 	public void visit(DesignatorAssign designatorAssign) {
-		//designatorAssign.getDesignator().obj.getType()
+		if (designatorAssign.getDesignator().obj.getKind()==Obj.Meth) {
+			report_error("Nemoguce dodeliti pozivu metode vrednost", designatorAssign);
+			return ;
+		}
+//		if (designatorAssign.getExpr().struct.getKind()==designatorAssign.getDesignator().obj.getType().getKind()) {
+//			report_error("Tipovi su nekompatibilni", designatorAssign);
+//		}
 	}
+	
+	//inkrementiranje vrednosti
+	public void visit(DesignatorIncrement designatorIncrement) {
+		if (designatorIncrement.getDesignator().obj.getKind()==Obj.Meth) {
+			report_error("Nemoguce inkrementirati poziv metode", designatorIncrement);
+		}
+//		if (!designatorIncrement.getDesignator().obj.getType().equals(Tab.intType)) {
+//			report_error("Nemoguce inkrementirati promenljivu koja nije ceo broj", designatorIncrement);
+//		}
+	}
+	
+	// dekrementiranje vrednosti
+	public void visit(DesignatorDecrement designatorDec) {
+		if (designatorDec.getDesignator().obj.getKind()==Obj.Meth) {
+			report_error("Nemoguce dekrementirati poziv metode", designatorDec);
+		}
+//		if (!designatorDec.getDesignator().obj.getType().equals(Tab.intType)) {
+//			report_error("Nemoguce dekrementirati promenljivu koja nije ceo broj", designatorDec);
+//		}
+	}
+	
+	public void visit(DesignatorMethod desMethod) {
+		if (Obj.Meth!=desMethod.getDesignator().obj.getKind()) {	
+			report_error("Greska u pozivu metode", desMethod);
+		}
+	}
+	
+	public void visit(DoWhileStmt whileStmt) {
+		// check break start 
+		
+		if (breakLoop && breakLoopLine>whileStmt.getLine() && breakLoopLine<whileStmt.getCondition().getLine()+whileStmt.getLine()) {
+			breakLoop = false;
+			report_info("Gotovo izvrsavanje petlje", whileStmt);
+			return;
+			//System.out.println("Gotovo izvrsavanje petlje pronadjen break na liniji "+breakLoopLine);
+		}
+		else if (breakLoop) {
+			report_error("Break iskaz se poziva samo unutar do while petlje", whileStmt);
+			breakLoop = false;
+		}
+		
+		// check break end
+		
+		// check continue start
+		if (continueLoop && continueLoopLine>whileStmt.getLine() && continueLoopLine<whileStmt.getCondition().getLine()+whileStmt.getLine()) {
+			continueLoop = false;
+			report_info("Nailazak na continue unutar petlje", whileStmt);
+		}
+		else if (continueLoop) {
+			report_error("Continue iskaz se mora nalaziti unutar do while petlje", whileStmt);
+			continueLoop = false;
+		}
+		
+		// check continue end
+		
+	}
+	
+	public void visit(BreakStmt breakStmt) {
+		breakLoop = true;
+		breakLoopLine = breakStmt.getParent().getLine();
+		
+	}
+	public void visit(ContinueStmt contStmt) {
+		continueLoop = true;
+		continueLoopLine = contStmt.getParent().getLine();
+	}
+	
+	public void visit(ReadStmt readStmt) {
+		
+		
+	}
+	
+	
 }
 

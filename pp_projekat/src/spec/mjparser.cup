@@ -187,7 +187,7 @@ LabelColon ::= (LabelColonc) Label COLON;
 SingleStatement ::= (SingleStatementc) DesignatorStatement SEMICOLON
 				| (IfStmt) IF LPAREN ConditionIf Statement ELSE Statement 
 				| (NoElseStmt) IF LPAREN ConditionIf Statement
-			 	| (DoStmt) DO Statement WHILE LPAREN Condition RPAREN SEMICOLON
+			 	| (DoWhileStmt) DO Statement WHILE LPAREN Condition RPAREN SEMICOLON
 				| (BreakStmt) BREAK SEMICOLON
 				| (ContinueStmt) CONTINUE SEMICOLON
 				| (ReturnStmt) RETURN OptionalExpression SEMICOLON

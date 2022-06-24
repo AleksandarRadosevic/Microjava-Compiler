@@ -2,8 +2,7 @@
 
 program test302
 
-const int jedan = 4;
-const bool a = false;
+const int jedan = false;
 
 int i;
 bool ibool;
@@ -11,6 +10,7 @@ bool ibool;
 int niz2;
 
 int niz[];
+int a;
 
 {
 	
@@ -35,6 +35,7 @@ int niz[];
 	
 	void main()
 	{
+		sum(1,2);
 		if(1!=1) print(-6);
 		else print(0);  
 			
@@ -75,7 +76,7 @@ int niz[];
 		read(niz[1]);
 		read(niz[2]);
 		print(eol);
-		
+		break;
 		print(sum (sum(niz[0], niz[1]), niz[2])); 
 			
 		print(eol); 

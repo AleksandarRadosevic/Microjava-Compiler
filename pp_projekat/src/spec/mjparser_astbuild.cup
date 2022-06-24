@@ -235,7 +235,7 @@ LabelColon ::= (LabelColonc) Label:L1 COLON {: RESULT=new LabelColonc(L1); RESUL
 SingleStatement ::= (SingleStatementc) DesignatorStatement:D1 SEMICOLON {: RESULT=new SingleStatementc(D1); RESULT.setLine(D1left); :}
 				| (IfStmt) IF LPAREN ConditionIf:C1 Statement:S2 ELSE Statement:S3 {: RESULT=new IfStmt(C1, S2, S3); RESULT.setLine(C1left); :} 
 				| (NoElseStmt) IF LPAREN ConditionIf:C1 Statement:S2 {: RESULT=new NoElseStmt(C1, S2); RESULT.setLine(C1left); :}
-			 	| (DoStmt) DO Statement:S1 WHILE LPAREN Condition:C2 RPAREN SEMICOLON {: RESULT=new DoStmt(S1, C2); RESULT.setLine(S1left); :}
+			 	| (DoWhileStmt) DO Statement:S1 WHILE LPAREN Condition:C2 RPAREN SEMICOLON {: RESULT=new DoWhileStmt(S1, C2); RESULT.setLine(S1left); :}
 				| (BreakStmt) BREAK SEMICOLON {: RESULT=new BreakStmt(); :}
 				| (ContinueStmt) CONTINUE SEMICOLON {: RESULT=new ContinueStmt(); :}
 				| (ReturnStmt) RETURN OptionalExpression:O1 SEMICOLON {: RESULT=new ReturnStmt(O1); RESULT.setLine(O1left); :}
