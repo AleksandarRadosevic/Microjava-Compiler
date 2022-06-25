@@ -1,0 +1,57 @@
+INFO  19:56:03,329 - Compiling source file: C:\Users\Aleksandar\Desktop\PP\projekat\PP_Projekat\pp_projekat\test\program.mj
+INFO  19:56:03,375 - #6 program
+INFO  19:56:03,375 - #4 MJProgram
+INFO  19:56:03,375 - #4 int
+INFO  19:56:03,375 - #4 x
+INFO  19:56:03,375 - #37 ;
+INFO  19:56:03,377 - #4 int
+INFO  19:56:03,377 - #4 y
+INFO  19:56:03,377 - #37 ;
+INFO  19:56:03,377 - #7 {
+INFO  19:56:03,377 - #24 void
+INFO  19:56:03,378 - #4 main
+INFO  19:56:03,378 - #22 (
+INFO  19:56:03,378 - #4 sfda
+INFO  19:56:03,378 - #23 )
+ERROR 19:56:03,378 - 
+Sintaksna greska na liniji 5
+INFO  19:56:03,378 - #7 {
+INFO  19:56:03,378 - #25 print
+INFO  19:56:03,378 - #22 (
+ERROR 19:56:03,379 - Izvrsen oporavak do ) u liniji 5
+INFO  19:56:03,384 - #2 1
+INFO  19:56:03,385 - #23 )
+INFO  19:56:03,386 - #37 ;
+INFO  19:56:03,386 - #25 print
+INFO  19:56:03,387 - #22 (
+INFO  19:56:03,387 - #2 2
+INFO  19:56:03,387 - #23 )
+INFO  19:56:03,387 - #37 ;
+INFO  19:56:03,387 - #25 print
+INFO  19:56:03,387 - #22 (
+INFO  19:56:03,387 - #2 1
+INFO  19:56:03,387 - #23 )
+INFO  19:56:03,387 - #37 ;
+INFO  19:56:03,387 - #25 print
+INFO  19:56:03,387 - #22 (
+INFO  19:56:03,387 - #2 2
+INFO  19:56:03,387 - #23 )
+INFO  19:56:03,387 - #37 ;
+INFO  19:56:03,387 - #25 print
+INFO  19:56:03,388 - #22 (
+INFO  19:56:03,388 - #2 1
+INFO  19:56:03,388 - #23 )
+INFO  19:56:03,388 - #37 ;
+INFO  19:56:03,388 - #25 print
+INFO  19:56:03,388 - #22 (
+INFO  19:56:03,388 - #2 2
+INFO  19:56:03,388 - #23 )
+INFO  19:56:03,388 - #37 ;
+INFO  19:56:03,388 - #8 }
+INFO  19:56:03,388 - #8 }
+INFO  19:56:03,392 - ===================================
+INFO  19:56:03,394 - Obradjuje se funkcija main na liniji 5
+INFO  19:56:03,395 -  Print count calls = 6
+INFO  19:56:03,395 -  Deklarisanih promenljivih ima = 0
+INFO  19:56:03,395 - ===================================
+INFO  19:56:03,397 - Parsiranje uspesno zavrseno!

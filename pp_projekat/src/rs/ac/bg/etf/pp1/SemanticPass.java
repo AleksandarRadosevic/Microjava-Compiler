@@ -23,7 +23,8 @@ public class SemanticPass extends VisitorAdaptor {
 
 	boolean hasReturn = false;
 	boolean optMinus = false;
-
+	public int nVars=0;
+		
 	Obj calledFunction = null;
 	Map<String, List<Obj>> methodsArguments = new HashMap<String, List<Obj>>();
 	int formalArgumentsCounter = 0;
@@ -41,7 +42,8 @@ public class SemanticPass extends VisitorAdaptor {
 
 	// Struct currentType;
 	Logger log = Logger.getLogger(getClass());
-
+	
+	public boolean errorDetected = false;
 	
 	public SemanticPass() {
 		// add obj e in chr
@@ -66,6 +68,7 @@ public class SemanticPass extends VisitorAdaptor {
 	// --------------------------------------
 
 	public void report_error(String message, SyntaxNode info) {
+		errorDetected = true;
 		StringBuilder msg = new StringBuilder(message);
 		int line = (info == null) ? 0 : info.getLine();
 		if (line != 0)
@@ -185,6 +188,7 @@ public class SemanticPass extends VisitorAdaptor {
 	//
 	public void visit(Programc program) {
 		// add local symbols in program scope
+		nVars = Tab.currentScope().getnVars();
 		Tab.chainLocalSymbols(program.getProgName().obj);
 		Tab.closeScope();
 		if (!mainExists) {
