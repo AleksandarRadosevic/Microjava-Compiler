@@ -1,0 +1,613 @@
+INFO  00:22:27,925 - Compiling source file: C:\Users\Aleksandar\Desktop\PP\projekat\PP_Projekat\pp_projekat\test\program.mj
+INFO  00:22:27,969 - #6 program
+INFO  00:22:27,969 - #4 test302
+INFO  00:22:27,969 - #9 const
+INFO  00:22:27,970 - #4 int
+INFO  00:22:27,970 - #4 jedan
+INFO  00:22:27,970 - #10 =
+INFO  00:22:27,970 - #2 1
+INFO  00:22:27,970 - #37 ;
+INFO  00:22:27,971 - #4 int
+INFO  00:22:27,971 - #4 i
+INFO  00:22:27,971 - #37 ;
+INFO  00:22:27,972 - #4 bool
+INFO  00:22:27,972 - #4 ibool
+INFO  00:22:27,972 - #37 ;
+INFO  00:22:27,972 - #4 int
+INFO  00:22:27,972 - #4 niz2
+INFO  00:22:27,972 - #37 ;
+INFO  00:22:27,973 - #4 int
+INFO  00:22:27,973 - #4 niz
+INFO  00:22:27,973 - #44 [
+INFO  00:22:27,973 - #45 ]
+INFO  00:22:27,977 - #37 ;
+INFO  00:22:27,977 - #4 int
+INFO  00:22:27,977 - #4 a
+INFO  00:22:27,977 - #37 ;
+INFO  00:22:27,977 - #7 {
+INFO  00:22:27,978 - #4 int
+INFO  00:22:27,978 - #4 sum
+INFO  00:22:27,978 - #22 (
+INFO  00:22:27,978 - #4 int
+INFO  00:22:27,978 - #4 z
+INFO  00:22:27,978 - #18 ,
+INFO  00:22:27,979 - #4 int
+INFO  00:22:27,979 - #4 d
+INFO  00:22:27,979 - #23 )
+INFO  00:22:27,979 - #7 {
+INFO  00:22:27,979 - #42 return
+INFO  00:22:27,980 - #4 z
+INFO  00:22:27,980 - #30 +
+INFO  00:22:27,982 - #4 d
+INFO  00:22:27,983 - #37 ;
+INFO  00:22:27,983 - #8 }
+INFO  00:22:27,983 - #4 int
+INFO  00:22:27,983 - #4 inkrement
+INFO  00:22:27,983 - #22 (
+INFO  00:22:27,984 - #4 int
+INFO  00:22:27,984 - #4 a
+INFO  00:22:27,984 - #18 ,
+INFO  00:22:27,984 - #4 int
+INFO  00:22:27,984 - #4 inc
+INFO  00:22:27,984 - #23 )
+INFO  00:22:27,984 - #4 int
+INFO  00:22:27,984 - #4 pom
+INFO  00:22:27,984 - #37 ;
+INFO  00:22:27,985 - #7 {
+INFO  00:22:27,985 - #36 if
+INFO  00:22:27,985 - #22 (
+INFO  00:22:27,985 - #4 inc
+INFO  00:22:27,985 - #11 ==
+INFO  00:22:27,985 - #4 jedan
+INFO  00:22:27,986 - #23 )
+INFO  00:22:27,986 - #4 pom
+INFO  00:22:27,987 - #10 =
+INFO  00:22:27,987 - #2 1
+INFO  00:22:27,987 - #37 ;
+INFO  00:22:27,988 - #51 else
+INFO  00:22:27,988 - #36 if
+INFO  00:22:27,988 - #22 (
+INFO  00:22:27,988 - #4 inc
+INFO  00:22:27,988 - #11 ==
+INFO  00:22:27,988 - #2 2
+INFO  00:22:27,988 - #23 )
+INFO  00:22:27,988 - #4 pom
+INFO  00:22:27,988 - #10 =
+INFO  00:22:27,988 - #4 a
+INFO  00:22:27,988 - #37 ;
+INFO  00:22:27,988 - #42 return
+INFO  00:22:27,989 - #4 sum
+INFO  00:22:27,989 - #22 (
+INFO  00:22:27,989 - #4 a
+INFO  00:22:27,989 - #18 ,
+INFO  00:22:27,989 - #4 pom
+INFO  00:22:27,989 - #23 )
+INFO  00:22:27,989 - #37 ;
+INFO  00:22:27,990 - #8 }
+INFO  00:22:27,990 - #4 bool
+INFO  00:22:27,990 - #4 verify
+INFO  00:22:27,990 - #22 (
+INFO  00:22:27,990 - #23 )
+INFO  00:22:27,990 - #7 {
+INFO  00:22:27,990 - #25 print
+INFO  00:22:27,990 - #22 (
+INFO  00:22:27,990 - #5 v
+INFO  00:22:27,990 - #23 )
+INFO  00:22:27,991 - #37 ;
+INFO  00:22:27,991 - #42 return
+INFO  00:22:27,991 - #3 false
+INFO  00:22:27,991 - #37 ;
+INFO  00:22:27,991 - #8 }
+INFO  00:22:27,991 - #24 void
+INFO  00:22:27,991 - #4 main
+INFO  00:22:27,991 - #22 (
+INFO  00:22:27,991 - #23 )
+INFO  00:22:27,992 - #7 {
+INFO  00:22:27,992 - #36 if
+INFO  00:22:27,992 - #22 (
+INFO  00:22:27,992 - #2 1
+INFO  00:22:27,992 - #12 !=
+INFO  00:22:27,992 - #2 1
+INFO  00:22:27,992 - #23 )
+INFO  00:22:27,992 - #25 print
+INFO  00:22:27,992 - #22 (
+INFO  00:22:27,992 - #31 -
+INFO  00:22:27,992 - #2 6
+INFO  00:22:27,992 - #23 )
+INFO  00:22:27,992 - #37 ;
+INFO  00:22:27,993 - #51 else
+INFO  00:22:27,993 - #25 print
+INFO  00:22:27,993 - #22 (
+INFO  00:22:27,993 - #2 0
+INFO  00:22:27,993 - #23 )
+INFO  00:22:27,993 - #37 ;
+INFO  00:22:27,993 - #4 ibool
+INFO  00:22:27,993 - #10 =
+INFO  00:22:27,993 - #3 false
+INFO  00:22:27,993 - #37 ;
+INFO  00:22:27,993 - #4 i
+INFO  00:22:27,993 - #10 =
+INFO  00:22:27,993 - #2 0
+INFO  00:22:27,993 - #37 ;
+INFO  00:22:27,993 - #38 do
+INFO  00:22:27,993 - #7 {
+INFO  00:22:27,993 - #36 if
+INFO  00:22:27,993 - #22 (
+INFO  00:22:27,993 - #4 i
+INFO  00:22:27,993 - #11 ==
+INFO  00:22:27,993 - #2 2
+INFO  00:22:27,993 - #23 )
+INFO  00:22:27,994 - #4 ibool
+INFO  00:22:27,994 - #10 =
+INFO  00:22:27,994 - #3 true
+INFO  00:22:27,994 - #37 ;
+INFO  00:22:27,994 - #4 i
+INFO  00:22:27,995 - #46 ++
+INFO  00:22:27,995 - #37 ;
+INFO  00:22:27,995 - #8 }
+INFO  00:22:27,995 - #39 while
+INFO  00:22:27,995 - #22 (
+INFO  00:22:27,995 - #4 i
+INFO  00:22:27,995 - #48 <
+INFO  00:22:27,995 - #2 5
+INFO  00:22:27,996 - #23 )
+INFO  00:22:27,996 - #37 ;
+INFO  00:22:27,996 - #36 if
+INFO  00:22:27,996 - #22 (
+INFO  00:22:27,996 - #4 ibool
+INFO  00:22:27,996 - #23 )
+INFO  00:22:27,996 - #36 if
+INFO  00:22:27,996 - #22 (
+INFO  00:22:27,996 - #4 i
+INFO  00:22:27,996 - #11 ==
+INFO  00:22:27,996 - #2 5
+INFO  00:22:27,996 - #23 )
+INFO  00:22:27,996 - #25 print
+INFO  00:22:27,996 - #22 (
+INFO  00:22:27,996 - #2 1
+INFO  00:22:27,997 - #23 )
+INFO  00:22:27,997 - #37 ;
+INFO  00:22:27,997 - #51 else
+INFO  00:22:27,997 - #25 print
+INFO  00:22:27,997 - #22 (
+INFO  00:22:27,997 - #31 -
+INFO  00:22:27,997 - #2 1
+INFO  00:22:27,997 - #23 )
+INFO  00:22:27,997 - #37 ;
+INFO  00:22:27,997 - #4 a
+INFO  00:22:27,997 - #10 =
+INFO  00:22:27,997 - #2 2
+INFO  00:22:27,997 - #37 ;
+INFO  00:22:27,997 - #4 niz
+INFO  00:22:27,997 - #10 =
+INFO  00:22:27,997 - #28 new
+INFO  00:22:27,997 - #4 int
+INFO  00:22:27,997 - #44 [
+INFO  00:22:27,997 - #2 3
+INFO  00:22:27,997 - #45 ]
+INFO  00:22:27,997 - #37 ;
+INFO  00:22:27,998 - #4 niz
+INFO  00:22:27,998 - #44 [
+INFO  00:22:27,998 - #2 0
+INFO  00:22:27,998 - #45 ]
+INFO  00:22:27,998 - #10 =
+INFO  00:22:27,998 - #2 1
+INFO  00:22:27,998 - #32 *
+INFO  00:22:27,998 - #4 a
+INFO  00:22:27,999 - #37 ;
+INFO  00:22:27,999 - #4 niz
+INFO  00:22:27,999 - #44 [
+INFO  00:22:27,999 - #2 1
+INFO  00:22:27,999 - #45 ]
+INFO  00:22:27,999 - #10 =
+INFO  00:22:27,999 - #2 2
+INFO  00:22:27,999 - #32 *
+INFO  00:22:27,999 - #4 a
+INFO  00:22:27,999 - #37 ;
+INFO  00:22:27,999 - #4 niz
+INFO  00:22:27,999 - #44 [
+INFO  00:22:27,999 - #2 2
+INFO  00:22:27,999 - #45 ]
+INFO  00:22:27,999 - #10 =
+INFO  00:22:27,999 - #4 sum
+INFO  00:22:27,999 - #22 (
+INFO  00:22:27,999 - #4 niz
+INFO  00:22:27,999 - #44 [
+INFO  00:22:28,000 - #2 1
+INFO  00:22:28,000 - #45 ]
+INFO  00:22:28,000 - #18 ,
+INFO  00:22:28,000 - #4 niz
+INFO  00:22:28,000 - #44 [
+INFO  00:22:28,000 - #2 0
+INFO  00:22:28,000 - #45 ]
+INFO  00:22:28,000 - #23 )
+INFO  00:22:28,000 - #32 *
+INFO  00:22:28,000 - #4 a
+INFO  00:22:28,000 - #30 +
+INFO  00:22:28,000 - #2 1
+INFO  00:22:28,000 - #37 ;
+INFO  00:22:28,000 - #36 if
+INFO  00:22:28,000 - #22 (
+INFO  00:22:28,000 - #4 verify
+INFO  00:22:28,000 - #22 (
+INFO  00:22:28,000 - #23 )
+INFO  00:22:28,001 - #50 ||
+INFO  00:22:28,001 - #4 niz
+INFO  00:22:28,001 - #44 [
+INFO  00:22:28,001 - #2 2
+INFO  00:22:28,001 - #45 ]
+INFO  00:22:28,001 - #11 ==
+INFO  00:22:28,001 - #2 4
+INFO  00:22:28,001 - #23 )
+INFO  00:22:28,001 - #25 print
+INFO  00:22:28,001 - #22 (
+INFO  00:22:28,001 - #4 ord
+INFO  00:22:28,001 - #22 (
+INFO  00:22:28,001 - #5 A
+INFO  00:22:28,001 - #23 )
+INFO  00:22:28,002 - #23 )
+INFO  00:22:28,002 - #37 ;
+INFO  00:22:28,002 - #51 else
+INFO  00:22:28,002 - #25 print
+INFO  00:22:28,002 - #22 (
+INFO  00:22:28,002 - #4 ord
+INFO  00:22:28,002 - #22 (
+INFO  00:22:28,002 - #5 a
+INFO  00:22:28,002 - #23 )
+INFO  00:22:28,002 - #23 )
+INFO  00:22:28,002 - #37 ;
+INFO  00:22:28,002 - #25 print
+INFO  00:22:28,002 - #22 (
+INFO  00:22:28,002 - #4 eol
+INFO  00:22:28,002 - #23 )
+INFO  00:22:28,002 - #37 ;
+INFO  00:22:28,002 - #4 i
+INFO  00:22:28,002 - #10 =
+INFO  00:22:28,002 - #2 0
+INFO  00:22:28,002 - #37 ;
+INFO  00:22:28,003 - #38 do
+INFO  00:22:28,003 - #7 {
+INFO  00:22:28,003 - #36 if
+INFO  00:22:28,003 - #22 (
+INFO  00:22:28,003 - #4 i
+INFO  00:22:28,003 - #11 ==
+INFO  00:22:28,003 - #2 3
+INFO  00:22:28,003 - #23 )
+INFO  00:22:28,003 - #7 {
+INFO  00:22:28,003 - #4 i
+INFO  00:22:28,003 - #46 ++
+INFO  00:22:28,003 - #37 ;
+INFO  00:22:28,003 - #41 continue
+INFO  00:22:28,003 - #37 ;
+INFO  00:22:28,003 - #8 }
+INFO  00:22:28,004 - #36 if
+INFO  00:22:28,004 - #22 (
+INFO  00:22:28,004 - #4 i
+INFO  00:22:28,004 - #11 ==
+INFO  00:22:28,004 - #2 4
+INFO  00:22:28,004 - #23 )
+INFO  00:22:28,004 - #40 break
+INFO  00:22:28,004 - #37 ;
+INFO  00:22:28,004 - #4 i
+INFO  00:22:28,004 - #10 =
+INFO  00:22:28,004 - #4 inkrement
+INFO  00:22:28,004 - #22 (
+INFO  00:22:28,004 - #4 i
+INFO  00:22:28,004 - #18 ,
+INFO  00:22:28,005 - #2 1
+INFO  00:22:28,005 - #23 )
+INFO  00:22:28,005 - #37 ;
+INFO  00:22:28,005 - #8 }
+INFO  00:22:28,005 - #39 while
+INFO  00:22:28,005 - #22 (
+INFO  00:22:28,005 - #4 i
+INFO  00:22:28,005 - #48 <
+INFO  00:22:28,005 - #2 10
+INFO  00:22:28,005 - #23 )
+INFO  00:22:28,005 - #37 ;
+INFO  00:22:28,005 - #36 if
+INFO  00:22:28,005 - #22 (
+INFO  00:22:28,005 - #4 i
+INFO  00:22:28,005 - #11 ==
+INFO  00:22:28,005 - #2 3
+INFO  00:22:28,005 - #27 &&
+INFO  00:22:28,005 - #4 verify
+INFO  00:22:28,005 - #22 (
+INFO  00:22:28,005 - #23 )
+INFO  00:22:28,005 - #23 )
+INFO  00:22:28,005 - #25 print
+INFO  00:22:28,005 - #22 (
+INFO  00:22:28,005 - #31 -
+INFO  00:22:28,005 - #2 4
+INFO  00:22:28,005 - #23 )
+INFO  00:22:28,005 - #37 ;
+INFO  00:22:28,006 - #51 else
+INFO  00:22:28,006 - #25 print
+INFO  00:22:28,006 - #22 (
+INFO  00:22:28,006 - #2 4
+INFO  00:22:28,006 - #23 )
+INFO  00:22:28,006 - #37 ;
+INFO  00:22:28,006 - #43 read
+INFO  00:22:28,006 - #22 (
+INFO  00:22:28,006 - #4 niz
+INFO  00:22:28,006 - #44 [
+INFO  00:22:28,006 - #2 0
+INFO  00:22:28,006 - #45 ]
+INFO  00:22:28,006 - #23 )
+INFO  00:22:28,006 - #37 ;
+INFO  00:22:28,006 - #43 read
+INFO  00:22:28,006 - #22 (
+INFO  00:22:28,006 - #4 niz
+INFO  00:22:28,006 - #44 [
+INFO  00:22:28,006 - #2 1
+INFO  00:22:28,006 - #45 ]
+INFO  00:22:28,006 - #23 )
+INFO  00:22:28,006 - #37 ;
+INFO  00:22:28,006 - #43 read
+INFO  00:22:28,006 - #22 (
+INFO  00:22:28,006 - #4 niz
+INFO  00:22:28,006 - #44 [
+INFO  00:22:28,006 - #2 2
+INFO  00:22:28,006 - #45 ]
+INFO  00:22:28,007 - #23 )
+INFO  00:22:28,007 - #37 ;
+INFO  00:22:28,007 - #25 print
+INFO  00:22:28,007 - #22 (
+INFO  00:22:28,007 - #4 eol
+INFO  00:22:28,007 - #23 )
+INFO  00:22:28,007 - #37 ;
+INFO  00:22:28,007 - #25 print
+INFO  00:22:28,007 - #22 (
+INFO  00:22:28,007 - #4 sum
+INFO  00:22:28,007 - #22 (
+INFO  00:22:28,007 - #4 sum
+INFO  00:22:28,007 - #22 (
+INFO  00:22:28,007 - #4 niz
+INFO  00:22:28,007 - #44 [
+INFO  00:22:28,007 - #2 0
+INFO  00:22:28,007 - #45 ]
+INFO  00:22:28,007 - #18 ,
+INFO  00:22:28,007 - #4 niz
+INFO  00:22:28,007 - #44 [
+INFO  00:22:28,007 - #2 1
+INFO  00:22:28,007 - #45 ]
+INFO  00:22:28,007 - #23 )
+INFO  00:22:28,007 - #18 ,
+INFO  00:22:28,007 - #4 niz
+INFO  00:22:28,007 - #44 [
+INFO  00:22:28,007 - #2 2
+INFO  00:22:28,007 - #45 ]
+INFO  00:22:28,007 - #23 )
+INFO  00:22:28,007 - #23 )
+INFO  00:22:28,007 - #37 ;
+INFO  00:22:28,007 - #25 print
+INFO  00:22:28,008 - #22 (
+INFO  00:22:28,008 - #4 eol
+INFO  00:22:28,008 - #23 )
+INFO  00:22:28,008 - #37 ;
+INFO  00:22:28,008 - #25 print
+INFO  00:22:28,008 - #22 (
+INFO  00:22:28,008 - #4 inkrement
+INFO  00:22:28,008 - #22 (
+INFO  00:22:28,008 - #4 niz
+INFO  00:22:28,008 - #44 [
+INFO  00:22:28,008 - #2 2
+INFO  00:22:28,008 - #45 ]
+INFO  00:22:28,008 - #18 ,
+INFO  00:22:28,008 - #2 2
+INFO  00:22:28,008 - #23 )
+INFO  00:22:28,008 - #23 )
+INFO  00:22:28,008 - #37 ;
+INFO  00:22:28,008 - #4 a
+INFO  00:22:28,008 - #10 =
+INFO  00:22:28,008 - #2 3
+INFO  00:22:28,008 - #37 ;
+INFO  00:22:28,008 - #4 i
+INFO  00:22:28,008 - #10 =
+INFO  00:22:28,008 - #2 0
+INFO  00:22:28,009 - #37 ;
+INFO  00:22:28,009 - #38 do
+INFO  00:22:28,009 - #7 {
+INFO  00:22:28,009 - #4 niz
+INFO  00:22:28,009 - #44 [
+INFO  00:22:28,009 - #4 i
+INFO  00:22:28,009 - #45 ]
+INFO  00:22:28,009 - #10 =
+INFO  00:22:28,009 - #4 niz
+INFO  00:22:28,009 - #44 [
+INFO  00:22:28,009 - #4 i
+INFO  00:22:28,009 - #45 ]
+INFO  00:22:28,009 - #32 *
+INFO  00:22:28,009 - #2 2
+INFO  00:22:28,009 - #32 *
+INFO  00:22:28,009 - #4 a
+INFO  00:22:28,009 - #37 ;
+INFO  00:22:28,009 - #4 i
+INFO  00:22:28,009 - #46 ++
+INFO  00:22:28,009 - #37 ;
+INFO  00:22:28,009 - #8 }
+INFO  00:22:28,009 - #39 while
+INFO  00:22:28,009 - #22 (
+INFO  00:22:28,009 - #4 i
+INFO  00:22:28,009 - #48 <
+INFO  00:22:28,009 - #2 3
+INFO  00:22:28,009 - #23 )
+INFO  00:22:28,009 - #37 ;
+INFO  00:22:28,009 - #25 print
+INFO  00:22:28,010 - #22 (
+INFO  00:22:28,010 - #4 niz
+INFO  00:22:28,010 - #44 [
+INFO  00:22:28,010 - #2 0
+INFO  00:22:28,010 - #45 ]
+INFO  00:22:28,010 - #23 )
+INFO  00:22:28,010 - #37 ;
+INFO  00:22:28,010 - #25 print
+INFO  00:22:28,010 - #22 (
+INFO  00:22:28,010 - #4 niz
+INFO  00:22:28,010 - #44 [
+INFO  00:22:28,010 - #2 1
+INFO  00:22:28,010 - #45 ]
+INFO  00:22:28,010 - #23 )
+INFO  00:22:28,010 - #37 ;
+INFO  00:22:28,010 - #25 print
+INFO  00:22:28,010 - #22 (
+INFO  00:22:28,010 - #4 niz
+INFO  00:22:28,010 - #44 [
+INFO  00:22:28,010 - #2 2
+INFO  00:22:28,010 - #45 ]
+INFO  00:22:28,010 - #23 )
+INFO  00:22:28,010 - #37 ;
+INFO  00:22:28,010 - #25 print
+INFO  00:22:28,011 - #22 (
+INFO  00:22:28,011 - #4 eol
+INFO  00:22:28,011 - #23 )
+INFO  00:22:28,011 - #37 ;
+INFO  00:22:28,011 - #4 i
+INFO  00:22:28,011 - #10 =
+INFO  00:22:28,011 - #2 0
+INFO  00:22:28,011 - #37 ;
+INFO  00:22:28,011 - #4 niz2
+INFO  00:22:28,011 - #10 =
+INFO  00:22:28,011 - #2 0
+INFO  00:22:28,011 - #37 ;
+INFO  00:22:28,011 - #38 do
+INFO  00:22:28,011 - #7 {
+INFO  00:22:28,011 - #4 niz2
+INFO  00:22:28,011 - #10 =
+INFO  00:22:28,011 - #4 niz2
+INFO  00:22:28,011 - #30 +
+INFO  00:22:28,011 - #4 niz
+INFO  00:22:28,011 - #44 [
+INFO  00:22:28,011 - #4 i
+INFO  00:22:28,011 - #45 ]
+INFO  00:22:28,011 - #32 *
+INFO  00:22:28,011 - #4 niz
+INFO  00:22:28,011 - #44 [
+INFO  00:22:28,011 - #4 i
+INFO  00:22:28,011 - #45 ]
+INFO  00:22:28,011 - #37 ;
+INFO  00:22:28,011 - #4 i
+INFO  00:22:28,011 - #46 ++
+INFO  00:22:28,011 - #37 ;
+INFO  00:22:28,011 - #8 }
+INFO  00:22:28,011 - #39 while
+INFO  00:22:28,011 - #22 (
+INFO  00:22:28,011 - #4 i
+INFO  00:22:28,011 - #48 <
+INFO  00:22:28,011 - #2 3
+INFO  00:22:28,012 - #23 )
+INFO  00:22:28,012 - #37 ;
+INFO  00:22:28,012 - #25 print
+INFO  00:22:28,012 - #22 (
+INFO  00:22:28,012 - #4 niz2
+INFO  00:22:28,012 - #23 )
+INFO  00:22:28,012 - #37 ;
+INFO  00:22:28,012 - #25 print
+INFO  00:22:28,012 - #22 (
+INFO  00:22:28,012 - #4 eol
+INFO  00:22:28,012 - #23 )
+INFO  00:22:28,012 - #37 ;
+INFO  00:22:28,012 - #8 }
+INFO  00:22:28,012 - #8 }
+INFO  00:22:28,015 - ===================================
+INFO  00:22:28,019 - Pronadjen poziv funkcije sum na liniji 28
+ERROR 00:22:28,019 - Argumenti deklarisane funkcije se moraju slagati po tipu na liniji 7
+ERROR 00:22:28,019 - Argumenti deklarisane funkcije se moraju slagati po tipu na liniji 2
+INFO  00:22:28,019 - Obradjuje se funkcija main na liniji 36
+ERROR 00:22:28,025 - Deklarisana funkcija nema ovoliko argumenata na liniji 6
+ERROR 00:22:28,025 - Deklarisana funkcija nema ovoliko argumenata na liniji 38
+ERROR 00:22:28,025 - Deklarisana funkcija nema ovoliko argumenata na liniji 12
+ERROR 00:22:28,025 - Deklarisana funkcija nema ovoliko argumenata na liniji 8
+ERROR 00:22:28,025 - Deklarisana funkcija nema ovoliko argumenata na liniji 4
+ERROR 00:22:28,025 - Deklarisana funkcija nema ovoliko argumenata na liniji 5
+ERROR 00:22:28,025 - Deklarisana funkcija nema ovoliko argumenata na liniji 8
+ERROR 00:22:28,025 - Deklarisana funkcija nema ovoliko argumenata na liniji 20
+ERROR 00:22:28,025 - Deklarisana funkcija nema ovoliko argumenata na liniji 8
+ERROR 00:22:28,025 - Deklarisana funkcija nema ovoliko argumenata na liniji 11
+ERROR 00:22:28,025 - Deklarisana funkcija nema ovoliko argumenata na liniji 4
+ERROR 00:22:28,026 - Deklarisana funkcija nema ovoliko argumenata na liniji 5
+ERROR 00:22:28,026 - Deklarisana funkcija nema ovoliko argumenata na liniji 8
+ERROR 00:22:28,026 - Deklarisana funkcija nema ovoliko argumenata na liniji 19
+ERROR 00:22:28,026 - Deklarisana funkcija nema ovoliko argumenata na liniji 50
+ERROR 00:22:28,026 - Deklarisana funkcija nema ovoliko argumenata na liniji 4
+ERROR 00:22:28,026 - Deklarisana funkcija nema ovoliko argumenata na liniji 15
+ERROR 00:22:28,026 - Deklarisana funkcija nema ovoliko argumenata na liniji 6
+ERROR 00:22:28,026 - Deklarisana funkcija nema ovoliko argumenata na liniji 5
+ERROR 00:22:28,026 - Deklarisana funkcija nema ovoliko argumenata na liniji 9
+ERROR 00:22:28,026 - Deklarisana funkcija nema ovoliko argumenata na liniji 5
+ERROR 00:22:28,026 - Deklarisana funkcija nema ovoliko argumenata na liniji 9
+ERROR 00:22:28,026 - Deklarisana funkcija nema ovoliko argumenata na liniji 5
+ERROR 00:22:28,026 - Deklarisana funkcija nema ovoliko argumenata na liniji 18
+ERROR 00:22:28,026 - Deklarisana funkcija nema ovoliko argumenata na liniji 14
+ERROR 00:22:28,026 - Deklarisana funkcija nema ovoliko argumenata na liniji 26
+ERROR 00:22:28,026 - Deklarisana funkcija nema ovoliko argumenata na liniji 21
+INFO  00:22:28,026 - Pronadjen poziv funkcije sum na liniji 55
+INFO  00:22:28,027 - Pronadjen poziv funkcije verify na liniji 56
+ERROR 00:22:28,027 - Deklarisana funkcija je bez argumenata na liniji 4
+ERROR 00:22:28,027 - Deklarisana funkcija je bez argumenata na liniji 20
+ERROR 00:22:28,027 - Deklarisana funkcija je bez argumenata na liniji 14
+ERROR 00:22:28,027 - Deklarisana funkcija je bez argumenata na liniji 24
+ERROR 00:22:28,027 - Deklarisana funkcija je bez argumenata na liniji 39
+INFO  00:22:28,027 - Pronadjen poziv funkcije ord na liniji 56
+ERROR 00:22:28,027 - Deklarisana funkcija je bez argumenata na liniji 35
+ERROR 00:22:28,027 - Deklarisana funkcija je bez argumenata na liniji 16
+INFO  00:22:28,027 - Pronadjen poziv funkcije ord na liniji 57
+ERROR 00:22:28,027 - Deklarisana funkcija je bez argumenata na liniji 12
+ERROR 00:22:28,027 - Deklarisana funkcija je bez argumenata na liniji 7
+ERROR 00:22:28,027 - Deklarisana funkcija je bez argumenata na liniji 4
+ERROR 00:22:28,027 - Deklarisana funkcija je bez argumenata na liniji 5
+ERROR 00:22:28,027 - Deklarisana funkcija je bez argumenata na liniji 8
+ERROR 00:22:28,027 - Deklarisana funkcija je bez argumenata na liniji 5
+ERROR 00:22:28,027 - Deklarisana funkcija je bez argumenata na liniji 8
+ERROR 00:22:28,027 - Deklarisana funkcija je bez argumenata na liniji 16
+ERROR 00:22:28,027 - Deklarisana funkcija je bez argumenata na liniji 18
+INFO  00:22:28,027 - Pronadjen poziv funkcije inkrement na liniji 68
+ERROR 00:22:28,027 - Deklarisana funkcija nema ovoliko argumenata na liniji 11
+INFO  00:22:28,027 - Gotovo izvrsavanje petlje na liniji 61
+INFO  00:22:28,027 - Nailazak na continue unutar petlje na liniji 61
+ERROR 00:22:28,027 - Deklarisana funkcija nema ovoliko argumenata na liniji 4
+ERROR 00:22:28,027 - Deklarisana funkcija nema ovoliko argumenata na liniji 7
+INFO  00:22:28,027 - Pronadjen poziv funkcije verify na liniji 71
+ERROR 00:22:28,028 - Deklarisana funkcija je bez argumenata na liniji 12
+ERROR 00:22:28,028 - Deklarisana funkcija je bez argumenata na liniji 71
+ERROR 00:22:28,028 - Deklarisana funkcija je bez argumenata na liniji 12
+ERROR 00:22:28,028 - Deklarisana funkcija je bez argumenata na liniji 10
+ERROR 00:22:28,028 - Deklarisana funkcija je bez argumenata na liniji 10
+ERROR 00:22:28,028 - Deklarisana funkcija je bez argumenata na liniji 10
+ERROR 00:22:28,028 - Deklarisana funkcija je bez argumenata na liniji 7
+ERROR 00:22:28,028 - Deklarisana funkcija je bez argumenata na liniji 20
+ERROR 00:22:28,028 - Deklarisana funkcija je bez argumenata na liniji 16
+ERROR 00:22:28,028 - Deklarisana funkcija je bez argumenata na liniji 28
+ERROR 00:22:28,028 - Deklarisana funkcija je bez argumenata na liniji 23
+INFO  00:22:28,028 - Pronadjen poziv funkcije sum na liniji 79
+ERROR 00:22:28,028 - Deklarisana funkcija nema ovoliko argumenata na liniji 32
+INFO  00:22:28,028 - Pronadjen poziv funkcije sum na liniji 79
+ERROR 00:22:28,028 - Argumenti deklarisane funkcije se moraju slagati po tipu na liniji 7
+ERROR 00:22:28,028 - Deklarisana funkcija nema ovoliko argumenata na liniji 17
+ERROR 00:22:28,028 - Deklarisana funkcija nema ovoliko argumenata na liniji 24
+INFO  00:22:28,028 - Pronadjen poziv funkcije inkrement na liniji 82
+ERROR 00:22:28,028 - Deklarisana funkcija nema ovoliko argumenata na liniji 4
+ERROR 00:22:28,028 - Deklarisana funkcija nema ovoliko argumenata na liniji 6
+ERROR 00:22:28,028 - Deklarisana funkcija nema ovoliko argumenata na liniji 15
+ERROR 00:22:28,028 - Deklarisana funkcija nema ovoliko argumenata na liniji 10
+ERROR 00:22:28,028 - Deklarisana funkcija nema ovoliko argumenata na liniji 9
+ERROR 00:22:28,028 - Deklarisana funkcija nema ovoliko argumenata na liniji 12
+ERROR 00:22:28,028 - Deklarisana funkcija nema ovoliko argumenata na liniji 11
+ERROR 00:22:28,028 - Deklarisana funkcija nema ovoliko argumenata na liniji 7
+ERROR 00:22:28,028 - Deklarisana funkcija nema ovoliko argumenata na liniji 11
+ERROR 00:22:28,028 - Deklarisana funkcija nema ovoliko argumenata na liniji 7
+ERROR 00:22:28,028 - Deklarisana funkcija nema ovoliko argumenata na liniji 11
+ERROR 00:22:28,029 - Deklarisana funkcija nema ovoliko argumenata na liniji 7
+ERROR 00:22:28,029 - Deklarisana funkcija nema ovoliko argumenata na liniji 7
+ERROR 00:22:28,029 - Deklarisana funkcija nema ovoliko argumenata na liniji 4
+ERROR 00:22:28,029 - Deklarisana funkcija nema ovoliko argumenata na liniji 7
+ERROR 00:22:28,029 - Deklarisana funkcija nema ovoliko argumenata na liniji 20
+ERROR 00:22:28,029 - Deklarisana funkcija nema ovoliko argumenata na liniji 29
+ERROR 00:22:28,029 - Deklarisana funkcija nema ovoliko argumenata na liniji 8
+ERROR 00:22:28,029 - Deklarisana funkcija nema ovoliko argumenata na liniji 9
+ERROR 00:22:28,029 - Deklarisana funkcija nema ovoliko argumenata na liniji 12
+ERROR 00:22:28,029 - Deklarisana funkcija nema ovoliko argumenata na liniji 7
+ERROR 00:22:28,029 - Deklarisana funkcija nema ovoliko argumenata na liniji 7
+INFO  00:22:28,029 -  Print count calls = 20
+INFO  00:22:28,029 -  Deklarisanih promenljivih ima = 1
+INFO  00:22:28,029 - ===================================

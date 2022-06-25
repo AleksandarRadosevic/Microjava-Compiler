@@ -1,28 +1,28 @@
 // generated with ast extension for cup
 // version 0.8
-// 24/5/2022 15:43:50
+// 25/5/2022 1:1:36
 
 
 package rs.ac.bg.etf.pp1.ast;
 
 public class DesignatorMethod extends DesignatorStatement {
 
-    private Designator Designator;
+    private DesignatorCalled DesignatorCalled;
     private ActParsOptional ActParsOptional;
 
-    public DesignatorMethod (Designator Designator, ActParsOptional ActParsOptional) {
-        this.Designator=Designator;
-        if(Designator!=null) Designator.setParent(this);
+    public DesignatorMethod (DesignatorCalled DesignatorCalled, ActParsOptional ActParsOptional) {
+        this.DesignatorCalled=DesignatorCalled;
+        if(DesignatorCalled!=null) DesignatorCalled.setParent(this);
         this.ActParsOptional=ActParsOptional;
         if(ActParsOptional!=null) ActParsOptional.setParent(this);
     }
 
-    public Designator getDesignator() {
-        return Designator;
+    public DesignatorCalled getDesignatorCalled() {
+        return DesignatorCalled;
     }
 
-    public void setDesignator(Designator Designator) {
-        this.Designator=Designator;
+    public void setDesignatorCalled(DesignatorCalled DesignatorCalled) {
+        this.DesignatorCalled=DesignatorCalled;
     }
 
     public ActParsOptional getActParsOptional() {
@@ -38,18 +38,18 @@ public class DesignatorMethod extends DesignatorStatement {
     }
 
     public void childrenAccept(Visitor visitor) {
-        if(Designator!=null) Designator.accept(visitor);
+        if(DesignatorCalled!=null) DesignatorCalled.accept(visitor);
         if(ActParsOptional!=null) ActParsOptional.accept(visitor);
     }
 
     public void traverseTopDown(Visitor visitor) {
         accept(visitor);
-        if(Designator!=null) Designator.traverseTopDown(visitor);
+        if(DesignatorCalled!=null) DesignatorCalled.traverseTopDown(visitor);
         if(ActParsOptional!=null) ActParsOptional.traverseTopDown(visitor);
     }
 
     public void traverseBottomUp(Visitor visitor) {
-        if(Designator!=null) Designator.traverseBottomUp(visitor);
+        if(DesignatorCalled!=null) DesignatorCalled.traverseBottomUp(visitor);
         if(ActParsOptional!=null) ActParsOptional.traverseBottomUp(visitor);
         accept(visitor);
     }
@@ -59,8 +59,8 @@ public class DesignatorMethod extends DesignatorStatement {
         buffer.append(tab);
         buffer.append("DesignatorMethod(\n");
 
-        if(Designator!=null)
-            buffer.append(Designator.toString("  "+tab));
+        if(DesignatorCalled!=null)
+            buffer.append(DesignatorCalled.toString("  "+tab));
         else
             buffer.append(tab+"  null");
         buffer.append("\n");

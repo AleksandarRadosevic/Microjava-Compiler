@@ -1,28 +1,28 @@
 // generated with ast extension for cup
 // version 0.8
-// 24/5/2022 15:43:50
+// 25/5/2022 1:1:36
 
 
 package rs.ac.bg.etf.pp1.ast;
 
 public class ActParsc extends ActPars {
 
-    private Expr Expr;
+    private ExprPar ExprPar;
     private ExprCommaList ExprCommaList;
 
-    public ActParsc (Expr Expr, ExprCommaList ExprCommaList) {
-        this.Expr=Expr;
-        if(Expr!=null) Expr.setParent(this);
+    public ActParsc (ExprPar ExprPar, ExprCommaList ExprCommaList) {
+        this.ExprPar=ExprPar;
+        if(ExprPar!=null) ExprPar.setParent(this);
         this.ExprCommaList=ExprCommaList;
         if(ExprCommaList!=null) ExprCommaList.setParent(this);
     }
 
-    public Expr getExpr() {
-        return Expr;
+    public ExprPar getExprPar() {
+        return ExprPar;
     }
 
-    public void setExpr(Expr Expr) {
-        this.Expr=Expr;
+    public void setExprPar(ExprPar ExprPar) {
+        this.ExprPar=ExprPar;
     }
 
     public ExprCommaList getExprCommaList() {
@@ -38,18 +38,18 @@ public class ActParsc extends ActPars {
     }
 
     public void childrenAccept(Visitor visitor) {
-        if(Expr!=null) Expr.accept(visitor);
+        if(ExprPar!=null) ExprPar.accept(visitor);
         if(ExprCommaList!=null) ExprCommaList.accept(visitor);
     }
 
     public void traverseTopDown(Visitor visitor) {
         accept(visitor);
-        if(Expr!=null) Expr.traverseTopDown(visitor);
+        if(ExprPar!=null) ExprPar.traverseTopDown(visitor);
         if(ExprCommaList!=null) ExprCommaList.traverseTopDown(visitor);
     }
 
     public void traverseBottomUp(Visitor visitor) {
-        if(Expr!=null) Expr.traverseBottomUp(visitor);
+        if(ExprPar!=null) ExprPar.traverseBottomUp(visitor);
         if(ExprCommaList!=null) ExprCommaList.traverseBottomUp(visitor);
         accept(visitor);
     }
@@ -59,8 +59,8 @@ public class ActParsc extends ActPars {
         buffer.append(tab);
         buffer.append("ActParsc(\n");
 
-        if(Expr!=null)
-            buffer.append(Expr.toString("  "+tab));
+        if(ExprPar!=null)
+            buffer.append(ExprPar.toString("  "+tab));
         else
             buffer.append(tab+"  null");
         buffer.append("\n");

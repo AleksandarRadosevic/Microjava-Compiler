@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 24/5/2022 15:43:50
+// 25/5/2022 1:1:36
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -15,7 +15,6 @@ public interface Visitor {
     public void visit(DeclListVar DeclListVar);
     public void visit(MethodDecl MethodDecl);
     public void visit(Mulop Mulop);
-    public void visit(IdentListelem IdentListelem);
     public void visit(ConstructorDecl ConstructorDecl);
     public void visit(DeclListMethod DeclListMethod);
     public void visit(ExprCommaList ExprCommaList);
@@ -24,25 +23,21 @@ public interface Visitor {
     public void visit(LabelColon LabelColon);
     public void visit(MulopFactorList MulopFactorList);
     public void visit(ParsList ParsList);
-    public void visit(DotOrExpr DotOrExpr);
     public void visit(Pars Pars);
     public void visit(OptionalExtends OptionalExtends);
     public void visit(StatementList StatementList);
     public void visit(Addop Addop);
     public void visit(OptionalBraces OptionalBraces);
-    public void visit(ExprBracesOptional ExprBracesOptional);
-    public void visit(ConditionIf ConditionIf);
     public void visit(RecordDecl RecordDecl);
+    public void visit(ConditionIf ConditionIf);
     public void visit(Factor Factor);
     public void visit(CondTerm CondTerm);
     public void visit(DeclList DeclList);
     public void visit(Designator Designator);
     public void visit(Term Term);
     public void visit(OptConstructorMethod OptConstructorMethod);
-    public void visit(RelopOprOptional RelopOprOptional);
     public void visit(Condition Condition);
     public void visit(FormParsOptional FormParsOptional);
-    public void visit(IdentList IdentList);
     public void visit(Statements Statements);
     public void visit(ConstDeclList ConstDeclList);
     public void visit(CondTermListOr CondTermListOr);
@@ -88,26 +83,20 @@ public interface Visitor {
     public void visit(Relopc Relopc);
     public void visit(Assignopc Assignopc);
     public void visit(Labelc Labelc);
-    public void visit(DotOrExprDerived1 DotOrExprDerived1);
-    public void visit(DotOrExprc DotOrExprc);
-    public void visit(IdentListelemDerived1 IdentListelemDerived1);
-    public void visit(IdentListelemc IdentListelemc);
-    public void visit(NoIdentList NoIdentList);
-    public void visit(IdentListc IdentListc);
     public void visit(DesignatorName DesignatorName);
     public void visit(ArrayElemClass ArrayElemClass);
     public void visit(DesignatorDerived1 DesignatorDerived1);
     public void visit(ArrayElem ArrayElem);
     public void visit(Designatorc Designatorc);
-    public void visit(NoExprBracesOptional NoExprBracesOptional);
-    public void visit(ExprBracesOptionalc ExprBracesOptionalc);
+    public void visit(DesignatorCalled DesignatorCalled);
     public void visit(FuncCall FuncCall);
-    public void visit(BaseExpDerived5 BaseExpDerived5);
-    public void visit(BaseExpDerived4 BaseExpDerived4);
-    public void visit(BaseExpDerived3 BaseExpDerived3);
-    public void visit(BaseExpDerived2 BaseExpDerived2);
-    public void visit(BaseExpDerived1 BaseExpDerived1);
-    public void visit(BaseExpc BaseExpc);
+    public void visit(BaseDesignator BaseDesignator);
+    public void visit(BaseExpr BaseExpr);
+    public void visit(BaseNewArrayElem BaseNewArrayElem);
+    public void visit(BaseNewRecord BaseNewRecord);
+    public void visit(BaseBool BaseBool);
+    public void visit(BaseChar BaseChar);
+    public void visit(BaseNumber BaseNumber);
     public void visit(NoListBaseExpc NoListBaseExpc);
     public void visit(ListBaseExpc ListBaseExpc);
     public void visit(Expopc Expopc);
@@ -120,8 +109,7 @@ public interface Visitor {
     public void visit(NoOptionalMinus NoOptionalMinus);
     public void visit(OptionalMinus OptionalMinus);
     public void visit(Exprc Exprc);
-    public void visit(NoRelopOprOptional NoRelopOprOptional);
-    public void visit(RelopOprOptionalc RelopOprOptionalc);
+    public void visit(ExprRelop ExprRelop);
     public void visit(CondFactc CondFactc);
     public void visit(NoCondFactListAnd NoCondFactListAnd);
     public void visit(CondFactListAndc CondFactListAndc);
@@ -133,6 +121,7 @@ public interface Visitor {
     public void visit(ConditionIfc ConditionIfc);
     public void visit(NoExprCommaList NoExprCommaList);
     public void visit(ExprCommaListc ExprCommaListc);
+    public void visit(ExprPar ExprPar);
     public void visit(ActParsc ActParsc);
     public void visit(NoActPars NoActPars);
     public void visit(ActParsOptionalc ActParsOptionalc);
@@ -185,6 +174,7 @@ public interface Visitor {
     public void visit(MethodTypeNamec MethodTypeNamec);
     public void visit(MethodDeclc MethodDeclc);
     public void visit(ConstructorDeclc ConstructorDeclc);
+    public void visit(RecordName RecordName);
     public void visit(RecordDeclc RecordDeclc);
     public void visit(NoDeclListMethod NoDeclListMethod);
     public void visit(DeclListMethodc DeclListMethodc);

@@ -63,19 +63,20 @@ terminal COMMA, CLASS, EXTENDS, RECORD, LPAREN, RPAREN, VOID, PRINT, GOTO, AND, 
 terminal IF, SEMICOLON, DO, WHILE, BREAK, CONTINUE, RETURN, READ, LBRACE, RBRACE, INCREMENT, DECREMENT,LOWER, LOWEREQUAL, OR, ELSE;
 terminal DEGREE, THREEDOTS;
 
-nonterminal DeclarationList, ConstDecl, VarDecl, ClassDecl, RecordDecl, ConstVal, ConstDeclList;
+nonterminal DeclarationList, ConstDecl, VarDecl, ClassDecl, ConstVal, ConstDeclList;
 nonterminal OptionalBraces, VarDeclList, OptionalExtends, DeclListVar, DeclList;
 nonterminal OptConstructorMethod, ConstructorDecl, OptionalConstructorDecl, DeclListMethod, StatementList;
 nonterminal FormParsOptional, Statement, FormPars, Pars, ParsList, SingleStatement, Label, LabelColon;
 nonterminal Condition, OptionalElse, DesignatorStatement, DesignatorStatementElements, ExprCommaList;
 nonterminal OptionalNumConst, Statements, OptionalExpression, ActParsOptional, ActPars, CondTerm;
-nonterminal CondTermListOr, CondFactListAnd, CondFact, RelopOprOptional, Relop, OptionalMinus, AddopTermList;
-nonterminal Addop, MulopFactorList, Mulop, ExprBracesOptional, IdentList, DotOrExpr, Assignop;
-nonterminal ConditionIf, IdentListelem, VarDeclGlobal, VarDeclListGlobal, Expop, ListBaseExp, VarArgs;
-
+nonterminal CondTermListOr, CondFactListAnd, CondFact, Relop, OptionalMinus;
+nonterminal Addop, Mulop, Assignop;
+nonterminal ConditionIf, VarDeclGlobal, VarDeclListGlobal, Expop, ListBaseExp, VarArgs;
+nonterminal DesignatorCalled;
 
 nonterminal rs.etf.pp1.symboltable.concepts.Obj ProgName, Program, MethodTypeName, MethodDecl, Designator, DesignatorName;
-nonterminal rs.etf.pp1.symboltable.concepts.Struct Type, TypeOrVoid, Term, Factor, Expr, BaseExp;
+nonterminal rs.etf.pp1.symboltable.concepts.Obj RecordDecl, RecordName;
+nonterminal rs.etf.pp1.symboltable.concepts.Struct Type, TypeOrVoid, Term, Factor, Expr, ExprPar, BaseExp, AddopTermList, MulopFactorList;
 
 precedence left ELSE;
 
@@ -142,12 +143,14 @@ DeclListMethod ::= (DeclListMethodc) DeclListMethod MethodDecl
 				| (NoDeclListMethod) /* epsilon */;	
 
 
-RecordDecl ::= (RecordDeclc) RECORD IDENT LBRACECURLY DeclListVar RBRACECURLY;
+RecordDecl ::= (RecordDeclc) RECORD RecordName LBRACECURLY DeclListVar RBRACECURLY;
+
+RecordName ::= (RecordName) IDENT:name;
 
 ConstructorDecl ::= (ConstructorDeclc) IDENT LPAREN RPAREN DeclListVar LBRACECURLY StatementList RBRACECURLY;
 
 
-MethodDecl ::= (MethodDeclc) MethodTypeName LPAREN FormParsOptional:pars  DeclListVar LBRACECURLY StatementList RBRACECURLY;
+MethodDecl ::= (MethodDeclc) MethodTypeName LPAREN FormParsOptional:pars DeclListVar LBRACECURLY StatementList RBRACECURLY;
 
 MethodTypeName ::= (MethodTypeNamec) Type:varType IDENT:methodName
 				| (VoidFunc) VOID IDENT:methodName;
@@ -210,7 +213,7 @@ StatementList ::= (StatementListc) StatementList Statement
 				| (NoStatementList) /* epsilon */;				
 				
 DesignatorStatement ::= (DesignatorAssign) Designator Assignop Expr
-					| (DesignatorMethod) Designator LPAREN ActParsOptional RPAREN
+					| (DesignatorMethod) DesignatorCalled LPAREN ActParsOptional RPAREN
 					| (DesignatorIncrement) Designator INCREMENT
 					| (DesignatorDecrement) Designator DECREMENT;				
 				
@@ -224,9 +227,11 @@ ActParsOptional ::= (ActParsOptionalc) ActPars
 				| (NoActPars) /* epsilon */;
 
 
-ActPars ::= (ActParsc) Expr ExprCommaList;
+ActPars ::= (ActParsc) ExprPar ExprCommaList;
 
-ExprCommaList ::= (ExprCommaListc) ExprCommaList COMMA Expr 
+ExprPar ::= (ExprPar) Expr;
+
+ExprCommaList ::= (ExprCommaListc) ExprCommaList COMMA ExprPar 
 				| (NoExprCommaList) /* epsilon */;
 
 ConditionIf ::= (ConditionIfc) CondTerm CondTermListOr RPAREN
@@ -241,12 +246,9 @@ CondTerm ::= (CondTermc) CondFact CondFactListAnd;
 CondFactListAnd ::= (CondFactListAndc) CondFactListAnd AND CondFact
 				| (NoCondFactListAnd) /* epsilon */;
 				
-CondFact ::= (CondFactc) Expr RelopOprOptional;				 
-				
-RelopOprOptional ::= (RelopOprOptionalc) Relop Expr
-				| (NoRelopOprOptional) /* epsilon */;				
-				
-				
+CondFact ::= (CondFactc) Expr 
+			| (ExprRelop) Expr:firstExpr Relop Expr:secondExpr;				 
+									
 Expr ::= (Exprc) OptionalMinus Term AddopTermList;
 
 OptionalMinus ::= (OptionalMinus) MINUS 
@@ -270,18 +272,17 @@ ListBaseExp ::= (ListBaseExpc) ListBaseExp Expop BaseExp
 			| (NoListBaseExpc) /* epsilon */;
 
 
-BaseExp ::= (BaseExpc) NUMBER
-		| CHARCONST
-		| BOOLCONST
-		| NEW Type ExprBracesOptional
-		| LPAREN Expr RPAREN
-		| Designator
-		| (FuncCall) Designator:func LPAREN ActParsOptional RPAREN;
+BaseExp ::= (BaseNumber) NUMBER
+		| (BaseChar) CHARCONST
+		| (BaseBool) BOOLCONST
+		| (BaseNewRecord) NEW Type:name
+		| (BaseNewArrayElem) NEW Type:name LBRACE Expr RBRACE
+		| (BaseExpr) LPAREN Expr RPAREN
+		| (BaseDesignator) Designator
+		| (FuncCall) DesignatorCalled LPAREN ActParsOptional RPAREN;
 				
-ExprBracesOptional ::= (ExprBracesOptionalc) LBRACE Expr RBRACE
-					| (NoExprBracesOptional) /* epsilon */;
-					
-					
+DesignatorCalled ::= (DesignatorCalled) Designator;
+							
 Designator ::= (Designatorc) DesignatorName 
 			| (ArrayElem) DesignatorName LBRACE Expr RBRACE
 			| DesignatorName DOT IDENT
@@ -290,15 +291,6 @@ Designator ::= (Designatorc) DesignatorName
 DesignatorName ::= (DesignatorName) IDENT:name;
 
 
-IdentList ::= (IdentListc) IdentList IdentListelem
-			| (NoIdentList) /* epsilon */;
-
-IdentListelem ::= (IdentListelemc) DOT IDENT
-				| LBRACE Expr RBRACE;
-	
-DotOrExpr ::= (DotOrExprc) DOT IDENT 
-			| LBRACE Expr RBRACE;
-			
 Label ::= (Labelc) IDENT;
 
 Assignop ::= (Assignopc) ASSIGN;
