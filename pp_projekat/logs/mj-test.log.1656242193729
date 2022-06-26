@@ -1,0 +1,65 @@
+INFO  13:16:20,077 - Compiling source file: C:\Users\Aleksandar\Desktop\PP\projekat\PP_Projekat\pp_projekat\test\program.mj
+INFO  13:16:20,122 - #6 program
+INFO  13:16:20,122 - #4 MJProgram
+INFO  13:16:20,122 - #4 int
+INFO  13:16:20,123 - #4 x
+INFO  13:16:20,123 - #37 ;
+INFO  13:16:20,124 - #4 int
+INFO  13:16:20,124 - #4 y
+INFO  13:16:20,124 - #37 ;
+INFO  13:16:20,124 - #7 {
+INFO  13:16:20,124 - #24 void
+INFO  13:16:20,125 - #4 main
+INFO  13:16:20,125 - #22 (
+INFO  13:16:20,125 - #23 )
+INFO  13:16:20,125 - #4 int
+INFO  13:16:20,126 - #4 z
+INFO  13:16:20,126 - #37 ;
+INFO  13:16:20,126 - #7 {
+INFO  13:16:20,126 - #4 z
+INFO  13:16:20,127 - #10 =
+INFO  13:16:20,127 - #2 1
+INFO  13:16:20,128 - #37 ;
+INFO  13:16:20,130 - #4 x
+INFO  13:16:20,134 - #10 =
+INFO  13:16:20,134 - #2 10
+INFO  13:16:20,134 - #37 ;
+INFO  13:16:20,134 - #4 y
+INFO  13:16:20,134 - #10 =
+INFO  13:16:20,134 - #2 523
+INFO  13:16:20,134 - #37 ;
+INFO  13:16:20,134 - #4 x
+INFO  13:16:20,134 - #10 =
+INFO  13:16:20,134 - #2 15
+INFO  13:16:20,134 - #37 ;
+INFO  13:16:20,134 - #4 z
+INFO  13:16:20,134 - #46 ++
+INFO  13:16:20,135 - #37 ;
+INFO  13:16:20,135 - #4 y
+INFO  13:16:20,135 - #47 --
+INFO  13:16:20,135 - #37 ;
+INFO  13:16:20,135 - #25 print
+INFO  13:16:20,135 - #22 (
+INFO  13:16:20,135 - #4 z
+INFO  13:16:20,135 - #18 ,
+INFO  13:16:20,135 - #2 1
+INFO  13:16:20,135 - #18 ,
+ERROR 13:16:20,135 - 
+Sintaksna greska na liniji 12
+INFO  13:16:20,135 - #2 2
+INFO  13:16:20,135 - #23 )
+INFO  13:16:20,136 - #37 ;
+INFO  13:16:20,136 - #25 print
+INFO  13:16:20,136 - #22 (
+INFO  13:16:20,136 - #4 y
+ERROR 13:16:20,136 - Izvrsen oporavak do ; u liniji 12
+INFO  13:16:20,136 - #23 )
+INFO  13:16:20,137 - #37 ;
+INFO  13:16:20,137 - #8 }
+INFO  13:16:20,137 - #8 }
+INFO  13:16:20,140 - ===================================
+INFO  13:16:20,142 - Obradjuje se funkcija main na liniji 5
+INFO  13:16:20,143 -  Print count calls = 1
+INFO  13:16:20,143 -  Deklarisanih promenljivih ima = 1
+INFO  13:16:20,143 - ===================================
+INFO  13:16:20,146 - Parsiranje uspesno zavrseno!

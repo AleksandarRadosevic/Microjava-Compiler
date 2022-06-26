@@ -1,0 +1,63 @@
+INFO  00:02:18,585 - Compiling source file: C:\Users\Aleksandar\Desktop\PP\projekat\PP_Projekat\pp_projekat\test\program.mj
+INFO  00:02:18,646 - #6 program
+INFO  00:02:18,646 - #4 MJProgram
+INFO  00:02:18,647 - #4 int
+INFO  00:02:18,647 - #4 x
+INFO  00:02:18,647 - #37 ;
+INFO  00:02:18,649 - #4 int
+INFO  00:02:18,649 - #4 y
+INFO  00:02:18,649 - #37 ;
+INFO  00:02:18,649 - #7 {
+INFO  00:02:18,649 - #24 void
+INFO  00:02:18,650 - #4 main
+INFO  00:02:18,650 - #22 (
+INFO  00:02:18,650 - #23 )
+INFO  00:02:18,650 - #4 int
+INFO  00:02:18,651 - #4 niz
+INFO  00:02:18,651 - #44 [
+INFO  00:02:18,651 - #45 ]
+INFO  00:02:18,651 - #37 ;
+INFO  00:02:18,652 - #7 {
+INFO  00:02:18,652 - #4 niz
+INFO  00:02:18,653 - #10 =
+INFO  00:02:18,657 - #28 new
+INFO  00:02:18,659 - #4 int
+INFO  00:02:18,659 - #44 [
+INFO  00:02:18,659 - #2 3
+INFO  00:02:18,659 - #45 ]
+INFO  00:02:18,661 - #37 ;
+INFO  00:02:18,661 - #4 x
+INFO  00:02:18,661 - #10 =
+INFO  00:02:18,661 - #2 1
+INFO  00:02:18,661 - #37 ;
+INFO  00:02:18,661 - #4 niz
+INFO  00:02:18,662 - #44 [
+INFO  00:02:18,662 - #4 x
+INFO  00:02:18,662 - #45 ]
+INFO  00:02:18,662 - #10 =
+INFO  00:02:18,662 - #2 16
+INFO  00:02:18,662 - #37 ;
+INFO  00:02:18,662 - #4 y
+INFO  00:02:18,662 - #10 =
+INFO  00:02:18,662 - #4 niz
+INFO  00:02:18,662 - #44 [
+INFO  00:02:18,662 - #4 x
+INFO  00:02:18,662 - #45 ]
+INFO  00:02:18,662 - #37 ;
+INFO  00:02:18,662 - #25 print
+INFO  00:02:18,663 - #22 (
+INFO  00:02:18,663 - #4 y
+INFO  00:02:18,663 - #23 )
+INFO  00:02:18,663 - #37 ;
+INFO  00:02:18,663 - #8 }
+INFO  00:02:18,663 - #8 }
+INFO  00:02:18,668 - ===================================
+INFO  00:02:18,683 - Obradjuje se funkcija main na liniji 5
+INFO  00:02:25,125 - Obradjuje se funkcija main na liniji 5
+ERROR 00:02:48,087 - Tipovi su nekompatibilni na liniji 7
+ERROR 00:02:48,087 - Greska u okviru pristupa elementu niza na liniji 8
+ERROR 00:02:48,088 - Greska u okviru pristupa elementu niza na liniji 9
+INFO  00:02:48,088 -  Print count calls = 1
+INFO  00:02:48,088 -  Deklarisanih promenljivih ima = 2
+INFO  00:02:48,088 - ===================================
+ERROR 00:02:48,090 - Parsiranje NIJE uspesno zavrseno!

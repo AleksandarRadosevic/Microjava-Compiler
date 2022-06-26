@@ -1,0 +1,38 @@
+INFO  12:23:48,341 - Compiling source file: C:\Users\Aleksandar\Desktop\PP\projekat\PP_Projekat\pp_projekat\test\program.mj
+INFO  12:23:48,413 - #6 program
+INFO  12:23:48,413 - #4 MJProgram
+INFO  12:23:48,413 - #4 int
+INFO  12:23:48,414 - #4 x
+INFO  12:23:48,414 - #37 ;
+INFO  12:23:48,415 - #4 int
+INFO  12:23:48,415 - #4 y
+INFO  12:23:48,416 - #37 ;
+INFO  12:23:48,416 - #7 {
+INFO  12:23:48,416 - #24 void
+INFO  12:23:48,416 - #4 main
+INFO  12:23:48,416 - #22 (
+INFO  12:23:48,416 - #23 )
+INFO  12:23:48,416 - #7 {
+INFO  12:23:48,417 - #4 int
+INFO  12:23:48,417 - #4 j
+ERROR 12:23:48,418 - 
+Sintaksna greska na liniji 6
+INFO  12:23:48,418 - #37 ;
+INFO  12:23:48,418 - #25 print
+INFO  12:23:48,418 - #22 (
+INFO  12:23:48,418 - #2 1
+ERROR 12:23:48,419 - Izvrsen oporavak do ; u liniji 6
+INFO  12:23:48,420 - #23 )
+INFO  12:23:48,421 - #37 ;
+INFO  12:23:48,422 - #25 print
+INFO  12:23:48,422 - #22 (
+INFO  12:23:48,422 - #2 2
+INFO  12:23:48,422 - #23 )
+INFO  12:23:48,422 - #37 ;
+INFO  12:23:48,422 - #8 }
+INFO  12:23:48,422 - #8 }
+INFO  12:23:48,426 - ===================================
+INFO  12:23:48,441 - Obradjuje se funkcija main na liniji 5
+INFO  12:23:48,441 -  Print count calls = 2
+INFO  12:23:48,442 -  Deklarisanih promenljivih ima = 0
+INFO  12:23:48,442 - ===================================

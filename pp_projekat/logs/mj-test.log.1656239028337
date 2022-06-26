@@ -1,0 +1,39 @@
+INFO  12:23:34,826 - Compiling source file: C:\Users\Aleksandar\Desktop\PP\projekat\PP_Projekat\pp_projekat\test\program.mj
+INFO  12:23:34,886 - #6 program
+INFO  12:23:34,886 - #4 MJProgram
+INFO  12:23:34,886 - #4 int
+INFO  12:23:34,887 - #4 x
+INFO  12:23:34,887 - #37 ;
+INFO  12:23:34,888 - #4 int
+INFO  12:23:34,889 - #4 y
+INFO  12:23:34,889 - #37 ;
+INFO  12:23:34,889 - #7 {
+INFO  12:23:34,889 - #24 void
+INFO  12:23:34,889 - #4 main
+INFO  12:23:34,889 - #22 (
+INFO  12:23:34,889 - #23 )
+INFO  12:23:34,890 - #7 {
+INFO  12:23:34,890 - #4 int
+INFO  12:23:34,891 - #4 j
+ERROR 12:23:34,891 - 
+Sintaksna greska na liniji 6
+INFO  12:23:34,891 - #37 ;
+INFO  12:23:34,891 - #25 print
+INFO  12:23:34,891 - #22 (
+INFO  12:23:34,891 - #2 1
+ERROR 12:23:34,892 - Izvrsen oporavak do ; u liniji 6
+INFO  12:23:34,893 - #23 )
+INFO  12:23:34,895 - #37 ;
+INFO  12:23:34,895 - #25 print
+INFO  12:23:34,895 - #22 (
+INFO  12:23:34,895 - #2 2
+INFO  12:23:34,895 - #23 )
+INFO  12:23:34,895 - #37 ;
+INFO  12:23:34,895 - #8 }
+INFO  12:23:34,896 - #8 }
+INFO  12:23:34,899 - ===================================
+INFO  12:23:34,915 - Obradjuje se funkcija main na liniji 5
+INFO  12:23:34,917 -  Print count calls = 2
+INFO  12:23:34,917 -  Deklarisanih promenljivih ima = 0
+INFO  12:23:34,917 - ===================================
+INFO  12:23:45,446 - Parsiranje uspesno zavrseno!

@@ -76,7 +76,7 @@ nonterminal DesignatorCalled;
 
 nonterminal rs.etf.pp1.symboltable.concepts.Obj ProgName, Program, MethodTypeName, MethodDecl, Designator, DesignatorName;
 nonterminal rs.etf.pp1.symboltable.concepts.Obj RecordDecl, RecordName;
-nonterminal rs.etf.pp1.symboltable.concepts.Struct Type, TypeOrVoid, Term, Factor, Expr, ExprPar, BaseExp, AddopTermList, MulopFactorList;
+nonterminal rs.etf.pp1.symboltable.concepts.Struct Type, TypeOrVoid, Term, Factor, Expr, ExprPar, BaseExp, AddopTermList, MulopFactorList, TermMinus;
 
 precedence left ELSE;
 
@@ -249,9 +249,12 @@ CondFactListAnd ::= (CondFactListAndc) CondFactListAnd AND CondFact
 CondFact ::= (CondFactc) Expr 
 			| (ExprRelop) Expr:firstExpr Relop Expr:secondExpr;				 
 									
-Expr ::= (Exprc) OptionalMinus Term AddopTermList;
+Expr ::= (Exprc) TermMinus AddopTermList;
 
-OptionalMinus ::= (OptionalMinus) MINUS 
+TermMinus ::= (TermMinusc) OptionalMinus Term;
+
+
+OptionalMinus ::= (OptionalMinusc) MINUS 
 			 | (NoOptionalMinus) /* epsilon */;
 
 AddopTermList ::= (AddopTermListc) AddopTermList Addop Term
@@ -276,7 +279,7 @@ BaseExp ::= (BaseNumber) NUMBER
 		| (BaseChar) CHARCONST
 		| (BaseBool) BOOLCONST
 		| (BaseNewRecord) NEW Type:name
-		| (BaseNewArrayElem) NEW Type:name LBRACE Expr RBRACE
+		| (BaseNewArrayElem) NEW Type LBRACE Expr RBRACE
 		| (BaseExpr) LPAREN Expr RPAREN
 		| (BaseDesignator) Designator
 		| (FuncCall) DesignatorCalled LPAREN ActParsOptional RPAREN;
@@ -302,9 +305,9 @@ Relop ::= (Relopc) EQUAL
 		| LOWER
 		| LOWEREQUAL;
 		
-Addop ::= (AddOpc) PLUS | MINUS;
+Addop ::= (OperationPlus) PLUS | (OperationMinus) MINUS;
 
-Mulop ::= (Mulopc) MUL | DIV | MOD;
+Mulop ::= (OperationMul) MUL | (OperationDiv) DIV | (OperationMod) MOD;
 
 
 VarArgs ::= (VarArgsc) Type THREEDOTS IDENT;

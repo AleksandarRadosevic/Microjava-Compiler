@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 25/5/2022 20:2:27
+// 26/5/2022 23:54:23
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -19,6 +19,7 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(DeclListMethod DeclListMethod) { }
     public void visit(ExprCommaList ExprCommaList) { }
     public void visit(Relop Relop) { }
+    public void visit(TermMinus TermMinus) { }
     public void visit(Assignop Assignop) { }
     public void visit(LabelColon LabelColon) { }
     public void visit(MulopFactorList MulopFactorList) { }
@@ -65,16 +66,17 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(VarDeclListGlobal VarDeclListGlobal) { }
     public void visit(ListBaseExp ListBaseExp) { }
     public void visit(SingleStatement SingleStatement) { }
+    public void visit(OptionalMinus OptionalMinus) { }
     public void visit(CondFactListAnd CondFactListAnd) { }
     public void visit(FormPars FormPars) { }
     public void visit(OptionalElse OptionalElse) { }
     public void visit(AddopTermList AddopTermList) { }
     public void visit(VarArgsc VarArgsc) { visit(); }
-    public void visit(MulopDerived2 MulopDerived2) { visit(); }
-    public void visit(MulopDerived1 MulopDerived1) { visit(); }
-    public void visit(Mulopc Mulopc) { visit(); }
-    public void visit(AddopDerived1 AddopDerived1) { visit(); }
-    public void visit(AddOpc AddOpc) { visit(); }
+    public void visit(OperationMod OperationMod) { visit(); }
+    public void visit(OperationDiv OperationDiv) { visit(); }
+    public void visit(OperationMul OperationMul) { visit(); }
+    public void visit(OperationMinus OperationMinus) { visit(); }
+    public void visit(OperationPlus OperationPlus) { visit(); }
     public void visit(RelopDerived5 RelopDerived5) { visit(); }
     public void visit(RelopDerived4 RelopDerived4) { visit(); }
     public void visit(RelopDerived3 RelopDerived3) { visit(); }
@@ -107,7 +109,8 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(NoAddopTermList NoAddopTermList) { visit(); }
     public void visit(AddopTermListc AddopTermListc) { visit(); }
     public void visit(NoOptionalMinus NoOptionalMinus) { visit(); }
-    public void visit(OptionalMinus OptionalMinus) { visit(); }
+    public void visit(OptionalMinusc OptionalMinusc) { visit(); }
+    public void visit(TermMinusc TermMinusc) { visit(); }
     public void visit(Exprc Exprc) { visit(); }
     public void visit(ExprRelop ExprRelop) { visit(); }
     public void visit(CondFactc CondFactc) { visit(); }

@@ -1,0 +1,64 @@
+INFO  15:42:34,120 - Compiling source file: C:\Users\Aleksandar\Desktop\PP\projekat\PP_Projekat\pp_projekat\test\program.mj
+INFO  15:42:34,165 - #6 program
+INFO  15:42:34,165 - #4 MJProgram
+INFO  15:42:34,165 - #4 int
+INFO  15:42:34,166 - #4 x
+INFO  15:42:34,166 - #37 ;
+INFO  15:42:34,168 - #4 int
+INFO  15:42:34,168 - #4 y
+INFO  15:42:34,168 - #37 ;
+INFO  15:42:34,168 - #7 {
+INFO  15:42:34,168 - #24 void
+INFO  15:42:34,169 - #4 main
+INFO  15:42:34,169 - #22 (
+INFO  15:42:34,169 - #23 )
+INFO  15:42:34,169 - #4 bool
+INFO  15:42:34,170 - #4 z
+INFO  15:42:34,170 - #37 ;
+INFO  15:42:34,170 - #7 {
+INFO  15:42:34,170 - #4 x
+INFO  15:42:34,171 - #10 =
+INFO  15:42:34,171 - #2 1
+INFO  15:42:34,173 - #37 ;
+INFO  15:42:34,174 - #4 z
+INFO  15:42:34,178 - #10 =
+INFO  15:42:34,178 - #3 true
+INFO  15:42:34,178 - #37 ;
+INFO  15:42:34,178 - #25 print
+INFO  15:42:34,178 - #22 (
+INFO  15:42:34,178 - #5 a
+INFO  15:42:34,178 - #23 )
+INFO  15:42:34,179 - #37 ;
+INFO  15:42:34,179 - #25 print
+INFO  15:42:34,179 - #22 (
+INFO  15:42:34,179 - #5 b
+INFO  15:42:34,179 - #23 )
+INFO  15:42:34,179 - #37 ;
+INFO  15:42:34,179 - #25 print
+INFO  15:42:34,179 - #22 (
+INFO  15:42:34,179 - #4 x
+INFO  15:42:34,179 - #23 )
+INFO  15:42:34,179 - #37 ;
+INFO  15:42:34,179 - #25 print
+INFO  15:42:34,180 - #22 (
+INFO  15:42:34,180 - #2 3
+INFO  15:42:34,180 - #23 )
+INFO  15:42:34,180 - #37 ;
+INFO  15:42:34,180 - #25 print
+INFO  15:42:34,180 - #22 (
+INFO  15:42:34,180 - #4 eol
+INFO  15:42:34,180 - #23 )
+INFO  15:42:34,180 - #37 ;
+INFO  15:42:34,180 - #25 print
+INFO  15:42:34,180 - #22 (
+INFO  15:42:34,180 - #4 z
+INFO  15:42:34,180 - #23 )
+INFO  15:42:34,180 - #37 ;
+INFO  15:42:34,180 - #8 }
+INFO  15:42:34,180 - #8 }
+INFO  15:42:34,184 - ===================================
+INFO  15:42:34,186 - Obradjuje se funkcija main na liniji 5
+INFO  15:42:34,187 -  Print count calls = 6
+INFO  15:42:34,187 -  Deklarisanih promenljivih ima = 1
+INFO  15:42:34,187 - ===================================
+INFO  15:42:34,191 - Parsiranje uspesno zavrseno!

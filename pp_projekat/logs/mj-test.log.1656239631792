@@ -1,0 +1,34 @@
+INFO  12:33:36,005 - Compiling source file: C:\Users\Aleksandar\Desktop\PP\projekat\PP_Projekat\pp_projekat\test\program.mj
+INFO  12:33:36,063 - #6 program
+INFO  12:33:36,063 - #4 MJProgram
+INFO  12:33:36,063 - #4 int
+INFO  12:33:36,063 - #4 x
+INFO  12:33:36,063 - #37 ;
+INFO  12:33:36,064 - #4 int
+INFO  12:33:36,065 - #4 y
+INFO  12:33:36,065 - #37 ;
+INFO  12:33:36,065 - #7 {
+INFO  12:33:36,065 - #24 void
+INFO  12:33:36,065 - #4 main
+INFO  12:33:36,066 - #22 (
+INFO  12:33:36,066 - #23 )
+INFO  12:33:36,066 - #7 {
+INFO  12:33:36,066 - #4 x
+INFO  12:33:36,067 - #10 =
+INFO  12:33:36,067 - #2 1
+INFO  12:33:36,069 - #37 ;
+INFO  12:33:36,070 - #25 print
+INFO  12:33:36,071 - #22 (
+INFO  12:33:36,071 - #4 x
+INFO  12:33:36,075 - #23 )
+INFO  12:33:36,075 - #37 ;
+INFO  12:33:36,075 - #25 print
+INFO  12:33:36,075 - #22 (
+INFO  12:33:36,075 - #2 2
+INFO  12:33:36,075 - #23 )
+INFO  12:33:36,075 - #37 ;
+INFO  12:33:36,076 - #8 }
+INFO  12:33:36,076 - #8 }
+INFO  12:33:36,080 - ===================================
+INFO  12:33:36,093 - Obradjuje se funkcija main na liniji 5
+ERROR 12:33:41,073 - Tipovi su nekompatibilni na liniji 6

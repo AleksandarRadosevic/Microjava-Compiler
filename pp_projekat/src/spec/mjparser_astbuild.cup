@@ -116,7 +116,7 @@ nonterminal DesignatorCalled DesignatorCalled;
 
 nonterminal rs.etf.pp1.symboltable.concepts.Obj ProgName, Program, MethodTypeName, MethodDecl, Designator, DesignatorName;
 nonterminal rs.etf.pp1.symboltable.concepts.Obj RecordDecl, RecordName;
-nonterminal rs.etf.pp1.symboltable.concepts.Struct Type, TypeOrVoid, Term, Factor, Expr, ExprPar, BaseExp, AddopTermList, MulopFactorList;
+nonterminal rs.etf.pp1.symboltable.concepts.Struct Type, TypeOrVoid, Term, Factor, Expr, ExprPar, BaseExp, AddopTermList, MulopFactorList, TermMinus;
 
 precedence left ELSE;
 
@@ -289,9 +289,12 @@ CondFactListAnd ::= (CondFactListAndc) CondFactListAnd:C1 AND CondFact:C2 {: RES
 CondFact ::= (CondFactc) Expr:E1 {: RESULT=new CondFactc(E1); RESULT.setLine(E1left); :} 
 			| (ExprRelop) Expr:firstExpr Relop:R1 Expr:secondExpr {: RESULT=new ExprRelop(firstExpr, R1, secondExpr); RESULT.setLine(firstExprleft); :};				 
 									
-Expr ::= (Exprc) OptionalMinus:O1 Term:T2 AddopTermList:A3 {: RESULT=new Exprc(O1, T2, A3); RESULT.setLine(O1left); :};
+Expr ::= (Exprc) TermMinus:T1 AddopTermList:A2 {: RESULT=new Exprc(T1, A2); RESULT.setLine(T1left); :};
 
-OptionalMinus ::= (OptionalMinus) MINUS {: RESULT=new OptionalMinus(); :} 
+TermMinus ::= (TermMinusc) OptionalMinus:O1 Term:T2 {: RESULT=new TermMinusc(O1, T2); RESULT.setLine(O1left); :};
+
+
+OptionalMinus ::= (OptionalMinusc) MINUS {: RESULT=new OptionalMinusc(); :} 
 			 | (NoOptionalMinus) {: RESULT=new NoOptionalMinus(); :} /* epsilon */;
 
 AddopTermList ::= (AddopTermListc) AddopTermList:A1 Addop:A2 Term:T3 {: RESULT=new AddopTermListc(A1, A2, T3); RESULT.setLine(A1left); :}
@@ -316,7 +319,7 @@ BaseExp ::= (BaseNumber) NUMBER:N1 {: RESULT=new BaseNumber(N1); RESULT.setLine(
 		| (BaseChar) CHARCONST:C1 {: RESULT=new BaseChar(C1); RESULT.setLine(C1left); :}
 		| (BaseBool) BOOLCONST:B1 {: RESULT=new BaseBool(B1); RESULT.setLine(B1left); :}
 		| (BaseNewRecord) NEW Type:name {: RESULT=new BaseNewRecord(name); RESULT.setLine(nameleft); :}
-		| (BaseNewArrayElem) NEW Type:name LBRACE Expr:E1 RBRACE {: RESULT=new BaseNewArrayElem(name, E1); RESULT.setLine(nameleft); :}
+		| (BaseNewArrayElem) NEW Type:T1 LBRACE Expr:E2 RBRACE {: RESULT=new BaseNewArrayElem(T1, E2); RESULT.setLine(T1left); :}
 		| (BaseExpr) LPAREN Expr:E1 RPAREN {: RESULT=new BaseExpr(E1); RESULT.setLine(E1left); :}
 		| (BaseDesignator) Designator:D1 {: RESULT=new BaseDesignator(D1); RESULT.setLine(D1left); :}
 		| (FuncCall) DesignatorCalled:D1 LPAREN ActParsOptional:A2 RPAREN {: RESULT=new FuncCall(D1, A2); RESULT.setLine(D1left); :};
@@ -342,9 +345,9 @@ Relop ::= (Relopc) EQUAL {: RESULT=new Relopc(); :}
 		| LOWER {: RESULT=new RelopDerived4(); :}
 		| LOWEREQUAL {: RESULT=new RelopDerived5(); :};
 		
-Addop ::= (AddOpc) PLUS {: RESULT=new AddOpc(); :} | MINUS {: RESULT=new AddopDerived1(); :};
+Addop ::= (OperationPlus) PLUS {: RESULT=new OperationPlus(); :} | (OperationMinus) MINUS {: RESULT=new OperationMinus(); :};
 
-Mulop ::= (Mulopc) MUL {: RESULT=new Mulopc(); :} | DIV {: RESULT=new MulopDerived1(); :} | MOD {: RESULT=new MulopDerived2(); :};
+Mulop ::= (OperationMul) MUL {: RESULT=new OperationMul(); :} | (OperationDiv) DIV {: RESULT=new OperationDiv(); :} | (OperationMod) MOD {: RESULT=new OperationMod(); :};
 
 
 VarArgs ::= (VarArgsc) Type:T1 THREEDOTS IDENT:I2 {: RESULT=new VarArgsc(T1, I2); RESULT.setLine(T1left); :};

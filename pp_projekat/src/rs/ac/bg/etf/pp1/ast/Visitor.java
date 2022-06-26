@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 25/5/2022 20:2:27
+// 26/5/2022 23:54:23
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -19,6 +19,7 @@ public interface Visitor {
     public void visit(DeclListMethod DeclListMethod);
     public void visit(ExprCommaList ExprCommaList);
     public void visit(Relop Relop);
+    public void visit(TermMinus TermMinus);
     public void visit(Assignop Assignop);
     public void visit(LabelColon LabelColon);
     public void visit(MulopFactorList MulopFactorList);
@@ -65,16 +66,17 @@ public interface Visitor {
     public void visit(VarDeclListGlobal VarDeclListGlobal);
     public void visit(ListBaseExp ListBaseExp);
     public void visit(SingleStatement SingleStatement);
+    public void visit(OptionalMinus OptionalMinus);
     public void visit(CondFactListAnd CondFactListAnd);
     public void visit(FormPars FormPars);
     public void visit(OptionalElse OptionalElse);
     public void visit(AddopTermList AddopTermList);
     public void visit(VarArgsc VarArgsc);
-    public void visit(MulopDerived2 MulopDerived2);
-    public void visit(MulopDerived1 MulopDerived1);
-    public void visit(Mulopc Mulopc);
-    public void visit(AddopDerived1 AddopDerived1);
-    public void visit(AddOpc AddOpc);
+    public void visit(OperationMod OperationMod);
+    public void visit(OperationDiv OperationDiv);
+    public void visit(OperationMul OperationMul);
+    public void visit(OperationMinus OperationMinus);
+    public void visit(OperationPlus OperationPlus);
     public void visit(RelopDerived5 RelopDerived5);
     public void visit(RelopDerived4 RelopDerived4);
     public void visit(RelopDerived3 RelopDerived3);
@@ -107,7 +109,8 @@ public interface Visitor {
     public void visit(NoAddopTermList NoAddopTermList);
     public void visit(AddopTermListc AddopTermListc);
     public void visit(NoOptionalMinus NoOptionalMinus);
-    public void visit(OptionalMinus OptionalMinus);
+    public void visit(OptionalMinusc OptionalMinusc);
+    public void visit(TermMinusc TermMinusc);
     public void visit(Exprc Exprc);
     public void visit(ExprRelop ExprRelop);
     public void visit(CondFactc CondFactc);

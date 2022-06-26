@@ -19,10 +19,9 @@ public class SemanticPass extends VisitorAdaptor {
 	Obj currentMethod = null;
 	boolean mainExists = false;
 	Struct constType = null;
-	Struct currentType = null;
+	Typec currentType = null;
 
 	boolean hasReturn = false;
-	boolean optMinus = false;
 	public int nVars=0;
 		
 	Obj calledFunction = null;
@@ -38,9 +37,8 @@ public class SemanticPass extends VisitorAdaptor {
 	int continueLoopLine;
 
 	boolean isArray = false;
-	Struct boolStruct = new Struct(Struct.Bool);
+	public static Struct boolStruct = new Struct(Struct.Bool);
 
-	// Struct currentType;
 	Logger log = Logger.getLogger(getClass());
 	
 	public boolean errorDetected = false;
@@ -120,6 +118,7 @@ public class SemanticPass extends VisitorAdaptor {
 
 		if (obj != Tab.noObj && obj != null) {
 			report_error("Ime lokalne promenljive ne sme biti deklarisano vise puta unutar istog opsega", varDecl);
+			return;
 		} else {
 			Struct str;
 			if (isArray) {
@@ -128,6 +127,8 @@ public class SemanticPass extends VisitorAdaptor {
 			} else
 				str = varDecl.getType().struct;
 			Obj varNode = Tab.insert(Obj.Var, varDecl.getVarName(), str);
+			
+			
 		}
 	}
 
@@ -197,6 +198,7 @@ public class SemanticPass extends VisitorAdaptor {
 	}
 
 	public void visit(Typec type) {
+		currentType = type;
 		Obj obj = Tab.find(type.getTypeName());
 		if (obj == Tab.noObj) {
 			report_error("Nije pronadjen tip " + type.getTypeName() + " u tabeli simbola! ", null);
@@ -249,7 +251,20 @@ public class SemanticPass extends VisitorAdaptor {
 		if (arrayElem.getExpr().struct != Tab.intType) {
 			report_error("Greska u okviru pristupa elementu niza", arrayElem);
 		}
+
 	}
+		
+	
+	public void visit(DesignatorName arrayElem) {
+		Obj obj = Tab.find(arrayElem.getName());
+		if (obj == Tab.noObj || obj == null) {
+			report_error("Promenljiva nije deklarisana", arrayElem);
+			return;
+		}
+		arrayElem.obj = obj;
+	}
+	
+	
 
 	public void visit(Designatorc designator) {
 		Obj obj = Tab.find(designator.getDesignatorName().getName());
@@ -344,9 +359,10 @@ public class SemanticPass extends VisitorAdaptor {
 			report_error("Nemoguce dodeliti pozivu metode vrednost", designatorAssign);
 			return;
 		}
-//		if (designatorAssign.getExpr().struct.getKind()==designatorAssign.getDesignator().obj.getType().getKind()) {
-//			report_error("Tipovi su nekompatibilni", designatorAssign);
-//		}
+		if (designatorAssign.getExpr().struct.getKind()==designatorAssign.getDesignator().obj.getType().getKind()) {
+			return;
+		}
+		report_error("Tipovi su nekompatibilni", designatorAssign);
 	}
 
 	// inkrementiranje vrednosti
@@ -354,9 +370,9 @@ public class SemanticPass extends VisitorAdaptor {
 		if (designatorIncrement.getDesignator().obj.getKind() == Obj.Meth) {
 			report_error("Nemoguce inkrementirati poziv metode", designatorIncrement);
 		}
-//		if (!designatorIncrement.getDesignator().obj.getType().equals(Tab.intType)) {
-//			report_error("Nemoguce inkrementirati promenljivu koja nije ceo broj", designatorIncrement);
-//		}
+		if (!designatorIncrement.getDesignator().obj.getType().equals(Tab.intType)) {
+			report_error("Nemoguce inkrementirati promenljivu koja nije ceo broj", designatorIncrement);
+		}
 	}
 
 	// dekrementiranje vrednosti
@@ -364,9 +380,9 @@ public class SemanticPass extends VisitorAdaptor {
 		if (designatorDec.getDesignator().obj.getKind() == Obj.Meth) {
 			report_error("Nemoguce dekrementirati poziv metode", designatorDec);
 		}
-//		if (!designatorDec.getDesignator().obj.getType().equals(Tab.intType)) {
-//			report_error("Nemoguce dekrementirati promenljivu koja nije ceo broj", designatorDec);
-//		}
+		if (!designatorDec.getDesignator().obj.getType().equals(Tab.intType)) {
+			report_error("Nemoguce dekrementirati promenljivu koja nije ceo broj", designatorDec);
+		}
 	}
 
 	public void visit(DesignatorMethod desMethod) {
@@ -452,7 +468,8 @@ public class SemanticPass extends VisitorAdaptor {
 	}
 
 	public void visit(BaseNewArrayElem baseNumber) {
-		baseNumber.struct = baseNumber.getType().struct;
+		Obj o = Tab.find(currentType.getTypeName());
+		baseNumber.struct = new Struct(Struct.Array,o.getType());
 		if (baseNumber.getExpr().struct != Tab.intType) {
 			report_error("Element u okviru indeksiranja mora biti int", baseNumber);
 			return;
@@ -475,6 +492,9 @@ public class SemanticPass extends VisitorAdaptor {
 			}
 		}
 	}
+	public void visit(TermMinusc termc) {
+		termc.struct = termc.getTerm().struct;
+	}
 
 	public void visit(Factorc factor) {
 		factor.struct = factor.getBaseExp().struct;
@@ -482,21 +502,16 @@ public class SemanticPass extends VisitorAdaptor {
 
 	public void visit(Exprc expr) {
 
-		if (expr.getTerm().struct != null && expr.getAddopTermList().struct != null
-				&& expr.getTerm().struct.getKind() != expr.getAddopTermList().struct.getKind()) {
+		if (expr.getTermMinus().struct != null && expr.getAddopTermList().struct != null
+				&& expr.getTermMinus().struct.getKind() != expr.getAddopTermList().struct.getKind()) {
 			report_error("Tipovi u okviru izraza su nekompatibilni", expr);
 			return;
 		}
-		expr.struct = expr.getTerm().struct;
-		if (optMinus) {
-			optMinus = false;
-			if (expr.struct.getKind() != Tab.intType.getKind()) {
-				report_error("Sa znakom minus mora se koristiti type int", expr);
-			}
-		}
+		expr.struct = expr.getTermMinus().struct;
 
 	}
-
+	
+	
 	public void visit(AddopTermListc termList) {
 		termList.struct = termList.getTerm().struct;
 
@@ -517,9 +532,6 @@ public class SemanticPass extends VisitorAdaptor {
 		// mulopList.getFactor().struct;
 	}
 
-	public void visit(OptionalMinus opt) {
-		optMinus = true;
-	}
 
 	public void visit(ExprRelop exprRelop) {
 		if (exprRelop.getExpr().struct.getKind() != exprRelop.getExpr1().struct.getKind()) {

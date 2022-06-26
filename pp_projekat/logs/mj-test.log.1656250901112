@@ -1,0 +1,59 @@
+INFO  15:39:57,848 - Compiling source file: C:\Users\Aleksandar\Desktop\PP\projekat\PP_Projekat\pp_projekat\test\program.mj
+INFO  15:39:57,890 - #6 program
+INFO  15:39:57,890 - #4 MJProgram
+INFO  15:39:57,890 - #4 int
+INFO  15:39:57,891 - #4 x
+INFO  15:39:57,891 - #37 ;
+INFO  15:39:57,892 - #4 int
+INFO  15:39:57,892 - #4 y
+INFO  15:39:57,893 - #37 ;
+INFO  15:39:57,893 - #7 {
+INFO  15:39:57,893 - #24 void
+INFO  15:39:57,893 - #4 main
+INFO  15:39:57,893 - #22 (
+INFO  15:39:57,893 - #23 )
+INFO  15:39:57,894 - #4 bool
+INFO  15:39:57,894 - #4 z
+INFO  15:39:57,894 - #37 ;
+INFO  15:39:57,895 - #7 {
+INFO  15:39:57,895 - #4 x
+INFO  15:39:57,895 - #10 =
+INFO  15:39:57,896 - #2 1
+INFO  15:39:57,897 - #37 ;
+INFO  15:39:57,898 - #4 z
+INFO  15:39:57,902 - #10 =
+INFO  15:39:57,902 - #3 true
+INFO  15:39:57,902 - #37 ;
+INFO  15:39:57,902 - #25 print
+INFO  15:39:57,902 - #22 (
+INFO  15:39:57,902 - #5 a
+INFO  15:39:57,902 - #23 )
+INFO  15:39:57,903 - #37 ;
+INFO  15:39:57,903 - #25 print
+INFO  15:39:57,903 - #22 (
+INFO  15:39:57,903 - #5 b
+INFO  15:39:57,903 - #23 )
+INFO  15:39:57,903 - #37 ;
+INFO  15:39:57,903 - #25 print
+INFO  15:39:57,903 - #22 (
+INFO  15:39:57,903 - #4 x
+INFO  15:39:57,903 - #23 )
+INFO  15:39:57,903 - #37 ;
+INFO  15:39:57,903 - #25 print
+INFO  15:39:57,903 - #22 (
+INFO  15:39:57,903 - #2 3
+INFO  15:39:57,903 - #23 )
+INFO  15:39:57,904 - #37 ;
+INFO  15:39:57,904 - #25 print
+INFO  15:39:57,904 - #22 (
+INFO  15:39:57,904 - #5 a
+INFO  15:39:57,904 - #23 )
+INFO  15:39:57,904 - #37 ;
+INFO  15:39:57,904 - #8 }
+INFO  15:39:57,904 - #8 }
+INFO  15:39:57,907 - ===================================
+INFO  15:39:57,910 - Obradjuje se funkcija main na liniji 5
+INFO  15:39:57,910 -  Print count calls = 5
+INFO  15:39:57,910 -  Deklarisanih promenljivih ima = 1
+INFO  15:39:57,910 - ===================================
+INFO  15:39:57,914 - Parsiranje uspesno zavrseno!

@@ -1,0 +1,37 @@
+INFO  21:32:00,397 - Compiling source file: C:\Users\Aleksandar\Desktop\PP\projekat\PP_Projekat\pp_projekat\test\program.mj
+INFO  21:32:00,441 - #6 program
+INFO  21:32:00,441 - #4 MJProgram
+INFO  21:32:00,441 - #4 int
+INFO  21:32:00,442 - #4 x
+INFO  21:32:00,442 - #37 ;
+INFO  21:32:00,443 - #4 int
+INFO  21:32:00,443 - #4 y
+INFO  21:32:00,443 - #37 ;
+INFO  21:32:00,443 - #7 {
+INFO  21:32:00,443 - #24 void
+INFO  21:32:00,444 - #4 main
+INFO  21:32:00,444 - #22 (
+INFO  21:32:00,444 - #23 )
+INFO  21:32:00,444 - #4 int
+INFO  21:32:00,445 - #4 z
+INFO  21:32:00,445 - #44 [
+INFO  21:32:00,445 - #45 ]
+INFO  21:32:00,445 - #37 ;
+INFO  21:32:00,445 - #7 {
+INFO  21:32:00,446 - #4 z
+INFO  21:32:00,446 - #10 =
+INFO  21:32:00,446 - #28 new
+INFO  21:32:00,451 - #4 int
+INFO  21:32:00,451 - #44 [
+INFO  21:32:00,451 - #2 3
+INFO  21:32:00,451 - #45 ]
+INFO  21:32:00,452 - #37 ;
+INFO  21:32:00,452 - #8 }
+INFO  21:32:00,453 - #8 }
+INFO  21:32:00,456 - ===================================
+INFO  21:32:00,458 - Obradjuje se funkcija main na liniji 5
+ERROR 21:32:00,459 - Tipovi su nekompatibilni na liniji 6
+INFO  21:32:00,459 -  Print count calls = 0
+INFO  21:32:00,459 -  Deklarisanih promenljivih ima = 1
+INFO  21:32:00,459 - ===================================
+ERROR 21:32:00,459 - Parsiranje NIJE uspesno zavrseno!

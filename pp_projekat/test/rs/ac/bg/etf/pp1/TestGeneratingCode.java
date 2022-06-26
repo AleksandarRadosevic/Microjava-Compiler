@@ -67,7 +67,8 @@ public class TestGeneratingCode {
 			Tab.dump();
 			if(!v.errorDetected){
 				File objFile = new File("test/program.obj");
-				if(objFile.exists()) objFile.delete();
+				if(objFile.exists()) 
+					objFile.delete();
 				
 				CodeGenerator codeGenerator = new CodeGenerator();
 				prog.traverseBottomUp(codeGenerator);

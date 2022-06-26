@@ -1,0 +1,38 @@
+INFO  12:17:04,561 - Compiling source file: C:\Users\Aleksandar\Desktop\PP\projekat\PP_Projekat\pp_projekat\test\program.mj
+INFO  12:17:04,619 - #6 program
+INFO  12:17:04,619 - #4 MJProgram
+INFO  12:17:04,619 - #4 int
+INFO  12:17:04,619 - #4 x
+INFO  12:17:04,620 - #37 ;
+INFO  12:17:04,621 - #4 int
+INFO  12:17:04,621 - #4 y
+INFO  12:17:04,621 - #37 ;
+INFO  12:17:04,621 - #7 {
+INFO  12:17:04,621 - #24 void
+INFO  12:17:04,622 - #4 main
+INFO  12:17:04,622 - #22 (
+INFO  12:17:04,622 - #23 )
+INFO  12:17:04,622 - #7 {
+INFO  12:17:04,623 - #4 int
+INFO  12:17:04,623 - #4 j
+ERROR 12:17:04,623 - 
+Sintaksna greska na liniji 6
+INFO  12:17:04,623 - #37 ;
+INFO  12:17:04,623 - #25 print
+INFO  12:17:04,624 - #22 (
+INFO  12:17:04,624 - #2 1
+ERROR 12:17:04,624 - Izvrsen oporavak do ; u liniji 6
+INFO  12:17:04,626 - #23 )
+INFO  12:17:04,627 - #37 ;
+INFO  12:17:04,627 - #25 print
+INFO  12:17:04,628 - #22 (
+INFO  12:17:04,628 - #2 2
+INFO  12:17:04,628 - #23 )
+INFO  12:17:04,628 - #37 ;
+INFO  12:17:04,628 - #8 }
+INFO  12:17:04,628 - #8 }
+INFO  12:17:04,632 - ===================================
+INFO  12:17:04,648 - Obradjuje se funkcija main na liniji 5
+INFO  12:17:04,649 -  Print count calls = 2
+INFO  12:17:04,649 -  Deklarisanih promenljivih ima = 0
+INFO  12:17:04,649 - ===================================
