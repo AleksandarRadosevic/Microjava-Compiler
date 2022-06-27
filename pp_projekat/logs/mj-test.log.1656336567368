@@ -1,0 +1,63 @@
+INFO  15:29:10,370 - Compiling source file: C:\Users\Aleksandar\Desktop\PP\projekat\PP_Projekat\pp_projekat\test\program.mj
+INFO  15:29:10,412 - #6 program
+INFO  15:29:10,412 - #4 test301
+INFO  15:29:10,412 - #9 const
+INFO  15:29:10,413 - #4 int
+INFO  15:29:10,413 - #4 nula
+INFO  15:29:10,413 - #10 =
+INFO  15:29:10,413 - #2 0
+INFO  15:29:10,413 - #37 ;
+INFO  15:29:10,414 - #9 const
+INFO  15:29:10,414 - #4 int
+INFO  15:29:10,414 - #4 jedan
+INFO  15:29:10,414 - #10 =
+INFO  15:29:10,414 - #2 1
+INFO  15:29:10,414 - #37 ;
+INFO  15:29:10,415 - #9 const
+INFO  15:29:10,415 - #4 int
+INFO  15:29:10,415 - #4 pet
+INFO  15:29:10,415 - #10 =
+INFO  15:29:10,415 - #2 5
+INFO  15:29:10,415 - #37 ;
+INFO  15:29:10,415 - #4 int
+INFO  15:29:10,415 - #4 niz
+INFO  15:29:10,415 - #44 [
+INFO  15:29:10,415 - #45 ]
+INFO  15:29:10,415 - #37 ;
+INFO  15:29:10,416 - #4 char
+INFO  15:29:10,416 - #4 nizch
+INFO  15:29:10,416 - #44 [
+INFO  15:29:10,416 - #45 ]
+INFO  15:29:10,416 - #37 ;
+INFO  15:29:10,416 - #7 {
+INFO  15:29:10,416 - #24 void
+INFO  15:29:10,416 - #4 main
+INFO  15:29:10,417 - #22 (
+INFO  15:29:10,417 - #23 )
+INFO  15:29:10,417 - #4 int
+INFO  15:29:10,417 - #4 bodovi
+INFO  15:29:10,417 - #37 ;
+INFO  15:29:10,418 - #4 bool
+INFO  15:29:10,418 - #4 bt
+INFO  15:29:10,418 - #37 ;
+INFO  15:29:10,418 - #7 {
+INFO  15:29:10,418 - #4 bodovi
+INFO  15:29:10,419 - #10 =
+INFO  15:29:10,419 - #2 0
+INFO  15:29:10,420 - #37 ;
+INFO  15:29:10,422 - #4 bodovi
+INFO  15:29:10,422 - #46 ++
+INFO  15:29:10,422 - #37 ;
+INFO  15:29:10,422 - #25 print
+INFO  15:29:10,422 - #22 (
+INFO  15:29:10,422 - #4 bodovi
+INFO  15:29:10,422 - #23 )
+INFO  15:29:10,423 - #37 ;
+INFO  15:29:10,423 - #8 }
+INFO  15:29:10,423 - #8 }
+INFO  15:29:10,426 - ===================================
+INFO  15:29:10,429 - Obradjuje se funkcija main na liniji 13
+INFO  15:29:10,429 -  Print count calls = 1
+INFO  15:29:10,429 -  Deklarisanih promenljivih ima = 2
+INFO  15:29:10,429 - ===================================
+INFO  15:29:10,433 - Parsiranje uspesno zavrseno!

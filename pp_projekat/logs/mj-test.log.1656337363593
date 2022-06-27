@@ -1,0 +1,72 @@
+INFO  15:42:10,195 - Compiling source file: C:\Users\Aleksandar\Desktop\PP\projekat\PP_Projekat\pp_projekat\test\program.mj
+INFO  15:42:10,238 - #6 program
+INFO  15:42:10,239 - #4 test301
+INFO  15:42:10,239 - #9 const
+INFO  15:42:10,239 - #4 int
+INFO  15:42:10,239 - #4 nula
+INFO  15:42:10,239 - #10 =
+INFO  15:42:10,239 - #2 0
+INFO  15:42:10,240 - #37 ;
+INFO  15:42:10,240 - #9 const
+INFO  15:42:10,240 - #4 int
+INFO  15:42:10,240 - #4 jedan
+INFO  15:42:10,240 - #10 =
+INFO  15:42:10,241 - #2 1
+INFO  15:42:10,241 - #37 ;
+INFO  15:42:10,241 - #9 const
+INFO  15:42:10,241 - #4 int
+INFO  15:42:10,241 - #4 pet
+INFO  15:42:10,241 - #10 =
+INFO  15:42:10,241 - #2 5
+INFO  15:42:10,241 - #37 ;
+INFO  15:42:10,241 - #4 int
+INFO  15:42:10,245 - #4 niz
+INFO  15:42:10,245 - #44 [
+INFO  15:42:10,245 - #45 ]
+INFO  15:42:10,245 - #37 ;
+INFO  15:42:10,246 - #4 char
+INFO  15:42:10,246 - #4 nizch
+INFO  15:42:10,246 - #44 [
+INFO  15:42:10,246 - #45 ]
+INFO  15:42:10,246 - #37 ;
+INFO  15:42:10,247 - #7 {
+INFO  15:42:10,247 - #24 void
+INFO  15:42:10,247 - #4 main
+INFO  15:42:10,247 - #22 (
+INFO  15:42:10,247 - #23 )
+INFO  15:42:10,247 - #4 int
+INFO  15:42:10,248 - #4 bodovi
+INFO  15:42:10,248 - #37 ;
+INFO  15:42:10,249 - #4 bool
+INFO  15:42:10,249 - #4 bt
+INFO  15:42:10,249 - #37 ;
+INFO  15:42:10,249 - #7 {
+INFO  15:42:10,249 - #4 bodovi
+INFO  15:42:10,249 - #10 =
+INFO  15:42:10,250 - #2 6
+INFO  15:42:10,251 - #37 ;
+INFO  15:42:10,253 - #4 bodovi
+INFO  15:42:10,253 - #10 =
+INFO  15:42:10,253 - #22 (
+INFO  15:42:10,253 - #2 5
+INFO  15:42:10,253 - #32 *
+INFO  15:42:10,253 - #2 1
+INFO  15:42:10,254 - #31 -
+INFO  15:42:10,254 - #2 1
+INFO  15:42:10,255 - #23 )
+INFO  15:42:10,255 - #32 *
+INFO  15:42:10,255 - #4 bodovi
+INFO  15:42:10,255 - #37 ;
+INFO  15:42:10,255 - #25 print
+INFO  15:42:10,255 - #22 (
+INFO  15:42:10,255 - #4 bodovi
+INFO  15:42:10,255 - #23 )
+INFO  15:42:10,256 - #37 ;
+INFO  15:42:10,256 - #8 }
+INFO  15:42:10,256 - #8 }
+INFO  15:42:10,259 - ===================================
+INFO  15:42:10,263 - Obradjuje se funkcija main na liniji 13
+INFO  15:42:10,263 -  Print count calls = 1
+INFO  15:42:10,263 -  Deklarisanih promenljivih ima = 2
+INFO  15:42:10,263 - ===================================
+INFO  15:42:10,267 - Parsiranje uspesno zavrseno!

@@ -46,7 +46,7 @@ public class TestGeneratingCode {
 	        
 	        
 			// ispis sintaksnog stabla
-			//log.info(prog.toString(""));
+			log.info(prog.toString(""));
 			log.info("===================================");
 	        Struct boolType=new Struct(Struct.Bool);
 	        Obj objBool=Tab.insert(Obj.Type, "bool", boolType);
@@ -58,10 +58,6 @@ public class TestGeneratingCode {
 			// ispis prepoznatih programskih konstrukcija
 			SemanticPass v = new SemanticPass();
 			prog.traverseBottomUp(v); 
-	      
-			log.info(" Print count calls = " + v.printCallCount);
-
-			log.info(" Deklarisanih promenljivih ima = " + v.varDeclCount);
 			
 			log.info("===================================");
 			Tab.dump();

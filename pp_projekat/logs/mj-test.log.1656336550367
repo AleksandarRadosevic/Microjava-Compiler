@@ -1,0 +1,78 @@
+INFO  15:28:27,060 - Compiling source file: C:\Users\Aleksandar\Desktop\PP\projekat\PP_Projekat\pp_projekat\test\program.mj
+INFO  15:28:27,102 - #6 program
+INFO  15:28:27,102 - #4 test301
+INFO  15:28:27,102 - #9 const
+INFO  15:28:27,103 - #4 int
+INFO  15:28:27,103 - #4 nula
+INFO  15:28:27,103 - #10 =
+INFO  15:28:27,103 - #2 0
+INFO  15:28:27,103 - #37 ;
+INFO  15:28:27,104 - #9 const
+INFO  15:28:27,104 - #4 int
+INFO  15:28:27,104 - #4 jedan
+INFO  15:28:27,104 - #10 =
+INFO  15:28:27,104 - #2 1
+INFO  15:28:27,104 - #37 ;
+INFO  15:28:27,104 - #9 const
+INFO  15:28:27,105 - #4 int
+INFO  15:28:27,105 - #4 pet
+INFO  15:28:27,105 - #10 =
+INFO  15:28:27,105 - #2 5
+INFO  15:28:27,105 - #37 ;
+INFO  15:28:27,105 - #4 int
+INFO  15:28:27,109 - #4 niz
+INFO  15:28:27,109 - #44 [
+INFO  15:28:27,109 - #45 ]
+INFO  15:28:27,109 - #37 ;
+INFO  15:28:27,110 - #4 char
+INFO  15:28:27,110 - #4 nizch
+INFO  15:28:27,110 - #44 [
+INFO  15:28:27,110 - #45 ]
+INFO  15:28:27,110 - #37 ;
+INFO  15:28:27,110 - #7 {
+INFO  15:28:27,110 - #24 void
+INFO  15:28:27,111 - #4 main
+INFO  15:28:27,111 - #22 (
+INFO  15:28:27,111 - #23 )
+INFO  15:28:27,111 - #4 int
+INFO  15:28:27,111 - #4 bodovi
+INFO  15:28:27,111 - #37 ;
+INFO  15:28:27,112 - #4 bool
+INFO  15:28:27,112 - #4 bt
+INFO  15:28:27,112 - #37 ;
+INFO  15:28:27,112 - #7 {
+INFO  15:28:27,113 - #4 bodovi
+INFO  15:28:27,113 - #10 =
+INFO  15:28:27,113 - #2 0
+INFO  15:28:27,114 - #37 ;
+INFO  15:28:27,116 - #4 bodovi
+INFO  15:28:27,116 - #46 ++
+INFO  15:28:27,116 - #37 ;
+INFO  15:28:27,116 - #4 bodovi
+INFO  15:28:27,116 - #10 =
+INFO  15:28:27,116 - #4 bodovi
+INFO  15:28:27,116 - #30 +
+INFO  15:28:27,116 - #4 jedan
+INFO  15:28:27,117 - #37 ;
+INFO  15:28:27,117 - #4 bodovi
+INFO  15:28:27,117 - #10 =
+INFO  15:28:27,117 - #4 bodovi
+INFO  15:28:27,117 - #32 *
+INFO  15:28:27,117 - #4 pet
+INFO  15:28:27,118 - #37 ;
+INFO  15:28:27,118 - #4 bodovi
+INFO  15:28:27,118 - #47 --
+INFO  15:28:27,118 - #37 ;
+INFO  15:28:27,118 - #25 print
+INFO  15:28:27,119 - #22 (
+INFO  15:28:27,119 - #4 bodovi
+INFO  15:28:27,119 - #23 )
+INFO  15:28:27,119 - #37 ;
+INFO  15:28:27,119 - #8 }
+INFO  15:28:27,119 - #8 }
+INFO  15:28:27,123 - ===================================
+INFO  15:28:27,126 - Obradjuje se funkcija main na liniji 13
+INFO  15:28:27,126 -  Print count calls = 1
+INFO  15:28:27,126 -  Deklarisanih promenljivih ima = 2
+INFO  15:28:27,126 - ===================================
+INFO  15:28:27,130 - Parsiranje uspesno zavrseno!

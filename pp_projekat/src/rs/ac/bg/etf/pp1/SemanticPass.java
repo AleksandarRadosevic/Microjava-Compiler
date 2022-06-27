@@ -20,7 +20,7 @@ public class SemanticPass extends VisitorAdaptor {
 	boolean mainExists = false;
 	Struct constType = null;
 	Typec currentType = null;
-
+	Object constVal;
 	boolean hasReturn = false;
 	public int nVars=0;
 		
@@ -88,13 +88,15 @@ public class SemanticPass extends VisitorAdaptor {
 	// --------------------------------
 
 	public void visit(ConstDeclc constVar) {
+
 		// mozda proveriti da li je dva puta definisana konstanta
 		Obj obj = Tab.find(constVar.getName());
 		if (obj != Tab.noObj) {
 			report_error("Globalna konstanta moze biti definisana jednom", constVar);
 		} else {
 			if (constType.getKind() == constVar.getType().struct.getKind()) {
-				Tab.insert(Obj.Con, constVar.getName(), constVar.getType().struct);
+				Obj conObj = Tab.insert(Obj.Con, constVar.getName(), constVar.getType().struct);
+				conObj.setAdr((int) this.constVal);
 			} else
 				report_error("Konstanti mora biti dodeljen isti tip", constVar);
 		}
@@ -102,14 +104,17 @@ public class SemanticPass extends VisitorAdaptor {
 
 	public void visit(ConstInt intVal) {
 		constType = Tab.intType;
+		constVal = intVal.getN1();
 	}
 
 	public void visit(ConstChar intVal) {
 		constType = Tab.charType;
+		constVal = intVal.getC1();
 	}
 
 	public void visit(ConstBool intVal) {
 		constType = boolStruct;
+		constVal = intVal.getB1();
 	}
 
 	public void visit(VarDeclc varDecl) {

@@ -1,0 +1,98 @@
+INFO  16:31:46,144 - Compiling source file: C:\Users\Aleksandar\Desktop\PP\projekat\PP_Projekat\pp_projekat\test\program.mj
+INFO  16:31:46,189 - #6 program
+INFO  16:31:46,190 - #4 test301
+INFO  16:31:46,190 - #9 const
+INFO  16:31:46,190 - #4 int
+INFO  16:31:46,190 - #4 jedan
+INFO  16:31:46,190 - #10 =
+INFO  16:31:46,190 - #2 1
+INFO  16:31:46,190 - #37 ;
+INFO  16:31:46,191 - #7 {
+INFO  16:31:46,191 - #24 void
+INFO  16:31:46,192 - #4 main
+INFO  16:31:46,192 - #22 (
+INFO  16:31:46,192 - #23 )
+INFO  16:31:46,192 - #7 {
+INFO  16:31:46,193 - #25 print
+INFO  16:31:46,193 - #22 (
+INFO  16:31:46,193 - #4 jedan
+INFO  16:31:46,194 - #23 )
+INFO  16:31:46,196 - #37 ;
+INFO  16:31:46,196 - #8 }
+INFO  16:31:46,196 - #8 }
+INFO  16:31:46,200 - Programc(
+  ProgNamec(
+   test301
+  ) [ProgNamec]
+  DeclarationListc(
+    NoDeclarations(
+    ) [NoDeclarations]
+    DeclListc(
+      ConstDeclc(
+        Typec(
+         int
+        ) [Typec]
+        ConstInitialization(
+         jedan
+          ConstInt(
+           1
+          ) [ConstInt]
+        ) [ConstInitialization]
+        NoConstDecl(
+        ) [NoConstDecl]
+      ) [ConstDeclc]
+    ) [DeclListc]
+  ) [DeclarationListc]
+  DeclListMethodc(
+    NoDeclListMethod(
+    ) [NoDeclListMethod]
+    MethodDeclc(
+      VoidFunc(
+       main
+      ) [VoidFunc]
+      FormParsOptionalDerived3(
+      ) [FormParsOptionalDerived3]
+      NoDeclListVar(
+      ) [NoDeclListVar]
+      StatementListc(
+        NoStatementList(
+        ) [NoStatementList]
+        StatementDerived1(
+          PrintStmt(
+            Exprc(
+              TermMinusc(
+                NoOptionalMinus(
+                ) [NoOptionalMinus]
+                Termc(
+                  Factorc(
+                    BaseDesignator(
+                      Designatorc(
+                        DesignatorName(
+                         jedan
+                        ) [DesignatorName]
+                      ) [Designatorc]
+                    ) [BaseDesignator]
+                    NoListBaseExpc(
+                    ) [NoListBaseExpc]
+                  ) [Factorc]
+                  NoMulopFactorList(
+                  ) [NoMulopFactorList]
+                ) [Termc]
+              ) [TermMinusc]
+              NoAddopTermList(
+              ) [NoAddopTermList]
+            ) [Exprc]
+            NoOptionalNumConst(
+            ) [NoOptionalNumConst]
+          ) [PrintStmt]
+        ) [StatementDerived1]
+      ) [StatementListc]
+    ) [MethodDeclc]
+  ) [DeclListMethodc]
+) [Programc]
+INFO  16:31:46,200 - ===================================
+INFO  16:31:46,203 - Obradjuje se funkcija main na liniji 8
+ERROR 16:31:46,203 - Promenljiva nije deklarisana na liniji 10
+ERROR 16:31:46,204 - Greska na liniji 10 : ime jedan nije deklarisano! 
+INFO  16:31:46,204 - ===================================
+ERROR 16:31:46,204 - Parsiranje NIJE uspesno zavrseno!

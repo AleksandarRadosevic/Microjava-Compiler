@@ -1,0 +1,63 @@
+INFO  14:54:00,786 - Compiling source file: C:\Users\Aleksandar\Desktop\PP\projekat\PP_Projekat\pp_projekat\test\program.mj
+INFO  14:54:00,846 - #6 program
+INFO  14:54:00,846 - #4 MJProgram
+INFO  14:54:00,846 - #4 int
+INFO  14:54:00,847 - #4 x
+INFO  14:54:00,847 - #37 ;
+INFO  14:54:00,848 - #4 int
+INFO  14:54:00,849 - #4 y
+INFO  14:54:00,849 - #37 ;
+INFO  14:54:00,849 - #7 {
+INFO  14:54:00,849 - #24 void
+INFO  14:54:00,849 - #4 main
+INFO  14:54:00,849 - #22 (
+INFO  14:54:00,850 - #23 )
+INFO  14:54:00,850 - #4 int
+INFO  14:54:00,850 - #4 niz
+INFO  14:54:00,851 - #44 [
+INFO  14:54:00,851 - #45 ]
+INFO  14:54:00,851 - #37 ;
+INFO  14:54:00,852 - #4 int
+INFO  14:54:00,852 - #4 val
+INFO  14:54:00,852 - #37 ;
+INFO  14:54:00,852 - #7 {
+INFO  14:54:00,852 - #4 niz
+INFO  14:54:00,853 - #10 =
+INFO  14:54:00,853 - #28 new
+INFO  14:54:00,854 - #4 int
+INFO  14:54:00,854 - #44 [
+INFO  14:54:00,854 - #2 3
+INFO  14:54:00,855 - #45 ]
+INFO  14:54:00,856 - #37 ;
+INFO  14:54:00,856 - #4 x
+INFO  14:54:00,856 - #10 =
+INFO  14:54:00,856 - #2 2
+INFO  14:54:00,856 - #37 ;
+INFO  14:54:00,857 - #4 niz
+INFO  14:54:00,857 - #44 [
+INFO  14:54:00,857 - #2 1
+INFO  14:54:00,857 - #45 ]
+INFO  14:54:00,857 - #10 =
+INFO  14:54:00,857 - #4 x
+INFO  14:54:00,857 - #37 ;
+INFO  14:54:00,858 - #25 print
+INFO  14:54:00,858 - #22 (
+INFO  14:54:00,858 - #4 niz
+INFO  14:54:00,858 - #44 [
+INFO  14:54:00,858 - #2 1
+INFO  14:54:00,858 - #45 ]
+INFO  14:54:00,858 - #23 )
+INFO  14:54:00,859 - #37 ;
+INFO  14:54:00,859 - #25 print
+INFO  14:54:00,859 - #22 (
+INFO  14:54:00,859 - #4 x
+INFO  14:54:00,859 - #23 )
+INFO  14:54:00,859 - #37 ;
+INFO  14:54:00,859 - #8 }
+INFO  14:54:00,859 - #8 }
+INFO  14:54:00,864 - ===================================
+INFO  14:54:00,873 - Obradjuje se funkcija main na liniji 5
+INFO  14:54:00,874 -  Print count calls = 2
+INFO  14:54:00,874 -  Deklarisanih promenljivih ima = 2
+INFO  14:54:00,874 - ===================================
+INFO  14:55:04,682 - Parsiranje uspesno zavrseno!

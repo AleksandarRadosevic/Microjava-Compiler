@@ -1,0 +1,94 @@
+INFO  17:06:31,201 - Compiling source file: C:\Users\Aleksandar\Desktop\PP\projekat\PP_Projekat\pp_projekat\test\program.mj
+INFO  17:06:31,245 - #6 program
+INFO  17:06:31,245 - #4 test301
+INFO  17:06:31,246 - #9 const
+INFO  17:06:31,246 - #4 int
+INFO  17:06:31,246 - #4 jedan
+INFO  17:06:31,246 - #10 =
+INFO  17:06:31,246 - #2 123
+INFO  17:06:31,247 - #37 ;
+INFO  17:06:31,247 - #7 {
+INFO  17:06:31,247 - #24 void
+INFO  17:06:31,248 - #4 main
+INFO  17:06:31,248 - #22 (
+INFO  17:06:31,248 - #23 )
+INFO  17:06:31,248 - #7 {
+INFO  17:06:31,249 - #25 print
+INFO  17:06:31,249 - #22 (
+INFO  17:06:31,249 - #4 jedan
+INFO  17:06:31,250 - #23 )
+INFO  17:06:31,251 - #37 ;
+INFO  17:06:31,252 - #8 }
+INFO  17:06:31,252 - #8 }
+INFO  17:06:31,256 - Programc(
+  ProgNamec(
+   test301
+  ) [ProgNamec]
+  DeclarationListc(
+    NoDeclarations(
+    ) [NoDeclarations]
+    DeclListc(
+      ConstDeclc(
+        Typec(
+         int
+        ) [Typec]
+       jedan
+        ConstInt(
+         123
+        ) [ConstInt]
+        NoConstDecl(
+        ) [NoConstDecl]
+      ) [ConstDeclc]
+    ) [DeclListc]
+  ) [DeclarationListc]
+  DeclListMethodc(
+    NoDeclListMethod(
+    ) [NoDeclListMethod]
+    MethodDeclc(
+      VoidFunc(
+       main
+      ) [VoidFunc]
+      FormParsOptionalDerived3(
+      ) [FormParsOptionalDerived3]
+      NoDeclListVar(
+      ) [NoDeclListVar]
+      StatementListc(
+        NoStatementList(
+        ) [NoStatementList]
+        StatementDerived1(
+          PrintStmt(
+            Exprc(
+              TermMinusc(
+                NoOptionalMinus(
+                ) [NoOptionalMinus]
+                Termc(
+                  Factorc(
+                    BaseDesignator(
+                      Designatorc(
+                        DesignatorName(
+                         jedan
+                        ) [DesignatorName]
+                      ) [Designatorc]
+                    ) [BaseDesignator]
+                    NoListBaseExpc(
+                    ) [NoListBaseExpc]
+                  ) [Factorc]
+                  NoMulopFactorList(
+                  ) [NoMulopFactorList]
+                ) [Termc]
+              ) [TermMinusc]
+              NoAddopTermList(
+              ) [NoAddopTermList]
+            ) [Exprc]
+            NoOptionalNumConst(
+            ) [NoOptionalNumConst]
+          ) [PrintStmt]
+        ) [StatementDerived1]
+      ) [StatementListc]
+    ) [MethodDeclc]
+  ) [DeclListMethodc]
+) [Programc]
+INFO  17:06:31,256 - ===================================
+INFO  17:06:31,260 - Obradjuje se funkcija main na liniji 8
+INFO  17:06:31,260 - ===================================
+INFO  17:06:31,263 - Parsiranje uspesno zavrseno!

@@ -3,7 +3,6 @@ package rs.ac.bg.etf.pp1;
 import rs.ac.bg.etf.pp1.CounterVisitor.FormParamCounter;
 import rs.ac.bg.etf.pp1.CounterVisitor.VarCounter;
 import rs.ac.bg.etf.pp1.ast.*;
-import rs.ac.bg.etf.pp1.ast.VisitorAdaptor;
 import rs.etf.pp1.mj.runtime.*;
 import rs.etf.pp1.symboltable.*;
 import rs.etf.pp1.symboltable.concepts.*;
@@ -20,7 +19,7 @@ public class CodeGenerator extends VisitorAdaptor{
 		this.mainPc = mainPc;
 	}
 
-	public void visit(PrintStmt printStmt){		
+	public void visit(PrintStmt printStmt){
 		if(printStmt.getExpr().struct == Tab.intType){
 			Code.loadConst(5);
 			Code.put(Code.print);
@@ -34,37 +33,56 @@ public class CodeGenerator extends VisitorAdaptor{
 		}
 	}
 	
-	// value types
+	// value types 
+	// non const values start
+	//------------------------------------------------------------------------------------
 	public void visit(BaseNumber cnst){
-		Obj con = Tab.insert(Obj.Con, "$", cnst.struct);
-		con.setLevel(0);
-		con.setAdr(cnst.getN1());
-		Code.load(con);
-		//Code.put(Code.neg);
+		Code.loadConst(cnst.getN1());
 	}
 	public void visit(BaseChar cnst) {
-		Obj con = Tab.insert(Obj.Con, "$", cnst.struct);
-		con.setLevel(0);
-		con.setAdr(cnst.getC1());
-		Code.load(con);
+		Code.loadConst(cnst.getC1());
 	}
-	
 	public void visit(BaseBool cnst) {
 		if (cnst.getB1()==true) {
-			Obj con = Tab.insert(Obj.Con, "$", cnst.struct);
-			con.setLevel(0);
-			con.setAdr(1);
-			Code.load(con);
+			Code.loadConst(1);
 		}
 		else {
-			Obj con = Tab.insert(Obj.Con, "$", cnst.struct);
-			con.setLevel(0);
-			con.setAdr(0);
-			Code.load(con);
+			Code.loadConst(0);
 		}
-		
 	}
+	//------------------------------------------------------------------------------------
+	//non const values  end
 	
+	//const values start
+	//------------------------------------------------------------------------------------
+
+	public void visit(ConstInt cnst) {
+		Code.loadConst(cnst.getN1());
+	}
+	public void visit(ConstChar cnst) {
+		Code.loadConst(cnst.getC1());
+
+	}
+	public void visit(ConstBool cnst) {
+		if (cnst.getB1()==true) {
+			Code.loadConst(1);
+		}
+		else {
+			Code.loadConst(0);
+		}
+	}
+	//------------------------------------------------------------------------------------
+	//const values end
+
+	//initialization values
+	//const
+	
+	
+	
+	public void visit(BaseDesignator d) {
+		if (d.getDesignator().obj.getKind()==Obj.Elem)
+			Code.load(d.getDesignator().obj);
+	}
 	
 	public void visit(MethodTypeNamec methodTypeName){	
 		if("main".equalsIgnoreCase(methodTypeName.getMethodName())){
@@ -117,6 +135,7 @@ public class CodeGenerator extends VisitorAdaptor{
 	}
 	
 	public void visit(Designatorc designator){
+		
 		Code.load(designator.obj);
 	}
 	public void visit(DesignatorNameArr d) {
@@ -125,10 +144,7 @@ public class CodeGenerator extends VisitorAdaptor{
 	}
 	
 	public void visit (DesignatorAssign assign) {
-		if (assign.getDesignator().obj.getKind()==5) {
-			Code.put(Code.astore);
-		}
-		else Code.store(assign.getDesignator().obj);
+		Code.store(assign.getDesignator().obj);
 	}
 	
 	public void visit(DesignatorIncrement incr) {
