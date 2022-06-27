@@ -113,6 +113,7 @@ nonterminal Expop Expop;
 nonterminal ListBaseExp ListBaseExp;
 nonterminal VarArgs VarArgs;
 nonterminal DesignatorCalled DesignatorCalled;
+nonterminal OneElementExp OneElementExp;
 
 nonterminal rs.etf.pp1.symboltable.concepts.Obj ProgName, Program, MethodTypeName, MethodDecl, Designator, DesignatorName, DesignatorNameArr;
 nonterminal rs.etf.pp1.symboltable.concepts.Obj RecordDecl, RecordName;
@@ -311,9 +312,10 @@ Factor ::= (Factorc) BaseExp:B1 ListBaseExp:L2 {: RESULT=new Factorc(B1, L2); RE
 
 Expop ::= (Expopc) DEGREE {: RESULT=new Expopc(); :};
 
-ListBaseExp ::= (ListBaseExpc) ListBaseExp:L1 Expop:E2 BaseExp:B3 {: RESULT=new ListBaseExpc(L1, E2, B3); RESULT.setLine(L1left); :}
+ListBaseExp ::= (ListBaseExpc) ListBaseExp:L1 OneElementExp:O2 {: RESULT=new ListBaseExpc(L1, O2); RESULT.setLine(L1left); :}
 			| (NoListBaseExpc) {: RESULT=new NoListBaseExpc(); :} /* epsilon */;
 
+OneElementExp ::= (OneElementExp) Expop:E1 BaseExp:B2 {: RESULT=new OneElementExp(E1, B2); RESULT.setLine(E1left); :};
 
 BaseExp ::= (BaseNumber) NUMBER:N1 {: RESULT=new BaseNumber(N1); RESULT.setLine(N1left); :}
 		| (BaseChar) CHARCONST:C1 {: RESULT=new BaseChar(C1); RESULT.setLine(C1left); :}

@@ -549,9 +549,19 @@ public class SemanticPass extends VisitorAdaptor {
 	public void visit(ExprRelop exprRelop) {
 		if (exprRelop.getExpr().struct.getKind() != exprRelop.getExpr1().struct.getKind()) {
 			report_error("Tipovi koji se porede moraju biti istog tipa", exprRelop);
-
 		}
 
 	}
+	
+	public void visit(OneElementExp exp) {
+		if (exp.getBaseExp().struct.getKind()==Struct.Int) {
+			return;
+		}
+		if (!(exp.getBaseExp() instanceof BaseNumber)) {
+			report_error("Stepenovanje se mora raditi sa celim brojevima", exp);
+			return;
+		}
+	}
+	
 
 }

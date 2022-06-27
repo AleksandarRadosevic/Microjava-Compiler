@@ -72,7 +72,7 @@ nonterminal OptionalNumConst, Statements, OptionalExpression, ActParsOptional, A
 nonterminal CondTermListOr, CondFactListAnd, CondFact, Relop, OptionalMinus;
 nonterminal Addop, Mulop, Assignop;
 nonterminal ConditionIf, VarDeclGlobal, VarDeclListGlobal, Expop, ListBaseExp, VarArgs;
-nonterminal DesignatorCalled;
+nonterminal DesignatorCalled, OneElementExp;
 
 nonterminal rs.etf.pp1.symboltable.concepts.Obj ProgName, Program, MethodTypeName, MethodDecl, Designator, DesignatorName, DesignatorNameArr;
 nonterminal rs.etf.pp1.symboltable.concepts.Obj RecordDecl, RecordName;
@@ -271,9 +271,10 @@ Factor ::= (Factorc) BaseExp ListBaseExp;
 
 Expop ::= (Expopc) DEGREE;
 
-ListBaseExp ::= (ListBaseExpc) ListBaseExp Expop BaseExp
+ListBaseExp ::= (ListBaseExpc) ListBaseExp OneElementExp
 			| (NoListBaseExpc) /* epsilon */;
 
+OneElementExp ::= (OneElementExp) Expop BaseExp;
 
 BaseExp ::= (BaseNumber) NUMBER
 		| (BaseChar) CHARCONST

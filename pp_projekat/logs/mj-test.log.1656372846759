@@ -1,0 +1,478 @@
+INFO  01:33:03,976 - Compiling source file: C:\Users\Aleksandar\Desktop\PP\projekat\PP_Projekat\pp_projekat\test\program.mj
+INFO  01:33:04,022 - #6 program
+INFO  01:33:04,022 - #4 test301
+INFO  01:33:04,022 - #7 {
+INFO  01:33:04,023 - #24 void
+INFO  01:33:04,023 - #4 main
+INFO  01:33:04,024 - #22 (
+INFO  01:33:04,024 - #23 )
+INFO  01:33:04,024 - #4 int
+INFO  01:33:04,025 - #4 bodovi
+INFO  01:33:04,025 - #37 ;
+INFO  01:33:04,026 - #4 int
+INFO  01:33:04,026 - #4 x
+INFO  01:33:04,026 - #44 [
+INFO  01:33:04,026 - #45 ]
+INFO  01:33:04,026 - #37 ;
+INFO  01:33:04,026 - #7 {
+INFO  01:33:04,026 - #4 x
+INFO  01:33:04,027 - #10 =
+INFO  01:33:04,027 - #28 new
+INFO  01:33:04,029 - #4 int
+INFO  01:33:04,029 - #44 [
+INFO  01:33:04,029 - #2 3
+INFO  01:33:04,029 - #45 ]
+INFO  01:33:04,031 - #37 ;
+INFO  01:33:04,031 - #4 x
+INFO  01:33:04,031 - #44 [
+INFO  01:33:04,032 - #2 0
+INFO  01:33:04,032 - #45 ]
+INFO  01:33:04,032 - #10 =
+INFO  01:33:04,032 - #2 10
+INFO  01:33:04,032 - #37 ;
+INFO  01:33:04,032 - #4 x
+INFO  01:33:04,032 - #44 [
+INFO  01:33:04,032 - #2 1
+INFO  01:33:04,032 - #45 ]
+INFO  01:33:04,032 - #10 =
+INFO  01:33:04,032 - #4 x
+INFO  01:33:04,032 - #44 [
+INFO  01:33:04,032 - #2 0
+INFO  01:33:04,033 - #45 ]
+INFO  01:33:04,033 - #52 ^
+INFO  01:33:04,033 - #2 4
+INFO  01:33:04,033 - #37 ;
+INFO  01:33:04,034 - #4 x
+INFO  01:33:04,034 - #44 [
+INFO  01:33:04,034 - #2 2
+INFO  01:33:04,034 - #45 ]
+INFO  01:33:04,034 - #10 =
+INFO  01:33:04,034 - #2 10
+INFO  01:33:04,034 - #30 +
+INFO  01:33:04,035 - #4 x
+INFO  01:33:04,035 - #44 [
+INFO  01:33:04,035 - #2 1
+INFO  01:33:04,035 - #45 ]
+INFO  01:33:04,035 - #30 +
+INFO  01:33:04,035 - #2 2
+INFO  01:33:04,036 - #52 ^
+INFO  01:33:04,036 - #2 2
+INFO  01:33:04,036 - #37 ;
+INFO  01:33:04,036 - #25 print
+INFO  01:33:04,036 - #22 (
+INFO  01:33:04,036 - #4 x
+INFO  01:33:04,036 - #44 [
+INFO  01:33:04,036 - #2 2
+INFO  01:33:04,036 - #45 ]
+INFO  01:33:04,036 - #23 )
+INFO  01:33:04,036 - #37 ;
+INFO  01:33:04,037 - #8 }
+INFO  01:33:04,037 - #8 }
+INFO  01:33:04,041 - Programc(
+  ProgNamec(
+   test301
+  ) [ProgNamec]
+  NoDeclarations(
+  ) [NoDeclarations]
+  DeclListMethodc(
+    NoDeclListMethod(
+    ) [NoDeclListMethod]
+    MethodDeclc(
+      VoidFunc(
+       main
+      ) [VoidFunc]
+      FormParsOptionalDerived3(
+      ) [FormParsOptionalDerived3]
+      DeclListVarc(
+        DeclListVarc(
+          NoDeclListVar(
+          ) [NoDeclListVar]
+          VarDeclc(
+            Typec(
+             int
+            ) [Typec]
+           bodovi
+            NoOptionalBraces(
+            ) [NoOptionalBraces]
+            NoVarDeclList(
+            ) [NoVarDeclList]
+          ) [VarDeclc]
+        ) [DeclListVarc]
+        VarDeclc(
+          Typec(
+           int
+          ) [Typec]
+         x
+          OptionalBracesc(
+          ) [OptionalBracesc]
+          NoVarDeclList(
+          ) [NoVarDeclList]
+        ) [VarDeclc]
+      ) [DeclListVarc]
+      StatementListc(
+        StatementListc(
+          StatementListc(
+            StatementListc(
+              StatementListc(
+                NoStatementList(
+                ) [NoStatementList]
+                StatementDerived1(
+                  SingleStatementc(
+                    DesignatorAssign(
+                      Designatorc(
+                        DesignatorName(
+                         x
+                        ) [DesignatorName]
+                      ) [Designatorc]
+                      Assignopc(
+                      ) [Assignopc]
+                      Exprc(
+                        TermMinusc(
+                          NoOptionalMinus(
+                          ) [NoOptionalMinus]
+                          Termc(
+                            Factorc(
+                              BaseNewArrayElem(
+                                Typec(
+                                 int
+                                ) [Typec]
+                                Exprc(
+                                  TermMinusc(
+                                    NoOptionalMinus(
+                                    ) [NoOptionalMinus]
+                                    Termc(
+                                      Factorc(
+                                        BaseNumber(
+                                         3
+                                        ) [BaseNumber]
+                                        NoListBaseExpc(
+                                        ) [NoListBaseExpc]
+                                      ) [Factorc]
+                                      NoMulopFactorList(
+                                      ) [NoMulopFactorList]
+                                    ) [Termc]
+                                  ) [TermMinusc]
+                                  NoAddopTermList(
+                                  ) [NoAddopTermList]
+                                ) [Exprc]
+                              ) [BaseNewArrayElem]
+                              NoListBaseExpc(
+                              ) [NoListBaseExpc]
+                            ) [Factorc]
+                            NoMulopFactorList(
+                            ) [NoMulopFactorList]
+                          ) [Termc]
+                        ) [TermMinusc]
+                        NoAddopTermList(
+                        ) [NoAddopTermList]
+                      ) [Exprc]
+                    ) [DesignatorAssign]
+                  ) [SingleStatementc]
+                ) [StatementDerived1]
+              ) [StatementListc]
+              StatementDerived1(
+                SingleStatementc(
+                  DesignatorAssign(
+                    ArrayElem(
+                      DesignatorNameArr(
+                       x
+                      ) [DesignatorNameArr]
+                      Exprc(
+                        TermMinusc(
+                          NoOptionalMinus(
+                          ) [NoOptionalMinus]
+                          Termc(
+                            Factorc(
+                              BaseNumber(
+                               0
+                              ) [BaseNumber]
+                              NoListBaseExpc(
+                              ) [NoListBaseExpc]
+                            ) [Factorc]
+                            NoMulopFactorList(
+                            ) [NoMulopFactorList]
+                          ) [Termc]
+                        ) [TermMinusc]
+                        NoAddopTermList(
+                        ) [NoAddopTermList]
+                      ) [Exprc]
+                    ) [ArrayElem]
+                    Assignopc(
+                    ) [Assignopc]
+                    Exprc(
+                      TermMinusc(
+                        NoOptionalMinus(
+                        ) [NoOptionalMinus]
+                        Termc(
+                          Factorc(
+                            BaseNumber(
+                             10
+                            ) [BaseNumber]
+                            NoListBaseExpc(
+                            ) [NoListBaseExpc]
+                          ) [Factorc]
+                          NoMulopFactorList(
+                          ) [NoMulopFactorList]
+                        ) [Termc]
+                      ) [TermMinusc]
+                      NoAddopTermList(
+                      ) [NoAddopTermList]
+                    ) [Exprc]
+                  ) [DesignatorAssign]
+                ) [SingleStatementc]
+              ) [StatementDerived1]
+            ) [StatementListc]
+            StatementDerived1(
+              SingleStatementc(
+                DesignatorAssign(
+                  ArrayElem(
+                    DesignatorNameArr(
+                     x
+                    ) [DesignatorNameArr]
+                    Exprc(
+                      TermMinusc(
+                        NoOptionalMinus(
+                        ) [NoOptionalMinus]
+                        Termc(
+                          Factorc(
+                            BaseNumber(
+                             1
+                            ) [BaseNumber]
+                            NoListBaseExpc(
+                            ) [NoListBaseExpc]
+                          ) [Factorc]
+                          NoMulopFactorList(
+                          ) [NoMulopFactorList]
+                        ) [Termc]
+                      ) [TermMinusc]
+                      NoAddopTermList(
+                      ) [NoAddopTermList]
+                    ) [Exprc]
+                  ) [ArrayElem]
+                  Assignopc(
+                  ) [Assignopc]
+                  Exprc(
+                    TermMinusc(
+                      NoOptionalMinus(
+                      ) [NoOptionalMinus]
+                      Termc(
+                        Factorc(
+                          BaseDesignator(
+                            ArrayElem(
+                              DesignatorNameArr(
+                               x
+                              ) [DesignatorNameArr]
+                              Exprc(
+                                TermMinusc(
+                                  NoOptionalMinus(
+                                  ) [NoOptionalMinus]
+                                  Termc(
+                                    Factorc(
+                                      BaseNumber(
+                                       0
+                                      ) [BaseNumber]
+                                      NoListBaseExpc(
+                                      ) [NoListBaseExpc]
+                                    ) [Factorc]
+                                    NoMulopFactorList(
+                                    ) [NoMulopFactorList]
+                                  ) [Termc]
+                                ) [TermMinusc]
+                                NoAddopTermList(
+                                ) [NoAddopTermList]
+                              ) [Exprc]
+                            ) [ArrayElem]
+                          ) [BaseDesignator]
+                          ListBaseExpc(
+                            NoListBaseExpc(
+                            ) [NoListBaseExpc]
+                            OneElementExp(
+                              Expopc(
+                              ) [Expopc]
+                              BaseNumber(
+                               4
+                              ) [BaseNumber]
+                            ) [OneElementExp]
+                          ) [ListBaseExpc]
+                        ) [Factorc]
+                        NoMulopFactorList(
+                        ) [NoMulopFactorList]
+                      ) [Termc]
+                    ) [TermMinusc]
+                    NoAddopTermList(
+                    ) [NoAddopTermList]
+                  ) [Exprc]
+                ) [DesignatorAssign]
+              ) [SingleStatementc]
+            ) [StatementDerived1]
+          ) [StatementListc]
+          StatementDerived1(
+            SingleStatementc(
+              DesignatorAssign(
+                ArrayElem(
+                  DesignatorNameArr(
+                   x
+                  ) [DesignatorNameArr]
+                  Exprc(
+                    TermMinusc(
+                      NoOptionalMinus(
+                      ) [NoOptionalMinus]
+                      Termc(
+                        Factorc(
+                          BaseNumber(
+                           2
+                          ) [BaseNumber]
+                          NoListBaseExpc(
+                          ) [NoListBaseExpc]
+                        ) [Factorc]
+                        NoMulopFactorList(
+                        ) [NoMulopFactorList]
+                      ) [Termc]
+                    ) [TermMinusc]
+                    NoAddopTermList(
+                    ) [NoAddopTermList]
+                  ) [Exprc]
+                ) [ArrayElem]
+                Assignopc(
+                ) [Assignopc]
+                Exprc(
+                  TermMinusc(
+                    NoOptionalMinus(
+                    ) [NoOptionalMinus]
+                    Termc(
+                      Factorc(
+                        BaseNumber(
+                         10
+                        ) [BaseNumber]
+                        NoListBaseExpc(
+                        ) [NoListBaseExpc]
+                      ) [Factorc]
+                      NoMulopFactorList(
+                      ) [NoMulopFactorList]
+                    ) [Termc]
+                  ) [TermMinusc]
+                  AddopTermListc(
+                    AddopTermListc(
+                      NoAddopTermList(
+                      ) [NoAddopTermList]
+                      OperationPlus(
+                      ) [OperationPlus]
+                      Termc(
+                        Factorc(
+                          BaseDesignator(
+                            ArrayElem(
+                              DesignatorNameArr(
+                               x
+                              ) [DesignatorNameArr]
+                              Exprc(
+                                TermMinusc(
+                                  NoOptionalMinus(
+                                  ) [NoOptionalMinus]
+                                  Termc(
+                                    Factorc(
+                                      BaseNumber(
+                                       1
+                                      ) [BaseNumber]
+                                      NoListBaseExpc(
+                                      ) [NoListBaseExpc]
+                                    ) [Factorc]
+                                    NoMulopFactorList(
+                                    ) [NoMulopFactorList]
+                                  ) [Termc]
+                                ) [TermMinusc]
+                                NoAddopTermList(
+                                ) [NoAddopTermList]
+                              ) [Exprc]
+                            ) [ArrayElem]
+                          ) [BaseDesignator]
+                          NoListBaseExpc(
+                          ) [NoListBaseExpc]
+                        ) [Factorc]
+                        NoMulopFactorList(
+                        ) [NoMulopFactorList]
+                      ) [Termc]
+                    ) [AddopTermListc]
+                    OperationPlus(
+                    ) [OperationPlus]
+                    Termc(
+                      Factorc(
+                        BaseNumber(
+                         2
+                        ) [BaseNumber]
+                        ListBaseExpc(
+                          NoListBaseExpc(
+                          ) [NoListBaseExpc]
+                          OneElementExp(
+                            Expopc(
+                            ) [Expopc]
+                            BaseNumber(
+                             2
+                            ) [BaseNumber]
+                          ) [OneElementExp]
+                        ) [ListBaseExpc]
+                      ) [Factorc]
+                      NoMulopFactorList(
+                      ) [NoMulopFactorList]
+                    ) [Termc]
+                  ) [AddopTermListc]
+                ) [Exprc]
+              ) [DesignatorAssign]
+            ) [SingleStatementc]
+          ) [StatementDerived1]
+        ) [StatementListc]
+        StatementDerived1(
+          PrintStmt(
+            Exprc(
+              TermMinusc(
+                NoOptionalMinus(
+                ) [NoOptionalMinus]
+                Termc(
+                  Factorc(
+                    BaseDesignator(
+                      ArrayElem(
+                        DesignatorNameArr(
+                         x
+                        ) [DesignatorNameArr]
+                        Exprc(
+                          TermMinusc(
+                            NoOptionalMinus(
+                            ) [NoOptionalMinus]
+                            Termc(
+                              Factorc(
+                                BaseNumber(
+                                 2
+                                ) [BaseNumber]
+                                NoListBaseExpc(
+                                ) [NoListBaseExpc]
+                              ) [Factorc]
+                              NoMulopFactorList(
+                              ) [NoMulopFactorList]
+                            ) [Termc]
+                          ) [TermMinusc]
+                          NoAddopTermList(
+                          ) [NoAddopTermList]
+                        ) [Exprc]
+                      ) [ArrayElem]
+                    ) [BaseDesignator]
+                    NoListBaseExpc(
+                    ) [NoListBaseExpc]
+                  ) [Factorc]
+                  NoMulopFactorList(
+                  ) [NoMulopFactorList]
+                ) [Termc]
+              ) [TermMinusc]
+              NoAddopTermList(
+              ) [NoAddopTermList]
+            ) [Exprc]
+            NoOptionalNumConst(
+            ) [NoOptionalNumConst]
+          ) [PrintStmt]
+        ) [StatementDerived1]
+      ) [StatementListc]
+    ) [MethodDeclc]
+  ) [DeclListMethodc]
+) [Programc]
+INFO  01:33:04,042 - ===================================
+INFO  01:33:04,046 - Obradjuje se funkcija main na liniji 5
+INFO  01:33:04,046 - ===================================
+INFO  01:33:04,049 - Parsiranje uspesno zavrseno!

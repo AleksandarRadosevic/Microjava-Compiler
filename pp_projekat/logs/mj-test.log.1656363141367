@@ -1,0 +1,193 @@
+INFO  22:51:50,798 - Compiling source file: C:\Users\Aleksandar\Desktop\PP\projekat\PP_Projekat\pp_projekat\test\program.mj
+INFO  22:51:50,857 - #6 program
+INFO  22:51:50,857 - #4 test301
+INFO  22:51:50,858 - #7 {
+INFO  22:51:50,859 - #24 void
+INFO  22:51:50,859 - #4 main
+INFO  22:51:50,859 - #22 (
+INFO  22:51:50,859 - #23 )
+INFO  22:51:50,859 - #4 int
+INFO  22:51:50,860 - #4 x
+INFO  22:51:50,860 - #37 ;
+INFO  22:51:50,861 - #4 int
+INFO  22:51:50,862 - #4 y
+INFO  22:51:50,862 - #37 ;
+INFO  22:51:50,862 - #7 {
+INFO  22:51:50,862 - #4 y
+INFO  22:51:50,862 - #10 =
+INFO  22:51:50,863 - #2 2
+INFO  22:51:50,864 - #37 ;
+INFO  22:51:50,866 - #4 x
+INFO  22:51:50,866 - #10 =
+INFO  22:51:50,866 - #2 2
+INFO  22:51:50,866 - #52 ^
+INFO  22:51:50,866 - #4 y
+INFO  22:51:50,867 - #37 ;
+INFO  22:51:50,868 - #25 print
+INFO  22:51:50,868 - #22 (
+INFO  22:51:50,868 - #4 x
+INFO  22:51:50,868 - #23 )
+INFO  22:51:50,868 - #37 ;
+INFO  22:51:50,868 - #8 }
+INFO  22:51:50,868 - #8 }
+INFO  22:51:50,873 - Programc(
+  ProgNamec(
+   test301
+  ) [ProgNamec]
+  NoDeclarations(
+  ) [NoDeclarations]
+  DeclListMethodc(
+    NoDeclListMethod(
+    ) [NoDeclListMethod]
+    MethodDeclc(
+      VoidFunc(
+       main
+      ) [VoidFunc]
+      FormParsOptionalDerived3(
+      ) [FormParsOptionalDerived3]
+      DeclListVarc(
+        DeclListVarc(
+          NoDeclListVar(
+          ) [NoDeclListVar]
+          VarDeclc(
+            Typec(
+             int
+            ) [Typec]
+           x
+            NoOptionalBraces(
+            ) [NoOptionalBraces]
+            NoVarDeclList(
+            ) [NoVarDeclList]
+          ) [VarDeclc]
+        ) [DeclListVarc]
+        VarDeclc(
+          Typec(
+           int
+          ) [Typec]
+         y
+          NoOptionalBraces(
+          ) [NoOptionalBraces]
+          NoVarDeclList(
+          ) [NoVarDeclList]
+        ) [VarDeclc]
+      ) [DeclListVarc]
+      StatementListc(
+        StatementListc(
+          StatementListc(
+            NoStatementList(
+            ) [NoStatementList]
+            StatementDerived1(
+              SingleStatementc(
+                DesignatorAssign(
+                  Designatorc(
+                    DesignatorName(
+                     y
+                    ) [DesignatorName]
+                  ) [Designatorc]
+                  Assignopc(
+                  ) [Assignopc]
+                  Exprc(
+                    TermMinusc(
+                      NoOptionalMinus(
+                      ) [NoOptionalMinus]
+                      Termc(
+                        Factorc(
+                          BaseNumber(
+                           2
+                          ) [BaseNumber]
+                          NoListBaseExpc(
+                          ) [NoListBaseExpc]
+                        ) [Factorc]
+                        NoMulopFactorList(
+                        ) [NoMulopFactorList]
+                      ) [Termc]
+                    ) [TermMinusc]
+                    NoAddopTermList(
+                    ) [NoAddopTermList]
+                  ) [Exprc]
+                ) [DesignatorAssign]
+              ) [SingleStatementc]
+            ) [StatementDerived1]
+          ) [StatementListc]
+          StatementDerived1(
+            SingleStatementc(
+              DesignatorAssign(
+                Designatorc(
+                  DesignatorName(
+                   x
+                  ) [DesignatorName]
+                ) [Designatorc]
+                Assignopc(
+                ) [Assignopc]
+                Exprc(
+                  TermMinusc(
+                    NoOptionalMinus(
+                    ) [NoOptionalMinus]
+                    Termc(
+                      Factorc(
+                        BaseNumber(
+                         2
+                        ) [BaseNumber]
+                        ListBaseExpc(
+                          NoListBaseExpc(
+                          ) [NoListBaseExpc]
+                          OneElementExp(
+                            Expopc(
+                            ) [Expopc]
+                            BaseDesignator(
+                              Designatorc(
+                                DesignatorName(
+                                 y
+                                ) [DesignatorName]
+                              ) [Designatorc]
+                            ) [BaseDesignator]
+                          ) [OneElementExp]
+                        ) [ListBaseExpc]
+                      ) [Factorc]
+                      NoMulopFactorList(
+                      ) [NoMulopFactorList]
+                    ) [Termc]
+                  ) [TermMinusc]
+                  NoAddopTermList(
+                  ) [NoAddopTermList]
+                ) [Exprc]
+              ) [DesignatorAssign]
+            ) [SingleStatementc]
+          ) [StatementDerived1]
+        ) [StatementListc]
+        StatementDerived1(
+          PrintStmt(
+            Exprc(
+              TermMinusc(
+                NoOptionalMinus(
+                ) [NoOptionalMinus]
+                Termc(
+                  Factorc(
+                    BaseDesignator(
+                      Designatorc(
+                        DesignatorName(
+                         x
+                        ) [DesignatorName]
+                      ) [Designatorc]
+                    ) [BaseDesignator]
+                    NoListBaseExpc(
+                    ) [NoListBaseExpc]
+                  ) [Factorc]
+                  NoMulopFactorList(
+                  ) [NoMulopFactorList]
+                ) [Termc]
+              ) [TermMinusc]
+              NoAddopTermList(
+              ) [NoAddopTermList]
+            ) [Exprc]
+            NoOptionalNumConst(
+            ) [NoOptionalNumConst]
+          ) [PrintStmt]
+        ) [StatementDerived1]
+      ) [StatementListc]
+    ) [MethodDeclc]
+  ) [DeclListMethodc]
+) [Programc]
+INFO  22:51:50,874 - ===================================
+INFO  22:51:50,877 - Obradjuje se funkcija main na liniji 5
+INFO  22:51:50,877 - ===================================

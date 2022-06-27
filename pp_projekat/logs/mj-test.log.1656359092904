@@ -1,0 +1,154 @@
+INFO  21:44:33,324 - Compiling source file: C:\Users\Aleksandar\Desktop\PP\projekat\PP_Projekat\pp_projekat\test\program.mj
+INFO  21:44:33,372 - #6 program
+INFO  21:44:33,372 - #4 test301
+INFO  21:44:33,372 - #7 {
+INFO  21:44:33,372 - #24 void
+INFO  21:44:33,373 - #4 main
+INFO  21:44:33,373 - #22 (
+INFO  21:44:33,373 - #23 )
+INFO  21:44:33,373 - #4 int
+INFO  21:44:33,374 - #4 x
+INFO  21:44:33,374 - #37 ;
+INFO  21:44:33,375 - #7 {
+INFO  21:44:33,375 - #4 x
+INFO  21:44:33,375 - #10 =
+INFO  21:44:33,376 - #2 1
+INFO  21:44:33,377 - #30 +
+INFO  21:44:33,378 - #2 4
+INFO  21:44:33,379 - #52 ^
+INFO  21:44:33,379 - #2 0
+INFO  21:44:33,380 - #37 ;
+INFO  21:44:33,380 - #25 print
+INFO  21:44:33,381 - #22 (
+INFO  21:44:33,381 - #4 x
+INFO  21:44:33,381 - #23 )
+INFO  21:44:33,381 - #37 ;
+INFO  21:44:33,381 - #8 }
+INFO  21:44:33,381 - #8 }
+INFO  21:44:33,385 - Programc(
+  ProgNamec(
+   test301
+  ) [ProgNamec]
+  NoDeclarations(
+  ) [NoDeclarations]
+  DeclListMethodc(
+    NoDeclListMethod(
+    ) [NoDeclListMethod]
+    MethodDeclc(
+      VoidFunc(
+       main
+      ) [VoidFunc]
+      FormParsOptionalDerived3(
+      ) [FormParsOptionalDerived3]
+      DeclListVarc(
+        NoDeclListVar(
+        ) [NoDeclListVar]
+        VarDeclc(
+          Typec(
+           int
+          ) [Typec]
+         x
+          NoOptionalBraces(
+          ) [NoOptionalBraces]
+          NoVarDeclList(
+          ) [NoVarDeclList]
+        ) [VarDeclc]
+      ) [DeclListVarc]
+      StatementListc(
+        StatementListc(
+          NoStatementList(
+          ) [NoStatementList]
+          StatementDerived1(
+            SingleStatementc(
+              DesignatorAssign(
+                Designatorc(
+                  DesignatorName(
+                   x
+                  ) [DesignatorName]
+                ) [Designatorc]
+                Assignopc(
+                ) [Assignopc]
+                Exprc(
+                  TermMinusc(
+                    NoOptionalMinus(
+                    ) [NoOptionalMinus]
+                    Termc(
+                      Factorc(
+                        BaseNumber(
+                         1
+                        ) [BaseNumber]
+                        NoListBaseExpc(
+                        ) [NoListBaseExpc]
+                      ) [Factorc]
+                      NoMulopFactorList(
+                      ) [NoMulopFactorList]
+                    ) [Termc]
+                  ) [TermMinusc]
+                  AddopTermListc(
+                    NoAddopTermList(
+                    ) [NoAddopTermList]
+                    OperationPlus(
+                    ) [OperationPlus]
+                    Termc(
+                      Factorc(
+                        BaseNumber(
+                         4
+                        ) [BaseNumber]
+                        ListBaseExpc(
+                          NoListBaseExpc(
+                          ) [NoListBaseExpc]
+                          OneElementExp(
+                            Expopc(
+                            ) [Expopc]
+                            BaseNumber(
+                             0
+                            ) [BaseNumber]
+                          ) [OneElementExp]
+                        ) [ListBaseExpc]
+                      ) [Factorc]
+                      NoMulopFactorList(
+                      ) [NoMulopFactorList]
+                    ) [Termc]
+                  ) [AddopTermListc]
+                ) [Exprc]
+              ) [DesignatorAssign]
+            ) [SingleStatementc]
+          ) [StatementDerived1]
+        ) [StatementListc]
+        StatementDerived1(
+          PrintStmt(
+            Exprc(
+              TermMinusc(
+                NoOptionalMinus(
+                ) [NoOptionalMinus]
+                Termc(
+                  Factorc(
+                    BaseDesignator(
+                      Designatorc(
+                        DesignatorName(
+                         x
+                        ) [DesignatorName]
+                      ) [Designatorc]
+                    ) [BaseDesignator]
+                    NoListBaseExpc(
+                    ) [NoListBaseExpc]
+                  ) [Factorc]
+                  NoMulopFactorList(
+                  ) [NoMulopFactorList]
+                ) [Termc]
+              ) [TermMinusc]
+              NoAddopTermList(
+              ) [NoAddopTermList]
+            ) [Exprc]
+            NoOptionalNumConst(
+            ) [NoOptionalNumConst]
+          ) [PrintStmt]
+        ) [StatementDerived1]
+      ) [StatementListc]
+    ) [MethodDeclc]
+  ) [DeclListMethodc]
+) [Programc]
+INFO  21:44:33,386 - ===================================
+INFO  21:44:33,389 - Obradjuje se funkcija main na liniji 5
+INFO  21:44:33,389 - ===================================
+INFO  21:44:33,393 - Parsiranje uspesno zavrseno!

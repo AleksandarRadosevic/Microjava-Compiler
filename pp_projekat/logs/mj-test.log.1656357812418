@@ -1,0 +1,138 @@
+INFO  21:23:23,796 - Compiling source file: C:\Users\Aleksandar\Desktop\PP\projekat\PP_Projekat\pp_projekat\test\program.mj
+INFO  21:23:23,840 - #6 program
+INFO  21:23:23,840 - #4 test301
+INFO  21:23:23,840 - #7 {
+INFO  21:23:23,840 - #24 void
+INFO  21:23:23,841 - #4 main
+INFO  21:23:23,841 - #22 (
+INFO  21:23:23,841 - #23 )
+INFO  21:23:23,841 - #4 int
+INFO  21:23:23,842 - #4 x
+INFO  21:23:23,842 - #37 ;
+INFO  21:23:23,843 - #7 {
+INFO  21:23:23,843 - #4 x
+INFO  21:23:23,843 - #10 =
+INFO  21:23:23,844 - #2 2
+INFO  21:23:23,845 - #52 ^
+INFO  21:23:23,845 - #5 a
+INFO  21:23:23,846 - #37 ;
+INFO  21:23:23,848 - #25 print
+INFO  21:23:23,848 - #22 (
+INFO  21:23:23,848 - #4 x
+INFO  21:23:23,848 - #23 )
+INFO  21:23:23,849 - #37 ;
+INFO  21:23:23,849 - #8 }
+INFO  21:23:23,849 - #8 }
+INFO  21:23:23,852 - Programc(
+  ProgNamec(
+   test301
+  ) [ProgNamec]
+  NoDeclarations(
+  ) [NoDeclarations]
+  DeclListMethodc(
+    NoDeclListMethod(
+    ) [NoDeclListMethod]
+    MethodDeclc(
+      VoidFunc(
+       main
+      ) [VoidFunc]
+      FormParsOptionalDerived3(
+      ) [FormParsOptionalDerived3]
+      DeclListVarc(
+        NoDeclListVar(
+        ) [NoDeclListVar]
+        VarDeclc(
+          Typec(
+           int
+          ) [Typec]
+         x
+          NoOptionalBraces(
+          ) [NoOptionalBraces]
+          NoVarDeclList(
+          ) [NoVarDeclList]
+        ) [VarDeclc]
+      ) [DeclListVarc]
+      StatementListc(
+        StatementListc(
+          NoStatementList(
+          ) [NoStatementList]
+          StatementDerived1(
+            SingleStatementc(
+              DesignatorAssign(
+                Designatorc(
+                  DesignatorName(
+                   x
+                  ) [DesignatorName]
+                ) [Designatorc]
+                Assignopc(
+                ) [Assignopc]
+                Exprc(
+                  TermMinusc(
+                    NoOptionalMinus(
+                    ) [NoOptionalMinus]
+                    Termc(
+                      Factorc(
+                        BaseNumber(
+                         2
+                        ) [BaseNumber]
+                        ListBaseExpc(
+                          NoListBaseExpc(
+                          ) [NoListBaseExpc]
+                          OneElementExp(
+                            Expopc(
+                            ) [Expopc]
+                            BaseChar(
+                             a
+                            ) [BaseChar]
+                          ) [OneElementExp]
+                        ) [ListBaseExpc]
+                      ) [Factorc]
+                      NoMulopFactorList(
+                      ) [NoMulopFactorList]
+                    ) [Termc]
+                  ) [TermMinusc]
+                  NoAddopTermList(
+                  ) [NoAddopTermList]
+                ) [Exprc]
+              ) [DesignatorAssign]
+            ) [SingleStatementc]
+          ) [StatementDerived1]
+        ) [StatementListc]
+        StatementDerived1(
+          PrintStmt(
+            Exprc(
+              TermMinusc(
+                NoOptionalMinus(
+                ) [NoOptionalMinus]
+                Termc(
+                  Factorc(
+                    BaseDesignator(
+                      Designatorc(
+                        DesignatorName(
+                         x
+                        ) [DesignatorName]
+                      ) [Designatorc]
+                    ) [BaseDesignator]
+                    NoListBaseExpc(
+                    ) [NoListBaseExpc]
+                  ) [Factorc]
+                  NoMulopFactorList(
+                  ) [NoMulopFactorList]
+                ) [Termc]
+              ) [TermMinusc]
+              NoAddopTermList(
+              ) [NoAddopTermList]
+            ) [Exprc]
+            NoOptionalNumConst(
+            ) [NoOptionalNumConst]
+          ) [PrintStmt]
+        ) [StatementDerived1]
+      ) [StatementListc]
+    ) [MethodDeclc]
+  ) [DeclListMethodc]
+) [Programc]
+INFO  21:23:23,853 - ===================================
+INFO  21:23:23,856 - Obradjuje se funkcija main na liniji 5
+ERROR 21:23:23,856 - Stepenovanje se mora raditi sa celim brojevima na liniji 8
+INFO  21:23:23,857 - ===================================
+ERROR 21:23:23,857 - Parsiranje NIJE uspesno zavrseno!

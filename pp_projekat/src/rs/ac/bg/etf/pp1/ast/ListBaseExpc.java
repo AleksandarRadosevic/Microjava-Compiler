@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 27/5/2022 17:1:59
+// 27/5/2022 21:22:58
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -8,16 +8,13 @@ package rs.ac.bg.etf.pp1.ast;
 public class ListBaseExpc extends ListBaseExp {
 
     private ListBaseExp ListBaseExp;
-    private Expop Expop;
-    private BaseExp BaseExp;
+    private OneElementExp OneElementExp;
 
-    public ListBaseExpc (ListBaseExp ListBaseExp, Expop Expop, BaseExp BaseExp) {
+    public ListBaseExpc (ListBaseExp ListBaseExp, OneElementExp OneElementExp) {
         this.ListBaseExp=ListBaseExp;
         if(ListBaseExp!=null) ListBaseExp.setParent(this);
-        this.Expop=Expop;
-        if(Expop!=null) Expop.setParent(this);
-        this.BaseExp=BaseExp;
-        if(BaseExp!=null) BaseExp.setParent(this);
+        this.OneElementExp=OneElementExp;
+        if(OneElementExp!=null) OneElementExp.setParent(this);
     }
 
     public ListBaseExp getListBaseExp() {
@@ -28,20 +25,12 @@ public class ListBaseExpc extends ListBaseExp {
         this.ListBaseExp=ListBaseExp;
     }
 
-    public Expop getExpop() {
-        return Expop;
+    public OneElementExp getOneElementExp() {
+        return OneElementExp;
     }
 
-    public void setExpop(Expop Expop) {
-        this.Expop=Expop;
-    }
-
-    public BaseExp getBaseExp() {
-        return BaseExp;
-    }
-
-    public void setBaseExp(BaseExp BaseExp) {
-        this.BaseExp=BaseExp;
+    public void setOneElementExp(OneElementExp OneElementExp) {
+        this.OneElementExp=OneElementExp;
     }
 
     public void accept(Visitor visitor) {
@@ -50,21 +39,18 @@ public class ListBaseExpc extends ListBaseExp {
 
     public void childrenAccept(Visitor visitor) {
         if(ListBaseExp!=null) ListBaseExp.accept(visitor);
-        if(Expop!=null) Expop.accept(visitor);
-        if(BaseExp!=null) BaseExp.accept(visitor);
+        if(OneElementExp!=null) OneElementExp.accept(visitor);
     }
 
     public void traverseTopDown(Visitor visitor) {
         accept(visitor);
         if(ListBaseExp!=null) ListBaseExp.traverseTopDown(visitor);
-        if(Expop!=null) Expop.traverseTopDown(visitor);
-        if(BaseExp!=null) BaseExp.traverseTopDown(visitor);
+        if(OneElementExp!=null) OneElementExp.traverseTopDown(visitor);
     }
 
     public void traverseBottomUp(Visitor visitor) {
         if(ListBaseExp!=null) ListBaseExp.traverseBottomUp(visitor);
-        if(Expop!=null) Expop.traverseBottomUp(visitor);
-        if(BaseExp!=null) BaseExp.traverseBottomUp(visitor);
+        if(OneElementExp!=null) OneElementExp.traverseBottomUp(visitor);
         accept(visitor);
     }
 
@@ -79,14 +65,8 @@ public class ListBaseExpc extends ListBaseExp {
             buffer.append(tab+"  null");
         buffer.append("\n");
 
-        if(Expop!=null)
-            buffer.append(Expop.toString("  "+tab));
-        else
-            buffer.append(tab+"  null");
-        buffer.append("\n");
-
-        if(BaseExp!=null)
-            buffer.append(BaseExp.toString("  "+tab));
+        if(OneElementExp!=null)
+            buffer.append(OneElementExp.toString("  "+tab));
         else
             buffer.append(tab+"  null");
         buffer.append("\n");

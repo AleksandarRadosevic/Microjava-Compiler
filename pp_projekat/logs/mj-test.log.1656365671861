@@ -1,0 +1,287 @@
+INFO  23:34:27,843 - Compiling source file: C:\Users\Aleksandar\Desktop\PP\projekat\PP_Projekat\pp_projekat\test\program.mj
+INFO  23:34:27,887 - #6 program
+INFO  23:34:27,887 - #4 test301
+INFO  23:34:27,888 - #9 const
+INFO  23:34:27,888 - #4 int
+INFO  23:34:27,888 - #4 nula
+INFO  23:34:27,888 - #10 =
+INFO  23:34:27,888 - #2 0
+INFO  23:34:27,889 - #37 ;
+INFO  23:34:27,889 - #9 const
+INFO  23:34:27,889 - #4 int
+INFO  23:34:27,889 - #4 jedan
+INFO  23:34:27,889 - #10 =
+INFO  23:34:27,889 - #2 1
+INFO  23:34:27,889 - #37 ;
+INFO  23:34:27,889 - #9 const
+INFO  23:34:27,890 - #4 int
+INFO  23:34:27,890 - #4 tri
+INFO  23:34:27,890 - #10 =
+INFO  23:34:27,890 - #2 3
+INFO  23:34:27,890 - #37 ;
+INFO  23:34:27,890 - #9 const
+INFO  23:34:27,890 - #4 int
+INFO  23:34:27,890 - #4 pet
+INFO  23:34:27,890 - #10 =
+INFO  23:34:27,890 - #2 5
+INFO  23:34:27,890 - #37 ;
+INFO  23:34:27,890 - #4 int
+INFO  23:34:27,891 - #4 niz
+INFO  23:34:27,891 - #44 [
+INFO  23:34:27,891 - #45 ]
+INFO  23:34:27,891 - #37 ;
+INFO  23:34:27,892 - #4 char
+INFO  23:34:27,892 - #4 nizch
+INFO  23:34:27,892 - #44 [
+INFO  23:34:27,892 - #45 ]
+INFO  23:34:27,892 - #37 ;
+INFO  23:34:27,892 - #7 {
+INFO  23:34:27,892 - #24 void
+INFO  23:34:27,892 - #4 main
+INFO  23:34:27,893 - #22 (
+INFO  23:34:27,893 - #23 )
+INFO  23:34:27,893 - #4 int
+INFO  23:34:27,893 - #4 bodovi
+INFO  23:34:27,893 - #37 ;
+INFO  23:34:27,894 - #4 bool
+INFO  23:34:27,894 - #4 bt
+INFO  23:34:27,894 - #37 ;
+INFO  23:34:27,894 - #7 {
+INFO  23:34:27,894 - #4 bodovi
+INFO  23:34:27,895 - #10 =
+INFO  23:34:27,895 - #2 0
+INFO  23:34:27,896 - #37 ;
+INFO  23:34:27,898 - #4 bodovi
+INFO  23:34:27,898 - #10 =
+INFO  23:34:27,898 - #2 2
+INFO  23:34:27,898 - #52 ^
+INFO  23:34:27,898 - #2 2
+INFO  23:34:27,899 - #37 ;
+INFO  23:34:27,899 - #25 print
+INFO  23:34:27,899 - #22 (
+INFO  23:34:27,899 - #23 )
+ERROR 23:34:27,899 - 
+Sintaksna greska na liniji 20
+INFO  23:34:27,899 - #37 ;
+INFO  23:34:27,899 - #8 }
+INFO  23:34:27,899 - #8 }
+ERROR 23:34:27,900 - Izvrsen oporavak do ; u liniji 20
+INFO  23:34:27,904 - Programc(
+  ProgNamec(
+   test301
+  ) [ProgNamec]
+  DeclarationListc(
+    DeclarationListc(
+      DeclarationListc(
+        DeclarationListc(
+          DeclarationListc(
+            DeclarationListc(
+              NoDeclarations(
+              ) [NoDeclarations]
+              DeclListc(
+                ConstDeclc(
+                  Typec(
+                   int
+                  ) [Typec]
+                 nula
+                  ConstInt(
+                   0
+                  ) [ConstInt]
+                  NoConstDecl(
+                  ) [NoConstDecl]
+                ) [ConstDeclc]
+              ) [DeclListc]
+            ) [DeclarationListc]
+            DeclListc(
+              ConstDeclc(
+                Typec(
+                 int
+                ) [Typec]
+               jedan
+                ConstInt(
+                 1
+                ) [ConstInt]
+                NoConstDecl(
+                ) [NoConstDecl]
+              ) [ConstDeclc]
+            ) [DeclListc]
+          ) [DeclarationListc]
+          DeclListc(
+            ConstDeclc(
+              Typec(
+               int
+              ) [Typec]
+             tri
+              ConstInt(
+               3
+              ) [ConstInt]
+              NoConstDecl(
+              ) [NoConstDecl]
+            ) [ConstDeclc]
+          ) [DeclListc]
+        ) [DeclarationListc]
+        DeclListc(
+          ConstDeclc(
+            Typec(
+             int
+            ) [Typec]
+           pet
+            ConstInt(
+             5
+            ) [ConstInt]
+            NoConstDecl(
+            ) [NoConstDecl]
+          ) [ConstDeclc]
+        ) [DeclListc]
+      ) [DeclarationListc]
+      DeclListDerived1(
+        VarDeclGlobalc(
+          Typec(
+           int
+          ) [Typec]
+         niz
+          OptionalBracesc(
+          ) [OptionalBracesc]
+          NoVarDeclListGlobalc(
+          ) [NoVarDeclListGlobalc]
+        ) [VarDeclGlobalc]
+      ) [DeclListDerived1]
+    ) [DeclarationListc]
+    DeclListDerived1(
+      VarDeclGlobalc(
+        Typec(
+         char
+        ) [Typec]
+       nizch
+        OptionalBracesc(
+        ) [OptionalBracesc]
+        NoVarDeclListGlobalc(
+        ) [NoVarDeclListGlobalc]
+      ) [VarDeclGlobalc]
+    ) [DeclListDerived1]
+  ) [DeclarationListc]
+  DeclListMethodc(
+    NoDeclListMethod(
+    ) [NoDeclListMethod]
+    MethodDeclc(
+      VoidFunc(
+       main
+      ) [VoidFunc]
+      FormParsOptionalDerived3(
+      ) [FormParsOptionalDerived3]
+      DeclListVarc(
+        DeclListVarc(
+          NoDeclListVar(
+          ) [NoDeclListVar]
+          VarDeclc(
+            Typec(
+             int
+            ) [Typec]
+           bodovi
+            NoOptionalBraces(
+            ) [NoOptionalBraces]
+            NoVarDeclList(
+            ) [NoVarDeclList]
+          ) [VarDeclc]
+        ) [DeclListVarc]
+        VarDeclc(
+          Typec(
+           bool
+          ) [Typec]
+         bt
+          NoOptionalBraces(
+          ) [NoOptionalBraces]
+          NoVarDeclList(
+          ) [NoVarDeclList]
+        ) [VarDeclc]
+      ) [DeclListVarc]
+      StatementListc(
+        StatementListc(
+          StatementListc(
+            NoStatementList(
+            ) [NoStatementList]
+            StatementDerived1(
+              SingleStatementc(
+                DesignatorAssign(
+                  Designatorc(
+                    DesignatorName(
+                     bodovi
+                    ) [DesignatorName]
+                  ) [Designatorc]
+                  Assignopc(
+                  ) [Assignopc]
+                  Exprc(
+                    TermMinusc(
+                      NoOptionalMinus(
+                      ) [NoOptionalMinus]
+                      Termc(
+                        Factorc(
+                          BaseNumber(
+                           0
+                          ) [BaseNumber]
+                          NoListBaseExpc(
+                          ) [NoListBaseExpc]
+                        ) [Factorc]
+                        NoMulopFactorList(
+                        ) [NoMulopFactorList]
+                      ) [Termc]
+                    ) [TermMinusc]
+                    NoAddopTermList(
+                    ) [NoAddopTermList]
+                  ) [Exprc]
+                ) [DesignatorAssign]
+              ) [SingleStatementc]
+            ) [StatementDerived1]
+          ) [StatementListc]
+          StatementDerived1(
+            SingleStatementc(
+              DesignatorAssign(
+                Designatorc(
+                  DesignatorName(
+                   bodovi
+                  ) [DesignatorName]
+                ) [Designatorc]
+                Assignopc(
+                ) [Assignopc]
+                Exprc(
+                  TermMinusc(
+                    NoOptionalMinus(
+                    ) [NoOptionalMinus]
+                    Termc(
+                      Factorc(
+                        BaseNumber(
+                         2
+                        ) [BaseNumber]
+                        ListBaseExpc(
+                          NoListBaseExpc(
+                          ) [NoListBaseExpc]
+                          OneElementExp(
+                            Expopc(
+                            ) [Expopc]
+                            BaseNumber(
+                             2
+                            ) [BaseNumber]
+                          ) [OneElementExp]
+                        ) [ListBaseExpc]
+                      ) [Factorc]
+                      NoMulopFactorList(
+                      ) [NoMulopFactorList]
+                    ) [Termc]
+                  ) [TermMinusc]
+                  NoAddopTermList(
+                  ) [NoAddopTermList]
+                ) [Exprc]
+              ) [DesignatorAssign]
+            ) [SingleStatementc]
+          ) [StatementDerived1]
+        ) [StatementListc]
+        ErrorStmt(
+        ) [ErrorStmt]
+      ) [StatementListc]
+    ) [MethodDeclc]
+  ) [DeclListMethodc]
+) [Programc]
+INFO  23:34:27,904 - ===================================
+INFO  23:34:27,908 - Obradjuje se funkcija main na liniji 14
+INFO  23:34:27,908 - ===================================
+INFO  23:34:27,912 - Parsiranje uspesno zavrseno!

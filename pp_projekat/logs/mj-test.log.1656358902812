@@ -1,0 +1,137 @@
+INFO  21:39:55,953 - Compiling source file: C:\Users\Aleksandar\Desktop\PP\projekat\PP_Projekat\pp_projekat\test\program.mj
+INFO  21:39:55,999 - #6 program
+INFO  21:39:55,999 - #4 test301
+INFO  21:39:55,999 - #7 {
+INFO  21:39:56,000 - #24 void
+INFO  21:39:56,000 - #4 main
+INFO  21:39:56,000 - #22 (
+INFO  21:39:56,000 - #23 )
+INFO  21:39:56,000 - #4 int
+INFO  21:39:56,001 - #4 x
+INFO  21:39:56,001 - #37 ;
+INFO  21:39:56,002 - #7 {
+INFO  21:39:56,002 - #4 x
+INFO  21:39:56,003 - #10 =
+INFO  21:39:56,003 - #2 4
+INFO  21:39:56,004 - #52 ^
+INFO  21:39:56,005 - #2 0
+INFO  21:39:56,006 - #37 ;
+INFO  21:39:56,007 - #25 print
+INFO  21:39:56,008 - #22 (
+INFO  21:39:56,008 - #4 x
+INFO  21:39:56,008 - #23 )
+INFO  21:39:56,008 - #37 ;
+INFO  21:39:56,008 - #8 }
+INFO  21:39:56,009 - #8 }
+INFO  21:39:56,012 - Programc(
+  ProgNamec(
+   test301
+  ) [ProgNamec]
+  NoDeclarations(
+  ) [NoDeclarations]
+  DeclListMethodc(
+    NoDeclListMethod(
+    ) [NoDeclListMethod]
+    MethodDeclc(
+      VoidFunc(
+       main
+      ) [VoidFunc]
+      FormParsOptionalDerived3(
+      ) [FormParsOptionalDerived3]
+      DeclListVarc(
+        NoDeclListVar(
+        ) [NoDeclListVar]
+        VarDeclc(
+          Typec(
+           int
+          ) [Typec]
+         x
+          NoOptionalBraces(
+          ) [NoOptionalBraces]
+          NoVarDeclList(
+          ) [NoVarDeclList]
+        ) [VarDeclc]
+      ) [DeclListVarc]
+      StatementListc(
+        StatementListc(
+          NoStatementList(
+          ) [NoStatementList]
+          StatementDerived1(
+            SingleStatementc(
+              DesignatorAssign(
+                Designatorc(
+                  DesignatorName(
+                   x
+                  ) [DesignatorName]
+                ) [Designatorc]
+                Assignopc(
+                ) [Assignopc]
+                Exprc(
+                  TermMinusc(
+                    NoOptionalMinus(
+                    ) [NoOptionalMinus]
+                    Termc(
+                      Factorc(
+                        BaseNumber(
+                         4
+                        ) [BaseNumber]
+                        ListBaseExpc(
+                          NoListBaseExpc(
+                          ) [NoListBaseExpc]
+                          OneElementExp(
+                            Expopc(
+                            ) [Expopc]
+                            BaseNumber(
+                             0
+                            ) [BaseNumber]
+                          ) [OneElementExp]
+                        ) [ListBaseExpc]
+                      ) [Factorc]
+                      NoMulopFactorList(
+                      ) [NoMulopFactorList]
+                    ) [Termc]
+                  ) [TermMinusc]
+                  NoAddopTermList(
+                  ) [NoAddopTermList]
+                ) [Exprc]
+              ) [DesignatorAssign]
+            ) [SingleStatementc]
+          ) [StatementDerived1]
+        ) [StatementListc]
+        StatementDerived1(
+          PrintStmt(
+            Exprc(
+              TermMinusc(
+                NoOptionalMinus(
+                ) [NoOptionalMinus]
+                Termc(
+                  Factorc(
+                    BaseDesignator(
+                      Designatorc(
+                        DesignatorName(
+                         x
+                        ) [DesignatorName]
+                      ) [Designatorc]
+                    ) [BaseDesignator]
+                    NoListBaseExpc(
+                    ) [NoListBaseExpc]
+                  ) [Factorc]
+                  NoMulopFactorList(
+                  ) [NoMulopFactorList]
+                ) [Termc]
+              ) [TermMinusc]
+              NoAddopTermList(
+              ) [NoAddopTermList]
+            ) [Exprc]
+            NoOptionalNumConst(
+            ) [NoOptionalNumConst]
+          ) [PrintStmt]
+        ) [StatementDerived1]
+      ) [StatementListc]
+    ) [MethodDeclc]
+  ) [DeclListMethodc]
+) [Programc]
+INFO  21:39:56,013 - ===================================
+INFO  21:39:56,016 - Obradjuje se funkcija main na liniji 5
+INFO  21:39:56,016 - ===================================
+INFO  21:39:56,019 - Parsiranje uspesno zavrseno!

@@ -1,231 +1,255 @@
-INFO  17:07:33,850 - Compiling source file: C:\Users\Aleksandar\Desktop\PP\projekat\PP_Projekat\pp_projekat\test\program.mj
-INFO  17:07:33,892 - #6 program
-INFO  17:07:33,892 - #4 test301
-INFO  17:07:33,892 - #9 const
-INFO  17:07:33,893 - #4 int
-INFO  17:07:33,893 - #4 nula
-INFO  17:07:33,893 - #10 =
-INFO  17:07:33,893 - #2 0
-INFO  17:07:33,893 - #37 ;
-INFO  17:07:33,893 - #9 const
-INFO  17:07:33,894 - #4 int
-INFO  17:07:33,894 - #4 jedan
-INFO  17:07:33,894 - #10 =
-INFO  17:07:33,894 - #2 1
-INFO  17:07:33,894 - #37 ;
-INFO  17:07:33,894 - #9 const
-INFO  17:07:33,894 - #4 int
-INFO  17:07:33,894 - #4 pet
-INFO  17:07:33,894 - #10 =
-INFO  17:07:33,894 - #2 5
-INFO  17:07:33,894 - #37 ;
-INFO  17:07:33,894 - #4 int
-INFO  17:07:33,895 - #4 niz
-INFO  17:07:33,895 - #44 [
-INFO  17:07:33,895 - #45 ]
-INFO  17:07:33,895 - #37 ;
-INFO  17:07:33,895 - #4 char
-INFO  17:07:33,896 - #4 nizch
-INFO  17:07:33,896 - #44 [
-INFO  17:07:33,896 - #45 ]
-INFO  17:07:33,896 - #37 ;
-INFO  17:07:33,896 - #7 {
-INFO  17:07:33,896 - #24 void
-INFO  17:07:33,897 - #4 main
-INFO  17:07:33,897 - #22 (
-INFO  17:07:33,897 - #23 )
-INFO  17:07:33,897 - #4 int
-INFO  17:07:33,897 - #4 bodovi
-INFO  17:07:33,897 - #37 ;
-INFO  17:07:33,898 - #4 bool
-INFO  17:07:33,898 - #4 bt
-INFO  17:07:33,898 - #37 ;
-INFO  17:07:33,898 - #7 {
-INFO  17:07:33,898 - #4 bodovi
-INFO  17:07:33,899 - #10 =
-INFO  17:07:33,899 - #2 0
-INFO  17:07:33,900 - #37 ;
-INFO  17:07:33,902 - #4 bodovi
-INFO  17:07:33,902 - #46 ++
-INFO  17:07:33,902 - #37 ;
-INFO  17:07:33,902 - #4 bodovi
-INFO  17:07:33,902 - #10 =
-INFO  17:07:33,902 - #4 bodovi
-INFO  17:07:33,902 - #30 +
-INFO  17:07:33,902 - #4 jedan
-INFO  17:07:33,903 - #37 ;
-INFO  17:07:33,903 - #4 bodovi
-INFO  17:07:33,903 - #10 =
-INFO  17:07:33,903 - #4 bodovi
-INFO  17:07:33,903 - #32 *
-INFO  17:07:33,903 - #4 pet
-INFO  17:07:33,904 - #37 ;
-INFO  17:07:33,904 - #4 bodovi
-INFO  17:07:33,905 - #47 --
-INFO  17:07:33,905 - #37 ;
-INFO  17:07:33,905 - #25 print
-INFO  17:07:33,905 - #22 (
-INFO  17:07:33,905 - #4 bodovi
-INFO  17:07:33,905 - #23 )
-INFO  17:07:33,906 - #37 ;
-INFO  17:07:33,906 - #4 niz
-INFO  17:07:33,906 - #10 =
-INFO  17:07:33,906 - #28 new
-INFO  17:07:33,906 - #4 int
-INFO  17:07:33,906 - #44 [
-INFO  17:07:33,906 - #2 3
-INFO  17:07:33,906 - #45 ]
-INFO  17:07:33,906 - #37 ;
-INFO  17:07:33,906 - #4 niz
-INFO  17:07:33,907 - #44 [
-INFO  17:07:33,907 - #4 nula
-INFO  17:07:33,907 - #45 ]
-INFO  17:07:33,907 - #10 =
-INFO  17:07:33,907 - #4 jedan
-INFO  17:07:33,907 - #37 ;
-INFO  17:07:33,907 - #4 niz
-INFO  17:07:33,908 - #44 [
-INFO  17:07:33,908 - #2 1
-INFO  17:07:33,908 - #45 ]
-INFO  17:07:33,908 - #10 =
-INFO  17:07:33,908 - #2 2
-INFO  17:07:33,908 - #37 ;
-INFO  17:07:33,908 - #4 niz
-INFO  17:07:33,908 - #44 [
-INFO  17:07:33,908 - #4 niz
-INFO  17:07:33,908 - #44 [
-INFO  17:07:33,908 - #4 jedan
-INFO  17:07:33,908 - #45 ]
-INFO  17:07:33,908 - #45 ]
-INFO  17:07:33,908 - #10 =
-INFO  17:07:33,909 - #4 niz
-INFO  17:07:33,909 - #44 [
-INFO  17:07:33,909 - #4 niz
-INFO  17:07:33,909 - #44 [
-INFO  17:07:33,909 - #2 0
-INFO  17:07:33,909 - #45 ]
-INFO  17:07:33,909 - #45 ]
-INFO  17:07:33,909 - #32 *
-INFO  17:07:33,909 - #2 3
-INFO  17:07:33,909 - #37 ;
-INFO  17:07:33,909 - #4 bodovi
-INFO  17:07:33,909 - #10 =
-INFO  17:07:33,909 - #4 niz
-INFO  17:07:33,909 - #44 [
-INFO  17:07:33,909 - #2 2
-INFO  17:07:33,909 - #45 ]
-INFO  17:07:33,909 - #33 /
-INFO  17:07:33,909 - #4 niz
-INFO  17:07:33,910 - #44 [
-INFO  17:07:33,910 - #2 0
-INFO  17:07:33,910 - #45 ]
-INFO  17:07:33,910 - #37 ;
-INFO  17:07:33,910 - #25 print
-INFO  17:07:33,910 - #22 (
-INFO  17:07:33,910 - #4 bodovi
-INFO  17:07:33,910 - #23 )
-INFO  17:07:33,910 - #37 ;
-INFO  17:07:33,910 - #25 print
-INFO  17:07:33,910 - #22 (
-INFO  17:07:33,910 - #4 niz
-INFO  17:07:33,911 - #44 [
-INFO  17:07:33,911 - #2 2
-INFO  17:07:33,911 - #45 ]
-INFO  17:07:33,911 - #23 )
-INFO  17:07:33,911 - #37 ;
-INFO  17:07:33,911 - #4 nizch
-INFO  17:07:33,911 - #10 =
-INFO  17:07:33,911 - #28 new
-INFO  17:07:33,911 - #4 char
-INFO  17:07:33,911 - #44 [
-INFO  17:07:33,911 - #2 3
-INFO  17:07:33,911 - #45 ]
-INFO  17:07:33,911 - #37 ;
-INFO  17:07:33,911 - #4 nizch
-INFO  17:07:33,911 - #44 [
-INFO  17:07:33,911 - #2 0
-INFO  17:07:33,911 - #45 ]
-INFO  17:07:33,911 - #10 =
-INFO  17:07:33,911 - #5 a
-INFO  17:07:33,911 - #37 ;
-INFO  17:07:33,912 - #4 nizch
-INFO  17:07:33,912 - #44 [
-INFO  17:07:33,912 - #4 jedan
-INFO  17:07:33,912 - #45 ]
-INFO  17:07:33,912 - #10 =
-INFO  17:07:33,912 - #5 b
-INFO  17:07:33,912 - #37 ;
-INFO  17:07:33,912 - #4 nizch
-INFO  17:07:33,912 - #44 [
-INFO  17:07:33,912 - #4 pet
-INFO  17:07:33,912 - #31 -
-INFO  17:07:33,912 - #2 3
-INFO  17:07:33,913 - #45 ]
-INFO  17:07:33,913 - #10 =
-INFO  17:07:33,913 - #5 c
-INFO  17:07:33,913 - #37 ;
-INFO  17:07:33,913 - #25 print
-INFO  17:07:33,913 - #22 (
-INFO  17:07:33,913 - #4 nizch
-INFO  17:07:33,913 - #44 [
-INFO  17:07:33,913 - #2 1
-INFO  17:07:33,913 - #45 ]
-INFO  17:07:33,913 - #23 )
-INFO  17:07:33,913 - #37 ;
-INFO  17:07:33,913 - #25 print
-INFO  17:07:33,913 - #22 (
-INFO  17:07:33,913 - #4 nizch
-INFO  17:07:33,913 - #44 [
-INFO  17:07:33,913 - #4 jedan
-INFO  17:07:33,913 - #32 *
-INFO  17:07:33,913 - #2 2
-INFO  17:07:33,914 - #45 ]
-INFO  17:07:33,914 - #23 )
-INFO  17:07:33,914 - #37 ;
-INFO  17:07:33,914 - #4 bodovi
-INFO  17:07:33,914 - #10 =
-INFO  17:07:33,914 - #4 bodovi
-INFO  17:07:33,914 - #30 +
-INFO  17:07:33,914 - #22 (
-INFO  17:07:33,914 - #4 pet
-INFO  17:07:33,914 - #32 *
-INFO  17:07:33,914 - #4 jedan
-INFO  17:07:33,914 - #31 -
-INFO  17:07:33,914 - #2 1
-INFO  17:07:33,914 - #23 )
-INFO  17:07:33,914 - #32 *
-INFO  17:07:33,914 - #4 bodovi
-INFO  17:07:33,914 - #31 -
-INFO  17:07:33,914 - #22 (
-INFO  17:07:33,914 - #2 3
-INFO  17:07:33,915 - #34 %
-INFO  17:07:33,915 - #2 2
-INFO  17:07:33,915 - #30 +
-INFO  17:07:33,915 - #2 3
-INFO  17:07:33,915 - #32 *
-INFO  17:07:33,915 - #2 2
-INFO  17:07:33,915 - #31 -
-INFO  17:07:33,915 - #2 3
-INFO  17:07:33,916 - #23 )
-INFO  17:07:33,916 - #37 ;
-INFO  17:07:33,916 - #25 print
-INFO  17:07:33,916 - #22 (
-INFO  17:07:33,916 - #4 bodovi
-INFO  17:07:33,916 - #23 )
-INFO  17:07:33,916 - #37 ;
-INFO  17:07:33,916 - #43 read
-INFO  17:07:33,916 - #22 (
-INFO  17:07:33,916 - #4 bodovi
-INFO  17:07:33,916 - #23 )
-INFO  17:07:33,916 - #37 ;
-INFO  17:07:33,916 - #25 print
-INFO  17:07:33,916 - #22 (
-INFO  17:07:33,916 - #4 bodovi
-INFO  17:07:33,916 - #23 )
-INFO  17:07:33,916 - #37 ;
-INFO  17:07:33,916 - #8 }
-INFO  17:07:33,916 - #8 }
-INFO  17:07:33,925 - Programc(
+INFO  01:39:14,391 - Compiling source file: C:\Users\Aleksandar\Desktop\PP\projekat\PP_Projekat\pp_projekat\test\program.mj
+INFO  01:39:14,445 - #6 program
+INFO  01:39:14,446 - #4 test301
+INFO  01:39:14,446 - #9 const
+INFO  01:39:14,446 - #4 int
+INFO  01:39:14,446 - #4 nula
+INFO  01:39:14,446 - #10 =
+INFO  01:39:14,447 - #2 0
+INFO  01:39:14,447 - #37 ;
+INFO  01:39:14,448 - #9 const
+INFO  01:39:14,448 - #4 int
+INFO  01:39:14,448 - #4 jedan
+INFO  01:39:14,448 - #10 =
+INFO  01:39:14,448 - #2 1
+INFO  01:39:14,448 - #37 ;
+INFO  01:39:14,448 - #9 const
+INFO  01:39:14,448 - #4 int
+INFO  01:39:14,448 - #4 tri
+INFO  01:39:14,448 - #10 =
+INFO  01:39:14,448 - #2 3
+INFO  01:39:14,448 - #37 ;
+INFO  01:39:14,449 - #9 const
+INFO  01:39:14,453 - #4 int
+INFO  01:39:14,453 - #4 pet
+INFO  01:39:14,453 - #10 =
+INFO  01:39:14,453 - #2 5
+INFO  01:39:14,453 - #37 ;
+INFO  01:39:14,453 - #4 int
+INFO  01:39:14,453 - #4 niz
+INFO  01:39:14,453 - #44 [
+INFO  01:39:14,453 - #45 ]
+INFO  01:39:14,454 - #37 ;
+INFO  01:39:14,455 - #4 char
+INFO  01:39:14,455 - #4 nizch
+INFO  01:39:14,455 - #44 [
+INFO  01:39:14,455 - #45 ]
+INFO  01:39:14,455 - #37 ;
+INFO  01:39:14,455 - #7 {
+INFO  01:39:14,455 - #24 void
+INFO  01:39:14,456 - #4 main
+INFO  01:39:14,456 - #22 (
+INFO  01:39:14,456 - #23 )
+INFO  01:39:14,456 - #4 int
+INFO  01:39:14,457 - #4 bodovi
+INFO  01:39:14,457 - #37 ;
+INFO  01:39:14,458 - #4 bool
+INFO  01:39:14,458 - #4 bt
+INFO  01:39:14,458 - #37 ;
+INFO  01:39:14,458 - #7 {
+INFO  01:39:14,458 - #4 bodovi
+INFO  01:39:14,459 - #10 =
+INFO  01:39:14,459 - #2 0
+INFO  01:39:14,460 - #37 ;
+INFO  01:39:14,462 - #4 bodovi
+INFO  01:39:14,462 - #46 ++
+INFO  01:39:14,462 - #37 ;
+INFO  01:39:14,462 - #4 bodovi
+INFO  01:39:14,462 - #10 =
+INFO  01:39:14,462 - #22 (
+INFO  01:39:14,462 - #4 bodovi
+INFO  01:39:14,462 - #30 +
+INFO  01:39:14,462 - #4 jedan
+INFO  01:39:14,463 - #23 )
+INFO  01:39:14,464 - #52 ^
+INFO  01:39:14,464 - #4 tri
+INFO  01:39:14,465 - #37 ;
+INFO  01:39:14,467 - #4 bodovi
+INFO  01:39:14,467 - #10 =
+INFO  01:39:14,467 - #4 bodovi
+INFO  01:39:14,467 - #32 *
+INFO  01:39:14,467 - #4 pet
+INFO  01:39:14,468 - #37 ;
+INFO  01:39:14,468 - #4 bodovi
+INFO  01:39:14,468 - #47 --
+INFO  01:39:14,468 - #37 ;
+INFO  01:39:14,468 - #25 print
+INFO  01:39:14,469 - #22 (
+INFO  01:39:14,469 - #4 bodovi
+INFO  01:39:14,469 - #23 )
+INFO  01:39:14,469 - #37 ;
+INFO  01:39:14,469 - #4 niz
+INFO  01:39:14,469 - #10 =
+INFO  01:39:14,469 - #28 new
+INFO  01:39:14,470 - #4 int
+INFO  01:39:14,470 - #44 [
+INFO  01:39:14,470 - #2 3
+INFO  01:39:14,470 - #45 ]
+INFO  01:39:14,470 - #37 ;
+INFO  01:39:14,470 - #4 niz
+INFO  01:39:14,470 - #44 [
+INFO  01:39:14,470 - #4 nula
+INFO  01:39:14,471 - #45 ]
+INFO  01:39:14,471 - #10 =
+INFO  01:39:14,471 - #4 jedan
+INFO  01:39:14,471 - #37 ;
+INFO  01:39:14,471 - #4 niz
+INFO  01:39:14,471 - #44 [
+INFO  01:39:14,471 - #2 1
+INFO  01:39:14,471 - #45 ]
+INFO  01:39:14,471 - #10 =
+INFO  01:39:14,471 - #2 2
+INFO  01:39:14,471 - #37 ;
+INFO  01:39:14,471 - #4 niz
+INFO  01:39:14,472 - #44 [
+INFO  01:39:14,472 - #4 niz
+INFO  01:39:14,472 - #44 [
+INFO  01:39:14,472 - #4 jedan
+INFO  01:39:14,472 - #45 ]
+INFO  01:39:14,472 - #52 ^
+INFO  01:39:14,472 - #2 2
+INFO  01:39:14,472 - #31 -
+INFO  01:39:14,472 - #2 2
+INFO  01:39:14,472 - #45 ]
+INFO  01:39:14,472 - #10 =
+INFO  01:39:14,473 - #4 niz
+INFO  01:39:14,473 - #44 [
+INFO  01:39:14,473 - #4 niz
+INFO  01:39:14,473 - #44 [
+INFO  01:39:14,473 - #2 0
+INFO  01:39:14,473 - #45 ]
+INFO  01:39:14,473 - #52 ^
+INFO  01:39:14,473 - #22 (
+INFO  01:39:14,473 - #4 bodovi
+INFO  01:39:14,473 - #32 *
+INFO  01:39:14,473 - #2 3
+INFO  01:39:14,473 - #23 )
+INFO  01:39:14,473 - #45 ]
+INFO  01:39:14,474 - #32 *
+INFO  01:39:14,474 - #2 3
+INFO  01:39:14,474 - #37 ;
+INFO  01:39:14,474 - #4 bodovi
+INFO  01:39:14,474 - #10 =
+INFO  01:39:14,474 - #4 niz
+INFO  01:39:14,474 - #44 [
+INFO  01:39:14,474 - #2 2
+INFO  01:39:14,474 - #45 ]
+INFO  01:39:14,474 - #33 /
+INFO  01:39:14,474 - #4 niz
+INFO  01:39:14,474 - #44 [
+INFO  01:39:14,474 - #2 0
+INFO  01:39:14,475 - #45 ]
+INFO  01:39:14,475 - #37 ;
+INFO  01:39:14,475 - #25 print
+INFO  01:39:14,475 - #22 (
+INFO  01:39:14,475 - #4 bodovi
+INFO  01:39:14,475 - #23 )
+INFO  01:39:14,475 - #37 ;
+INFO  01:39:14,475 - #25 print
+INFO  01:39:14,475 - #22 (
+INFO  01:39:14,475 - #4 niz
+INFO  01:39:14,476 - #44 [
+INFO  01:39:14,476 - #2 2
+INFO  01:39:14,476 - #45 ]
+INFO  01:39:14,476 - #23 )
+INFO  01:39:14,476 - #37 ;
+INFO  01:39:14,476 - #4 nizch
+INFO  01:39:14,476 - #10 =
+INFO  01:39:14,476 - #28 new
+INFO  01:39:14,476 - #4 char
+INFO  01:39:14,476 - #44 [
+INFO  01:39:14,476 - #2 3
+INFO  01:39:14,476 - #45 ]
+INFO  01:39:14,476 - #37 ;
+INFO  01:39:14,476 - #4 nizch
+INFO  01:39:14,476 - #44 [
+INFO  01:39:14,476 - #2 0
+INFO  01:39:14,476 - #45 ]
+INFO  01:39:14,476 - #10 =
+INFO  01:39:14,476 - #5 a
+INFO  01:39:14,477 - #37 ;
+INFO  01:39:14,477 - #4 nizch
+INFO  01:39:14,477 - #44 [
+INFO  01:39:14,477 - #4 jedan
+INFO  01:39:14,477 - #45 ]
+INFO  01:39:14,477 - #10 =
+INFO  01:39:14,477 - #5 b
+INFO  01:39:14,477 - #37 ;
+INFO  01:39:14,477 - #4 nizch
+INFO  01:39:14,477 - #44 [
+INFO  01:39:14,477 - #4 pet
+INFO  01:39:14,477 - #31 -
+INFO  01:39:14,478 - #2 3
+INFO  01:39:14,478 - #45 ]
+INFO  01:39:14,478 - #10 =
+INFO  01:39:14,478 - #5 c
+INFO  01:39:14,478 - #37 ;
+INFO  01:39:14,478 - #25 print
+INFO  01:39:14,478 - #22 (
+INFO  01:39:14,478 - #4 nizch
+INFO  01:39:14,478 - #44 [
+INFO  01:39:14,478 - #2 1
+INFO  01:39:14,478 - #45 ]
+INFO  01:39:14,478 - #23 )
+INFO  01:39:14,478 - #37 ;
+INFO  01:39:14,478 - #25 print
+INFO  01:39:14,478 - #22 (
+INFO  01:39:14,478 - #4 nizch
+INFO  01:39:14,478 - #44 [
+INFO  01:39:14,478 - #4 jedan
+INFO  01:39:14,478 - #32 *
+INFO  01:39:14,478 - #2 2
+INFO  01:39:14,479 - #45 ]
+INFO  01:39:14,479 - #23 )
+INFO  01:39:14,479 - #37 ;
+INFO  01:39:14,479 - #4 bodovi
+INFO  01:39:14,479 - #10 =
+INFO  01:39:14,479 - #4 bodovi
+INFO  01:39:14,479 - #30 +
+INFO  01:39:14,479 - #22 (
+INFO  01:39:14,479 - #4 pet
+INFO  01:39:14,479 - #32 *
+INFO  01:39:14,479 - #4 jedan
+INFO  01:39:14,479 - #31 -
+INFO  01:39:14,480 - #2 1
+INFO  01:39:14,480 - #23 )
+INFO  01:39:14,480 - #32 *
+INFO  01:39:14,480 - #4 bodovi
+INFO  01:39:14,480 - #31 -
+INFO  01:39:14,480 - #22 (
+INFO  01:39:14,480 - #2 3
+INFO  01:39:14,480 - #34 %
+INFO  01:39:14,480 - #2 2
+INFO  01:39:14,480 - #30 +
+INFO  01:39:14,480 - #2 3
+INFO  01:39:14,480 - #32 *
+INFO  01:39:14,480 - #2 2
+INFO  01:39:14,480 - #31 -
+INFO  01:39:14,481 - #2 3
+INFO  01:39:14,481 - #23 )
+INFO  01:39:14,481 - #37 ;
+INFO  01:39:14,481 - #25 print
+INFO  01:39:14,481 - #22 (
+INFO  01:39:14,481 - #4 bodovi
+INFO  01:39:14,481 - #23 )
+INFO  01:39:14,481 - #37 ;
+INFO  01:39:14,481 - #43 read
+INFO  01:39:14,481 - #22 (
+INFO  01:39:14,481 - #4 bodovi
+INFO  01:39:14,481 - #23 )
+INFO  01:39:14,481 - #37 ;
+INFO  01:39:14,481 - #25 print
+INFO  01:39:14,481 - #22 (
+INFO  01:39:14,481 - #4 bodovi
+INFO  01:39:14,481 - #52 ^
+INFO  01:39:14,481 - #2 2
+INFO  01:39:14,481 - #52 ^
+INFO  01:39:14,481 - #2 2
+INFO  01:39:14,481 - #23 )
+INFO  01:39:14,481 - #37 ;
+INFO  01:39:14,481 - #8 }
+INFO  01:39:14,481 - #8 }
+INFO  01:39:14,495 - Programc(
   ProgNamec(
    test301
   ) [ProgNamec]
@@ -234,16 +258,31 @@ INFO  17:07:33,925 - Programc(
       DeclarationListc(
         DeclarationListc(
           DeclarationListc(
-            NoDeclarations(
-            ) [NoDeclarations]
+            DeclarationListc(
+              NoDeclarations(
+              ) [NoDeclarations]
+              DeclListc(
+                ConstDeclc(
+                  Typec(
+                   int
+                  ) [Typec]
+                 nula
+                  ConstInt(
+                   0
+                  ) [ConstInt]
+                  NoConstDecl(
+                  ) [NoConstDecl]
+                ) [ConstDeclc]
+              ) [DeclListc]
+            ) [DeclarationListc]
             DeclListc(
               ConstDeclc(
                 Typec(
                  int
                 ) [Typec]
-               nula
+               jedan
                 ConstInt(
-                 0
+                 1
                 ) [ConstInt]
                 NoConstDecl(
                 ) [NoConstDecl]
@@ -255,9 +294,9 @@ INFO  17:07:33,925 - Programc(
               Typec(
                int
               ) [Typec]
-             jedan
+             tri
               ConstInt(
-               1
+               3
               ) [ConstInt]
               NoConstDecl(
               ) [NoConstDecl]
@@ -425,41 +464,72 @@ INFO  17:07:33,925 - Programc(
                                                           ) [NoOptionalMinus]
                                                           Termc(
                                                             Factorc(
-                                                              BaseDesignator(
-                                                                Designatorc(
-                                                                  DesignatorName(
-                                                                   bodovi
-                                                                  ) [DesignatorName]
-                                                                ) [Designatorc]
-                                                              ) [BaseDesignator]
-                                                              NoListBaseExpc(
-                                                              ) [NoListBaseExpc]
+                                                              BaseExpr(
+                                                                Exprc(
+                                                                  TermMinusc(
+                                                                    NoOptionalMinus(
+                                                                    ) [NoOptionalMinus]
+                                                                    Termc(
+                                                                      Factorc(
+                                                                        BaseDesignator(
+                                                                          Designatorc(
+                                                                            DesignatorName(
+                                                                             bodovi
+                                                                            ) [DesignatorName]
+                                                                          ) [Designatorc]
+                                                                        ) [BaseDesignator]
+                                                                        NoListBaseExpc(
+                                                                        ) [NoListBaseExpc]
+                                                                      ) [Factorc]
+                                                                      NoMulopFactorList(
+                                                                      ) [NoMulopFactorList]
+                                                                    ) [Termc]
+                                                                  ) [TermMinusc]
+                                                                  AddopTermListc(
+                                                                    NoAddopTermList(
+                                                                    ) [NoAddopTermList]
+                                                                    OperationPlus(
+                                                                    ) [OperationPlus]
+                                                                    Termc(
+                                                                      Factorc(
+                                                                        BaseDesignator(
+                                                                          Designatorc(
+                                                                            DesignatorName(
+                                                                             jedan
+                                                                            ) [DesignatorName]
+                                                                          ) [Designatorc]
+                                                                        ) [BaseDesignator]
+                                                                        NoListBaseExpc(
+                                                                        ) [NoListBaseExpc]
+                                                                      ) [Factorc]
+                                                                      NoMulopFactorList(
+                                                                      ) [NoMulopFactorList]
+                                                                    ) [Termc]
+                                                                  ) [AddopTermListc]
+                                                                ) [Exprc]
+                                                              ) [BaseExpr]
+                                                              ListBaseExpc(
+                                                                NoListBaseExpc(
+                                                                ) [NoListBaseExpc]
+                                                                OneElementExp(
+                                                                  Expopc(
+                                                                  ) [Expopc]
+                                                                  BaseDesignator(
+                                                                    Designatorc(
+                                                                      DesignatorName(
+                                                                       tri
+                                                                      ) [DesignatorName]
+                                                                    ) [Designatorc]
+                                                                  ) [BaseDesignator]
+                                                                ) [OneElementExp]
+                                                              ) [ListBaseExpc]
                                                             ) [Factorc]
                                                             NoMulopFactorList(
                                                             ) [NoMulopFactorList]
                                                           ) [Termc]
                                                         ) [TermMinusc]
-                                                        AddopTermListc(
-                                                          NoAddopTermList(
-                                                          ) [NoAddopTermList]
-                                                          OperationPlus(
-                                                          ) [OperationPlus]
-                                                          Termc(
-                                                            Factorc(
-                                                              BaseDesignator(
-                                                                Designatorc(
-                                                                  DesignatorName(
-                                                                   jedan
-                                                                  ) [DesignatorName]
-                                                                ) [Designatorc]
-                                                              ) [BaseDesignator]
-                                                              NoListBaseExpc(
-                                                              ) [NoListBaseExpc]
-                                                            ) [Factorc]
-                                                            NoMulopFactorList(
-                                                            ) [NoMulopFactorList]
-                                                          ) [Termc]
-                                                        ) [AddopTermListc]
+                                                        NoAddopTermList(
+                                                        ) [NoAddopTermList]
                                                       ) [Exprc]
                                                     ) [DesignatorAssign]
                                                   ) [SingleStatementc]
@@ -768,15 +838,39 @@ INFO  17:07:33,925 - Programc(
                                                       ) [Exprc]
                                                     ) [ArrayElem]
                                                   ) [BaseDesignator]
+                                                  ListBaseExpc(
+                                                    NoListBaseExpc(
+                                                    ) [NoListBaseExpc]
+                                                    OneElementExp(
+                                                      Expopc(
+                                                      ) [Expopc]
+                                                      BaseNumber(
+                                                       2
+                                                      ) [BaseNumber]
+                                                    ) [OneElementExp]
+                                                  ) [ListBaseExpc]
+                                                ) [Factorc]
+                                                NoMulopFactorList(
+                                                ) [NoMulopFactorList]
+                                              ) [Termc]
+                                            ) [TermMinusc]
+                                            AddopTermListc(
+                                              NoAddopTermList(
+                                              ) [NoAddopTermList]
+                                              OperationMinus(
+                                              ) [OperationMinus]
+                                              Termc(
+                                                Factorc(
+                                                  BaseNumber(
+                                                   2
+                                                  ) [BaseNumber]
                                                   NoListBaseExpc(
                                                   ) [NoListBaseExpc]
                                                 ) [Factorc]
                                                 NoMulopFactorList(
                                                 ) [NoMulopFactorList]
                                               ) [Termc]
-                                            ) [TermMinusc]
-                                            NoAddopTermList(
-                                            ) [NoAddopTermList]
+                                            ) [AddopTermListc]
                                           ) [Exprc]
                                         ) [ArrayElem]
                                         Assignopc(
@@ -824,8 +918,50 @@ INFO  17:07:33,925 - Programc(
                                                                 ) [Exprc]
                                                               ) [ArrayElem]
                                                             ) [BaseDesignator]
-                                                            NoListBaseExpc(
-                                                            ) [NoListBaseExpc]
+                                                            ListBaseExpc(
+                                                              NoListBaseExpc(
+                                                              ) [NoListBaseExpc]
+                                                              OneElementExp(
+                                                                Expopc(
+                                                                ) [Expopc]
+                                                                BaseExpr(
+                                                                  Exprc(
+                                                                    TermMinusc(
+                                                                      NoOptionalMinus(
+                                                                      ) [NoOptionalMinus]
+                                                                      Termc(
+                                                                        Factorc(
+                                                                          BaseDesignator(
+                                                                            Designatorc(
+                                                                              DesignatorName(
+                                                                               bodovi
+                                                                              ) [DesignatorName]
+                                                                            ) [Designatorc]
+                                                                          ) [BaseDesignator]
+                                                                          NoListBaseExpc(
+                                                                          ) [NoListBaseExpc]
+                                                                        ) [Factorc]
+                                                                        MulopFactorListc(
+                                                                          NoMulopFactorList(
+                                                                          ) [NoMulopFactorList]
+                                                                          OperationMul(
+                                                                          ) [OperationMul]
+                                                                          Factorc(
+                                                                            BaseNumber(
+                                                                             3
+                                                                            ) [BaseNumber]
+                                                                            NoListBaseExpc(
+                                                                            ) [NoListBaseExpc]
+                                                                          ) [Factorc]
+                                                                        ) [MulopFactorListc]
+                                                                      ) [Termc]
+                                                                    ) [TermMinusc]
+                                                                    NoAddopTermList(
+                                                                    ) [NoAddopTermList]
+                                                                  ) [Exprc]
+                                                                ) [BaseExpr]
+                                                              ) [OneElementExp]
+                                                            ) [ListBaseExpc]
                                                           ) [Factorc]
                                                           NoMulopFactorList(
                                                           ) [NoMulopFactorList]
@@ -1635,8 +1771,26 @@ INFO  17:07:33,925 - Programc(
                         ) [DesignatorName]
                       ) [Designatorc]
                     ) [BaseDesignator]
-                    NoListBaseExpc(
-                    ) [NoListBaseExpc]
+                    ListBaseExpc(
+                      ListBaseExpc(
+                        NoListBaseExpc(
+                        ) [NoListBaseExpc]
+                        OneElementExp(
+                          Expopc(
+                          ) [Expopc]
+                          BaseNumber(
+                           2
+                          ) [BaseNumber]
+                        ) [OneElementExp]
+                      ) [ListBaseExpc]
+                      OneElementExp(
+                        Expopc(
+                        ) [Expopc]
+                        BaseNumber(
+                         2
+                        ) [BaseNumber]
+                      ) [OneElementExp]
+                    ) [ListBaseExpc]
                   ) [Factorc]
                   NoMulopFactorList(
                   ) [NoMulopFactorList]
@@ -1653,7 +1807,7 @@ INFO  17:07:33,925 - Programc(
     ) [MethodDeclc]
   ) [DeclListMethodc]
 ) [Programc]
-INFO  17:07:33,926 - ===================================
-INFO  17:07:33,929 - Obradjuje se funkcija main na liniji 13
-INFO  17:07:33,930 - ===================================
-INFO  17:07:33,934 - Parsiranje uspesno zavrseno!
+INFO  01:39:14,511 - ===================================
+INFO  01:39:14,514 - Obradjuje se funkcija main na liniji 14
+INFO  01:39:14,514 - ===================================
+INFO  01:39:14,519 - Parsiranje uspesno zavrseno!
