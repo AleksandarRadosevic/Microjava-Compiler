@@ -114,7 +114,7 @@ nonterminal ListBaseExp ListBaseExp;
 nonterminal VarArgs VarArgs;
 nonterminal DesignatorCalled DesignatorCalled;
 
-nonterminal rs.etf.pp1.symboltable.concepts.Obj ProgName, Program, MethodTypeName, MethodDecl, Designator, DesignatorName;
+nonterminal rs.etf.pp1.symboltable.concepts.Obj ProgName, Program, MethodTypeName, MethodDecl, Designator, DesignatorName, DesignatorNameArr;
 nonterminal rs.etf.pp1.symboltable.concepts.Obj RecordDecl, RecordName;
 nonterminal rs.etf.pp1.symboltable.concepts.Struct Type, TypeOrVoid, Term, Factor, Expr, ExprPar, BaseExp, AddopTermList, MulopFactorList, TermMinus;
 
@@ -327,12 +327,12 @@ BaseExp ::= (BaseNumber) NUMBER:N1 {: RESULT=new BaseNumber(N1); RESULT.setLine(
 DesignatorCalled ::= (DesignatorCalled) Designator:D1 {: RESULT=new DesignatorCalled(D1); RESULT.setLine(D1left); :};
 							
 Designator ::= (Designatorc) DesignatorName:D1 {: RESULT=new Designatorc(D1); RESULT.setLine(D1left); :} 
-			| (ArrayElem) DesignatorName:D1 LBRACE Expr:E2 RBRACE {: RESULT=new ArrayElem(D1, E2); RESULT.setLine(D1left); :}
+			| (ArrayElem) DesignatorNameArr:D1 LBRACE Expr:E2 RBRACE {: RESULT=new ArrayElem(D1, E2); RESULT.setLine(D1left); :}
 			| DesignatorName:D1 DOT IDENT:I2 {: RESULT=new DesignatorDerived1(D1, I2); RESULT.setLine(D1left); :}
 			| (ArrayElemClass) DesignatorName:D1 DOT IDENT:I2 LBRACE Expr:E3 RBRACE {: RESULT=new ArrayElemClass(D1, I2, E3); RESULT.setLine(D1left); :};
 
 DesignatorName ::= (DesignatorName) IDENT:name {: RESULT=new DesignatorName(name); RESULT.setLine(nameleft); :};
-
+DesignatorNameArr ::= (DesignatorNameArr) IDENT:name {: RESULT=new DesignatorNameArr(name); RESULT.setLine(nameleft); :};
 
 Label ::= (Labelc) IDENT:I1 {: RESULT=new Labelc(I1); RESULT.setLine(I1left); :};
 

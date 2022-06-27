@@ -20,8 +20,7 @@ public class CodeGenerator extends VisitorAdaptor{
 		this.mainPc = mainPc;
 	}
 
-	public void visit(PrintStmt printStmt){	
-		
+	public void visit(PrintStmt printStmt){		
 		if(printStmt.getExpr().struct == Tab.intType){
 			Code.loadConst(5);
 			Code.put(Code.print);
@@ -120,6 +119,10 @@ public class CodeGenerator extends VisitorAdaptor{
 	public void visit(Designatorc designator){
 		Code.load(designator.obj);
 	}
+	public void visit(DesignatorNameArr d) {
+		Code.load(d.obj);
+		
+	}
 	
 	public void visit (DesignatorAssign assign) {
 		if (assign.getDesignator().obj.getKind()==5) {
@@ -181,10 +184,8 @@ public class CodeGenerator extends VisitorAdaptor{
 		}
 		else Code.put(1);
 	}
+
 	
-	public void visit(ArrayElem elem) {
-		Code.put(Code.dup2);
-		Code.load(elem.obj);
-	}
+
 	
 }

@@ -236,7 +236,7 @@ public class SemanticPass extends VisitorAdaptor {
 	}
 
 	public void visit(ArrayElem arrayElem) {
-		Obj obj = Tab.find(arrayElem.getDesignatorName().getName());
+		Obj obj = Tab.find(arrayElem.getDesignatorNameArr().getName());
 		if (obj == Tab.noObj || obj == null) {
 			report_error("Promenljiva nije deklarisana", arrayElem);
 			return;
@@ -247,11 +247,19 @@ public class SemanticPass extends VisitorAdaptor {
 			return;
 		}
 		if (arrayElem.obj == null)
-			arrayElem.obj = new Obj(Obj.Elem, arrayElem.getDesignatorName().getName(), obj.getType().getElemType());
+			arrayElem.obj = new Obj(Obj.Elem, arrayElem.getDesignatorNameArr().getName(), obj.getType().getElemType());
 		if (arrayElem.getExpr().struct != Tab.intType) {
 			report_error("Greska u okviru pristupa elementu niza", arrayElem);
 		}
 
+	}
+	public void visit(DesignatorNameArr arrayElem) {
+		Obj obj = Tab.find(arrayElem.getName());
+		if (obj == Tab.noObj || obj == null) {
+			report_error("Promenljiva nije deklarisana", arrayElem);
+			return;
+		}
+		arrayElem.obj = obj;
 	}
 		
 	

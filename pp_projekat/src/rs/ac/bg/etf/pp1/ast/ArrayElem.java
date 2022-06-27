@@ -1,28 +1,28 @@
 // generated with ast extension for cup
 // version 0.8
-// 26/5/2022 23:54:23
+// 27/5/2022 12:7:9
 
 
 package rs.ac.bg.etf.pp1.ast;
 
 public class ArrayElem extends Designator {
 
-    private DesignatorName DesignatorName;
+    private DesignatorNameArr DesignatorNameArr;
     private Expr Expr;
 
-    public ArrayElem (DesignatorName DesignatorName, Expr Expr) {
-        this.DesignatorName=DesignatorName;
-        if(DesignatorName!=null) DesignatorName.setParent(this);
+    public ArrayElem (DesignatorNameArr DesignatorNameArr, Expr Expr) {
+        this.DesignatorNameArr=DesignatorNameArr;
+        if(DesignatorNameArr!=null) DesignatorNameArr.setParent(this);
         this.Expr=Expr;
         if(Expr!=null) Expr.setParent(this);
     }
 
-    public DesignatorName getDesignatorName() {
-        return DesignatorName;
+    public DesignatorNameArr getDesignatorNameArr() {
+        return DesignatorNameArr;
     }
 
-    public void setDesignatorName(DesignatorName DesignatorName) {
-        this.DesignatorName=DesignatorName;
+    public void setDesignatorNameArr(DesignatorNameArr DesignatorNameArr) {
+        this.DesignatorNameArr=DesignatorNameArr;
     }
 
     public Expr getExpr() {
@@ -38,18 +38,18 @@ public class ArrayElem extends Designator {
     }
 
     public void childrenAccept(Visitor visitor) {
-        if(DesignatorName!=null) DesignatorName.accept(visitor);
+        if(DesignatorNameArr!=null) DesignatorNameArr.accept(visitor);
         if(Expr!=null) Expr.accept(visitor);
     }
 
     public void traverseTopDown(Visitor visitor) {
         accept(visitor);
-        if(DesignatorName!=null) DesignatorName.traverseTopDown(visitor);
+        if(DesignatorNameArr!=null) DesignatorNameArr.traverseTopDown(visitor);
         if(Expr!=null) Expr.traverseTopDown(visitor);
     }
 
     public void traverseBottomUp(Visitor visitor) {
-        if(DesignatorName!=null) DesignatorName.traverseBottomUp(visitor);
+        if(DesignatorNameArr!=null) DesignatorNameArr.traverseBottomUp(visitor);
         if(Expr!=null) Expr.traverseBottomUp(visitor);
         accept(visitor);
     }
@@ -59,8 +59,8 @@ public class ArrayElem extends Designator {
         buffer.append(tab);
         buffer.append("ArrayElem(\n");
 
-        if(DesignatorName!=null)
-            buffer.append(DesignatorName.toString("  "+tab));
+        if(DesignatorNameArr!=null)
+            buffer.append(DesignatorNameArr.toString("  "+tab));
         else
             buffer.append(tab+"  null");
         buffer.append("\n");

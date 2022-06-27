@@ -74,7 +74,7 @@ nonterminal Addop, Mulop, Assignop;
 nonterminal ConditionIf, VarDeclGlobal, VarDeclListGlobal, Expop, ListBaseExp, VarArgs;
 nonterminal DesignatorCalled;
 
-nonterminal rs.etf.pp1.symboltable.concepts.Obj ProgName, Program, MethodTypeName, MethodDecl, Designator, DesignatorName;
+nonterminal rs.etf.pp1.symboltable.concepts.Obj ProgName, Program, MethodTypeName, MethodDecl, Designator, DesignatorName, DesignatorNameArr;
 nonterminal rs.etf.pp1.symboltable.concepts.Obj RecordDecl, RecordName;
 nonterminal rs.etf.pp1.symboltable.concepts.Struct Type, TypeOrVoid, Term, Factor, Expr, ExprPar, BaseExp, AddopTermList, MulopFactorList, TermMinus;
 
@@ -287,12 +287,12 @@ BaseExp ::= (BaseNumber) NUMBER
 DesignatorCalled ::= (DesignatorCalled) Designator;
 							
 Designator ::= (Designatorc) DesignatorName 
-			| (ArrayElem) DesignatorName LBRACE Expr RBRACE
+			| (ArrayElem) DesignatorNameArr LBRACE Expr RBRACE
 			| DesignatorName DOT IDENT
 			| (ArrayElemClass) DesignatorName DOT IDENT LBRACE Expr RBRACE;
 
 DesignatorName ::= (DesignatorName) IDENT:name;
-
+DesignatorNameArr ::= (DesignatorNameArr) IDENT:name;
 
 Label ::= (Labelc) IDENT;
 

@@ -2,9 +2,10 @@ program MJProgram
 	int x; int y;
 {
 
-	void main() int niz[];{
-		x = 1;
+	void main() int niz[];int val;{
 		niz = new int[3];
-		print(x);
+		niz[0]=1;
+		
+		print(niz[0]);
 	}
 }
